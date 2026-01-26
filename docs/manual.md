@@ -78,15 +78,15 @@ cables.](images/Pictures/10000001000003DA0000022AEC253E1D.png "fig:"){width="17c
 height="11.352cm"}
 
 ![Figure 2: Trawl design integrated in
-./phobos.](docs/images/Pictures/10000001000001FB000002B0D3974D97.png "fig:"){width="10.732cm"
+./phobos.](images/Pictures/10000001000001FB000002B0D3974D97.png "fig:"){width="10.732cm"
 height="14.563cm"}
 
 ![Figure 3: Initial shape (not equilibrated) of the
-trawl.](docs/images/Pictures/100000010000024D000002C88C36DDE2.png "fig:"){width="12.467cm"
+trawl.](images/Pictures/100000010000024D000002C88C36DDE2.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 ![Figure 4: Final shape (equilibrated) of the
-trawl.](docs/images/Pictures/100000010000024D000002C8211FC29C.png "fig:"){width="12.467cm"
+trawl.](images/Pictures/100000010000024D000002C8211FC29C.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 # []{#anchor-5}\*.don file
@@ -134,7 +134,7 @@ in the plane XY.*
 
 ![Figure 5: *Design of a pelagic trawl
 \~/femnet/data_2001/readme/1pelagic_trawl/s1 displayed with phobos
-tool.*](docs/images/Pictures/10000001000001FB000002B00DE114D6.png "fig:"){width="11.067cm"
+tool.*](images/Pictures/10000001000001FB000002B00DE114D6.png "fig:"){width="11.067cm"
 height="14.321cm"}
 
 panels number: 25
@@ -188,7 +188,7 @@ corner 2 is **2**. This point will be discussed later
 ![Figure 7: Mesh coordinates of the corners of the panel 1 of netting,
 displayed with phobos using
 \~/femnet/data_2001/readme/1pelagic_trawl/s1. Displayed with phobos
-tool.](docs/images/Pictures/10000001000001FE000002F0ED126AC4.png "fig:"){width="8.177cm"
+tool.](images/Pictures/10000001000001FE000002F0ED126AC4.png "fig:"){width="8.177cm"
 height="12.056cm"}
 
 Traction stiffness (N): 25000.000000
@@ -499,7 +499,7 @@ nb_pt: 2 pa: 1 nd: 6 pa: 3 nd: 6
 
 ![Figure 8: Links between components. The two corners noted 52 are
 linked and this link is the 52. View of phobos using
-\~/femnet/data_2001/readme/1pelagic_trawl/s1.](docs/images/Pictures/10000001000001FB000002B0934B0716.png "fig:"){width="10.714cm"
+\~/femnet/data_2001/readme/1pelagic_trawl/s1.](images/Pictures/10000001000001FB000002B0934B0716.png "fig:"){width="10.714cm"
 height="13.866cm"}
 
 Meshing order:
@@ -974,11 +974,11 @@ cd \~/femnet/programs
 ./phobos
 
 ![Figure 11: Commands for
-phobos.](docs/images/Pictures/100000010000037B000000FF0B8E9075.png "fig:"){width="17cm"
+phobos.](images/Pictures/100000010000037B000000FF0B8E9075.png "fig:"){width="17cm"
 height="4.888cm"}You get the .
 
 ![Figure 12: Window of
-phobos.](docs/images/Pictures/10000001000001FB000002B0417A2802.png "fig:"){width="10.732cm"
+phobos.](images/Pictures/10000001000001FB000002B0417A2802.png "fig:"){width="10.732cm"
 height="14.563cm"}
 
 The main commands are the following:
@@ -1034,13 +1034,13 @@ cd \~/femnet/programs
 
 ![Figure 13: Commands for calculating the equilibrium of s1, when s1.don
 and s1.mdg
-exist.](docs/images/Pictures/1000000100000499000000FF1EB2B9EF.png "fig:"){width="17cm"
+exist.](images/Pictures/1000000100000499000000FF1EB2B9EF.png "fig:"){width="17cm"
 height="3.69cm"}
 
 The result is displayed on the and :
 
 ![Figure 14: Iterations due to the calculation of the equilibrium of
-s1.](docs/images/Pictures/1000000100000441000001AFEED1C682.png "fig:"){width="17cm"
+s1.](images/Pictures/1000000100000441000001AFEED1C682.png "fig:"){width="17cm"
 height="5.644cm"}
 
 In :
@@ -1065,7 +1065,7 @@ stiffness varies on due to the line *input Auto_convergence* of s1.don.
 
 ![Figure 15: End of iterations for the calculation of the equilibrium of
 s1. *In this case, it* requires *1570*
-iterations.](docs/images/Pictures/1000000100000441000002F961995F7D.png "fig:"){width="17cm"
+iterations.](images/Pictures/1000000100000441000002F961995F7D.png "fig:"){width="17cm"
 height="12.218cm"}
 
 This shows that the equilibrium has been reached in 1546 iterations
@@ -1086,7 +1086,7 @@ cd \~/femnet/programs
 
 ![Figure 16: Commands for batz. The tool used for displaying the result
 of calculation when \*.don file, \*.mdg file and \*.sta file
-exist.](docs/images/Pictures/100000010000037B000000FF74B36244.png "fig:"){width="17cm"
+exist.](images/Pictures/100000010000037B000000FF74B36244.png "fig:"){width="17cm"
 height="4.877cm"}
 
 In the the structure is displayed. To display the structure, do:
@@ -1102,7 +1102,7 @@ of too many twines.
 
 ![Figure 17: The pelagic trawl
 \~/femnet/data_2001/readme/1pelagic_trawl/s1 displayed with
-batz.](docs/images/Pictures/100000010000024D000002C80C0AA42A.png "fig:"){width="12.467cm"
+batz.](images/Pictures/100000010000024D000002C80C0AA42A.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 In , the horizontal cursor and the left vertical cursor are for turning
@@ -1131,13 +1131,13 @@ linked.
 (\~/femnet/data_2001/readme/1pelagic_trawl/u1.don) is identical to *the
 one* of figure 1. Here part of the links are automatically carried out
 using *input link 0.01 *at the end of
-u1.don.](docs/images/Pictures/1000000100000282000002EBE6E1CAF6.png "fig:"){width="13.589cm"
+u1.don.](images/Pictures/1000000100000282000002EBE6E1CAF6.png "fig:"){width="13.589cm"
 height="15.812cm"}
 
 []{#anchor-20}![Figure 23: Shape of the pelagic trawl
 \~/femnet/data_2001/readme/1pelagic_trawl/u1. It is very similar to s1
 trawl
-().](docs/images/Pictures/100000010000024D000002C815AE0BD8.png "fig:"){width="12.467cm"
+().](images/Pictures/100000010000024D000002C815AE0BD8.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 # []{#anchor-21}Refining the calculation 
@@ -1163,7 +1163,7 @@ cd \~/femnet/programs
 
 ![Figure 24: Phobos commands to generate s2.mdg and s2.sta from s2.don
 and
-s1.sta.](docs/images/Pictures/1000000100000499000000FFA96D88EE.png "fig:"){width="17cm"
+s1.sta.](images/Pictures/1000000100000499000000FFA96D88EE.png "fig:"){width="17cm"
 height="4.046cm"}
 
 This command creates the file s2.mdg but also s2.sta which is an
@@ -1190,7 +1190,7 @@ cd \~/femnet/programs
 
 ![Figure 25: Phobos commands to generate s*3*.mdg and s*3*.sta from
 s*2*.don and
-s*2*.sta.](docs/images/Pictures/1000000100000499000000FFE28BE97D.png "fig:"){width="17cm"
+s*2*.sta.](images/Pictures/1000000100000499000000FFE28BE97D.png "fig:"){width="17cm"
 height="3.69cm"}
 
 To calculate the equilibrium of the refined structure and record the
@@ -1201,7 +1201,7 @@ cd \~/femnet/programs
 ./unix \~/femnet/data_2001/readme/1pelagic_trawl/s3
 
 ![Figure 26: Commands for calculating the equilibrium of
-s3.](docs/images/Pictures/1000000100000499000000FF157AF969.png "fig:"){width="17cm"
+s3.](images/Pictures/1000000100000499000000FF157AF969.png "fig:"){width="17cm"
 height="3.425cm"}
 
 This command gives:
@@ -1209,7 +1209,7 @@ This command gives:
 ![Figure 27: End of iterations for the calculation of the equilibrium of
 s*3*. It requires *774* iterations. The figures are very comparable to
 those of s1
-().](docs/images/Pictures/1000000100000441000002F996EB4126.png "fig:"){width="17cm"
+().](images/Pictures/1000000100000441000002F996EB4126.png "fig:"){width="17cm"
 height="9.495cm"}
 
 That means that the calculation is done in 774 iterations.
@@ -1223,7 +1223,7 @@ cd \~/femnet/programs
 ![Figure 28: The pelagic trawl
 \~/femnet/data_2001/readme/1pelagic_trawl/s*3* displayed with batz. This
 figure is very similar to
-(s1).](docs/images/Pictures/100000010000024D000002C84E243EC1.png "fig:"){width="12.467cm"
+(s1).](images/Pictures/100000010000024D000002C84E243EC1.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 # []{#anchor-22}Symmetry
@@ -1235,7 +1235,7 @@ figure, the structure presents a vertical plane of symmetry.
 \~/femnet/data_2001/readme/1pelagic_trawl/t1. It is the same as s1
 (figure 1) except that here the symmetry plane is not used: the whole
 trawl is
-designed.](docs/images/Pictures/10000001000003EC000002B0743E02BC.png "fig:"){width="17cm"
+designed.](images/Pictures/10000001000003EC000002B0743E02BC.png "fig:"){width="17cm"
 height="11.649cm"}
 
 If there is a symmetry plane only half structure could be designed, as
@@ -1244,7 +1244,7 @@ s1.
 ![Figure 30: Design of \~/femnet/data_2001/readme/1pelagic_trawl/s1 with
 one symmetry plane. The nodes type are displayed. The nodes on the
 symmetry plane have a type
-3.](docs/images/Pictures/100000010000031C000002B00F8815C8.png "fig:"){width="16.849cm"
+3.](images/Pictures/100000010000031C000002B00F8815C8.png "fig:"){width="16.849cm"
 height="14.563cm"}
 
 To introduce a symmetry plane the nodes on the symmetry plane must have
@@ -1285,7 +1285,7 @@ This first part for calculated t1.mdg compatible with the calculation of
 equilibrium.
 
 ![Figure 31: Calculation of t1.mdg with
-phobos.](docs/images/Pictures/10000001000003D3000000E98046F52D.png "fig:"){width="17cm"
+phobos.](images/Pictures/10000001000003D3000000E98046F52D.png "fig:"){width="17cm"
 height="4.487cm"}
 
 cd \~/femnet/programs
@@ -1295,7 +1295,7 @@ cd \~/femnet/programs
 This second part for the calculation of the equilibrium of t1.
 
 ![Figure 32: Calculation of the equilibrium of
-t1.](docs/images/Pictures/10000001000004AF000000E9F444457B.png "fig:"){width="17cm"
+t1.](images/Pictures/10000001000004AF000000E9F444457B.png "fig:"){width="17cm"
 height="3.782cm"}
 
 The result is partly shown on . It can be compared to those displayed on
@@ -1306,14 +1306,14 @@ filtered surface).
 
 ![Figure 33: The calculation is carried out in 1491 iterations. The
 figures are comparable to those of s1 ( and
-).](docs/images/Pictures/10000001000004570000030F563C23F1.png "fig:fig:"){width="17cm"
+).](images/Pictures/10000001000004570000030F563C23F1.png "fig:fig:"){width="17cm"
 height="10.059cm"}
 
 The shape of the trawl is displayed on .
 
 ![Figure 34: Shape of \~/femnet/data_2001/readme/1pelagic_trawl/t1. The
 design of this trawl don't use the symmetry plane as s1
-().](docs/images/Pictures/100000010000024D000002C8D2E889F8.png "fig:"){width="12.467cm"
+().](images/Pictures/100000010000024D000002C8D2E889F8.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 # []{#anchor-23}Bottom trawl
@@ -1374,13 +1374,13 @@ defined in \*.don file (*Wearing coefficient on the bottom: 1.000000*).
 Such bottom trawl could be seen on .
 
 ![Figure 35: Bottom trawl
-\~/femnet/data_2001/readme/*3bottom*\_trawl/b3.](docs/images/Pictures/1000000100000524000002E07EA8D701.png "fig:"){width="17cm"
+\~/femnet/data_2001/readme/*3bottom*\_trawl/b3.](images/Pictures/1000000100000524000002E07EA8D701.png "fig:"){width="17cm"
 height="9.507cm"}
 
 The design of this bottom trawl could be seen on .
 
 ![Figure 36: Design of the bottom trawl
-b3.](docs/images/Pictures/100000010000032F000002B046AF4B6E.png "fig:"){width="17cm"
+b3.](images/Pictures/100000010000032F000002B046AF4B6E.png "fig:"){width="17cm"
 height="14.351cm"}
 
 To reach this result, a first trawl defined in b1.don with a *Meshing
@@ -1411,48 +1411,48 @@ cd \~/femnet/programs
 ./unix \~/femnet/data_2001/readme/3bottom_trawl/b3
 
 ![Figure 37: Command to create b1.mdg from
-b1.don.](docs/images/Pictures/10000001000004AF000000FF5438A4BA.png "fig:"){width="17cm"
+b1.don.](images/Pictures/10000001000004AF000000FF5438A4BA.png "fig:"){width="17cm"
 height="3.567cm"}
 
 ![Figure 38: Command to calculate the equilibrium of b1, and
 consequently create
-b1.sta.](docs/images/Pictures/10000001000004AF000000FF70E12E74.png "fig:"){width="17cm"
+b1.sta.](images/Pictures/10000001000004AF000000FF70E12E74.png "fig:"){width="17cm"
 height="3.597cm"}
 
 ![Figure 39. The calculation of equilibrium of bottom trawl b1,
 converges in *4048*
-iterations.](docs/images/Pictures/10000001000004AF0000028BAA5E92C3.png "fig:"){width="17cm"
+iterations.](images/Pictures/10000001000004AF0000028BAA5E92C3.png "fig:"){width="17cm"
 height="9.495cm"}
 
 ![Figure 40: Command to create b2.mdg and calculate an approximation of
 equilibrium of b2 (recorded in b2.sta) by using
-b1.sta.](docs/images/Pictures/10000001000003C8000000FF11F21904.png "fig:"){width="17cm"
+b1.sta.](images/Pictures/10000001000003C8000000FF11F21904.png "fig:"){width="17cm"
 height="4.168cm"}
 
-![![](docs/images/Pictures/100000010000049900000091A1CF6B5F.png){width="17cm"
+![![](images/Pictures/100000010000049900000091A1CF6B5F.png){width="17cm"
 height="2.094cm"}Figure 41: Command to calculate the equilibrium of
 b*2*, and consequently create
-b*2*.sta.](docs/images/Pictures/10000001000005070000012B8C67235B.png "fig:"){width="17cm"
+b*2*.sta.](images/Pictures/10000001000005070000012B8C67235B.png "fig:"){width="17cm"
 height="3.949cm"}
 
 ![Figure 42: The calculation of equilibrium of bottom trawl b*2*,
 converges in *1266*
-iterations.](docs/images/Pictures/100000010000040A0000028BC32676D8.png "fig:"){width="17cm"
+iterations.](images/Pictures/100000010000040A0000028BC32676D8.png "fig:"){width="17cm"
 height="10.703cm"}
 
 ![Figure 43: Command to create b*3*.mdg and calculate a approximation of
 equilibrium of b*3* (recorded in b*3*.sta) by using
-b*2*.sta.](docs/images/Pictures/100000010000040A000000D3F618BDD2.png "fig:"){width="17cm"
+b*2*.sta.](images/Pictures/100000010000040A000000D3F618BDD2.png "fig:"){width="17cm"
 height="3.872cm"}
 
 ![Figure 44: Command to calculate the equilibrium of b*3*, and
 consequently create
-b*3*.sta.](docs/images/Pictures/10000001000004E6000000E9774A02DB.png "fig:"){width="17cm"
+b*3*.sta.](images/Pictures/10000001000004E6000000E9774A02DB.png "fig:"){width="17cm"
 height="3.157cm"}
 
 ![Figure 45: The calculation of equilibrium of bottom trawl b*3*,
 converges in *1520*
-iterations.](docs/images/Pictures/10000001000004570000025F2133528F.png "fig:"){width="17cm"
+iterations.](images/Pictures/10000001000004570000025F2133528F.png "fig:"){width="17cm"
 height="9.495cm"}
 
 Several scientific papers used this possibility of FEMNET:
@@ -1477,7 +1477,7 @@ the \*.don file ().
 ![Figure 46: Initial position of the cod-end. To get this view do in
 ./batz File, load_initial_file. Here *output no_visible_symmetry *is not
 used in
-\~/femnet/data_2001/readme/*5catch*/c2.don.](docs/images/Pictures/100000010000024D000002C8BE95C9ED.png "fig:"){width="12.467cm"
+\~/femnet/data_2001/readme/*5catch*/c2.don.](images/Pictures/100000010000024D000002C8BE95C9ED.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 The nodes at the entry are fixed along X axis, the nodes on the symmetry
@@ -1498,7 +1498,7 @@ type 4: symmetry along axe Z. Type 5: constraint along axe X and
 symmetry along axe Y. Type 6: constraint along axe X and symmetry along
 axe Z. Type 7: constraint along axe X. Here output no_visible_symmetry
 is used in
-\~/femnet/data_2001/readme/5catch/c2.don.*](docs/images/Pictures/1000000100000524000002E0E535A451.png "fig:"){width="17cm"
+\~/femnet/data_2001/readme/5catch/c2.don.*](images/Pictures/1000000100000524000002E0E535A451.png "fig:"){width="17cm"
 height="9.507cm"}
 
 The commands to create the c2.mdg file are () :
@@ -1508,7 +1508,7 @@ cd \~/femnet/programs
 ./phobos \~/femnet/data_2001/readme/5catch/c2
 
 ![Figure 48: Commands to create the file
-c2.mdg.](docs/images/Pictures/10000001000004FC0000012BB83744F9.png "fig:"){width="17cm"
+c2.mdg.](images/Pictures/10000001000004FC0000012BB83744F9.png "fig:"){width="17cm"
 height="4.306cm"}
 
 The commands to calculate the equilibrium of c2 and record the result in
@@ -1519,19 +1519,19 @@ cd \~/femnet/programs
 ./unix \~/femnet/data_2001/readme/5catch/c2
 
 ![Figure 49: Commands for the equilibrium calculation of
-c2.](docs/images/Pictures/10000001000004FC0000012B2290FBA1.png "fig:"){width="17cm"
+c2.](images/Pictures/10000001000004FC0000012B2290FBA1.png "fig:"){width="17cm"
 height="4.306cm"}
 
 ![Figure 51: End of iteration. The calculation converges in *801*
 iteration, when the fourth column is less the convergence threshold (N).
 The thickness of the catch is 0.628m (sixth
-column).](docs/images/Pictures/10000001000004990000025F20F5C32F.png "fig:"){width="17cm"
+column).](images/Pictures/10000001000004990000025F20F5C32F.png "fig:"){width="17cm"
 height="9.677cm"}
 
 ![Figure 52: Equilibrium of the cod-end. The limit of the catch is
 visible (vertical black line): the catch is on the right of this limit.
 View of batz using
-\~/femnet/data_2001/readme/*5catch*/c2.](docs/images/Pictures/100000010000024D000002C854CA052F.png "fig:"){width="12.467cm"
+\~/femnet/data_2001/readme/*5catch*/c2.](images/Pictures/100000010000024D000002C854CA052F.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 If the catch is too small, there is a possibility of contact between
@@ -1543,7 +1543,7 @@ To display the contact do in batz: Element information, twines contact.
 ![Figure 53: There is a contact between knots in the blue zone. This
 contact is due to the meshes which are closed and to the size of the
 knots of the netting. View of
-\~/femnet/data_2001/readme/*5catch*/c2.](docs/images/Pictures/100000010000024D000002C8297E5B29.png "fig:"){width="12.467cm"
+\~/femnet/data_2001/readme/*5catch*/c2.](images/Pictures/100000010000024D000002C8297E5B29.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 In case of small catch volume, there could be an unrealistic behaviour
@@ -1553,7 +1553,7 @@ of the codend () has a width smaller than the previous one ().
 ![Figure 54: This codend (\~/femnet/data_2001/readme/*5catch*/d2) is
 exactly the same as the previous, except its initial shape *has a
 smaller width (see
-).*](docs/images/Pictures/100000010000024D000002C8C231E3ED.png "fig:"){width="12.467cm"
+).*](images/Pictures/100000010000024D000002C8C231E3ED.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 The commands to get the equilibrium are:
@@ -1571,7 +1571,7 @@ result is not as expected: the calculated shape is unrealistic.
 displayed, are not as expected. The catch volume is 0.2m³. This
 unrealistic calculated shape is got probably because the initial shape
 of the codend is too far the equilibrium shape. View of
-\~/femnet/data_2001/readme/*5catch*/d2.](docs/images/Pictures/100000010000024D000002C803B38833.png "fig:"){width="12.467cm"
+\~/femnet/data_2001/readme/*5catch*/d2.](images/Pictures/100000010000024D000002C803B38833.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 In such cases, a solution is to momently increase a lot the catch.
@@ -1617,28 +1617,28 @@ cd \~/femnet/programs
 
 ![Figure 56: The volume of the catch is 1m³
 (\~/femnet/data_2001/readme/*5catch*/d3). The calculated shape is
-realistic.](docs/images/Pictures/100000010000024D000002C8DF87938F.png "fig:"){width="12.467cm"
+realistic.](images/Pictures/100000010000024D000002C8DF87938F.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 ![Figure 57: The volume of the catch is 0.*4*m³. The calculation
 converges in *483* iterations. The thickness of the catch is
-0.8329m.](docs/images/Pictures/10000001000004990000025F9D0E9686.png "fig:"){width="17cm"
+0.8329m.](images/Pictures/10000001000004990000025F9D0E9686.png "fig:"){width="17cm"
 height="9.677cm"}
 
 ![Figure 58: The calculated shape of the codend with a volume catch of
 0.*4*m³ is realistic (\~/femnet/data_2001/readme/*5catch*/d4
-file).](docs/images/Pictures/100000010000024D000002C884B762D2.png "fig:"){width="12.467cm"
+file).](images/Pictures/100000010000024D000002C884B762D2.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 ![Figure 59: The calculation for a catch of 0.2m³ (d5) is done in 363
 iterations. The catch thickness is 0.6280m (sixth column) , as it is on
-.](docs/images/Pictures/10000001000004990000025F538D5F2B.png "fig:"){width="17cm"
+.](images/Pictures/10000001000004990000025F538D5F2B.png "fig:"){width="17cm"
 height="9.677cm"}
 
 ![Figure 60: The calculation gives a realistic calculated shape
 (\~/femnet/data_2001/readme/*5catch*/d5) and very similar to the one
 calculated with an another initial shape
-().](docs/images/Pictures/100000010000024D000002C8A7CC82A8.png "fig:"){width="12.467cm"
+().](images/Pictures/100000010000024D000002C8A7CC82A8.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 Several scientific papers used this possibility of FEMNET: [@sala2006],
@@ -1659,7 +1659,7 @@ m⁴). This ability of FEMNET has been described in [@Morvan].
 ![Figure 61: Small panel of suspended netting by its top boundary. The
 twines are *modelled* as cables with flexion resistance. View of batz
 using
-\~/femnet/data*\_2001/readme/6flexion/f1.*](docs/images/Pictures/100000010000024D000002C865B77F59.png "fig:"){width="12.467cm"
+\~/femnet/data*\_2001/readme/6flexion/f1.*](images/Pictures/100000010000024D000002C865B77F59.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 The initial position of this panel of netting is visible in . An another
@@ -1667,7 +1667,7 @@ parameter has to be introduced, the neutral angle between the twines.
 This angle corresponds to the angle between twines when there is no
 couple between twines.
 
-![](docs/images/Pictures/100000010000024D000002C89311860F.png){width="10.541cm"
+![](images/Pictures/100000010000024D000002C89311860F.png){width="10.541cm"
 height="13.981cm"}
 
 The flexion resistance is introduced in \*.don file such as following in
@@ -1687,7 +1687,7 @@ cd \~/femnet/programs
 ./phobos \~/femnet/data_2001/readme/6flexion/f1
 
 ![Figure 63: Commands to get the
-f1.mdg.](docs/images/Pictures/100000010000046D00000115E8DB30FF.png "fig:"){width="17cm"
+f1.mdg.](images/Pictures/100000010000046D00000115E8DB30FF.png "fig:"){width="17cm"
 height="4.08cm"}
 
 The commands to reach the equilibrium are ():
@@ -1697,7 +1697,7 @@ cd \~/femnet/programs
 ./unix \~/femnet/data_2001/readme/6flexion/f1
 
 ![Figure 64: Commands to calculate the
-equilibrium.](docs/images/Pictures/100000010000046D00000115173F3D1E.png "fig:"){width="16.831cm"
+equilibrium.](images/Pictures/100000010000046D00000115173F3D1E.png "fig:"){width="16.831cm"
 height="3.508cm"}
 
 ## []{#anchor-27}Polyamide cylinder example
@@ -1732,14 +1732,14 @@ The initial position of the 4 cables is given in .
 
 ![Figure 65: Initial position of 4 cables with a flexion resistance.
 View of batz using
-\~/femnet/data_200*1/readme/6flexion/c1.*](docs/images/Pictures/100000010000024D000002C822B0E567.png "fig:"){width="12.467cm"
+\~/femnet/data_200*1/readme/6flexion/c1.*](images/Pictures/100000010000024D000002C822B0E567.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 The equilibrium if displayed in .
 
 ![Figure 66: Final position (equilibrium) of the 4 cables with a flexion
 resistance. View of batz using
-\~/femnet/data*\_2001/readme/6flexion/c1.*](docs/images/Pictures/100000010000024D000002C8F3C3BC5F.png "fig:"){width="12.467cm"
+\~/femnet/data*\_2001/readme/6flexion/c1.*](images/Pictures/100000010000024D000002C8F3C3BC5F.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 The command to get the c1.mdg file is:
@@ -1749,7 +1749,7 @@ cd \~/femnet/programs
 ./phobos \~/femnet/data_2001/readme/6flexion/c1
 
 ![Figure 67: Commands to get
-c1.mdg.](docs/images/Pictures/100000010000046D000001152CAA8A24.png "fig:"){width="17cm"
+c1.mdg.](images/Pictures/100000010000046D000001152CAA8A24.png "fig:"){width="17cm"
 height="4.53cm"}
 
 The commands to reach the equilibrium are:
@@ -1759,14 +1759,14 @@ cd \~/femnet/programs
 ./unix \~/femnet/data_2001/readme/6flexion/c1
 
 ![Figure 68: Commands to reach the equilibrium
-(c1.sta).](docs/images/Pictures/100000010000046D000001157B4953F0.png "fig:"){width="17cm"
+(c1.sta).](images/Pictures/100000010000046D000001157B4953F0.png "fig:"){width="17cm"
 height="3.736cm"}
 
 The result of these commands is shown in . That shows that the
 equilibrium is reached in 1396 iterations.
 
 ![Figure 69: The equilibrium is reached in 959
-iterations.](docs/images/Pictures/100000010000046D000002076CB899B6.png "fig:"){width="17cm"
+iterations.](images/Pictures/100000010000046D000002076CB899B6.png "fig:"){width="17cm"
 height="7.874cm"}
 
 # []{#anchor-28}Gravity catch
@@ -1788,13 +1788,13 @@ The view of the initial shape of the netting bag is on and .
 
 ![Figure 70: Top view of the initial shape of the netting bag. The nodes
 type are shown. View of phobos using
-\~/femnet/data_200*1/readme/13gravity_catch/g1*.](docs/images/Pictures/10000001000001FB000002B017AC6881.png "fig:"){width="10.732cm"
+\~/femnet/data_200*1/readme/13gravity_catch/g1*.](images/Pictures/10000001000001FB000002B017AC6881.png "fig:"){width="10.732cm"
 height="14.563cm"}
 
 ![Figure 71: 3D view of the initial shape of the netting bag. The bag is
 closed at the bottom by 4 ropes and it is hold at the top by 4 rigid
 cables. View of batz using
-\~/femnet/data_200*1/readme/13gravity_catch/g*1.](docs/images/Pictures/100000010000024D000002C81BEDD736.png "fig:"){width="12.467cm"
+\~/femnet/data_200*1/readme/13gravity_catch/g*1.](images/Pictures/100000010000024D000002C81BEDD736.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 The nodes at the top are fixed along Z axis. The nodes of type 3 () are
@@ -1851,7 +1851,7 @@ cd \~/femnet/programs
 *./phobos \~/femnet/data_2001/readme/13gravity_catch/g1*
 
 ![Figure 72: Commands to create the file
-*g1*.mdg.](docs/images/Pictures/10000001000004E6000001150A99D8DD.png "fig:"){width="17cm"
+*g1*.mdg.](images/Pictures/10000001000004E6000001150A99D8DD.png "fig:"){width="17cm"
 height="4.306cm"}
 
 The commands to calculate the equilibrium of g1 and record the result in
@@ -1862,7 +1862,7 @@ cd \~/femnet/programs
 ./unix \~/femnet/data_2001/readme/13gravity_catch/g1
 
 ![Figure 73: Commands for the equilibrium calculation of
-*g1*.](docs/images/Pictures/10000001000004E6000001159A68388B.png "fig:"){width="17cm"
+*g1*.](images/Pictures/10000001000004E6000001159A68388B.png "fig:"){width="17cm"
 height="4.306cm"}
 
 In order to have a finer discretization, the meshing step of netting
@@ -1884,16 +1884,16 @@ and (, )
 
 ![Figure 75: Command to create g2.mdg and a first evaluation of g2.sta
 from
-g1.](docs/images/Pictures/10000001000004D00000014123B1ED87.png "fig:"){width="17cm"
+g1.](images/Pictures/10000001000004D00000014123B1ED87.png "fig:"){width="17cm"
 height="4.237cm"}
 
 ![Figure 76: Command for the calculation of the equilibrium of
-g2.](docs/images/Pictures/10000001000004D0000000E9F9145B08.png "fig:"){width="17cm"
+g2.](images/Pictures/10000001000004D0000000E9F9145B08.png "fig:"){width="17cm"
 height="3.493cm"}
 
 ![Figure 77: Calculation of the equilibrium of g2 in 1865 iterations
 stored in
-g2.sta.](docs/images/Pictures/10000001000004D0000002F93FD56BA4.png "fig:"){width="17cm"
+g2.sta.](images/Pictures/10000001000004D0000002F93FD56BA4.png "fig:"){width="17cm"
 height="9.495cm"}
 
 The equilibrium is reached in 1859 iterations (). The shape is displayed
@@ -1918,7 +1918,7 @@ the netting.
 
 ![Figure 78: Equilibrium of the *netting bag*. The catch is *below* the
 horizontal line. View of batz using
-\~/femnet/data_200*1/readme/13gravity_catch/g2*.](docs/images/Pictures/100000010000024D000002C852702C06.png "fig:"){width="12.467cm"
+\~/femnet/data_200*1/readme/13gravity_catch/g2*.](images/Pictures/100000010000024D000002C852702C06.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 # []{#anchor-29}./dyna
@@ -1962,14 +1962,14 @@ FEMNET are Airy model (linear wave theory), Stokes 2^nd^ order in
 intermediate depth and deep waters, and Stokes 3^rd^ order in deep
 waters. The wave model valid depends on H, T and d is depth. H is wave
 height, T is wave period and d is depth
-.](docs/images/Pictures/100000010000021E0000020F6F94538D.png "fig:"){width="11.472cm"
+.](images/Pictures/100000010000021E0000020F6F94538D.png "fig:"){width="11.472cm"
 height="11.155cm"}
 
 # []{#anchor-30}FAD
 
 ![Figure 80: The FAD moored by 1500m deep waters and in current of
 1.5m/s. View of batz using
-\~/*femnet/data_2001/readme/7fad/g3.*](docs/images/Pictures/100000010000024D000002C838624023.png "fig:"){width="12.467cm"
+\~/*femnet/data_2001/readme/7fad/g3.*](images/Pictures/100000010000024D000002C838624023.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 The wave conditions are:
@@ -1991,13 +1991,13 @@ order in deep waters (*input wave_model 3*) can also be used.
 
 ![Figure 81: The wave conditions of the FAD are shown with the red
 cross. The wave model of Stokes 2d order is adapted to such wave
-conditions.](docs/images/Pictures/10000000000004B000000384349B69EC.png "fig:"){width="17cm"
+conditions.](images/Pictures/10000000000004B000000384349B69EC.png "fig:"){width="17cm"
 height="12.749cm"}
 
 []{#anchor-31}![Figure 82: Static position (on the left) and nodes
 trajectories (on the right due to the wave drift) of the top of the FAD
 assessed with the *Stokes 2d order* wave model. View of batz using
-\~/femnet/data*\_2001/readme/7fad/g3.*](docs/images/Pictures/1000000100000524000002E0F6E46D10.png "fig:fig:"){width="17cm"
+\~/femnet/data*\_2001/readme/7fad/g3.*](images/Pictures/1000000100000524000002E0F6E46D10.png "fig:fig:"){width="17cm"
 height="9.507cm"}
 
 The commands to create mdg file are:
@@ -2036,7 +2036,7 @@ load_initial_file, Visualisation, Cable/bar_contour, Visualisation,
 node_contour, Visualisation, free_surface, turn the view of 270 degrees
 in the left vertical cursor and turn of 80 degrees in the horizontal
 cursor. View of batz using
-\~/femnet/data*\_2001/readme/8long_line/m1.*](docs/images/Pictures/1000000100000524000002E0344797AF.png "fig:"){width="14.563cm"
+\~/femnet/data*\_2001/readme/8long_line/m1.*](images/Pictures/1000000100000524000002E0344797AF.png "fig:"){width="14.563cm"
 height="10.732cm"}
 
 The intermediate floats on the mooring line are defined as a specific
@@ -2076,7 +2076,7 @@ modelled in 6 bar elements. The volume of the float is split between the
 ![Figure 84: A float is modelled by 6 bar elements (on the right). The
 volumes of bar elements *are* split in cubes on bar element extremities
 (on the left). View of batz using
-\~/femnet/data_2001/r*eadme/8long_line/m1.*](docs/images/Pictures/10000001000004B2000002D1E466F96B.png "fig:"){width="17cm"
+\~/femnet/data_2001/r*eadme/8long_line/m1.*](images/Pictures/10000001000004B2000002D1E466F96B.png "fig:"){width="17cm"
 height="10.197cm"}
 
 If the float is modelled in 1 bar element (left of ). The volume of the
@@ -2087,7 +2087,7 @@ coarser.
 ![Figure 85: A float is modelled by *1* bar element (on the left). The
 volume of bar element is split in cubes on bar element extremities (on
 the right). This modelling is coarser than on . View of batz using
-\~/femnet/data_2001*/readme/8long_line/m2.*](docs/images/Pictures/10000001000004B0000002D08FF105CB.png "fig:"){width="17cm"
+\~/femnet/data_2001*/readme/8long_line/m2.*](images/Pictures/10000001000004B0000002D08FF105CB.png "fig:"){width="17cm"
 height="10.199cm"}
 
 Once the float is modelled in several bar elements (), it must be
@@ -2115,14 +2115,14 @@ cd \~/femnet/programs
 
 ![Figure 86: The static equilibrium of the mussels long line is reach in
 *814*
-iterations.](docs/images/Pictures/10000001000004D0000002F91FB51578.png "fig:"){width="17cm"
+iterations.](images/Pictures/10000001000004D0000002F91FB51578.png "fig:"){width="17cm"
 height="9.495cm"}
 
 The shape of the long line in static conditions is displayed on .
 
 ![Figure 87: Static position of th*e mussels long line m1. View of batz
 using
-\~/femnet/data_2001/readme/8long_line/m1.*](docs/images/Pictures/10000001000007820000043A9EAB7409.png "fig:"){width="17cm"
+\~/femnet/data_2001/readme/8long_line/m1.*](images/Pictures/10000001000007820000043A9EAB7409.png "fig:"){width="17cm"
 height="2.533cm"}
 
 The wave conditions and the depth lead to use the Stokes 2d order wave
@@ -2131,7 +2131,7 @@ model as it can be seen on .
 ![Figure 88: The wave conditions of the *mussels long line* are shown
 with the red cross. The wave model of Stokes 2d order is adapted to such
 wave conditions and
-depth.](docs/images/Pictures/10000000000004B000000384F5A0F768.png "fig:"){width="17cm"
+depth.](images/Pictures/10000000000004B000000384F5A0F768.png "fig:"){width="17cm"
 height="12.749cm"}
 
 The dynamic equilibrium is got using in a terminal:
@@ -2150,7 +2150,7 @@ Here the scalar product for node is not null due to the *intermediate
 float on the 2 mooring lines. This float is described as a node with a
 lengths (m) along X, Y and Z which give sections (m²) and consequently a
 drag
-(N).*](docs/images/Pictures/1000000100000533000002757E226176.png "fig:"){width="17cm"
+(N).*](images/Pictures/1000000100000533000002757E226176.png "fig:"){width="17cm"
 height="6.869cm"}
 
 A dynamic position is got using,
@@ -2166,7 +2166,7 @@ dynamic position ().
 
 ![Figure 90: The dynamic position of the mussels long line in waves.
 View of batz using
-\~/femnet/data_20*01/readme/8long_line/m1.*](docs/images/Pictures/100000010000068E00000217183E18D4.png "fig:"){width="17cm"
+\~/femnet/data_20*01/readme/8long_line/m1.*](images/Pictures/100000010000068E00000217183E18D4.png "fig:"){width="17cm"
 height="5.419cm"}
 
 # []{#anchor-33}Netting boom
@@ -2196,7 +2196,7 @@ cd \~/femnet/programs
 ./phobos
 
 ![Figure 91: Command for graphic
-phobos.](docs/images/Pictures/100000010000034F000000D33AF9D699.png "fig:"){width="17cm"
+phobos.](images/Pictures/100000010000034F000000D33AF9D699.png "fig:"){width="17cm"
 height="3.956cm"}
 
 In phobos, do: File, create_mdg_file. Choose
@@ -2220,7 +2220,7 @@ diagonals is the distance between numeric nodes along axe Z ().
 ![Figure 92: Phobos *on *\~/femnet/data_20*01/readme/9gill_net/h1 file*.
 The 3 V diagonals have the length identical as the distance between
 numeric nodes along Z
-axe.](docs/images/Pictures/10000001000001FB000002B04621729D.png "fig:"){width="10.732cm"
+axe.](images/Pictures/10000001000001FB000002B04621729D.png "fig:"){width="10.732cm"
 height="14.563cm"}
 
 Spheric floats are added on the head line with the following command:
@@ -2234,13 +2234,13 @@ the headline on .
 
 ![Figure 93: A zoom on an extremity of the boom. The twines are shown.
 The spheric floats are visible. View of batz using
-\~/femnet/d*ata_2001/readme/9gill_net/h1.*](docs/images/Pictures/1000000100000522000002E9B926CC6A.png "fig:"){width="17cm"
+\~/femnet/d*ata_2001/readme/9gill_net/h1.*](images/Pictures/1000000100000522000002E9B926CC6A.png "fig:"){width="17cm"
 height="9.638cm"}
 
 ![Figure 94: The same zoom on the boom as , the twines are hidden, the
 triangular elements of netting are shown. These triangular elements are
 very long relatively to their width. View of batz using
-\~/femnet/d*ata_2001/readme/9gill_net/h1.*](docs/images/Pictures/1000000100000522000002E93294B097.png "fig:"){width="17cm"
+\~/femnet/d*ata_2001/readme/9gill_net/h1.*](images/Pictures/1000000100000522000002E93294B097.png "fig:"){width="17cm"
 height="9.638cm"}
 
 The calculation of the static equilibrium of h1 is got with the command:
@@ -2250,19 +2250,19 @@ cd \~/femnet/programs
 ./unix \~/femnet/data_2001/readme/9gill_net/h1
 
 ![Figure 95: Commands to calculate the static equilibrium of
-h1.](docs/images/Pictures/100000010000048E000000D3CC54DEFD.png "fig:"){width="17cm"
+h1.](images/Pictures/100000010000048E000000D3CC54DEFD.png "fig:"){width="17cm"
 height="3.357cm"}
 
 ![Figure 96: The static equilibrium of h1 is reached in *948*
 iterations.
-](docs/images/Pictures/100000010000046D000002F9DE367417.png "fig:"){width="17cm"
+](images/Pictures/100000010000046D000002F9DE367417.png "fig:"){width="17cm"
 height="9.495cm"}
 
 The static position is displayed on .
 
 ![Figure 97: Static position of the boom in the current. View of batz
 using
-\~/femnet/data*\_2001/readme/9gill_net/h1.*](docs/images/Pictures/1000000100000782000004B2572DA88A.png "fig:"){width="17cm"
+\~/femnet/data*\_2001/readme/9gill_net/h1.*](images/Pictures/1000000100000782000004B2572DA88A.png "fig:"){width="17cm"
 height="7.945cm"}
 
 The dynamic position of the boom is got using the commands ():
@@ -2272,7 +2272,7 @@ cd \~/femnet/programs
 ./dyna \~/femnet/data_2001/readme/9gill_net/h1
 
 ![Figure 98: Commands to get the dynamic equilibrium of
-h1.](docs/images/Pictures/1000000100000483000000E982E76752.png "fig:"){width="17cm"
+h1.](images/Pictures/1000000100000483000000E982E76752.png "fig:"){width="17cm"
 height="3.572cm"}
 
 ![Figure 99: Dynamic calculation of the *boom* on *60s*. The columns
@@ -2281,7 +2281,7 @@ unit of this scalar product is the Watt. Column Haul is used when
 hauling cables are used (it is not the case here). Bottom when there is
 a friction with the sea bottom (not the case here). Cable (Netting,
 *Node*) in case of drag and displacement of cables (nettings,
-*nodes*).](docs/images/Pictures/1000000100000533000002B754774403.png "fig:"){width="17cm"
+*nodes*).](images/Pictures/1000000100000533000002B754774403.png "fig:"){width="17cm"
 height="9.495cm"}
 
 A Shape of the boom in wave is shown on . This shape is got using the
@@ -2293,7 +2293,7 @@ vertical cursor is used to adjust the time step required.
 ![Figure 100: A dynamic position of the boom in wave. It can be seen
 that the headline *don't* always stay on the free surface (blue line).
 View of batz using
-\~/femnet/data\_*2001/readme/9gill_net/h1.*](docs/images/Pictures/100000010000075200000233C31197B1.png "fig:"){width="17cm"
+\~/femnet/data\_*2001/readme/9gill_net/h1.*](images/Pictures/100000010000075200000233C31197B1.png "fig:"){width="17cm"
 height="7.945cm"}
 
 # []{#anchor-34}Fish cage
@@ -2303,7 +2303,7 @@ A fish cage using flexible polyethylene pipes as float, and moored with
 
 ![Figure 101: Fish cage. PE pipes are used as floats at the free
 surface. The mooring lines ends with chains. View of batz using
-\~/femnet/data_2001*/readme/10fish_cage/f1.*](docs/images/Pictures/10000001000006370000026950ABA865.png "fig:"){width="17cm"
+\~/femnet/data_2001*/readme/10fish_cage/f1.*](images/Pictures/10000001000006370000026950ABA865.png "fig:"){width="17cm"
 height="6.592cm"}
 
 The \*.don file is quite complex: it is made of 14 panels of netting,
@@ -2313,13 +2313,13 @@ of two concentric PE pipes (). The netting is taut with a circular dead
 weight (). The dead weight is fixed to the floating collar by 12 ropes
 and fixed to the bottom of netting by 12 ropes ().
 
-![](docs/images/Pictures/10000001000002BB0000033E8501F62E.png "fig:"){width="7.546cm"
+![](images/Pictures/10000001000002BB0000033E8501F62E.png "fig:"){width="7.546cm"
 height="8.959cm"}
 
-![](docs/images/Pictures/10000001000002BB0000033EF31EBAA2.png "fig:"){width="7.842cm"
+![](images/Pictures/10000001000002BB0000033EF31EBAA2.png "fig:"){width="7.842cm"
 height="9.312cm"}
 
-![](docs/images/Pictures/10000001000002BB0000033ED0AD3204.png "fig:"){width="8.878cm"
+![](images/Pictures/10000001000002BB0000033ED0AD3204.png "fig:"){width="8.878cm"
 height="10.539cm"}
 
 The fish cage is moored using 3 mooring lines () made of, from the sea
@@ -2329,7 +2329,7 @@ and 2 bridles. The bridles are fixed to the floating collar of the cage.
 ![Figure 105: Each of the 3 mooring lines *is* made, from the bottom, of
 chain (black), sub-surface rope (red), buoy (green), surface rope
 (*blue*) and 2 bridles (red). View of batz using
-\~/femnet/data_2001/r*eadme/10fish_cage/f1.*](docs/images/Pictures/1000000100000524000002E031975E89.png "fig:"){width="17cm"
+\~/femnet/data_2001/r*eadme/10fish_cage/f1.*](images/Pictures/1000000100000524000002E031975E89.png "fig:"){width="17cm"
 height="7.426cm"}
 
 It is recommanded to use an help to create the \*.don file (f1.don) due
@@ -2339,7 +2339,7 @@ each component are defined in a specific worksheet. Have a look at
 each worksheet are copied in the don file.
 
 ![Figure 106: Fish cage in waves. View of batz using
-\~/femnet/data_2001/re*adme/10fish_cage/f1.*](docs/images/Pictures/10000001000006050000017E43DD7942.png "fig:"){width="17cm"
+\~/femnet/data_2001/re*adme/10fish_cage/f1.*](images/Pictures/10000001000006050000017E43DD7942.png "fig:"){width="17cm"
 height="4.214cm"}
 
 Once f1.don is created, doing f1.mdg with the commands ():
@@ -2349,7 +2349,7 @@ cd \~/femnet/programs
 ./phobos \~/femnet/data_2001/readme/10fish_cage/f1
 
 ![Figure 107: Creation of f1.*mdg* using
-phobos.](docs/images/Pictures/10000001000004A4000000D35AFCF518.png "fig:"){width="17cm"
+phobos.](images/Pictures/10000001000004A4000000D35AFCF518.png "fig:"){width="17cm"
 height="3.3cm"}
 
 The calculation of the static equilibrium of the cage described by
@@ -2360,7 +2360,7 @@ cd \~/femnet/programs
 ./unix \~/femnet/data_2001/readme/10fish_cage/f1
 
 ![Figure 108: Commands used for the calculation of
-f1.sta.](docs/images/Pictures/10000001000004A4000000D30370DC75.png "fig:"){width="17cm"
+f1.sta.](images/Pictures/10000001000004A4000000D30370DC75.png "fig:"){width="17cm"
 height="3.3cm"}
 
 In order to have a more detailed fish cage, f2.don is created. It is a
@@ -2394,7 +2394,7 @@ This commands also creates an estimation of the static equilibrium of f2
 
 ![Figure 109: Creation of f*2*.*mdg* using phobos. This commands
 estimates also f2.sta using
-f1.sta.](docs/images/Pictures/10000001000003F4000000FF493097B4.png "fig:"){width="17cm"
+f1.sta.](images/Pictures/10000001000003F4000000FF493097B4.png "fig:"){width="17cm"
 height="3.582cm"}
 
 The commands to calculate the equilibrium in static conditions of f2 are
@@ -2406,7 +2406,7 @@ cd \~/femnet/programs
 
 ![Figure 110: Commands for the calculation of the equilibrium in static
 conditions of
-f2.](docs/images/Pictures/10000001000004DB000000E9E408D1A3.png "fig:"){width="17cm"
+f2.](images/Pictures/10000001000004DB000000E9E408D1A3.png "fig:"){width="17cm"
 height="3.415cm"}
 
 The commands to calculate the equilibrium in dynamic conditions of f2
@@ -2418,7 +2418,7 @@ cd \~/femnet/programs
 
 ![Figure 111: Commands for the calculation of the equilibrium in
 *dynamic* conditions of
-f2.](docs/images/Pictures/10000001000004DB000000E93DBE42A9.png "fig:"){width="17cm"
+f2.](images/Pictures/10000001000004DB000000E93DBE42A9.png "fig:"){width="17cm"
 height="3.145cm"}
 
 A view of the cage (f2) in the wave is given .
@@ -2428,7 +2428,7 @@ A view of the cage (f2) in the wave is given .
 at 270deg in order to have a side view. The horizontal cursor is tuned
 at 140deg in order to a view normal to wave propagation: 140deg is the
 complement of wave direction (40deg) to
-180deg.*](docs/images/Pictures/100000010000024D000002C8544496FB.png "fig:"){width="12.467cm"
+180deg.*](images/Pictures/100000010000024D000002C8544496FB.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
 # []{#anchor-35}Bottom seine
@@ -2447,7 +2447,7 @@ with one corner the boat (on the left) and the trawl at the opposite
 corner (on the right). The structure is symmetric around a vertical
 plane. The square is got using external forces (green lines). View of
 batz using
-\~/femnet/data_2001/read*me/11bottom_seine/s1.*](docs/images/Pictures/100000010000032D000002A94A96BC23.png "fig:"){width="17cm"
+\~/femnet/data_2001/read*me/11bottom_seine/s1.*](images/Pictures/100000010000032D000002A94A96BC23.png "fig:"){width="17cm"
 height="14.24cm"}
 
 Because the cable is defined as a line () in s1.don, it is necessary to
@@ -2475,7 +2475,7 @@ the red circle. The type 5 is also visible in two places.
 is displayed: it can be seen type 4 in the middle of the cable and *two*
 types 5 at the rear part of the trawl (inside the red circles). View of
 *phobos* using
-\~/femnet/data_2001/re*adme/11bottom_seine/s1.*](docs/images/Pictures/100000010000050B000002B0BFE46434.png "fig:"){width="17cm"
+\~/femnet/data_2001/re*adme/11bottom_seine/s1.*](images/Pictures/100000010000050B000002B0BFE46434.png "fig:"){width="17cm"
 height="9.059cm"}
 
 The external force on type 5 is 10000N and 20000N along axe Y on type 4
@@ -2637,7 +2637,7 @@ get this view, do in a terminal cd \~/femnet/programs, ./phobos, File,
 *triangle_contour*, choose \~/femnet/data_2001/readme/11bottom_seine/s4,
 Visualisation, contour_cable_bar, Visualisation, twines_contour,
 Node_information,
-node_corner.](docs/images/Pictures/100000010000050B000002B00BDEA5BE.png "fig:"){width="17cm"
+node_corner.](images/Pictures/100000010000050B000002B00BDEA5BE.png "fig:"){width="17cm"
 height="9.059cm"}
 
 In this example, the boat tows the seine. To introduce this towing use
@@ -2673,7 +2673,7 @@ cd \~/femnet/programs
 ./dyna \~/femnet/data_2001/readme/11bottom_seine/s4
 
 ![Figure 116: Shape of the bottom seine at 700s. View of batz using
-\~/femnet/data_2*001/readme/11bottom_seine/s4.*](docs/images/Pictures/1000000100000782000004B25C5585FF.png "fig:"){width="17cm"
+\~/femnet/data_2*001/readme/11bottom_seine/s4.*](images/Pictures/1000000100000782000004B25C5585FF.png "fig:"){width="17cm"
 height="10.631cm"}
 
 # []{#anchor-36}Symmetry plane
@@ -2780,26 +2780,26 @@ Few examples are shown on the following figures.
 ![Figure 117: Piece of netting modelled with triangular elements. The
 twines are shown. The triangular elements are hidden. Here the command
 *input netting2ropes* is not
-used.](docs/images/Pictures/1000000100000255000002D3CE043522.png "fig:"){width="8.26cm"
+used.](images/Pictures/1000000100000255000002D3CE043522.png "fig:"){width="8.26cm"
 height="9.999cm"}![Figure 118: Same model. The triangular elements are
 shown. The twines are hidden. Here the command *input netting2ropes* is
 not
-used.](docs/images/Pictures/1000000100000255000002D389C9C158.png "fig:"){width="8.26cm"
+used.](images/Pictures/1000000100000255000002D389C9C158.png "fig:"){width="8.26cm"
 height="9.999cm"}
 
 ![Figure 119: Same netting, using *input netting2ropes 1 20 0.0 0.0 3
-2*](docs/images/Pictures/1000000100000255000002D3ED632739.png "fig:"){width="8.26cm"
+2*](images/Pictures/1000000100000255000002D3ED632739.png "fig:"){width="8.26cm"
 height="9.999cm"}![Figure 120: Same netting using *input netting2ropes 1
 5 0.0 0.0 1
-1*](docs/images/Pictures/1000000100000255000002D39C4D0942.png "fig:"){width="8.26cm"
+1*](images/Pictures/1000000100000255000002D39C4D0942.png "fig:"){width="8.26cm"
 height="9.999cm"}
 
 ![Figure 121: Same netting using input netting2ropes *input
 netting2ropes 1 20 0.25 0.25 3
-2*](docs/images/Pictures/1000000100000255000002D3D139D8D1.png "fig:"){width="8.26cm"
+2*](images/Pictures/1000000100000255000002D3D139D8D1.png "fig:"){width="8.26cm"
 height="9.999cm"}![Figure 122: Same netting using *input netting2ropes 1
 20 0.5 0.0 3
-2*](docs/images/Pictures/1000000100000255000002D33B3E8342.png "fig:"){width="8.26cm"
+2*](images/Pictures/1000000100000255000002D33B3E8342.png "fig:"){width="8.26cm"
 height="9.999cm"}
 
 # []{#anchor-38}./gengis
@@ -2814,14 +2814,14 @@ cd \~/femnet/programs
 ./gengis
 
 ![Figure 123: Command for launching
-gengis.](docs/images/Pictures/100000010000038A000000EC293B8E7D.png "fig:"){width="10.982cm"
+gengis.](images/Pictures/100000010000038A000000EC293B8E7D.png "fig:"){width="10.982cm"
 height="2.861cm"}
 
 This command gives the tool on following figure.
 
 ![Figure 124: The tool ./gengis which is used for helping the writing of
 \*.don
-files.](docs/images/Pictures/1000000100000350000002D69EAC39F3.png "fig:"){width="12.31cm"
+files.](images/Pictures/1000000100000350000002D69EAC39F3.png "fig:"){width="12.31cm"
 height="10.539cm"}
 
 1.  Choose the plane view. For trawl prefer XZ. Do Actions, View
@@ -2837,7 +2837,7 @@ height="10.539cm"}
 
 ![Figure 125: Gengis. On the left, creation of one netting panel with
 Actions, Create Panels. On the right the plan of the
-structure.](docs/images/Pictures/1000000100000CD600000438E8260B80.png "fig:"){width="16.468cm"
+structure.](images/Pictures/1000000100000CD600000438E8260B80.png "fig:"){width="16.468cm"
 height="9.606cm"}
 
 1.  Define the number of meshes per netting panel. Do Actions, Modify
@@ -2855,14 +2855,14 @@ height="9.606cm"}
 The directions of U and V meshes are noted in red. 40 and 200 and the
 number of meshes of the first node of the highlighted edge. -40 and -40
 are the number of meshes U and V between the 2 nodes of this
-edge.](docs/images/Pictures/100000010000034E000003F4E6BD125A.png "fig:"){width="11.718cm"
+edge.](images/Pictures/100000010000034E000003F4E6BD125A.png "fig:"){width="11.718cm"
 height="14.018cm"}
 
 1.  Create cables. Do Actions, Create Cables. They appear in green.
 
 ![Figure 127: Creation of cables by doing Actions, Create cables and use
 the mouse. The cables appear in
-green.](docs/images/Pictures/100000010000036000000412E6C787BC.png "fig:"){width="13.845cm"
+green.](images/Pictures/100000010000036000000412E6C787BC.png "fig:"){width="13.845cm"
 height="16.695cm"}
 
 1.  In order to improve the visualisation of the structure? It could be
@@ -2874,7 +2874,7 @@ height="16.695cm"}
 
 ![Figure 128: Dialogue box used to modify X coordinates of selected
 nodes. The mean and the standard deviation of selected nodes are
-displayed.](docs/images/Pictures/1000000100000236000000DAB82A2994.png "fig:"){width="9.703cm"
+displayed.](images/Pictures/1000000100000236000000DAB82A2994.png "fig:"){width="9.703cm"
 height="3.738cm"}
 
 1.  Do the same for the alignment along Z. Once done for each nodes,
@@ -2882,7 +2882,7 @@ height="3.738cm"}
 
 ![Figure 129: Once all nodes have been aligned using Alignment,
 Alignment Mode and Alignment X and Alignment
-Z.](docs/images/Pictures/100000010000036000000412167A2EE5.png "fig:"){width="17cm"
+Z.](images/Pictures/100000010000036000000412167A2EE5.png "fig:"){width="17cm"
 height="20.5cm"}
 
 1.  The type of nodes, panels, edges of panels and cables have to be
@@ -2904,7 +2904,7 @@ height="20.5cm"}
 ![Figure 130: The types of nodes, panels, cable and edges of panels are
 displayed using Types, Point Types, Panel Panels, Edge Types, Cable
 Types.
-](docs/images/Pictures/1000000100000360000004128632BE74.png "fig:"){width="13.107cm"
+](images/Pictures/1000000100000360000004128632BE74.png "fig:"){width="13.107cm"
 height="15.808cm"}
 
 1.  In order to created the seams between the components links have to
@@ -2913,7 +2913,7 @@ height="15.808cm"}
 
 ![Figure 131: Do Actions, Create Links in order to link and to seam the
 components. The links appears in red dotted
-lines.](docs/images/Pictures/100000010000036000000412C25EA08F.png "fig:"){width="7.729cm"
+lines.](images/Pictures/100000010000036000000412C25EA08F.png "fig:"){width="7.729cm"
 height="9.32cm"}
 
 1.  Do File, Save in order to create a first level of don file, for
@@ -2927,7 +2927,7 @@ height="9.32cm"}
 ![Figure 132: ./gengis has dimensions X, Y and Z in pixels when \*.don
 file has dimensions in meters. The action Zoom, Set Zoom pixel/m allows
 to adjust the 2
-dimensions.](docs/images/Pictures/1000000100000236000000C432880EDB.png "fig:"){width="7.253cm"
+dimensions.](images/Pictures/1000000100000236000000C432880EDB.png "fig:"){width="7.253cm"
 height="2.512cm"}
 
 1.  Verify the file geometry.don with ./phobos. Launch ./phobos in a
@@ -2938,7 +2938,7 @@ height="2.512cm"}
 ![Figure 133: The file created by ./gengis is verify using ./phobos. Do
 File, create_mdg_file, Visualisation, contour_diamond,
 contour_cable_bar, twines_contour, adjust twines_period (here
-10).](docs/images/Pictures/1000000100000206000003101CC3AFD4.png "fig:"){width="8.906cm"
+10).](images/Pictures/1000000100000206000003101CC3AFD4.png "fig:"){width="8.906cm"
 height="13.478cm"}
 
 1.  The don file is not fully completed: the characteristics of panels
@@ -3363,7 +3363,7 @@ Fd (N) 4209.367500 Fl (N) 6847.237800
 
 ![Figure 134: Appendix IV-17 of the document Otterboard Performance and
 Behaviour. Characteristics of trawl door model (surface, mass, cd and
-cl).](docs/images/Pictures/10000001000001920000028C81225D33.png "fig:"){width="13.06cm"
+cl).](images/Pictures/10000001000001920000028C81225D33.png "fig:"){width="13.06cm"
 height="21.183cm"}
 
 ## []{#anchor-48}Foil determined by hydrodynamic coefficients and surface
