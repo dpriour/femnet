@@ -118,7 +118,7 @@ follows a strict template:
 ## []{#anchor-6}-The first part:
 
 In this first part, the order of the commands must be respected.
-
+<span style="color: red;">Texte en rouge</span>
 design in the plane normal to axis: 2
 
 The design of the structure is done in the plane normal to axis **2**
