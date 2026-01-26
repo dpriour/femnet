@@ -108,9 +108,9 @@ the plane normal to axis: 2*), *design in the plane normal to axis *is
 the comment, *2 *is the value of the parameter and between these two
 parts there is a colon (*:*).
 
-In the following s1.don file (in
-\~/femnet/data_2001/readme/1pelagic_trawl) is displayed in blue, a
-tentative of explanation is given in green and with figures. This file
+In the following, s1.don file (in
+\~/femnet/data_2001/readme/1pelagic_trawl) is displayed in bold, a
+tentative of explanation is given with figures. This file
 describes a pelagic trawl. In this file the boat is fixed and a current
 represents the towing speed. The file begins with the first part which
 follows a strict template:
@@ -118,19 +118,19 @@ follows a strict template:
 ## []{#anchor-6}-The first part:
 
 In this first part, the order of the commands must be respected.
-<span style="color: red;">Texte en rouge</span>
-design in the plane normal to axis: 2
+
+**design in the plane normal to axis: 2**
 
 The design of the structure is done in the plane normal to axis **2**
 (Y) that means in the plane ZX.
 
-*This is used by phobos. The gives the view of phobos of this file. That
+This is used by phobos. The gives the view of phobos of this file. That
 shows panels of netting in blue, cables or bars in red. The design is in
 the plane ZX. To get the view of do cd \~/femnet/programs, ./phobos,
 File, load_don_file, choose s1.don, Visualisation, contour_diamond,
 Visualisation, contour_cable_bar, Visualisation, axes. If, in place of
 2, 1 is used, the design is in the plane YZ. If 3 is used the design is
-in the plane XY.*
+in the plane XY.
 
 ![Figure 5: *Design of a pelagic trawl
 \~/femnet/data_2001/readme/1pelagic_trawl/s1 displayed with phobos
