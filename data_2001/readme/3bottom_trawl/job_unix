@@ -1,0 +1,28 @@
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/3bottom_trawl/b1
+./unix ~/femnet/data_2001/readme/3bottom_trawl/b1
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/3bottom_trawl/b2 ~/femnet/data_2001/readme/3bottom_trawl/b1
+./unix ~/femnet/data_2001/readme/3bottom_trawl/b2
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/3bottom_trawl/b3 ~/femnet/data_2001/readme/3bottom_trawl/b2
+./unix ~/femnet/data_2001/readme/3bottom_trawl/b3
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/3bottom_trawl/b3_bridle ~/femnet/data_2001/readme/3bottom_trawl/b3
+./unix ~/femnet/data_2001/readme/3bottom_trawl/b3_bridle
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/3bottom_trawl/b3_aile ~/femnet/data_2001/readme/3bottom_trawl/b3
+./unix ~/femnet/data_2001/readme/3bottom_trawl/b3_aile
+
+
+convert -flatten ../data_2001/optim/gloria/LM_2_12.ps ../data_2001/optim/gloria/LM_2_12a.png
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/3bottom_trawl/b31 ~/femnet/data_2001/readme/3bottom_trawl/b3
+./unix ~/femnet/data_2001/readme/3bottom_trawl/b31
+
+

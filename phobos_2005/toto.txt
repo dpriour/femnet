@@ -1,0 +1,679 @@
+chargement_don.c:	int nb_barre_choisi;
+chargement_don.c:    		do  c=fgetc(fic); while (c !=':');itmp = fscanf(fic,"%d\n",&element[pa].nb_barre);
+chargement_don.c:		printf("nb barre = %8d  \n",element[pa].nb_barre);*/
+chargement_don.c:  		element[pa].noeud = (int *) malloc((1 + element[pa].nb_barre) * sizeof(int));
+chargement_don.c:  		element[pa].barre = (int *) malloc((1 + element[pa].nb_barre) * sizeof(int));
+chargement_don.c:		if (element[pa].barre    == NULL)
+chargement_don.c:			printf(" element[pa].barre 1 = NULL  \n" );
+chargement_don.c:  		element[pa].prop = (double *) malloc((1 + element[pa].nb_barre) * sizeof(double));
+chargement_don.c:    		do  c=fgetc(fic); while (c !=':');itmp = fscanf(fic,"%d\n",&winch[pa].nb_barre);
+chargement_don.c:  		winch[pa].noeud = (int *) malloc((1 + winch[pa].nb_barre) * sizeof(int));
+chargement_don.c:  		winch[pa].barre = (int *) malloc((1 + winch[pa].nb_barre) * sizeof(int));
+chargement_don.c:		if (winch[pa].barre    == NULL)
+chargement_don.c:			printf(" winch[pa].barre 1 = NULL  \n" );
+chargement_don.c:				itmp = fscanf(fic,"%d",&panneau[temp_int].netting_2_ropes_bar_nb);
+chargement_don.c:				printf("netting_2_ropes_bar_nb %d\n",panneau[temp_int].netting_2_ropes_bar_nb);
+chargement_don.c:				itmp = fscanf(fic,"%d",&Slider[Structure.nb_slider].nb_bar);
+chargement_don.c:				printf("Slider %d has %d elements :",Structure.nb_slider,Slider[Structure.nb_slider].nb_bar);
+chargement_don.c:				Slider[Structure.nb_slider].barre =	(int *)    Malloc_int(1 + Slider[Structure.nb_slider].nb_bar);
+chargement_don.c:				for (zi=1;zi<=Slider[Structure.nb_slider].nb_bar;zi++)
+chargement_don.c:					itmp = fscanf(fic,"%d",&Slider[Structure.nb_slider].barre[zi]);
+chargement_don.c:					element[Slider[Structure.nb_slider].barre[zi]].slider = Structure.nb_slider;	//this element is part of a slider
+chargement_don.c:					//element[Slider[Structure.nb_slider].barre[zi]].flag_dessin = 0;
+chargement_don.c:					printf(" %d",Slider[Structure.nb_slider].barre[zi]);
+chargement_don.c:			if (strcmp(chaine,"Diamond_panel_2_bar_element") == 0)
+chargement_don.c:				printf("Discretisation of panel %d in bar elements\n",temp_int);
+chargement_don.c:				printf("n: %d ",element[pa+j].nb_barre);
+chargement_don.c:			    		element[pa+j].nb_barre 		= element[j].nb_barre;
+chargement_don.c:					printf("n: %d ",element[pa+j].nb_barre);
+chargement_don.c:			    		element[pa+j].nb_barre 			= element[j].nb_barre;
+chargement_don.c:			    		element[pa+j].nb_barre 			= element[j].nb_barre;
+chargement_don.c:				double coeff_trainee_inter = 1.2;	/* coefficient de trainée des barres de la cage*/
+chargement_don.c:				double pronf_niveau_bas = 0;		/* profondeur des barres du niveau bas (sous phobos)*/
+chargement_don.c:				double pronf_niveau_haut = pronf_niveau_bas + Structure.add_cage_haut_ann;		/* profondeur des barres du niveau haut (sous phobos)*/
+chargement_don.c:				double coeff_trainee_inter = 1.2;	/* coefficient de trainée des barres de la cage*/
+chargement_don.c:				double pronf_niveau_bas = 0;		/* profondeur des barres du niveau bas (sous phobos)*/
+chargement_don.c:				double pronf_niveau_haut = pronf_niveau_bas + Structure.add_cage_haut_ann;		/* profondeur des barres du niveau haut (sous phobos)*/
+chargement_don.c:				double pronf_niveau_bas = 0;		/* profondeur des barres du niveau bas (sous phobos)*/
+chargement_don.c:					element[zi+2].nb_barre=1;
+chargement_don.c:						printf("n: %d ",element[jjj].nb_barre);
+chargement_don.c:			if (strcmp(chaine,"nb_barre") == 0)
+chargement_don.c:				itmp = fscanf(fic,"%d",&nb_barre_choisi);
+chargement_don.c:				element[num_elem_choisi].nb_barre=nb_barre_choisi;
+chargement_don.c:			if (strcmp(chaine,"carac_barre_noeud") == 0)
+chargement_don.c:				itmp = fscanf(fic,"%d",&nb_barre_choisi);
+chargement_don.c:						element[iii].nb_barre=nb_barre_choisi;
+chargement_don.c:	for (pa=1;pa<=Structure.nb_barre;pa++)	fprintf(f3,"ba %3d : 1\n",pa);	fprintf(f3,"\n"); //NOMBRE_ELEMENTS
+chargement_don.c:	Structure.nb_barre 		= 0;
+chargement_don.c:    	fprintf(f2,"%5d\n",Structure.nb_barre);
+chargement_don.c:  	for (i = 1 ; i<=Structure.nb_barre  ; i++) 
+chargement_don.c:    		fprintf(f2,"%5d ",total2global[barre[i].noeud[1]]);
+chargement_don.c:    		fprintf(f2,"%5d ",total2global[barre[i].noeud[2]]);
+chargement_don.c:    		fprintf(f2,"%8.7f ",barre[i].pro[1]);
+chargement_don.c:    		fprintf(f2,"%8.7f ",barre[i].pro[2]);
+chargement_don.c:    		fprintf(f2,"%5d ",barre[i].type);
+chargement_don.c:    		/*fprintf(f2,"%6.5f ",barre[i].longueur_repos);*/
+chargement_don.c:    	fprintf(f2,"%5d\n",Structure.nb_barre_winch);
+chargement_don.c:    	fprintf(f2,"Description of winch bars\n");
+chargement_don.c:  	for (i = 1 ; i<=Structure.nb_barre_winch  ; i++) 
+chargement_don.c:    		fprintf(f2,"%5d ",total2global[barre_winch[i].noeud[1]]);
+chargement_don.c:    		fprintf(f2,"%5d ",total2global[barre_winch[i].noeud[2]]);
+chargement_don.c:    		fprintf(f2,"%8.7f ",barre_winch[i].pro[1]);
+chargement_don.c:    		fprintf(f2,"%8.7f ",barre_winch[i].pro[2]);
+chargement_don.c:    		fprintf(f2,"%5d ",barre_winch[i].type);
+chargement_don.c:    		/*fprintf(f2,"%6.5f ",barre_winch[i].longueur_repos);*/
+chargement_don.c:    	for (pa=1;pa<=Structure.nb_barre;pa++)
+chargement_don.c:    		itmp = fscanf(fic,"%d\n",&barre[pa].flag_dessin);
+chargement_don.c:		itmp = fscanf(fic_source,"%d",&temp_i);	fprintf(fic_target,"%d ",temp_i);/*nb bars*/
+chargement_mdgsta.c:	itmp = fscanf(fic1,"%d",&struct_old.nb_barre);
+chargement_mdgsta.c:	printf("Nombre d elements %d\n",struct_old.nb_barre);
+chargement_mdgsta.c:	for (i=1;i<=struct_old.nb_barre;i++)
+chargement_mdgsta.c:	  	itmp = fscanf(fic1,"%d",&barre_old[i].noeud[1]);
+chargement_mdgsta.c:	  	itmp = fscanf(fic1,"%d",&barre_old[i].noeud[2]);
+chargement_mdgsta.c:	  	itmp = fscanf(fic1,"%f",&barre_old[i].pro[1]);
+chargement_mdgsta.c:	  	itmp = fscanf(fic1,"%f",&barre_old[i].pro[2]);
+chargement_mdgsta.c:	  	itmp = fscanf(fic1,"%d",&barre_old[i].type);
+chargement_mdgsta.c:	  	/*itmp = fscanf(fic1,"%f\n",&barre_old[i].longueur_repos);*/
+chargement_mdgsta.c:	for (i=1;i<=struct_old.nb_barre;i++)
+chargement_mdgsta.c:		itmp = fscanf(fic2,"%f\n",&barre_old[i].elongation);
+chargement_mdgsta.c:	int i,j,k,no_barre_old[3],no_new;
+chargement_mdgsta.c:	for (i=1;i<=Structure.nb_barre;i++) 
+chargement_mdgsta.c:	    		/* determination du numero de la barre d un element de *.mdg contenant le noeud courant*/
+chargement_mdgsta.c:	    		no_new = total2global[barre[i].noeud[k]];
+chargement_mdgsta.c:	    		for (j=1;j<=struct_old.nb_barre;j++)
+chargement_mdgsta.c:	      			if ((barre_old[j].type == barre[i].type)  && (barre_old[j].pro[1] <= barre[i].pro[k]) && (barre_old[j].pro[2] >= barre[i].pro[k]))
+chargement_mdgsta.c:	      				no_barre_old[k] = j;
+chargement_mdgsta.c:	      	  	/* determination de la position de ce noeud courant sur la barre de numero no_barre et calcul des nouvelles coordonnees*/
+chargement_mdgsta.c:	      	  	  	l[k] =   barre_old[no_barre_old[k]].pro[2] - barre_old[no_barre_old[k]].pro[1];
+chargement_mdgsta.c:	        	  	d[k] = - barre_old[no_barre_old[k]].pro[1] + barre[i].pro[k];
+chargement_mdgsta.c:	      			noeud_global[no_new].x = (1. - t[k]) * noeud_old[barre_old[no_barre_old[k]].noeud[1]].x
+chargement_mdgsta.c:	      			       			     + t[k]  * noeud_old[barre_old[no_barre_old[k]].noeud[2]].x;
+chargement_mdgsta.c:	      			noeud_global[no_new].y = (1. - t[k]) * noeud_old[barre_old[no_barre_old[k]].noeud[1]].y
+chargement_mdgsta.c:	      			       			     + t[k]  * noeud_old[barre_old[no_barre_old[k]].noeud[2]].y;
+chargement_mdgsta.c:	      			noeud_global[no_new].z = (1. - t[k]) * noeud_old[barre_old[no_barre_old[k]].noeud[1]].z
+chargement_mdgsta.c:	      			       			     + t[k]  * noeud_old[barre_old[no_barre_old[k]].noeud[2]].z;
+chargement_mdgsta.c:	/*ecriture des elongations des nouvelles barres*/
+chargement_mdgsta.c:	for (i = 1 ; i<= Structure.nb_barre ; i++) 
+chargement_mdgsta.c:	{	X = noeud_global[total2global[barre[i].noeud[2]]].x -  noeud_global[total2global[barre[i].noeud[1]]].x;
+chargement_mdgsta.c:		Y = noeud_global[total2global[barre[i].noeud[2]]].y -  noeud_global[total2global[barre[i].noeud[1]]].y;
+chargement_mdgsta.c:    		Z = noeud_global[total2global[barre[i].noeud[2]]].z -  noeud_global[total2global[barre[i].noeud[1]]].z;
+chargement_mdgsta.c:    		barre[i].longueur_tendue = sqrt(X*X + Y*Y + Z*Z);
+chargement_mdgsta.c:    		elongation = (barre[i].longueur_tendue - barre[i].longueur_repos) / barre[i].longueur_repos;
+chargement_sta.c:	for (i=1;i<=Structure.nb_barre;i++)
+chargement_sta.c:		itmp = fscanf(fic,"%f\n",&barre[i].longueur_tendue);
+Checked_menu.c:void Checked_internal_bar()
+Checked_menu.c:void Checked_numerotation_barre()
+Checked_menu.c:void Checked_bar_length()
+dessiner_ps.c:	mode = GetMenuItemChecked(w[95]);	if (mode == 1) internal_bar_dessiner();
+dessiner_ps.c:	mode = GetMenuItemChecked(w[8]);	if (mode == 1) dessiner_numero_barre();
+dessiner_ps.c:	mode = GetMenuItemChecked(w[96]);	if (mode == 1) dessiner_bar_length();
+dessiner_ps.c:	for (pa=1;pa<=Structure.nb_barre;pa++)
+dessiner_ps.c:		deb = barre[pa].noeud[1];
+dessiner_ps.c:		fin = barre[pa].noeud[2];
+dessiner_ps.c:		for (zi=1;zi<=Slider[pa].nb_bar;zi++)
+dessiner_ps.c:			el = Slider[pa].barre[zi];
+dessiner_ps.c:		for (zi=1;zi<=Slider[pa].nb_bar;zi++)
+dessiner_ps.c:			el = Slider[pa].barre[zi];
+dessiner_ps.c:void dessiner_numero_barre()
+dessiner_ps.c:	if (col==-1) printf("Erreur de couleur dessiner_numero_barre\n");
+dessiner_ps.c:	//printf("Structure.nb_barre %d\n", Structure.nb_barre);
+dessiner_ps.c:	for (pa=1;pa<=Structure.nb_barre;pa++)
+dessiner_ps.c:		deb = barre[pa].noeud[1];
+dessiner_ps.c:		fin = barre[pa].noeud[2];
+dessiner_ps.c:			yb = (float) (0.0); 	/*barycentre position of the panel*/
+dessiner_ps.c:			for (no=1;no<=element[el].nb_barre - 1;no++)
+dessiner_ps.c:void dessiner_bar_length()
+dessiner_ps.c:	if (col==-1) printf("Erreur de couleur dessiner_numero_barre\n");
+dessiner_ps.c:	Text(x1,y1,"unstretched length bar (m)");
+dessiner_ps.c:	for (pa=1;pa<=Structure.nb_barre;pa++)
+dessiner_ps.c:		sprintf(str,"%f",barre[pa].longueur_repos);
+dessiner_ps.c:		deb = barre[pa].noeud[1];
+dessiner_ps.c:		fin = barre[pa].noeud[2];
+dessiner_ps.c:		pas_mail = (float) (element[pa].lgrepos / element[pa].nb_barre);
+dessiner_ps.c:	Text(x1,y1,"bar/twine volume (m^3)");
+dessiner_ps.c:void internal_bar_dessiner()
+dessiner_ps.c:	for (pa=1;pa<=Structure.nb_barre;pa++)
+dessiner_ps.c:		deb = barre[pa].noeud[1];
+dessiner_ps.c:		fin = barre[pa].noeud[2];
+dessiner_ps.c:	float x1,x2,y1,y2,x_barycentre,y_barycentre,vect_x,vect_y,vect_z,nx,ny,nz,mx,my,mz;
+dessiner_ps.c:		x_barycentre = 0.0;	y_barycentre = 0.0;
+dessiner_ps.c:			x_barycentre += noeud[deb].x;	y_barycentre += noeud[deb].y;
+dessiner_ps.c:		x_barycentre = x_barycentre / panneau[no_pa].nb_noeud_contour;
+dessiner_ps.c:		y_barycentre = y_barycentre / panneau[no_pa].nb_noeud_contour;
+dessiner_ps.c:		x1 = ((REEL) x_barycentre - binx) / (baxx - binx);
+dessiner_ps.c:		y1 = ((REEL) y_barycentre - biny) / (baxy - biny);
+dessiner_ps.c:		x2 = ((REEL) x_barycentre + nx - binx) / (baxx - binx);
+dessiner_ps.c:		y2 = ((REEL) y_barycentre + ny - biny) / (baxy - biny);
+dessiner_ps.c:		x2 = ((REEL) x_barycentre + mx - binx) / (baxx - binx);
+dessiner_ps.c:		y2 = ((REEL) y_barycentre + my - biny) / (baxy - biny);
+dessiner_ps.c:	for (pa=1;pa<=Structure.nb_barre;pa++)
+dessiner_ps.c:		sprintf(str,"%lf",barre[pa].tension);
+dessiner_ps.c:		deb = barre[pa].noeud[1];
+dessiner_ps.c:		fin = barre[pa].noeud[2];
+dessiner_ps.c:	for (pa=1;pa<=Structure.nb_barre;pa++)
+dessiner_ps.c:		sprintf(str,"%lf",barre[pa].longueur_tendue);
+dessiner_ps.c:		deb = barre[pa].noeud[1];
+dessiner_ps.c:		fin = barre[pa].noeud[2];
+dessiner_ps.c:	for (pa=1;pa<=Structure.nb_barre;pa++)
+dessiner_ps.c:		sprintf(str,"%lf",barre[pa].nrj);
+dessiner_ps.c:		deb = barre[pa].noeud[1];
+dessiner_ps.c:		fin = barre[pa].noeud[2];
+init_display.c:	w[9]  = MakeMenuItem(w[3], "contour_cable_bar", 	Checked_dessiner_contour_element, me);
+init_display.c:	w[95] = MakeMenuItem(w[3], "internal_bar", 		Checked_internal_bar, me);
+init_display.c:	w[8]   = MakeMenuItem(w[16], "bar_number", 		Checked_numerotation_barre, me);
+init_display.c:	w[96]  = MakeMenuItem(w[38], "bar_length", 		Checked_bar_length, me);
+lire_fichier_mdgsta.c:	printf("Structure.nb_barre = %d\n",Structure.nb_barre);
+lire_fichier_mdgsta.c:	for (i=1;i<=Structure.nb_barre;i++)	       	               
+lire_fichier_mdgsta.c:    		itmp = fscanf(fic2,"%f\n",&barre[i].elongation);
+lire_fichier_mdgsta.c:		printf("i= %d elongation=%f\n",i,barre[i].elongation);
+lire_fichier_mdgsta.c:      		barre[i].longueur_tendue=(barre[i].elongation * barre[i].longueur_repos)+ barre[i].longueur_repos;   		
+lire_fichier_mdgsta.c:                if (barre[i].elongation >= 0.0) barre[i].tension = barre[i].elongation * element[barre[i].type].raideur_traction;
+lire_fichier_mdgsta.c:                /*energie potentielle*/	      barre[i].nrj= barre[i].tension * (barre[i].longueur_tendue - barre[i].longueur_repos)/2;
+lire_fichier_mdgsta.c:      		if (barre[i].elongation <  0.0) barre[i].tension = barre[i].elongation * element[barre[i].type].raideur_compression;
+lire_fichier_mdgsta.c:    		/*energie potentielle*/       barre[i].nrj= barre[i].tension * (barre[i].longueur_tendue - barre[i].longueur_repos)/2;
+lire_fichier_mdgsta.c:		printf("%d longueur_repos=%.3g longueur_tendue=%f tension=%f nrjelem=%f\n",i,barre[i].longueur_repos,barre[i].longueur_tendue,barre[i].tension,barre[i].nrj);
+maillage.c:	for (pa=1;pa<=Structure.nb_barre;pa++)	fprintf(f3,"ba %3d : 1\n",pa);	fprintf(f3,"\n"); //NOMBRE_ELEMENTS
+maillage.c:		//printf("el %4d nb_barre %4d\n",el,element[el].nb_barre);
+maillage.c:	printf("bar number = %d\n", Structure.nb_barre);
+maillage.c:		if (winch[el].nb_barre <= 0.0)
+maillage.c:			printf("le nb de barre n est pas positif = %12d \n",winch[el].nb_barre);
+maillage.c:		if (element[el].nb_barre <= 0.0)
+maillage.c:			printf("le nb de barre de l'element %d n est pas positif = %12d \n",el,element[el].nb_barre);
+maillage.c:	//do the list of barre per element
+maillage.c:	//printf("Structure.nb_barre = %4d ",Structure.nb_barre);
+maillage.c:	for (co=1;co<=Structure.nb_barre;co++)	
+maillage.c:		//printf("bar %4d ",co);
+maillage.c:		//printf("cable %4d ",barre[co].type);
+maillage.c:		//printf("bar nodes %4d %4d ",barre[co].noeud[1],barre[co].noeud[2]);
+maillage.c:		//printf("bar pro %4.2f %4.2f\n",barre[co].pro[1],barre[co].pro[2]);	
+maillage.c:	//printf("element nb_bar %4d\n",element[el].nb_barre);
+maillage.c:	for (cp=1;cp<=element[el].nb_barre-1;cp++)	
+maillage.c:		//printf("bar %4d\n",element[el].barre[cp]);
+maillage.c:			//printf("In this case the twines are modelled by bars elements in a rectangular panel\n");/**/
+maillage.c:			maillage_interne5(pa);	/*bars elements created along twines*/
+maillage.c:			//printf("In this case the twines are modelled by bars elements\n");/**/
+maillage.c:			//maillage_interne5(pa);	/*bars elements created along twines*/
+maillage_coulisse.c:	/*on verifie que le nb de barre de l element est > au nb de barre de la coulisse*/
+maillage_coulisse.c:	if(element[el2].nb_barre < coulisse[co].nb_noeud + 1)
+maillage_coulisse.c:		printf(" le nombre de barre de l element %4d est trop faible  \n",el2 );
+maillage_coulisse.c:	/*calcul du nombre de barre de le element correspondant a une barre de la coulisse
+maillage_coulisse.c:	nb_segment = (float) element[el2].nb_barre / ((float)coulisse[co].nb_noeud + 1.0);
+maillage_coulisse.c:		premier_loc = element[el2].nb_barre - 1;
+maillage_coulisse.c:	nb_coupe = element[el2].nb_barre;
+maillage_element.c:			if (element[el].nb_barre <= 0.0)
+maillage_element.c:				printf("le nb de barre n est pas positif = %12d \n",element[el].nb_barre);
+maillage_element.c:	nb_coupe = element[el].nb_barre;
+maillage_element.c:		Structure.nb_barre++;
+maillage_element.c:		if ( Structure.nb_barre>= NBMAXBARRE)
+maillage_element.c:			printf(" NBMAXBARRE trop petit %4d < %4d \n",NBMAXBARRE,Structure.nb_barre );
+maillage_element.c:		/*creation des barres*/
+maillage_element.c:		if (zi == 1) barre[Structure.nb_barre].noeud[1] = deb;
+maillage_element.c:		if (zi != 1) barre[Structure.nb_barre].noeud[1] = Structure.nb_total - 1;
+maillage_element.c:		barre[Structure.nb_barre].noeud[2] = Structure.nb_total;
+maillage_element.c:		/*Le no de type de la barre est le numero de l element*/
+maillage_element.c:		barre[Structure.nb_barre].type = el;
+maillage_element.c:		barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_element.c:		barre[Structure.nb_barre].pro[1] = (float) (zi-1) / nb_coupe ;
+maillage_element.c:		barre[Structure.nb_barre].pro[2] = (float)  zi    / nb_coupe ;
+maillage_element.c:		barre[Structure.nb_barre].longueur_repos = (float)  element[el].lgrepos * fabs(barre[Structure.nb_barre].pro[1]-barre[Structure.nb_barre].pro[2]);
+maillage_element.c:	Structure.nb_barre++;
+maillage_element.c:	if (Structure.nb_barre >= NBMAXBARRE)
+maillage_element.c:		printf(" NBMAXBARRE trop petit %4d < %4d \n",NBMAXBARRE,Structure.nb_barre );
+maillage_element.c:		barre[Structure.nb_barre].noeud[1] = Structure.nb_total;
+maillage_element.c:		barre[Structure.nb_barre].pro[1] = (float) (nb_coupe - 1) / nb_coupe ;
+maillage_element.c:		barre[Structure.nb_barre].noeud[1] = deb;
+maillage_element.c:		barre[Structure.nb_barre].pro[1] = 0.0 ;
+maillage_element.c:	barre[Structure.nb_barre].noeud[2] = fin;
+maillage_element.c:	barre[Structure.nb_barre].pro[2] = 1.0;
+maillage_element.c:	barre[Structure.nb_barre].longueur_repos = (float)  element[el].lgrepos * fabs(barre[Structure.nb_barre].pro[1]-barre[Structure.nb_barre].pro[2]);
+maillage_element.c:	barre[Structure.nb_barre].type = el;
+maillage_element.c:	barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_element.c:	//printf(" Structure.nb_barre= %4d ",Structure.nb_barre);
+maillage_element.c:	/*type de barre*/
+maillage_element.c:	nb_coupe = element[el2].nb_barre;
+maillage_element.c:	element[el].nb_barre = nb_coupe; 		/*Changement du nombre de barres sur l element el*/
+maillage_element.c:  	element[el].noeud = (int *) realloc(element[el].noeud, (1+ element[el].nb_barre) * sizeof(int));
+maillage_element.c:  	element[el].barre = (int *) realloc(element[el].barre, (1+ element[el].nb_barre) * sizeof(int));
+maillage_element.c:	if (element[el].barre    == NULL)
+maillage_element.c:		printf(" element[el].barre 2 = NULL  \n" );
+maillage_element.c:  	element[el].prop = (double *) realloc(element[el].prop, (1+ element[el].nb_barre) * sizeof(double));
+maillage_element.c:		Structure.nb_barre++;
+maillage_element.c:		/*creation des barres*/
+maillage_element.c:		if (zi == 1)  barre[Structure.nb_barre].noeud[1] = deb ;
+maillage_element.c:		if (zi != 1)  barre[Structure.nb_barre].noeud[1] = Structure.nb_total - 1; 
+maillage_element.c:		barre[Structure.nb_barre].noeud[2] = Structure.nb_total;
+maillage_element.c:		/*le no de type de la barre est le numero de l element*/
+maillage_element.c:		barre[Structure.nb_barre].type = el;
+maillage_element.c:		barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_element.c:		barre[Structure.nb_barre].pro[1] = (float) (zi-1) / nb_coupe ;
+maillage_element.c:		barre[Structure.nb_barre].pro[2] = (float)  zi    / nb_coupe ;
+maillage_element.c:		barre[Structure.nb_barre].longueur_repos = (float)  element[el].lgrepos * fabs(barre[Structure.nb_barre].pro[1]-barre[Structure.nb_barre].pro[2]);
+maillage_element.c:	Structure.nb_barre++;
+maillage_element.c:	if ( Structure.nb_barre>= NBMAXBARRE)
+maillage_element.c:		printf(" NBMAXBARRE trop petit %4d < %4d \n",NBMAXBARRE,Structure.nb_barre );
+maillage_element.c:		barre[Structure.nb_barre].noeud[1] = Structure.nb_total;
+maillage_element.c:		barre[Structure.nb_barre].noeud[1] = deb;
+maillage_element.c:	barre[Structure.nb_barre].noeud[2] = fin;
+maillage_element.c:	barre[Structure.nb_barre].pro[1] = (float) ( nb_coupe - 1 ) / nb_coupe;;
+maillage_element.c:	barre[Structure.nb_barre].pro[2] = 1.0;
+maillage_element.c:	barre[Structure.nb_barre].longueur_repos = (float)  element[el].lgrepos * fabs(barre[Structure.nb_barre].pro[1]-barre[Structure.nb_barre].pro[2]);
+maillage_element.c:	barre[Structure.nb_barre].type = el;
+maillage_element.c:	barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_element.c:	printf(" Structure.nb_barre %4d ",Structure.nb_barre);
+maillage_element.c:	printf(" extremites %4d %4d",barre[Structure.nb_barre].noeud[1],barre[Structure.nb_barre].noeud[2]);
+maillage_element.c:	/*type de barre*/
+maillage_element.c:	/*Changement du nombre de barres sur l element el*/
+maillage_element.c:	element[el].nb_barre = nb_coupe; 		
+maillage_element.c:  	element[el].noeud = (int *) realloc(element[el].noeud, (1+ element[el].nb_barre) * sizeof(int));
+maillage_element.c:  	element[el].barre = (int *) realloc(element[el].barre, (1+ element[el].nb_barre) * sizeof(int));
+maillage_element.c:	if (element[el].barre    == NULL)
+maillage_element.c:		printf(" element[el].barre 2 = NULL  \n" );
+maillage_element.c:  	element[el].prop = (double *) realloc(element[el].prop, (1+ element[el].nb_barre) * sizeof(double));
+maillage_element.c:		Structure.nb_barre++;
+maillage_element.c:		/*creation des barres*/
+maillage_element.c:		if (zi == 1) barre[Structure.nb_barre].noeud[1] = deb ;
+maillage_element.c:		if (zi != 1) barre[Structure.nb_barre].noeud[1] = Structure.nb_total - 1; 
+maillage_element.c:		barre[Structure.nb_barre].noeud[2] = Structure.nb_total;
+maillage_element.c:		/*le no de type de la barre est le numero de l element*/
+maillage_element.c:		barre[Structure.nb_barre].type = el;
+maillage_element.c:		barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_element.c:		 	 barre[Structure.nb_barre].pro[2] = panneau[nopan].prop_cote[premier_loc + sens_cote * (zi - 1)];
+maillage_element.c:		 	 if ( zi == 1 ) { barre[Structure.nb_barre].pro[1] = 0.0 				    ; }		/* Pour la 1ère barre, on a 0.0 */
+maillage_element.c:		 	 else           { barre[Structure.nb_barre].pro[1] = barre[Structure.nb_barre - 1].pro[2] ; }		/* Pour les autres barres, on s'appuie sur la barre precedente */
+maillage_element.c:		 	 barre[Structure.nb_barre].pro[2] =  1. - panneau[nopan].prop_cote[premier_loc + sens_cote * (zi - 1) ];
+maillage_element.c:		 	 if ( zi == 1 ) { barre[Structure.nb_barre].pro[1] = 0.0    			    ; }
+maillage_element.c:		 	 else           { barre[Structure.nb_barre].pro[1] = barre[Structure.nb_barre - 1].pro[2] ; }
+maillage_element.c:		barre[Structure.nb_barre].longueur_repos = (float)  element[el].lgrepos * fabs(barre[Structure.nb_barre].pro[1]-barre[Structure.nb_barre].pro[2]);
+maillage_element.c:	Structure.nb_barre++;
+maillage_element.c:	if ( Structure.nb_barre>= NBMAXBARRE)
+maillage_element.c:		printf(" NBMAXBARRE trop petit %4d < %4d \n",NBMAXBARRE,Structure.nb_barre );
+maillage_element.c:	if (zi == 1)  barre[Structure.nb_barre].noeud[1] = deb ;
+maillage_element.c:	else          barre[Structure.nb_barre].noeud[1] = Structure.nb_total;
+maillage_element.c:	barre[Structure.nb_barre].noeud[2] = fin;
+maillage_element.c:	if (zi == 1)  barre[Structure.nb_barre].noeud[1] = deb ;
+maillage_element.c:	if (nb_coupe == 1 ) { barre[Structure.nb_barre].pro[1] = 0.0 ;}					/* Pour le cas d'une seule barre */
+maillage_element.c:	else 		    { barre[Structure.nb_barre].pro[1] = barre[Structure.nb_barre - 1].pro[2] ;}	/* pour les autres, on s'appuie sur la barre précédente*/
+maillage_element.c:	barre[Structure.nb_barre].pro[2] = 1.0;
+maillage_element.c:	barre[Structure.nb_barre].longueur_repos = (float)  element[el].lgrepos * fabs(barre[Structure.nb_barre].pro[1]-barre[Structure.nb_barre].pro[2]);
+maillage_element.c:	barre[Structure.nb_barre].type = el;
+maillage_element.c:	barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_element.c:	//printf(" Structure.nb_barre= %4d ",Structure.nb_barre);
+maillage_element.c:	/*type de barre*/
+maillage_element.c:	/*Changement du nombre de barres sur l element el*/
+maillage_element.c:	element[el].nb_barre = nb_coupe; 		
+maillage_element.c:  	element[el].noeud = (int *) realloc(element[el].noeud, (1+ element[el].nb_barre) * sizeof(int));
+maillage_element.c:  	element[el].barre = (int *) realloc(element[el].barre, (1+ element[el].nb_barre) * sizeof(int));
+maillage_element.c:	if (element[el].barre    == NULL)
+maillage_element.c:		printf(" element[el].barre 2 = NULL  \n" );
+maillage_element.c:  	element[el].prop = (double *) realloc(element[el].prop, (1+ element[el].nb_barre) * sizeof(double));
+maillage_element.c:		Structure.nb_barre++;
+maillage_element.c:		/*creation des barres*/
+maillage_element.c:		if (zi == 1)  barre[Structure.nb_barre].noeud[1] = deb ;
+maillage_element.c:		if (zi != 1) barre[Structure.nb_barre].noeud[1] = Structure.nb_total - 1; 
+maillage_element.c:		barre[Structure.nb_barre].noeud[2] = Structure.nb_total;
+maillage_element.c:		/*le no de type de la barre est le numero de l element*/
+maillage_element.c:		barre[Structure.nb_barre].type = el;
+maillage_element.c:		barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_element.c:		 	 barre[Structure.nb_barre].pro[2] = pan_hexa[nopan].prop_cote[premier_loc + sens_cote * (zi - 1)];
+maillage_element.c:		 	 if ( zi == 1 ) { barre[Structure.nb_barre].pro[1] = 0.0 				    ; }		/* Pour la 1ère barre, on a 0.0 */
+maillage_element.c:		 	 else           { barre[Structure.nb_barre].pro[1] = barre[Structure.nb_barre - 1].pro[2] ; }		/* Pour les autres barres, on s'appuie sur la barre precedente */
+maillage_element.c:		 	 barre[Structure.nb_barre].pro[2] =  1. - pan_hexa[nopan].prop_cote[premier_loc + sens_cote * (zi - 1) ];
+maillage_element.c:		 	 if ( zi == 1 ) { barre[Structure.nb_barre].pro[1] = 0.0    			    ; }
+maillage_element.c:		 	 else           { barre[Structure.nb_barre].pro[1] = barre[Structure.nb_barre - 1].pro[2] ; }
+maillage_element.c:		barre[Structure.nb_barre].longueur_repos = (float)  element[el].lgrepos * fabs(barre[Structure.nb_barre].pro[1]-barre[Structure.nb_barre].pro[2]);
+maillage_element.c:	Structure.nb_barre++;
+maillage_element.c:	if ( Structure.nb_barre>= NBMAXBARRE)
+maillage_element.c:		printf(" NBMAXBARRE trop petit %4d < %4d \n",NBMAXBARRE,Structure.nb_barre );
+maillage_element.c:	if (zi == 1)  barre[Structure.nb_barre].noeud[1] = deb ;
+maillage_element.c:	else          barre[Structure.nb_barre].noeud[1] = Structure.nb_total;
+maillage_element.c:	barre[Structure.nb_barre].noeud[2] = fin;
+maillage_element.c:	if (zi == 1)  barre[Structure.nb_barre].noeud[1] = deb ;
+maillage_element.c:	if (nb_coupe == 1 ) { barre[Structure.nb_barre].pro[1] = 0.0 ;}					/* Pour le cas d'une seule barre */
+maillage_element.c:	else 		    { barre[Structure.nb_barre].pro[1] = barre[Structure.nb_barre - 1].pro[2] ;}	/* pour les autres, on s'appuie sur la barre précédente*/
+maillage_element.c:	barre[Structure.nb_barre].pro[2] = 1.0;
+maillage_element.c:	barre[Structure.nb_barre].longueur_repos = (float)  element[el].lgrepos * fabs(barre[Structure.nb_barre].pro[1]-barre[Structure.nb_barre].pro[2]);
+maillage_element.c:	barre[Structure.nb_barre].type = el;
+maillage_element.c:	barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_element.c:	//printf(" Structure.nb_barre= %4d ",Structure.nb_barre);
+maillage_element.c:	/*type de barre*/
+maillage_pan_hexa.c:	nb_coupe = element[noele].nb_barre;
+maillage_pan_hexa.c:   	/*creation des barres*/
+maillage_pan_hexa.c:   	/*creation des barres*/
+maillage_pan_hexa.c:			Structure.nb_barre++;
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[1] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 1 + 0 * (maxv - minv)];
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[2] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 2 + 1 * (maxv - minv)];
+maillage_pan_hexa.c:			barre[Structure.nb_barre].type = 1;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[1] = 0.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[2] = 1.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].longueur_repos = pan_hexa[pa].lo_repos ;
+maillage_pan_hexa.c:			Structure.nb_barre++;
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[1] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 2 + 2 * (maxv - minv)];
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[2] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 3 + 3 * (maxv - minv)];
+maillage_pan_hexa.c:			barre[Structure.nb_barre].type = 1;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[1] = 0.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[2] = 1.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].longueur_repos = pan_hexa[pa].lo_repos ;
+maillage_pan_hexa.c:			Structure.nb_barre++;
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[1] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 2 + 1 * (maxv - minv)];
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[2] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 2 + 0 * (maxv - minv)];
+maillage_pan_hexa.c:			barre[Structure.nb_barre].type = 3;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[1] = 0.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[2] = 1.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].longueur_repos = pan_hexa[pa].no_repos ;
+maillage_pan_hexa.c:			Structure.nb_barre++;
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[1] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 2 + 2 * (maxv - minv)];
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[2] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 2 + 3 * (maxv - minv)];
+maillage_pan_hexa.c:			barre[Structure.nb_barre].type = 3;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[1] = 0.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[2] = 1.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].longueur_repos = pan_hexa[pa].no_repos ;
+maillage_pan_hexa.c:			Structure.nb_barre++;
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[1] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 2 + 1 * (maxv - minv)];
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[2] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 2 + 2 * (maxv - minv)];
+maillage_pan_hexa.c:			barre[Structure.nb_barre].type = 2;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[1] = 0.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[2] = 1.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].longueur_repos = pan_hexa[pa].mo_repos ;
+maillage_pan_hexa.c:			Structure.nb_barre++;
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[1] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 2 + 3 * (maxv - minv)];
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[2] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 3 + 4 * (maxv - minv)];
+maillage_pan_hexa.c:			barre[Structure.nb_barre].type = 2;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[1] = 0.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[2] = 1.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].longueur_repos = pan_hexa[pa].mo_repos ;
+maillage_pan_hexa.c:			Structure.nb_barre++;
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[1] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 2 + 3 * (maxv - minv)];
+maillage_pan_hexa.c:        	       	barre[Structure.nb_barre].noeud[2] = profondeur[um * ((maxv-minv) * 4 + 2) + vm + 3 + 4 * (maxv - minv)];
+maillage_pan_hexa.c:			barre[Structure.nb_barre].type = 2;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].netting2ropes_panel = 0;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[1] = 0.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].pro[2] = 1.0 ;
+maillage_pan_hexa.c:			barre[Structure.nb_barre].longueur_repos = pan_hexa[pa].mo_repos ;*/
+maillage_pan_hexa.c:	printf(" Structure.nb_barre = %4d \n",Structure.nb_barre );
+maillage_pan_hexa.c:	if ( Structure.nb_barre>= NBMAXBARRE)
+maillage_pan_hexa.c:		printf(" NBMAXBARRE trop petit %4d < %4d \n",NBMAXBARRE,Structure.nb_barre );
+maillage_panneau1.c:	for (pa=1;pa<=Structure.nb_barre;pa++)
+maillage_panneau1.c:		if(barre[pa].noeud[1] == no_noeud)
+maillage_panneau1.c:		if(barre[pa].noeud[2] == no_noeud)
+maillage_panneau1.c:	for (pa=1;pa<=Structure.nb_barre_winch;pa++)
+maillage_panneau1.c:		if(barre_winch[pa].noeud[1] == no_noeud)
+maillage_panneau1.c:		if(barre_winch[pa].noeud[2] == no_noeud)
+maillage_panneau1.c:	si 2 barre
+maillage_panneau1.c:	for (pa=1;pa<=Structure.nb_barre;pa++)
+maillage_panneau1.c:		if(barre[pa].noeud[1] == no_noeud)
+maillage_panneau1.c:		if(barre[pa].noeud[2] == no_noeud)
+maillage_panneau1.c:	for (pa=1;pa<=Structure.nb_barre_winch;pa++)
+maillage_panneau1.c:		if(barre_winch[pa].noeud[1] == no_noeud)
+maillage_panneau1.c:		if(barre_winch[pa].noeud[2] == no_noeud)
+maillage_panneau1.c:	nb_coupe = element[noele].nb_barre;
+maillage_seam.c:	Structure.nb_barre_selvedges = 0;	/*nb of bars in the selvedges*/
+maillage_seam.c:			/*bars creation along the seams*/
+maillage_seam.c:			/*Changement du nombre de barres sur l element el*/
+maillage_seam.c:			element[Structure.NbTypeelem + Structure.nb_selvedges].nb_barre = nb_coupe; 		
+maillage_seam.c:		  	element[Structure.NbTypeelem + Structure.nb_selvedges].noeud = (int *) realloc(element[Structure.NbTypeelem + Structure.nb_selvedges].noeud, (1+ element[Structure.NbTypeelem + Structure.nb_selvedges].nb_barre) * sizeof(int));
+maillage_seam.c:		  	element[Structure.NbTypeelem + Structure.nb_selvedges].barre = (int *) realloc(element[Structure.NbTypeelem + Structure.nb_selvedges].barre, (1+ element[Structure.NbTypeelem + Structure.nb_selvedges].nb_barre) * sizeof(int));
+maillage_seam.c:			if (element[Structure.NbTypeelem + Structure.nb_selvedges].barre    == NULL)
+maillage_seam.c:				printf(" element[Structure.NbTypeelem + Structure.nb_selvedges].barre 2 = NULL  \n" );
+maillage_seam.c:		  	element[Structure.NbTypeelem + Structure.nb_selvedges].prop = (double *) realloc(element[Structure.NbTypeelem + Structure.nb_selvedges].prop, (1+ element[Structure.NbTypeelem + Structure.nb_selvedges].nb_barre) * sizeof(double));
+maillage_seam.c:				Structure.nb_barre_selvedges++;
+maillage_seam.c:				/*creation des barres*/
+maillage_seam.c:				if (zi == 1) barre[Structure.nb_barre_selvedges].noeud[1] = deb ;
+maillage_seam.c:				if (zi != 1) barre[Structure.nb_barre_selvedges].noeud[1] = premier_cote + zi - 1; 
+maillage_seam.c:				barre[Structure.nb_barre_selvedges].noeud[2] = Structure.nb_total;
+maillage_seam.c:				/*le no de type de la barre est le numero de l element*/
+maillage_seam.c:				barre[Structure.nb_barre_selvedges].type = Structure.NbTypeelem + Structure.nb_selvedges;
+maillage_seam.c:				barre[Structure.nb_barre_selvedges].netting2ropes_panel = 0;
+maillage_seam.c:				barre[Structure.nb_barre_selvedges].pro[2] = panneau[pa].prop_cote[premier_loc + zi - 1];
+maillage_seam.c:					/* Pour la 1ère barre, on a 0.0 */
+maillage_seam.c:					barre[Structure.nb_barre_selvedges].pro[1] = 0.0; 
+maillage_seam.c:					/* Pour les autres barres, on s'appuie sur la barre precedente */
+maillage_seam.c:					barre[Structure.nb_barre_selvedges].pro[1] = barre[Structure.nb_barre_selvedges - 1].pro[2]; 
+maillage_seam.c:				barre[Structure.nb_barre_selvedges].longueur_repos = (float)  element[Structure.NbTypeelem + Structure.nb_selvedges].lgrepos * fabs(barre[Structure.nb_barre_selvedges].pro[1]-barre[Structure.nb_barre_selvedges].pro[2]);	
+maillage_seam.c:			/*last bar of the selvedge*/
+maillage_seam.c:			Structure.nb_barre_selvedges++;
+maillage_seam.c:			if ( Structure.nb_barre_selvedges>= NBMAXBARRE)
+maillage_seam.c:				printf(" NBMAXBARRE trop petit %4d < %4d \n",NBMAXBARRE,Structure.nb_barre_selvedges );
+maillage_seam.c:			if (zi == 1)  barre[Structure.nb_barre_selvedges].noeud[1] = deb ;
+maillage_seam.c:			else          barre[Structure.nb_barre_selvedges].noeud[1] = premier_cote + zi - 1;
+maillage_seam.c:			barre[Structure.nb_barre_selvedges].noeud[2] = fin;
+maillage_seam.c:				/* Pour le cas d'une seule barre */
+maillage_seam.c:				barre[Structure.nb_barre_selvedges].pro[1] = 0.0 ;
+maillage_seam.c:				/* pour les autres, on s'appuie sur la barre précédente*/
+maillage_seam.c:				barre[Structure.nb_barre_selvedges].pro[1] = barre[Structure.nb_barre_selvedges - 1].pro[2] ;
+maillage_seam.c:			barre[Structure.nb_barre_selvedges].pro[2] = 1.0;
+maillage_seam.c:			barre[Structure.nb_barre_selvedges].longueur_repos = (float)  element[Structure.NbTypeelem + Structure.nb_selvedges].lgrepos * fabs(barre[Structure.nb_barre_selvedges].pro[1]-barre[Structure.nb_barre_selvedges].pro[2]);
+maillage_seam.c:			barre[Structure.nb_barre_selvedges].type = el;	
+maillage_seam.c:			barre[Structure.nb_barre_selvedges].netting2ropes_panel = 0;
+maillage_seam.c:			printf(" Structure.nb_barre_selvedges= %4d ",Structure.nb_barre_selvedges);
+maillage_winch.c:	nb_coupe = winch[wi].nb_barre;
+maillage_winch.c:		Structure.nb_barre_winch++;
+maillage_winch.c:		if ( Structure.nb_barre_winch>= NBMAXBARRE)
+maillage_winch.c:			printf(" NBMAXBARRE trop petit %4d < %4d \n",NBMAXBARRE,Structure.nb_barre_winch );
+maillage_winch.c:		/*creation des barre_winchs*/
+maillage_winch.c:		if (zi == 1) barre_winch[Structure.nb_barre_winch].noeud[1] = deb;
+maillage_winch.c:		if (zi != 1) barre_winch[Structure.nb_barre_winch].noeud[1] = Structure.nb_total - 1;
+maillage_winch.c:		barre_winch[Structure.nb_barre_winch].noeud[2] = Structure.nb_total;
+maillage_winch.c:		/*Le no de type de la barre_winch est le numero de l winch*/
+maillage_winch.c:		barre_winch[Structure.nb_barre_winch].type = wi;
+maillage_winch.c:		barre_winch[Structure.nb_barre_winch].pro[1] = (float) (zi-1) / nb_coupe ;
+maillage_winch.c:		barre_winch[Structure.nb_barre_winch].pro[2] = (float)  zi    / nb_coupe ;
+maillage_winch.c:		barre_winch[Structure.nb_barre_winch].longueur_repos = (float)  winch[wi].longueur_repos * fabs(barre_winch[Structure.nb_barre_winch].pro[1]-barre_winch[Structure.nb_barre_winch].pro[2]);
+maillage_winch.c:	Structure.nb_barre_winch++;
+maillage_winch.c:	if (Structure.nb_barre_winch >= NBMAXBARRE)
+maillage_winch.c:		printf(" NBMAXBARRE trop petit %4d < %4d \n",NBMAXBARRE,Structure.nb_barre_winch );
+maillage_winch.c:		barre_winch[Structure.nb_barre_winch].noeud[1] = Structure.nb_total;
+maillage_winch.c:		barre_winch[Structure.nb_barre_winch].pro[1] = (float) (nb_coupe - 1) / nb_coupe ;
+maillage_winch.c:		barre_winch[Structure.nb_barre_winch].noeud[1] = deb;
+maillage_winch.c:		barre_winch[Structure.nb_barre_winch].pro[1] = 0.0 ;
+maillage_winch.c:	barre_winch[Structure.nb_barre_winch].noeud[2] = fin;
+maillage_winch.c:	barre_winch[Structure.nb_barre_winch].pro[2] = 1.0;
+maillage_winch.c:	barre_winch[Structure.nb_barre_winch].longueur_repos = (float)  winch[wi].longueur_repos * fabs(barre_winch[Structure.nb_barre_winch].pro[1]-barre_winch[Structure.nb_barre_winch].pro[2]);
+maillage_winch.c:	barre_winch[Structure.nb_barre_winch].type = wi;
+maillage_winch.c:	printf(" Structure.nb_barre_winch= %4d \n",Structure.nb_barre_winch);
+meshing_netting_2_ropes2.c:int bar_creation2(int pan, int pt1, int pt2, double cut_a)
+meshing_netting_2_ropes2.c:	Structure.nb_barre++;		
+meshing_netting_2_ropes2.c:	barre[Structure.nb_barre].noeud[1] = pt1;
+meshing_netting_2_ropes2.c:	barre[Structure.nb_barre].noeud[2] = pt2;
+meshing_netting_2_ropes2.c:	barre[Structure.nb_barre].netting2ropes_panel 	= pan;
+meshing_netting_2_ropes2.c:	barre[Structure.nb_barre].netting2ropes_uv	= 1;
+meshing_netting_2_ropes2.c:	//barre[Structure.nb_barre].longueur_repos = (float)  panneau[pan].longueur_repos*panneau[pan].netting_2_ropes_period*(1.0-cut_a);
+meshing_netting_2_ropes2.c:	barre[Structure.nb_barre].longueur_repos = (float)  panneau[pan].longueur_repos*panneau[pan].netting_2_ropes_period*(1.0-cut_a)/panneau[pan].netting_2_ropes_bar_nb;
+meshing_netting_2_ropes2.c:	barre[Structure.nb_barre].pro[1] = 0.0 ;
+meshing_netting_2_ropes2.c:	barre[Structure.nb_barre].pro[2] = barre[Structure.nb_barre].longueur_repos / panneau[pan].longueur_repos;
+meshing_netting_2_ropes2.c:	barre[Structure.nb_barre].type = -pan;
+meshing_netting_2_ropes2.c:	return Structure.nb_barre;
+meshing_netting_2_ropes2.c:void bar_creation_per_element_around_panel(int pan)
+meshing_netting_2_ropes2.c:	int no,np,co,cp,corner1,corner2,sewn,temp_noeud,node_prop1,node_prop2,trouve_barre;
+meshing_netting_2_ropes2.c:////////////////////////////////beginning of bar creation in element
+meshing_netting_2_ropes2.c:			//printf("bar %4d \n",co);	
+meshing_netting_2_ropes2.c:				for (cp=1;cp<=Structure.nb_barre;cp++)
+meshing_netting_2_ropes2.c:					trouve_barre = 0;
+meshing_netting_2_ropes2.c:					if ((barre[cp].type == no) && (barre[cp].noeud[1] == node_prop1) && (barre[cp].noeud[2] != node_prop2))
+meshing_netting_2_ropes2.c:						trouve_barre = cp;
+meshing_netting_2_ropes2.c:						barre[cp].noeud[2] = node_prop2;
+meshing_netting_2_ropes2.c:						barre[cp].longueur_repos = (float) ((prop2-prop1) * element[no].lgrepos);
+meshing_netting_2_ropes2.c:						barre[cp].pro[1] = (float) prop1;
+meshing_netting_2_ropes2.c:						barre[cp].pro[2] = (float) prop2;
+meshing_netting_2_ropes2.c:						barre[cp].type = no;
+meshing_netting_2_ropes2.c:						//printf("length %d %6.2f \n",Structure.nb_barre,barre[Structure.nb_barre].longueur_repos);
+meshing_netting_2_ropes2.c:				//printf("	trouve_barre %4d\n",trouve_barre);	
+meshing_netting_2_ropes2.c:				if (trouve_barre == 0)
+meshing_netting_2_ropes2.c:					Structure.nb_barre++;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].noeud[1] = node_prop1;
+meshing_netting_2_ropes2.c:					//printf("barrh %d extremity 1 %d\n",Structure.nb_barre,node_prop1);	
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].noeud[2] = node_prop2;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].netting2ropes_panel 	= pan;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].netting2ropes_uv	= 1;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].longueur_repos = (float)  ((prop2-prop1) * element[no].lgrepos);
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].pro[1] = (float) prop1;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].pro[2] = (float) prop2;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].type = no;
+meshing_netting_2_ropes2.c:					//printf("lengti %d %6.2f \n",Structure.nb_barre,barre[Structure.nb_barre].longueur_repos);
+meshing_netting_2_ropes2.c:				for (cp=1;cp<=Structure.nb_barre;cp++)
+meshing_netting_2_ropes2.c:					trouve_barre = 0;
+meshing_netting_2_ropes2.c:					if ((barre[cp].type == no) && (barre[cp].noeud[1] == node_prop1) && (barre[cp].noeud[2] != node_prop2))
+meshing_netting_2_ropes2.c:						trouve_barre = cp;
+meshing_netting_2_ropes2.c:						barre[cp].noeud[2] = node_prop2;
+meshing_netting_2_ropes2.c:						barre[cp].longueur_repos = (float) ((prop2-prop1) * element[no].lgrepos);
+meshing_netting_2_ropes2.c:						barre[cp].pro[1] = (float) prop1;
+meshing_netting_2_ropes2.c:						barre[cp].pro[2] = (float) prop2;
+meshing_netting_2_ropes2.c:						barre[cp].type = no;
+meshing_netting_2_ropes2.c:						//printf("lengtj %d %6.2f \n",Structure.nb_barre,barre[Structure.nb_barre].longueur_repos);
+meshing_netting_2_ropes2.c:				//printf("	trouve_barre %4d\n",trouve_barre);	
+meshing_netting_2_ropes2.c:				if (trouve_barre == 0)
+meshing_netting_2_ropes2.c:					Structure.nb_barre++;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].noeud[1] = node_prop1;
+meshing_netting_2_ropes2.c:					//printf("barri %d extremity 1 %d\n",Structure.nb_barre,node_prop1);	
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].noeud[2] = node_prop2;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].netting2ropes_panel 	= pan;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].netting2ropes_uv	= 1;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].longueur_repos = (float)  ((prop2-prop1) * element[no].lgrepos);
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].pro[1] = (float) prop1;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].pro[2] = (float) prop2;
+meshing_netting_2_ropes2.c:					barre[Structure.nb_barre].type = no;
+meshing_netting_2_ropes2.c:					//printf("lengtk %d %6.2f \n",Structure.nb_barre,barre[Structure.nb_barre].longueur_repos);
+meshing_netting_2_ropes2.c:		/*for (co=1;co<=Structure.nb_barre;co++)
+meshing_netting_2_ropes2.c:			if (barre[co].type == no)
+meshing_netting_2_ropes2.c:				//this barre co is in the element no
+meshing_netting_2_ropes2.c:				printf("bar %4d ",co);	
+meshing_netting_2_ropes2.c:				printf("cable %4d ",barre[co].type);	
+meshing_netting_2_ropes2.c:				printf("extremiy %4d %4d\n",barre[co].noeud[1] ,barre[co].noeud[2] );	
+meshing_netting_2_ropes2.c:////////////////////////////////end of bar creation
+meshing_netting_2_ropes2.c:	for (no=1;no<=Structure.nb_barre;no++)
+meshing_netting_2_ropes2.c:		printf("bar %4d ",no);	
+meshing_netting_2_ropes2.c:		printf("cable %4d ",barre[no].type);	
+meshing_netting_2_ropes2.c:		printf("lengtl %6.2f ",barre[no].longueur_repos);
+meshing_netting_2_ropes2.c:		printf("extremiy %4d %4d\n",barre[no].noeud[1] ,barre[no].noeud[2] );	
+meshing_netting_2_ropes3.c:	//printf("netting_2_ropes_bar_nb %d\n",panneau[pa].netting_2_ropes_bar_nb);
+meshing_netting_2_ropes3.c:	period2 = (int) panneau[pa].netting_2_ropes_period / panneau[pa].netting_2_ropes_bar_nb;
+meshing_netting_2_ropes3.c:	period1 = period2 * panneau[pa].netting_2_ropes_bar_nb;
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);	//printf("case1 case3 extremity1_node %4d extremity2_node %4d\n",extremity1_node,extremity2_node);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 1.0-cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				//printf("base2 case1 extremity1_node %4d extremity2_node %4d\n",extremity1_node,extremity2_node);		
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 1.0-cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 1.0-cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 1.0-cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);	//printf("case1 case3 extremity1_node %4d extremity2_node %4d\n",extremity1_node,extremity2_node);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 1.0-cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				//printf("base2 case1 extremity1_node %4d extremity2_node %4d\n",extremity1_node,extremity2_node);		
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 1.0-cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 1.0-cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 1.0-cut_alpha[nb_cut]);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:				bar_creation2(pa, extremity1_node, extremity2_node, 0.0);				
+meshing_netting_2_ropes3.c:	bar_creation_per_element_around_panel(pa);
+numerotation.c:		element_trouve = appartient_numero_element(no);		//bar or triangle numero
+numerotation.c:		type_trouve = appartient_type_element(no);		//1 coulisse, 2 barre, 3 winch, 4 surface_hexa, 5 surface	
+quitter.c:  		if ( element[pa].barre			!= NULL) 	free(element[pa].barre);
+triangle.c:/*    floating-point precision is a practical barrier to how much this can   */
+triangle.c:/*  (barycentric) coordinates.  The xi-eta coordinate system is defined in   */

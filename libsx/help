@@ -1,0 +1,125 @@
+This file contains answers to questions that come up when people try
+to build libsx.
+
+
+----------------------------------------------------------------------------
+Q: The library built fine, but when I run the demo program, I get the
+   following error:
+
+  Warning: Cannot convert string "" to type Cursor
+        X Error of failed request:  BadPixmap (invalid Pixmap parameter)
+          Major opcode of failed request:  93 (X_CreateCursor)
+          Resource id in failed request:  0x0
+          Serial number of failed request:  133
+          Current serial number in output stream:  135
+
+A: This problem seems to occur on Sun workstations that have
+   different versions of the shared X libraries and server.  That is,
+   if you have the R4 libraries and an R5 server or R5 libs and an R4
+   server, you'll have this problem.
+
+   The solution is to get matching versions of the libraries and
+   server.  Everything should work fine then.
+
+   Occasionally it seems this problem will happen when running
+   OpenWindows.  That's because OpenWindows usually sets the
+   LD_LIBRARY_PATH variable to be /usr/openwin/lib instead of
+   /usr/lib.  That in itself isn't a big deal but if you have versions
+   of the X libraries in /usr/lib, and compile against those but at
+   run-time you end up using the libraries in /usr/openwin/lib, this
+   "Cannont convert string" problem happens.  The solution to this
+   would be to make the X libraries (at minimum libXaw.so) symbolic
+   links from /usr/openwin/lib to the corresponding version in
+   /usr/lib.  That should do the trick but I have not tried it myself. 
+   A competent sysadmin ought to be able to figure out a solution 
+   without terribly much difficulty (although a _really_ competent
+   sysadmin wouldn't have the problem in the first place :-).
+
+
+----------------------------------------------------------------------------
+Q: The library builds ok, but when I try to compile one of the demo programs
+   I get:
+	/usr/bin/ld:
+	
+	Error: Undefined:
+	XShapeQueryExtension
+	XShapeCombineMask
+
+A: You need to put -lXext in the LIBS variable in libsx_defs.
+
+----------------------------------------------------------------------------
+Q: I get the following undefined symbols when I try to link the demo
+   programs:
+
+        _get_wmShellWidgetClass
+        _get_applicationShellWidgetClass
+
+A: (this comes straight out of the comp.windows.x faq sheet)
+
+        In SunOS 4.1.2 Sun fixed a shared-library bug in ld which conflicts
+with the way X builds the shared Xmu library, causing these symbols, notably, 
+to be undefined when building some X11 clients on SunOS 4.1.[23]: 
+        _get_wmShellWidgetClass
+        _get_applicationShellWidgetClass
+Compiling "-Bstatic -lXmu -Bdynamic" is overkill; be sure to set
+OSTeenyVersion correctly in the config/sun.cf file and rebuild X11R5.
+
+To solve the problem if you are using OpenWindows 3.0 (X11R4-based Xt), please 
+contact your local Sun office and request the following patches:
+
+Patch i.d.      Description
+100512-02       4.1.x OpenWindows 3.0 libXt Jumbo patch
+100573-03       4.1.x OpenWindows 3.0 undefined symbols when using
+                        shared libXmu
+
+[Greg Earle, earle@Sun.COM; 7/92] 
+
+A source patch for use with the X11R4 libraries was developed by Conrad 
+Kimball (cek@sdc.boeing.com); it retrofits into R4 some fixes made in R5 to
+get around this problem. The patch is on ftp.x.org in [1/93]
+        contrib/X11R4_sunos4.1.2_patch_version3.Z
+
+----------------------------------------------------------------------------
+Q: The library builds ok, but when I try to compile one of the demo programs
+   I get:
+	/usr/bin/ld:
+	
+	Error: Undefined:
+	sin
+	cos
+
+A: You need to put -lm at the end of the LIBS variable in libsx_defs.
+
+
+----------------------------------------------------------------------------
+Q: The file requester, freq, doesn't work on Solaris.  I get messages 
+   such as:
+        kefile: No such file or directory
+        eq.c: No such file or directory
+        etc...
+
+A: What appears to be happening is that readdir() is returning bogus
+   name fields.  One way around this problem is to switch over to 
+   using readdir_r() which although it's not portable, will work on
+   Solaris.  If you switch to using readdir_r(), you will need to 
+   first declare an appropriate size dirent structure like this:
+
+   res = (struct dirent *)malloc(sizeof(struct dirent)+_POSIX_PATH_MAX);
+
+   Then use the pointer malloc() gives you in calls to readdir_r().
+
+
+----------------------------------------------------------------------------
+Q: On an SGI, scrollbars don't seem to work properly.  What's a matter?
+
+A: This is because in some earlier versions of Irix (pre 5.2), the header
+   file <X11/Xaw/Scrollbar.h> has an incorrect prototype for the function
+   XawScrollbarSetThumb().  The arguments wind up being defined as doubles
+   instead of float.  You can fix this by changing the scrollbar.c file
+   so that just before Scrollbar.h gets #included, you put the following
+   line:
+ 
+     #undef NeedWidePrototypes
+
+   And that should take care of any problems you have with scrollbars.
+

@@ -1,0 +1,131 @@
+charger.c:       			Element[zi].lgrepos = (Element[zi].pro[2] - Element[zi].pro[1]) * TypeElement[Element[zi].type].lgrepos;
+charger.c:    			//this bar belongs to the panel panneau[-Element[zi].type].lgrepos
+charger.c:       			Element[zi].lgrepos = (Element[zi].pro[2] - Element[zi].pro[1]) * panneau[-Element[zi].type].longueur_repos;
+charger.c:      		//Element[zi].lgrepos = (Element[zi].pro[2] - Element[zi].pro[1]) * TypeElement[Element[zi].type].lgrepos;
+charger.c:		//printf("elem %d longueur : %lf \n",zi,Element[zi].lgrepos);
+charger.c:       			Element[zi].lgrepos = (Element[zi].pro[2] - Element[zi].pro[1]) * TypeElement[Element[zi].type].lgrepos;
+charger.c:    			//this bar belongs to the panel panneau[-Element[zi].typ].lgrepos
+charger.c:       			Element[zi].lgrepos = (Element[zi].pro[2] - Element[zi].pro[1]) * panneau[-Element[zi].type].longueur_repos;
+charger.c:		Element[no+NOMBRE_ELEMENTS].lgrepos 			= Element[no].lgrepos;
+charger.c:		Element[no+NOMBRE_ELEMENTS].lgtendue 			= Element[no].lgtendue;
+charger.c:		Surface[no_su].lgrepos 			= Surface[no].lgrepos;
+charger.c:		Surface[no_su].lgrepos 			= Surface[no].lgrepos;
+charger.c:		if (Element[no].lgrepos <= 0.0) 
+charger.c:			printf("l element %4d a une longueur <= 0 : lgrepos = %8.3f   \n",no,Element[no].lgrepos); exit(0); 
+charger.c:		rapport = (float) Element[no].lgtendue / Element[no].lgrepos;
+charger.c:		if (Surface[no].lgrepos <= 0.0) { printf("Surface_2 = %8d lgrepos = %8f   \n",no,Surface[no].lgrepos); exit(0); }
+charger.c:		rapport = (float) rapport / Surface[no].lgrepos;
+charger.c:		if (Surface[no].lgrepos <= 0.0) { printf("Surface_3 = %8d lgrepos = %8f   \n",no,Surface[no].lgrepos); exit(0); }
+charger.c:		rapport = (float) rapport / Surface[no].lgrepos;
+charger.c:		rapport = (float) Element[no].lgtendue;
+charger.c:		if (Element[no].lgrepos <= 0.0) { printf("%8d %8f   ",no,Element[no].lgrepos); exit(0); }
+charger.c:		rapport = (float) rapport / Element[no].lgrepos;
+charger.c:		if (Surface[no].lgrepos <= 0.0) { printf("%8d %8f   ",no,Surface[no].lgrepos); exit(0); }
+charger.c:		rapport = (float) rapport / Surface[no].lgrepos;
+charger.c:		if (Surface[no].lgrepos <= 0.0) { printf("%8d %8f   ",no,Surface[no].lgrepos); exit(0); }
+charger.c:		rapport = (float) rapport / Surface[no].lgrepos;
+dessiner_info_element.c:			sprintf(chaine,"%5.2lg",Surface[pa].nrj1);
+dessiner_info_element.c:			sprintf(chaine,"%5.2lg",Surface[pa].nrj2);
+dessiner_info_element.c:	/*sprintf(chaine,"%5.2lg",Surface[pa].nrj1+Surface[pa].nrj2);
+dessiner_info_element.c:			sprintf(chaine,"%.3g",Surface[pa].lgrepos);EcritText(BLUE, (Noeud[pt1].x+Noeud[pt2].x+Noeud[pt3].x)/3.0, (Noeud[pt1].y+Noeud[pt2].y+Noeud[pt3].y)/3.0, chaine, 0.0);
+dessiner_info_element.c:			sprintf(chaine,"%.3g",Element[pa].lgrepos);
+dessiner_info_element.c:				sprintf(chaine,"%.3g",Coulisse[pa].lgrepos);
+dessiner_info_element.c:	sprintf(chaine,"%.3g",Surface[pa].lgrepos);
+dessiner_info_element.c:	sprintf(chaine,"%.3g",Element[pa].lgrepos);
+dessiner_info_element.c:		sprintf(chaine,"%.3g",Coulisse[pa].lgrepos);
+dessiner_info_element.c:			sprintf(chaine,"lgt1=%.3g",nnn);
+dessiner_info_element.c:			sprintf(chaine,"lgt2=%.3g",mmm);
+dessiner_info_element.c:			sprintf(chaine,"%.3g",Element[pa].lgtendue);
+dessiner_info_element.c:				sprintf(chaine,"%.3g",Coulisse[pa].lgtendue);
+dessiner_info_element.c:	sprintf(chaine,"%.3g",Element[pa].lgtendue);
+dessiner_info_element.c:		sprintf(chaine,"%.3g",Coulisse[pa].lgtendue);
+dessiner_info_element.c:			sca = PI * Surface[pa].diametrehydro * Surface[pa].diametrehydro / 4.0 * Surface[pa].lgrepos;
+dessiner_info_element.c:			sca = PI * Element[pa].diametrehydro * Element[pa].diametrehydro / 4.0 * Element[pa].lgrepos;
+dessiner_info_element.c:				sca = PI * Coulisse[pa].diametrehydro * Coulisse[pa].diametrehydro / 4.0 * Coulisse[pa].lgrepos;
+dessiner_info_element.c:	sca = PI * Surface[pa].diametrehydro * Surface[pa].diametrehydro / 4.0 * Surface[pa].lgrepos;
+dessiner_info_element.c:	sca = PI * Element[pa].diametrehydro * Element[pa].diametrehydro / 4.0 * Element[pa].lgrepos;
+dessiner_info_element.c:		sca = PI * Coulisse[pa].diametrehydro * Coulisse[pa].diametrehydro / 4.0 * Coulisse[pa].lgrepos;
+dessiner_info_element.c:			sca = PI * Surface[pa].diametrehydro * Surface[pa].diametrehydro / 4.0 * Surface[pa].lgrepos * Surface[pa].rhosurface;
+dessiner_info_element.c:			sca = PI * Element[pa].diametrehydro * Element[pa].diametrehydro / 4.0 * Element[pa].lgrepos * Element[pa].rhoelement;
+dessiner_info_element.c:				sca = PI * Coulisse[pa].diametrehydro * Coulisse[pa].diametrehydro / 4.0 * Coulisse[pa].lgrepos * Coulisse[pa].rhocoulisse;
+dessiner_info_element.c:	sca = PI * Surface[pa].diametrehydro * Surface[pa].diametrehydro / 4.0 * Surface[pa].lgrepos * Surface[pa].rhosurface;
+dessiner_info_element.c:	sca = PI * Element[pa].diametrehydro * Element[pa].diametrehydro / 4.0 * Element[pa].lgrepos * Element[pa].rhoelement;
+dessiner_info_element.c:		sca = PI * Coulisse[pa].diametrehydro * Coulisse[pa].diametrehydro / 4.0 * Coulisse[pa].lgrepos * Coulisse[pa].rhocoulisse;
+dessiner_info_element.c:			volume = PI * Surface[pa].diametrehydro * Surface[pa].diametrehydro  * Surface[pa].lgrepos / 4.0;
+dessiner_info_element.c:			volume = PI * Element[pa].diametrehydro * Element[pa].diametrehydro  * Element[pa].lgrepos / 4.0;
+dessiner_info_element.c:				volume = PI * Coulisse[pa].diametrehydro * Coulisse[pa].diametrehydro  * Coulisse[pa].lgrepos / 4.0;
+dessiner_info_element.c:	volume = PI * Surface[pa].diametrehydro * Surface[pa].diametrehydro  * Surface[pa].lgrepos / 4.0;
+dessiner_info_element.c:	volume = PI * Element[pa].diametrehydro * Element[pa].diametrehydro  * Element[pa].lgrepos / 4.0;
+dessiner_info_element.c:		volume = PI * Coulisse[pa].diametrehydro * Coulisse[pa].diametrehydro  * Coulisse[pa].lgrepos / 4.0;
+dessiner_visualisation.c:			angle_mini = atan(fabs(Surface[pa].largeurnoeud / 2.0 / Surface[pa].lgrepos));	/*demi angle de contact entre les fils u et v*/
+dessiner_visualisation.c:	twine_surface = 4.0 * Surface[pa].diametrehydro * Surface[pa].lgrepos;	/*surface of twine in one mesh*/
+dessiner_visualisation.c:	/*sprintf(chaine,"%5.2lg",Surface[pa].nrj1+Surface[pa].nrj2);
+dessiner_visualisation.c:	angle_mini = atan(fabs(Surface[pa].largeurnoeud / 2.0 / Surface[pa].lgrepos));	/*demi angle de contact entre les fils u et v*/
+dessiner_visualisation.c:			volume = Surface[no].lgrepos * PI * Surface[no].diametrehydro * Surface[no].diametrehydro / 4.0 * 2.0 * Surface[no].nb_ufils;
+dessiner_visualisation.c:				volume = Element[no].lgrepos * PI * Element[no].diametrehydro * Element[no].diametrehydro / 4.0;
+dessiner_visualisation.c:			volume = Element[no].lgrepos * PI * Element[no].diametrehydro * Element[no].diametrehydro / 4.0;
+gfx_base.c:	char flg=flag_clip;
+gfx_base.c:	flag_clip=flg;
+lecturedo3.c:    	/*fscanf(f1,"%lf %lf %d  %lf",&Element[i].pro[1],&Element[i].pro[2],&Element[i].type,&Element[i].lgrepos);*/
+lecture_don.c:	double* lg_lg = NULL;
+lecture_don.c:	float pourc_lg_pate;
+lecture_don.c:	float pourc_lg_masse1;
+lecture_don.c:	float pourc_lg_masse2;
+lecture_don.c:    			TypeElement[1].lgrepos 			= TypeSurfHexa[pa].lo_repos;
+lecture_don.c:    			TypeElement[2].lgrepos 			= TypeSurfHexa[pa].lo_repos;
+lecture_don.c:    			TypeElement[3].lgrepos			= TypeSurfHexa[pa].lo_repos;
+lecture_don.c:    		do  c=fgetc(fic); while (c !=':');fscanf(fic,"%lf\n",&TypeElement[pa].lgrepos);
+lecture_don.c:    		do  c=fgetc(fic); while (c !=':');fscanf(fic,"%lf\n",&Coulisse[pa].lgrepos);
+lecture_don.c:		printf("raideur traction  %lf \n",Coulisse[pa].lgrepos);
+lecture_don.c:			    		TypeElement[pa+zj].lgrepos 			= TypeElement[zj].lgrepos;
+lecture_don.c:			    		TypeElement[pa+zj].lgrepos 			= TypeElement[zj].lgrepos;
+lecture_don.c:			    		TypeElement[pa+zj].lgrepos	 		= TypeElement[zj].lgrepos;
+lecture_don.c:					TypeElement[zi].lgrepos=sqrt((TypeElement[zi].x1-TypeElement[zi].x2)*(TypeElement[zi].x1-TypeElement[zi].x2) + (TypeElement[zi].y1-TypeElement[zi].y2)*(TypeElement[zi].y1-TypeElement[zi].y2) + (TypeElement[zi].z1-TypeElement[zi].z2)*(TypeElement[zi].z1-TypeElement[zi].z2));
+lecture_don.c:					TypeElement[zi].lgrepos=sqrt((TypeElement[zi].x1-TypeElement[zi].x2)*(TypeElement[zi].x1-TypeElement[zi].x2) + (TypeElement[zi].y1-TypeElement[zi].y2)*(TypeElement[zi].y1-TypeElement[zi].y2) + (TypeElement[zi].z1-TypeElement[zi].z2)*(TypeElement[zi].z1-TypeElement[zi].z2));
+lecture_don.c:					TypeElement[zi].lgrepos=sqrt((TypeElement[zi].x1-TypeElement[zi].x2)*(TypeElement[zi].x1-TypeElement[zi].x2) + (TypeElement[zi].y1-TypeElement[zi].y2)*(TypeElement[zi].y1-TypeElement[zi].y2) + (TypeElement[zi].z1-TypeElement[zi].z2)*(TypeElement[zi].z1-TypeElement[zi].z2));
+lecture_don.c:					TypeElement[zi+3].lgrepos=0.95*sqrt((TypeElement[zi].x1-TypeElement[zi].x2)*(TypeElement[zi].x1-TypeElement[zi].x2) + (TypeElement[zi].y1-TypeElement[zi].y2)*(TypeElement[zi].y1-TypeElement[zi].y2) + (TypeElement[zi].z1-TypeElement[zi].z2)*(TypeElement[zi].z1-TypeElement[zi].z2));
+lecture_don.c:					double lglg;
+lecture_don.c:						itmp = fscanf(fic, "%lf %lf %lf %lf %d", &lglg, &noeud_coord_x, &noeud_coord_y, &noeud_coord_z, &noeud_type_type);
+lecture_don.c:					lg_lg = (double *) realloc(lg_lg, (iii-1) * sizeof(double));
+lecture_don.c:						itmp = fscanf (fic, "%lf", &lglg);
+lecture_don.c:						lg_lg[jjj-1]=lglg;
+lecture_don.c:						TypeElement[jjj].lgrepos=lg_lg[jjj-elem_amarrage];
+lecture_don.c:					double lglg;
+lecture_don.c:					lg_lg = (double *) realloc(lg_lg, (iii-1) * sizeof(double));
+lecture_don.c:						itmp = fscanf (fic, "%lf", &lglg);
+lecture_don.c:						lg_lg[jjj-1]=lglg;
+lecture_don.c:						TypeElement[jjj].lgrepos=lg_lg[jjj-elem_amarrage];
+lecture_don.c:							itmp = fscanf(fic,"%f %f %f %f %f %d %d", &xxx, &yyy, &zzz, &pourc_lg_masse1, &z_masse1, &type_masse1, &pan_choisi1);
+lecture_don.c:							TypeElement[elem_accroche].x2=xxx-(xxx-(add_filet_pred_xxo-add_filet_pred_diam/2*cos(2*PI*pan_choisi1/add_filet_pred_nsegment)))*pourc_lg_masse1;
+lecture_don.c:							TypeElement[elem_accroche].y2=yyy-(yyy-(add_filet_pred_yyo+add_filet_pred_diam/2*sin(2*PI*pan_choisi1/add_filet_pred_nsegment)))*pourc_lg_masse1;
+lecture_don.c:								TypeElement[jjj].lgrepos=sqrt((TypeElement[jjj].x1-TypeElement[jjj].x2)*(TypeElement[jjj].x1-TypeElement[jjj].x2) + (TypeElement[jjj].y1-TypeElement[jjj].y2)*(TypeElement[jjj].y1-TypeElement[jjj].y2) + (TypeElement[jjj].z1-TypeElement[jjj].z2)*(TypeElement[jjj].z1-TypeElement[jjj].z2));
+lecture_don.c:							itmp = fscanf(fic,"%f %f %f %f %f %d %d %f %f %d %d", &xxx, &yyy, &zzz, &pourc_lg_masse1, &z_masse1, &type_masse1, &pan_choisi1, &pourc_lg_masse2, &z_masse2, &type_masse2, &pan_choisi2);
+lecture_don.c:							TypeElement[elem_accroche].x2=xxx-(xxx-(add_filet_pred_xxo-add_filet_pred_diam/2*cos(2*PI*pan_choisi1/add_filet_pred_nsegment)))*pourc_lg_masse1;
+lecture_don.c:							TypeElement[elem_accroche].y2=yyy-(yyy-(add_filet_pred_yyo+add_filet_pred_diam/2*sin(2*PI*pan_choisi1/add_filet_pred_nsegment)))*pourc_lg_masse1;
+lecture_don.c:							TypeElement[elem_accroche+3].x2=xxx-(xxx-(add_filet_pred_xxo-add_filet_pred_diam/2*cos(2*PI*pan_choisi2/add_filet_pred_nsegment)))*pourc_lg_masse2;
+lecture_don.c:							TypeElement[elem_accroche+3].y2=yyy-(yyy-(add_filet_pred_yyo+add_filet_pred_diam/2*sin(2*PI*pan_choisi2/add_filet_pred_nsegment)))*pourc_lg_masse2;
+lecture_don.c:								TypeElement[jjj].lgrepos=sqrt((TypeElement[jjj].x1-TypeElement[jjj].x2)*(TypeElement[jjj].x1-TypeElement[jjj].x2) + (TypeElement[jjj].y1-TypeElement[jjj].y2)*(TypeElement[jjj].y1-TypeElement[jjj].y2) + (TypeElement[jjj].z1-TypeElement[jjj].z2)*(TypeElement[jjj].z1-TypeElement[jjj].z2));
+lecture_don.c:							itmp = fscanf(fic,"%f %f %f %f %f %d %f %f %d %d", &xxx, &yyy, &zzz, &pourc_lg_masse1, &z_masse1, &type_masse1, &pourc_lg_pate, &z_pate, &pan_choisi1, &pan_choisi2);
+lecture_don.c:							TypeElement[elem_accroche].x2=xxx+xxo*(1-add_filet_pred_diam/(2*sqrt(xxo*xxo+yyo*yyo)))*pourc_lg_masse1;
+lecture_don.c:							TypeElement[elem_accroche].y2=yyy+yyo*(1-add_filet_pred_diam/(2*sqrt(xxo*xxo+yyo*yyo)))*pourc_lg_masse1;
+lecture_don.c:							TypeElement[elem_accroche+2].x2=xxx+xxo*(1-add_filet_pred_diam/(2*sqrt(xxo*xxo+yyo*yyo)))*pourc_lg_pate;
+lecture_don.c:							TypeElement[elem_accroche+2].y2=yyy+yyo*(1-add_filet_pred_diam/(2*sqrt(xxo*xxo+yyo*yyo)))*pourc_lg_pate;
+lecture_don.c:								TypeElement[jjj].lgrepos=sqrt((TypeElement[jjj].x1-TypeElement[jjj].x2)*(TypeElement[jjj].x1-TypeElement[jjj].x2) + (TypeElement[jjj].y1-TypeElement[jjj].y2)*(TypeElement[jjj].y1-TypeElement[jjj].y2) + (TypeElement[jjj].z1-TypeElement[jjj].z2)*(TypeElement[jjj].z1-TypeElement[jjj].z2));
+lecture_don.c:    		/*Element[i].lgrepos             = TypeElement[Element[i].type].lgrepos;*/
+lecture_don.c:    		Surface[i].lgrepos             = panneau[Surface[i].type].longueur_repos;
+lecturedyn.c:			Element[elem].dlgtendue = 	(double *) Malloc_double(1 + nbtemps);
+lecturedyn.c:      				Element[elem].dlgtendue[pa] = sqrt((Noeud[fin].dx[pa]-Noeud[deb].dx[pa])*(Noeud[fin].dx[pa]-Noeud[deb].dx[pa]) 
+lecturedyn.c:      				elongation = (Element[elem].dlgtendue[pa]-Element[elem].lgrepos) / Element[elem].lgrepos ;
+lecturedyn.c:    				Element[elem].dnrj[pa] = Element[elem].dtension[pa] * (Element[elem].dlgtendue[pa] - Element[elem].lgrepos)/2.0;
+lecturedyn.c:						printf("lgrepos %lf,lgtendue[%d] %lf , tension[%d] %lf\n",Element[35].lgrepos,pa,Element[35].dlgtendue[pa],pa,Element[35].dtension[pa]);	
+lecturesta.c:      			Element[elem].lgtendue = (elongation * Element[elem].lgrepos) +  Element[elem].lgrepos ;
+lecturesta.c:    			Element[elem].nrj= Element[elem].wt * (Element[elem].lgtendue - Element[elem].lgrepos)/2.0;
+lecturesta.c:		/*printf("elem 3 longueur: %lf \n",Element[3].lgrepos);*/
+lecturesta.c:      			Coulisse[elem].lgtendue = (elongation * Coulisse[elem].lgrepos) +  Coulisse[elem].lgrepos ;
+lecturesta.c:    			Coulisse[elem].nrj= Coulisse[elem].wt * (Coulisse[elem].lgtendue - Coulisse[elem].lgrepos)/2.0;
+lecturesta.c:       		elongation = (n - Surface[elem].lgrepos) / Surface[elem].lgrepos;
+lecturesta.c:     			elongation = (m - Surface[elem].lgrepos) / Surface[elem].lgrepos;
+lecturesta.c:    			Surface[elem].nrj1= Surface[elem].tension1 * (n - Surface[elem].lgrepos)/2.0;
+lecturesta.c:    			Surface[elem].nrj2= Surface[elem].tension2 * (m - Surface[elem].lgrepos)/2.0;
+lecturesta.c:				printf("lgr  = %lf m  = %lf n  = %lf \n",Surface[elem].lgrepos,m,n);
+multireq.c:			Element[elem].lgtendue=Element[elem].dlgtendue[pa];

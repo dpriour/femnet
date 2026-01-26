@@ -1,0 +1,37 @@
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/5catch/c2
+./unix ~/femnet/data_2001/readme/5catch/c2
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/5catch/d2
+./unix ~/femnet/data_2001/readme/5catch/d2
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/5catch/d3
+./unix ~/femnet/data_2001/readme/5catch/d3
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/5catch/d4 ~/femnet/data_2001/readme/5catch/d3
+./unix ~/femnet/data_2001/readme/5catch/d4
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/5catch/d5 ~/femnet/data_2001/readme/5catch/d4
+./unix ~/femnet/data_2001/readme/5catch/d5
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/5catch/d5b ~/femnet/data_2001/readme/5catch/d5a
+./unix ~/femnet/data_2001/readme/5catch/d5b
+
+cd ~/femnet/programs
+./phobos ~/femnet/data_2001/readme/5catch/d5c ~/femnet/data_2001/readme/5catch/d5a
+./unix ~/femnet/data_2001/readme/5catch/d5c
+
+
+
+
+
+cd ~/femnet/hector
+./hector
+
+convert -flatten ../data_2001/optim/gloria/LM_2_12.ps ../data_2001/optim/gloria/LM_2_12a.png
+

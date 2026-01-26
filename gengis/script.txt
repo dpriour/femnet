@@ -1,0 +1,277 @@
+peux tu creer un code en langage c qui fonctionne sous linux et qui utilise la bibliotheque libsx.  Ce code est un programme graphique qui comporte plusieurs menus. dans le premier menu il y a :
+un bouton pour creer des polygones avec la souris
+un bouton pour creer des sgments avec la souris
+un bouton pour creer des liens entre les points. les points sont les sommets de polygones et les extremites des segments
+
+peux tu ajouter une fonction de zoom
+
+peux tu ajouter un menu file avec :
+un bouton de sauvegarde dans un fichier
+un bouton de chargement d un fichier
+
+peux tu modifier le zoom pour qu il soit actionne avec la molette de la souris
+peux tu ajouter la fonction de deplacement de la figure avec la souris lorsque le bouton droit est actionne
+
+les points ont une caracteristique nommee type, qui est un entier
+par default le type est 1.
+
+peux tu ajouter une action alignement qui premierement selectionne des points dans un rectangle defini a la souris et deuxiemement permet de modifier soit le ccordonnees x, soit les coordonnes y soit les types
+
+lorsqu on clique sur alignement modifier X ou modifier Y, indique la moyenne et l ecart type des points selectionnes
+
+rajouter ctrl z pour asnnuler la derniere action
+
+lorsqu on fait file charger propose une liste des fichiers disponibles
+lorsqu on a charger un fichier et qu on le sauvegarde propose son nom
+
+lorsqu on fait file charger propose une liste des fichiers disponibles et ajoute la possibilite de les selectionnes avec la souris
+
+peux tu modifier le reset du zoom pour que l utilisateur in dique le zoom qu il desire. par exemple 1.5 pour 150%
+
+Peux tu sauvegarder les liens par interconnections
+
+dans 2geometry.dat je ne veux pas la liste des liens 2 a 2 comme
+LINKS 8
+3 13
+13 8
+2 14
+14 9
+2 7
+7 15
+1 4
+6 16
+mais obtenir 
+INTERCONNECTIONS 4
+3 3 13 8
+5 2 14 9 7 15
+2 1 4
+2 6 16
+ou le premier entier est le nombre de noeuds interconnectes
+
+Peux tu ajouter un menu avec un bouton pour l affichage des points, un bouton pour l affichage des polygones, un bouton pour l affichage des segments, un bouton pour l affichage des interconnections.
+
+Peux tu ajouter un menu avec un bouton pour l affichage du numeros des points, un bouton pour l affichage du numeros des polygones, un bouton pour l affichage du numeros des segments, un bouton pour l affichage du numeros des interconnections.
+
+les polygones ont un type, comme les points. les cotes des polygones ont un type et les segments ont un type. par default ce type sera 1. 
+peux tu ajouter un bouton pour afficher le numero du type des points, le numero du type des polygones, le numero du type des cotes des polygones, le numero du type des segments.
+
+dans la fonction alignement et modifier type. il faut changer le type du polygone si le polygone est entierement selectionne. il faut changer le type du cote du polygone si le cote du polygone est entierement selectionne. il faut changer le type du segment si le segment est entierement selectionne. 
+
+peux tu enregistrer les types des polygones, cotes de polygones et segment lors de la sauvegarde
+
+peux tu ajouter un bouton d affichage des axes dans le menu affichage
+
+peux tu indiquer quel est l axe x et l axe y
+
+Chaque point de polygone est affecte de 2 reels u et v. ces reels u et v sont des coordonnees en nombre de mailles de filet. Par defaut ces coordonnees sont les coordonnees x et y lors de la creation du polygone. Peux tu creer un bouton de modification de ces reels u et v. lorsque ce bouton est actionne, on clique sur un cote de polygone pour afficher une boite de dialogue dans laquelle il y a u et v du premier point du cote (u1,v1), u et v du second point (u2,v2) et lu et lv les ecarts en u et v entre ces 2 points. Dans cette boite de dialogue on peut modifier u1 dans ce cas lu est modifie automatiquement, on peut modifier lu dans ce cas u2 est modifie automatiquement et on peut modifier u2 dans ce cas lu est modifie automatiquement. idem pour v.
+
+lorsque modifier uv est actionne, et lorsque un cote de polygone est selectionne, le cote et ses extremites doivent etre mis en evidence par un changement de couleur par exemple. Dans la boite de dialogue il faut donner la possibilite de modifier lu et lv.  Si lu est modifie alors u2 est automatiquement modifie. Si lv est modifie alors v2 est automatiquement modifie.
+
+peux tu commencer les numerotations a 1 et non a 0
+
+lors de sauvegarder la numerotation dans le fichier .dat doit rendre compte de la numerotation commencant par 1 et non par 0.
+
+peux tu creer un bouton dans le menu actions qui ouvre une boite de dialogue pour saisir un entier entre 1 2 ou 3. Si c est 1 l axe normal a la fenetre est l axe X et les axes de la fenetre sont Y et Z. Si c est 2 l axe normal a la fenetre est l axe Y et les axes de la fenetre sont Z et X. Si c est 3 l axe normal a la fenetre est l axe Z et les axes de la fenetre sont X et Y.
+
+Quand le plan de vue est 1 les axes apparaissant sur la fenetre doivent etre Y et Z.
+Quand le plan de vue est 2 les axes apparaissant sur la fenetre doivent etre Z et X.
+Quand le plan de vue est 3 les axes apparaissant sur la fenetre doivent etre X et Y.
+
+Quand le plan de vue est 1 u et v doivent etre par default Y et Z.
+Quand le plan de vue est 2 u et v doivent etre par default Z et X.
+Quand le plan de vue est 3 u et v doivent etre par default X et Y.
+
+Mettre les menus, le boutons et les boites de dialogue en anglais
+
+Dans la boite de dialogue modify UV, commencer la numerotation de polygones a 1 et commencer la numerotation des points a 1 et non a 0
+
+peux tu enregistrer dans un fichier avec l extension don en meme temps que dans le fichier dat et avec le meme nom les elements suivants: 
+design in the plane normal to axis: x
+x etant l entier plan de vue
+
+peux tu enregistrer dans le fichier avec l extension don
+panels number: x
+x etant le nombre de polygones
+
+peux tu enregistrer pour tous les  polygones dans le fichier avec l extension don les 25 lignes suivantes:
+Panel: 1
+number of nodes around: 10
+nodes of the contour no x y z U V type and following type:
+1	37.000000	0.000000	20.000000	0.000000	27.500000	2	2
+2	46.000000	0.000000	24.000000	7.000000	37.500000	2	2
+3	71.000000	0.000000	22.000000	25.000000	32.500000	2	2
+4	111.000000	0.000000	12.000000	55.000000	17.500000	2	2
+5	111.000000	0.000000	-12.000000	55.000000	-17.500000	2	2
+6	71.000000	0.000000	-22.000000	25.000000	-32.500000	2	2
+7	46.000000	0.000000	-24.000000	7.000000	-37.500000	2	2
+8	37.000000	0.000000	-20.000000	0.000000	-27.500000	2	2
+9	71.000000	0.000000	-3.000000	25.000000	-2.500000	2	2
+10	71.000000	0.000000	3.000000	25.000000	2.500000	2	2
+Traction stiffness (N):			25000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.400000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.002800
+Knot size (m):				0.000000
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+10 etant le nombre de points du polygone
+ensuite pour tous les points du polygone
+37.00 0.00 20.00 etant les coordonnes x y et z du premier point
+0.00 27.50 etant les coordonnees u et v du premier point
+2 2 etant le type du point et le type du premier cote
+ensuite recopier les 12 lignes sauf
+Type of internal nodes:			2
+2 etant le type du polygone
+
+peux tu enregistrer a la suite du fichier avec l extension don les 2 lignes suivantes:
+hexagonal panels number: 0
+Cables number: x
+
+x etant le nombre de segments
+
+peux tu enregistrer pour tous les  segments a la suite du fichier avec l extension don les 13 lignes suivantes:
+Cable: 1
+Extremities no x y z type:
+1  0.000000  0.000000  0.000000  1
+2  2.000000  0.000000  0.000000  4
+Traction stiffness (N):		62000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):		200.000000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.026000
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			9
+Type of internal nodes:		2
+
+0.000000  0.000000  0.000000  1 etant les coordonees x y z du premier point du segment et 1 le type du premier point.
+2.000000  0.000000  0.000000  4 etant les coordonees x y z du second point du segment et 1 le type du second point.
+ensuite recopier les 9 lignes sauf
+Type of internal nodes:		2
+2 etant le type du segment
+
+peux tu enregistrer a la suite du fichier avec l extension don les 2 lignes suivantes:
+Sliding cables number: 0
+links number: x
+
+x etant le nombre  d interconnections
+
+
+peux tu enregistrer a la suite du fichier avec l extension don pour chaque inteconnexions la ligne suivante:
+nb_pt :4	el: 9	nd: 2	el: 13	nd: 1	pa: 1	nd: 8	el: 18	nd: 1	
+
+4 etant le nombre de points dans l interconection. el:9 nd:2 etant le second point du segment 9. pa: 1	nd: 8 etant le huitieme point du polygone 1
+
+peux tu enregistrer a la suite du fichier avec l extension don la ligne suivante:
+Meshing order:
+peux tu enregistrer pour tous les polygones a la suite du fichier avec l extension don la ligne suivante dans le cas ou il y a 5 polygones:
+pa:    1  pa:    2  pa:    3  pa:    4  pa:     5  
+peux tu enregistrer pour tous les sgments a la suite du fichier avec l extension don la ligne suivante dans le cas ou il y a 3 segments:
+el:     1 el:    2  el:    3  
+
+peux tu enregistrer a la suite du fichier avec l extension don la ligne suivante:
+Number of types of nodes: 4
+
+4 etant la valeur maximale de types de points
+
+
+peux tu enregistrer a la suite du fichier avec l extension don pour chaque type de point les 10 lignes suivantes:
+No du type :			1
+Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
+Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
+Length X,Y,Z (m):		0.000000  0.000000  0.000000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
+External forces X,Y,Z (N):	0.000000  0.000000  0.000000
+Displacement X,Y,Z:		1  1  1
+Limits X,Y,Z (m):		0.000000  0.000000  0.000000
+Limits sens X,Y,Z:		0  0  0
+Symetry X,Y,Z:			0  0  0
+
+le premier 1 est le numero du type
+
+
+peux tu enregistrer a la suite du fichier avec l extension don les 60 lignes suivantes:
+NUMERIC ENVIRONMENT
+Divisor (s):						0.000050
+
+Convergence threshold (N):				0.0100000
+
+Displacement limit for each iteration (m):		10.000000
+
+Maximal number of iterations:				10000
+
+Dynamic: Time step (s):					0.100000
+
+Dynamic: Record time step (s):				0.200000
+
+Dynamic: Beginning time of record (s):			0.000000
+
+Dynamic: End time of record and calculation (s):	0.000000
+
+METEO/OCEANIC ENVIRONMENT
+Current direction (deg):				0.000000
+
+Current speed (m/s):					2.058000
+
+Wave period (s):					10.000000
+
+Wave height (m):					0.000000
+
+Wave direction relatively X (deg):			0.000000
+
+Depth (m):						2000.000000
+
+CATCH DESCRIPTION
+Volume (m3):						0.000000
+
+Accuracy on this volume:				0.000010
+
+Drag coefficient on this volume:			1.000000
+
+BOTTOM SEA ENVIRONMENT
+Wearing coefficient on the bottom:			0.500000
+
+Stiffness of the insertion in the sea bottom (N/m):	5000000.000000
+
+TEXT OUTPUT
+Distances number 		:	0
+Forces number 			:	0
+Tensions number 		:	0
+Sliding tensions number 	:	0
+Positions number 		:	0
+
+Structure forces display	 	: 1
+Catch diameter display		 	: 1
+Catch thickness display	 		: 1
+Catch volume display		 	: 1
+Filtrated surface display	 	: 1
+Speed display		 		: 1
+
+
+input Auto_convergence
+input convergence_parameters 1 10 100000000000
+input link 0.5
+
+peux tu sauvegarder plan de vue sous forme d entier dans le fichier dat
+
+peux tu rajouter un bouton modify Z 
+
+peux tu positionner les boutons  Alignment et Modify Z du menu actions dans le menu alignment
+peux tu positionner la fonction Load file dans le menu File et supprimer le bouton load du menu File
+
+peux tu supprimer Zoom In et Zoom Out du menu Zoom
+
+Dans le menu File au lieu d avoir la liste des fichiers dat peux tu ajouter un bouton load qui permet de visualiser la liste des fichiers dat avant de les charger
+
+peut t on cliquer sur un nom de fichier dat pour le charger
+
+peux tu mettre tous les cotes des polygones a la couleur noire
+
+Peux tu modifier la créations des liens entre les points. les points sont soit des sommets de polygones et soit des extremites des segments, mais pas des points isolés.
+

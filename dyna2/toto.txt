@@ -1,0 +1,2 @@
+4ch19.c:						Surface[zi].cdnormal            = TypeSurface[Surface[zi].type].cdnormal * ratio_drag;
+dyna.c:						Surface[zi].cdnormal            = TypeSurface[Surface[zi].type].cdnormal * ratio_drag;

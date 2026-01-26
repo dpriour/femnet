@@ -1,0 +1,193 @@
+design in the plane normal to axis: 2
+panels number: 2
+
+Panel: 1
+number of nodes around: 10
+nodes of the contour no x y z U V type and following type:
+1	-18.1	0.0	17.9	0.0	0.0	2	2
+2	-23.8	0.0	15.1	42.0	42.0	2	2
+3	-29.0	0.0	12.4	78.0	78.0	2	2
+4	-29.0	0.0	9.6	78.0	106.0	3	3
+5	-33.2	0.0	9.6	108.0	106.0	3	3
+6	-34.7	0.0	9.6	118.0	106.0	3	2
+7	-34.7	0.0	16.9	118.0	15.0	2	2
+8	-33.2	0.0	17.5	108.0	6.0	2	2
+9	-29.0	0.0	18.7	78.0	-14.0	2	2
+10	-23.8	0.0	20.1	42.0	-32.0	2	2
+Traction stiffness (N):			32000.0
+Compression stiffness (N):		0.0
+Mesh opening stiffness (N.m/rad):	0.0
+Unstretched length (m):			0.20
+Volumic mass (kg/m3):			956
+Hydrodynamic diameter (m):		0.0026
+Knot size (m):				0.0
+Normal Cd:				1.20
+Tangential Cd:				0.08
+Meshing step (m):			5.0
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 2
+number of nodes around: 9
+nodes of the contour no x y z U V type and following type:
+1	-18.1	0.0	22.5	0.0	0.0	2	2
+2	-23.8	0.0	20.9	42.0	-17.0	2	2
+3	-29.0	0.0	23.2	78.0	12.0	2	2
+4	-33.2	0.0	25.2	108.0	36.0	2	0
+5	-34.7	0.0	25.8	118.0	44.0	2	0
+6	-34.7	0.0	32.7	118.0	136.0	3	6
+7	-33.2	0.0	32.7	108.0	136.0	3	2
+8	-33.2	0.0	30.1	108.0	108.0	2	2
+9	-23.8	0.0	25.1	42.0	42.0	2	2
+Traction stiffness (N):			32000.0
+Compression stiffness (N):		0.0
+Mesh opening stiffness (N.m/rad):	0.0
+Unstretched length (m):			0.20
+Volumic mass (kg/m3):			956
+Hydrodynamic diameter (m):		0.0026
+Knot size (m):				0.0
+Normal Cd:				1.20
+Tangential Cd:				0.08
+Meshing step (m):			5.0
+Type of internal nodes:			2
+Meshing type:				2
+
+hexagonal panels number: 0
+
+Cables number: 4
+Ca: 1	D:  1  -0.0  2.0   2.0  1	2  -0.0  0.0  22.1  4		Kt: 50000.0  Kc: 0.0  L: 0.817500  Vm: 1140.0  D:0.005000  Cd: 1.200000  f: 0.080000  Nb: 5  Ty: 2
+Ca: 2	D:  1  -0.0  0.0  22.1  4	2  -3.4  0.0  22.1  2		Kt: 50000.0  Kc: 0.0  L: 0.985000  Vm: 1140.0  D:0.005000  Cd: 1.200000  f: 0.080000  Nb: 1  Ty: 2
+Ca: 3	D:  1  -3.4  0.0  22.1  2	2  -9.6  0.0  20.5  2		Kt: 50000.0  Kc: 0.0  L: 2.960000  Vm: 1140.0  D:0.005000  Cd: 1.200000  f: 0.080000  Nb: 1  Ty: 2
+Ca: 4	D:  1  -3.4  0.0  22.1  2	2  -18.1  0.0  22.5  3		Kt: 1000000.0  Kc: 0.0  L: 1.010000  Vm: 5665.0  D:0.022500  Cd: 1.200000  f: 0.080000  Nb: 1  Ty: 2
+
+Sliding cables number: 0
+
+Links number: 0
+
+Meshing order:
+all  
+
+Number of types of nodes: 4
+
+No du type :			1
+Mass X,Y,Z (kg):		0.0  0.0  0.0
+Added mass X,Y,Z (kg):		0.0  0.0  0.0
+Length X,Y,Z (m):		0.0  0.0  0.0
+Drag coefficient X,Y,Z:		1.2  1.2  1.2
+External forces X,Y,Z (N):	0.0  0.0  0.0
+Displacement X,Y,Z:		1  1  1
+Limits X,Y,Z (m):		0.0  0.0  0.0
+Limits sense X,Y,Z:		0  0  0
+Symmetry X,Y,Z:			0  0  0
+
+No du type :			2
+Mass X,Y,Z (kg):		0.0  0.0  0.0
+Added mass X,Y,Z (kg):		0.0  0.0  0.0
+Length X,Y,Z (m):		0.0  0.0  0.0
+Drag coefficient X,Y,Z:		1.2  1.2  1.2
+External forces X,Y,Z (N):	0.0  0.0  0.0
+Displacement X,Y,Z:		0  0  0
+Limits X,Y,Z (m):		0.0  0.0  0.0
+Limits sense X,Y,Z:		0  0  0
+Symmetry X,Y,Z:			0  0  0
+
+No du type :			3
+Mass X,Y,Z (kg):		0.0  0.0  0.0
+Added mass X,Y,Z (kg):		0.0  0.0  0.0
+Length X,Y,Z (m):		0.0  0.0  0.0
+Drag coefficient X,Y,Z:		1.2  1.2  1.2
+External forces X,Y,Z (N):	0.0  0.0  0.0
+Displacement X,Y,Z:		0  0  0
+Limits X,Y,Z (m):		0.0  0.0  0.0
+Limits sense X,Y,Z:		0  0  0
+Symmetry X,Y,Z:			0  1  0
+
+No du type :			4
+Mass X,Y,Z (kg):		0.0  0.0  0.0
+Added mass X,Y,Z (kg):		0.0  0.0  0.0
+Length X,Y,Z (m):		0.0  0.0  0.0
+Drag coefficient X,Y,Z:		1.2  1.2  1.2
+External forces X,Y,Z (N):	0.0  0.0  0.0
+Displacement X,Y,Z:		1  0  0
+Limits X,Y,Z (m):		0.0  0.0  0.0
+Limits sense X,Y,Z:		0  0  0
+Symmetry X,Y,Z:			0  0  0
+
+NUMERIC ENVIRONMENT
+Divisor (s):						0.000050
+
+Convergence threshold (N):				0.001000
+
+Displacement limit for each iteration (m):		10.0
+
+Maximal number of iterations:				5000
+
+Dynamic: Time step (s):					0.100000
+
+Dynamic: Record time step (s):				0.200000
+
+Dynamic: Beginning time of record (s):			0.0
+
+Dynamic: End time of record and calculation (s):	0.0
+
+METEO/OCEANIC ENVIRONMENT
+Current direction (deg):				0.0
+
+Current speed (m/s):					0.6
+
+Wave period (s):					10.0
+
+Wave height (m):					0.0
+
+Wave direction relatively X (deg):			0.0
+
+Depth (m):						2000.0
+
+CATCH DESCRIPTION
+Volume (m3):						0.0
+
+Accuracy on this volume (m3):				1e-05
+
+Drag coefficient on this volume:			1.4
+
+BOTTOM SEA ENVIRONMENT
+Wearing coefficient on the bottom:			0.50
+
+Stiffness of the insertion in the sea bottom (N/m):	5000000.0
+
+TEXT OUTPUT
+Distances number 		:	1
+Distance: 1 comment: #warp (m)# no global 1: 5 no global 2: 2 decimal nb: 3
+
+Forces number 			:	0
+
+Tensions number 		:	1
+Tension: 1 comment: #Tension warp	(N)# cable: 1 extremity node: 5 decimal nb: 0
+
+Sliding tensions number 	:	0
+
+Positions number 		:	8
+Position: 1 comment: #X    begining warp(m)# no global: 5 axe: 1 decimal nb: 2
+Position: 2 comment: #Z    begining warp(m)# no global: 5 axe: 3 decimal nb: 2
+Position: 3 comment: #X         end warp(m)# no global: 2 axe: 1 decimal nb: 2
+Position: 4 comment: #Z         end warp(m)# no global: 2 axe: 3 decimal nb: 2
+Position: 5 comment: #X   begining chain(m)# no global: 3 axe: 1 decimal nb: 2
+Position: 6 comment: #Z   begining chain(m)# no global: 3 axe: 3 decimal nb: 2
+Position: 7 comment: #X     middle chain(m)# no global: 4 axe: 1 decimal nb: 2
+Position: 8 comment: #Z     middle chain(m)# no global: 4 axe: 3 decimal nb: 2
+
+Structure forces display	 	: 1
+Catch diameter display		 	: 0
+Catch thickness display	 		: 0
+Catch volume display		 	: 0
+Filtrated surface display	 	: 1
+Speed display		 		: 1
+
+input Auto_convergence
+input convergence_parameters 1 10 100000000000
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+#
+#
+include ../libsx_defs
+# include /home/alre/libsx/libsx_defs
+
+OBJS       = main.o multireq.o
+
+all : multireq
+
+multireq : $(OBJS) 
+	$(CC) -o $@ $(OBJS) $(LIBS) -lm
+
+main.o : main.c libsx.h multireq.h
+
+multireq.o : multireq.c multireq.h
+
+clean:
+	rm -f *.o *~ core multireq
+

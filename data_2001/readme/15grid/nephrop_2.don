@@ -1,0 +1,414 @@
+Plane normal yo z axis: 3
+Diamond panel nb: 6
+
+Panneau : 1  
+ 
+nombre de points du contour : 6
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	0	0	-9.65	0	0	1	4
+2	0	1	-10	0	-27	4	2
+3	1.4	1	-10	37	-27	2	2
+4	1.4	0	-9.65	37	0	2	2
+5	1.4	-1	-10	37	27	2	2
+6	0	-1	-10	0	27	4	4
+
+Raideur traction (N) :		120000
+Raideur compression (N) :	0
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.02
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.003
+largeur noeud :			0
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		0.2
+type des noeuds interieurs :	2
+type de maillage :		2
+
+Panneau : 2  
+ 
+nombre de points du contour : 6
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	1.41	0	-9.65	37	0	2	2
+2	1.41	1	-10	37	-27	2	2
+3	1.75	1	-10	77	-27	3	2
+4	1.75	0	-9.65	77	0	3	2
+5	1.75	-1	-10	77	27	3	2
+6	1.41	-1	-10	37	27	2	2
+
+Raideur traction (N) :		120000
+Raideur compression (N) :	0
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.02
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.003
+largeur noeud :			0
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		0.2
+type des noeuds interieurs :	2
+type de maillage :		2
+
+Panneau : 3  
+ 
+nombre de points du contour : 5
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	0.0	0	-10.35	0	0	5	4
+2	0.00	0.98	-10	0	27	4	2
+3	0.59	0.5	-10	33	27	2	2
+4	0.59	-0.5	-10	33	-27	2	2
+5	0.00	-0.98	-10	0	-27	4	4
+
+Raideur traction (N) :		120000
+Raideur compression (N) :	0
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.02
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.003
+largeur noeud :			0
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		0.2
+type des noeuds interieurs :	2
+type de maillage :		2
+
+Panneau : 4  
+ 
+nombre de points du contour : 5
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	1.75	0	-10.35	37	0	3	2
+2	1.75	0.99	-10	37	-27	3	2
+3	1.42	0.99	-10	77	-27	2	2
+4	1.42	-0.99	-10	77	27	2	2
+5	1.75	-0.99	-10	37	27	3	2
+
+Raideur traction (N) :		120000
+Raideur compression (N) :	0
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.02
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.003
+largeur noeud :			0
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		0.2
+type des noeuds interieurs :	2
+type de maillage :		2
+
+Panneau : 5  
+ 
+nombre de points du contour : 3
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	0.00	0.99	-10	0	0	4	2
+2	0.6	0.51	-10	-37	0	2	2
+3	1.39	0.99	-10	-44	-28	2	2
+
+Raideur traction (N) :		120000
+Raideur compression (N) :	0
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.02
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.003
+largeur noeud :			0
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		0.2
+type des noeuds interieurs :	2
+type de maillage :		2
+
+Panneau : 6  
+ 
+nombre de points du contour : 3
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	0.00	-0.99	-10	0	0	4	2
+2	0.6	-0.51	-10	37	0	2	2
+3	1.39	-0.98	-10	44	-28	2	2
+
+Raideur traction (N) :		120000
+Raideur compression (N) :	0
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.02
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.003
+largeur noeud :			0
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		0.2
+type des noeuds interieurs :	2
+type de maillage :		2
+
+nombre de panneaux hexagonaux : 0
+
+cable nb: 84
+ca: 1 desc: 1 	0.6 	0.5 	-10 	2 2 	1.3 	0.5 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 2 desc: 1 	0.6 	0.452 	-10 	2 2 	1.3 	0.452	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 3 desc: 1 	0.6 	0.404 	-10 	2 2 	1.3 	0.404	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 4 desc: 1 	0.6 	0.356	-10 	2 2 	1.3 	0.356	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 5 desc: 1 	0.6 	0.308	-10 	2 2 	1.3 	0.308	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 6 desc: 1 	0.6 	0.260	-10 	2 2 	1.3 	0.260	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 7 desc: 1 	0.6 	0.212	-10 	2 2 	1.3 	0.212	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 8 desc: 1 	0.6 	0.164	-10 	2 2 	1.3 	0.164	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 9 desc: 1 	0.6 	0.116	-10 	2 2 	1.3 	0.116	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 10 desc: 1 	0.6 	0.068	-10 	2 2 	1.3 	0.068	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 11 desc: 1 	0.6 	0.020	-10 	2 2 	1.3 	0.020	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 12 desc: 1 	0.6 	-0.028 	-10 	2 2 	1.3 	-0.028 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 13 desc: 1 	0.6 	-0.076 	-10 	2 2 	1.3 	-0.076 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 14 desc: 1 	0.6 	-0.124 	-10 	2 2 	1.3 	-0.124 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 15 desc: 1 	0.6 	-0.172 	-10 	2 2 	1.3 	-0.172 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 16 desc: 1 	0.6 	-0.220 	-10 	2 2 	1.3 	-0.220 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 17 desc: 1 	0.6 	-0.268 	-10 	2 2 	1.3 	-0.268 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 18 desc: 1 	0.6 	-0.316 	-10 	2 2 	1.3 	-0.316 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 19 desc: 1 	0.6 	-0.364 	-10 	2 2 	1.3 	-0.364 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 20 desc: 1 	0.6 	-0.412 	-10 	2 2 	1.3 	-0.412 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 21 desc: 1 	0.6 	-0.460 	-10 	2 2 	1.3 	-0.460 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 22 desc: 1 	0.6 	-0.508 	-10 	2 2 	1.3 	-0.508 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.7 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 23 desc: 1 	0.6 	0.5 	-10 	2 2 	0.6 	0.452 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 24 desc: 1 	0.6 	0.452 	-10 	2 2 	0.6 	0.404 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 25 desc: 1 	0.6 	0.404 	-10 	2 2 	0.6 	0.356 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 26 desc: 1 	0.6 	0.356 	-10 	2 2 	0.6 	0.308 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 27 desc: 1 	0.6 	0.308 	-10 	2 2 	0.6 	0.260 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 28 desc: 1 	0.6 	0.260 	-10 	2 2 	0.6 	0.212 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 29 desc: 1 	0.6 	0.212 	-10 	2 2 	0.6 	0.164 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 30 desc: 1 	0.6 	0.164 	-10 	2 2 	0.6 	0.116 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 31 desc: 1 	0.6 	0.116 	-10 	2 2 	0.6 	0.068 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 32 desc: 1 	0.6 	0.068 	-10 	2 2 	0.6 	0.020 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 33 desc: 1 	0.6 	0.020 	-10 	2 2 	0.6 	-0.028 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 34 desc: 1 	0.6 	-0.028 	-10 	2 2 	0.6 	-0.076 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 35 desc: 1 	0.6 	-0.076 	-10 	2 2 	0.6 	-0.124 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 36 desc: 1 	0.6 	-0.124 	-10 	2 2 	0.6 	-0.172 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 37 desc: 1 	0.6 	-0.172 	-10 	2 2 	0.6 	-0.220 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 38 desc: 1 	0.6 	-0.220 	-10 	2 2 	0.6 	-0.268 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 39 desc: 1 	0.6 	-0.268 	-10 	2 2 	0.6 	-0.316 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 40 desc: 1 	0.6 	-0.316 	-10 	2 2 	0.6 	-0.364 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 41 desc: 1 	0.6 	-0.364 	-10 	2 2 	0.6 	-0.412 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 42 desc: 1 	0.6 	-0.412 	-10 	2 2 	0.6 	-0.460 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 43 desc: 1 	0.6 	-0.460 	-10 	2 2 	0.6 	-0.508 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 44 desc: 1 	1.3 	0.5 	-10 	2 2 	1.3 	0.452 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 45 desc: 1 	1.3 	0.452 	-10 	2 2 	1.3 	0.404 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 46 desc: 1 	1.3 	0.404 	-10 	2 2 	1.3 	0.356 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 47 desc: 1 	1.3 	0.356 	-10 	2 2 	1.3 	0.308 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 48 desc: 1 	1.3 	0.308 	-10 	2 2 	1.3 	0.260 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 49 desc: 1 	1.3 	0.260 	-10 	2 2 	1.3 	0.212 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 50 desc: 1 	1.3 	0.212 	-10 	2 2 	1.3 	0.164 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 51 desc: 1 	1.3 	0.164 	-10 	2 2 	1.3 	0.116 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 52 desc: 1 	1.3 	0.116 	-10 	2 2 	1.3 	0.068 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 53 desc: 1 	1.3 	0.068 	-10 	2 2 	1.3 	0.020 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 54 desc: 1 	1.3 	0.020 	-10 	2 2 	1.3 	-0.028 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 55 desc: 1 	1.3 	-0.028 	-10 	2 2 	1.3 	-0.076 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 56 desc: 1 	1.3 	-0.076 	-10 	2 2 	1.3 	-0.124 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 57 desc: 1 	1.3 	-0.124 	-10 	2 2 	1.3 	-0.172 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 58 desc: 1 	1.3 	-0.172 	-10 	2 2 	1.3 	-0.220 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 59 desc: 1 	1.3 	-0.220 	-10 	2 2 	1.3 	-0.268 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 60 desc: 1 	1.3 	-0.268 	-10 	2 2 	1.3 	-0.316 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 61 desc: 1 	1.3 	-0.316 	-10 	2 2 	1.3 	-0.364 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 62 desc: 1 	1.3 	-0.364 	-10 	2 2 	1.3 	-0.412 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 63 desc: 1 	1.3 	-0.412 	-10 	2 2 	1.3 	-0.460 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 64 desc: 1 	1.3 	-0.460 	-10 	2 2 	1.3 	-0.508 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 0.048 De: 1025 Di: 0.024 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 65 desc: 1 	0.6 	0.5 	-10 	2 2 	1.3 	-0.508 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 1.30 De: 1025 Di: 0.001 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 66 desc: 1 	0.6 	-0.508 	-10 	2 2 	1.3 	0.5 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 1.30 De: 1025 Di: 0.001 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 67 desc: 1 	0.00 	0.995 	-10 	4 2 	1.39 	0.995 	-10 	2 Rt: 500000 Rc: 0 Le: 1.48 De: 1025 Di: 0.012 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 68 desc: 1 	0.00 	-0.995 	-10 	4 2 	1.39 	-0.99 	-10 	2 Rt: 500000 Rc: 0 Le: 1.48 De: 1025 Di: 0.012 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 69 desc: 1 	1.75 	0.995 	-10 	3 2 	1.42 	0.995 	-10 	2 Rt: 500000 Rc: 0 Le: 1.60 De: 1025 Di: 0.012 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 70 desc: 1 	1.75 	-0.995 	-10 	3 2 	1.42 	-0.995 	-10 	2 Rt: 500000 Rc: 0 Le: 1.60 De: 1025 Di: 0.012 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 71 desc: 1 	0.00 	0.985 	-10 	4 2 	0.59 	0.51 	-10 	2 Rt: 500000 Rc: 0 Le: 1.00 De: 1025 Di: 0.012 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 72 desc: 1 	0.00 	-0.985 	-10 	4 2 	0.59 	-0.51 	-10 	2 Rt: 500000 Rc: 0 Le: 1.00 De: 1025 Di: 0.012 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 73 desc: 1 	0.58 	0.5 	-10 	2 2 	0.58 	-0.5 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 1 De: 1025 Di: 0.001 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 74 desc: 1 	1.31 	0.5 	-10 	2 2 	1.31 	-0.5 	-10 	2 Rt: 1e+07 Rc: 1e+07 Le: 1 De: 1025 Di: 0.001 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 75 desc: 1 	1.40 	0.0 	-9.65 	2 2 	1.40 	 1.0 	-10 	2 Rt: 400000 Rc: 0 Le: 1.2 De: 1025 Di: 0.014 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 76 desc: 1 	1.40 	0.0 	-9.65 	2 2 	1.40 	-1.0 	-10 	2 Rt: 400000 Rc: 0 Le: 1.2 De: 1025 Di: 0.014 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 77 desc: 1 	0.0 	0.0 	-9.65 	1 2 	0.0 	-1 	-10 	4 Rt: 3e+07 Rc: 3e+07 Le: 0.7 De: 7800 Di: 0.04 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 4
+ca: 78 desc: 1 	0.0 	-1 	-10 	4 2 	0.0 	0.0 	-10.35 	5 Rt: 3e+07 Rc: 3e+07 Le: 0.7 De: 7800 Di: 0.04 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 4
+ca: 79 desc: 1 	0.0 	0.0 	-10.35 	5 2 	0.0 	1 	-10 	4 Rt: 3e+07 Rc: 3e+07 Le: 0.7 De: 7800 Di: 0.04 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 4
+ca: 80 desc: 1 	0.0 	1 	-10 	4 2 	0.0 	0.0 	-9.65 	1 Rt: 3e+07 Rc: 3e+07 Le: 0.7 De: 7800 Di: 0.04 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 4
+ca: 81 desc: 1 	1.75 	0.0 	-9.65 	1 2 	1.75 	-1 	-10 	3 Rt: 3e+07 Rc: 3e+07 Le: 0.7 De: 7800 Di: 0.04 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 82 desc: 1 	1.75 	-1 	-10 	3 2 	1.75 	0.0 	-10.35 	3 Rt: 3e+07 Rc: 3e+07 Le: 0.7 De: 7800 Di: 0.04 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 83 desc: 1 	1.75 	0.0 	-10.35 	3 2 	1.75 	1 	-10 	3 Rt: 3e+07 Rc: 3e+07 Le: 0.7 De: 7800 Di: 0.04 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+ca: 84 desc: 1 	1.75 	1 	-10 	3 2 	1.75 	0.0 	-9.65 	3 Rt: 3e+07 Rc: 3e+07 Le: 0.7 De: 7800 Di: 0.04 Cd: 1.2 Cf: 0.08 Nb: 1 Ty: 2
+
+nb sliding ropes: 0
+
+Links nb: 2
+nb :2 	pa: 1	no: 3	el: 1	no: 2
+nb :2 	pa: 1	no: 5	el: 22	no: 2
+
+Meshing order:
+el:73 el:74
+pa: 1 pa: 2 pa: 3 pa: 4 pa: 5 pa: 6
+el: 1 el: 2 el: 3 el: 4 el: 5 el: 6 el: 7 el: 8 el: 9 el:10 
+el:11 el:12 el:13 el:14 el:15 el:16 el:17 el:18 el:19 el:20 
+el:21 el:22 el:23 el:24 el:25 el:26 el:27 el:28 el:29 el:30
+el:31 el:32 el:33 el:34 el:35 el:36 el:37 el:38 el:39 el:40
+el:41 el:42 el:43 el:44 el:45 el:46 el:47 el:48 el:49 el:50
+el:51 el:52 el:53 el:54 el:55 el:56 el:57 el:58 el:59 el:60
+el:61 el:62 el:63 el:64 el:65 el:66 el:67 el:68 el:69 el:70
+el:71 el:72 el:75 el:76 el:77 el:78 el:79 el:80 el:81 el:82
+el:83 el:84
+
+Node types nb: 5
+No du type :			1  
+Masses X,Y,Z (kg) :		0	0	0 
+Masses ajoutees X,Y,Z (kg) :	0	0	0 
+Longueurs X,Y,Z (m) :		0	0	0 
+Coef. trainee X,Y,Z :		1.2	1.2	1.2 
+Efforts exterieurs X,Y,Z (N) :	0	0	0 
+Deplacement X,Y,Z :		1	1	1 
+Limites X,Y,Z (m) :		0	0	0 
+Sens des limites X,Y,Z :	0	0	0 
+Symetrie X,Y,Z :		0	0	0 
+ 
+No du type :			2  
+Masses X,Y,Z (kg) :		0	0	0 
+Masses ajoutees X,Y,Z (kg) :	0	0	0 
+Longueurs X,Y,Z (m) :		0	0	0 
+Coef. trainee X,Y,Z :		1.2	1.2	1.2 
+Efforts exterieurs X,Y,Z (N) :	0	0	0 
+Deplacement X,Y,Z :		0	0	0 
+Limites X,Y,Z (m) :		0	0	0 
+Sens des limites X,Y,Z :	0	0	0 
+Symetrie X,Y,Z :		0	0	0 
+ 
+No du type :			3  
+Masses X,Y,Z (kg) :		0	0	0 
+Masses ajoutees X,Y,Z (kg) :	0	0	0 
+Longueurs X,Y,Z (m) :		0.0	0.0	0.0 
+Coef. trainee X,Y,Z :		1.2	1.2	1.2 
+Efforts exterieurs X,Y,Z (N) :	200	0	0 
+Deplacement X,Y,Z :		0	0	0 
+Limites X,Y,Z (m) :		0	0	0 
+Sens des limites X,Y,Z :	0	0	0 
+Symetrie X,Y,Z :		0	0	0 
+
+No du type :			4  
+Masses X,Y,Z (kg) :		0	0	0 
+Masses ajoutees X,Y,Z (kg) :	0	0	0 
+Longueurs X,Y,Z (m) :		0	0	0 
+Coef. trainee X,Y,Z :		1.2	1.2	1.2 
+Efforts exterieurs X,Y,Z (N) :	0	0	0 
+Deplacement X,Y,Z :		1	0	0 
+Limites X,Y,Z (m) :		0	0	0 
+Sens des limites X,Y,Z :	0	0	0 
+Symetrie X,Y,Z :		0	0	0
+ 
+No du type :			5  
+Masses X,Y,Z (kg) :		0	0	0 
+Masses ajoutees X,Y,Z (kg) :	0	0	0 
+Longueurs X,Y,Z (m) :		0	0	0 
+Coef. trainee X,Y,Z :		1.2	1.2	1.2 
+Efforts exterieurs X,Y,Z (N) :	0	0	0 
+Deplacement X,Y,Z :		1	1	0 
+Limites X,Y,Z (m) :		0	0	0 
+Sens des limites X,Y,Z :	0	0	0 
+Symetrie X,Y,Z :		0	0	0
+ 
+ENVIRONNEMENT NUMERIQUE  
+Diviseur (s) :
+5e-05
+
+Seuil de convergence (N) :
+0.1
+
+Limite de deplacement a chaque iteration (m) :
+0.1
+
+Nombre maximum d'iterations :
+10000
+
+Dynamique : Pas de temps du calcul (s) :
+0.1
+
+Dynamique : Pas de temps de stockage (s) :
+0.2
+
+Dynamique : Temps de debut du stockage (s) :
+0
+
+Dynamique : Temps de fin du calcul et du stockage (s) :
+0
+
+ENVIRONNEMENT METEOROLOGIQUE ET OCEANIQUE  
+Courant  
+Direction (deg) :
+0
+
+Vitesse (m/s) :
+1.5
+
+Houle  
+Periode (s) :
+10
+
+Hauteur (m) :
+0
+
+Direction par rapport a X (deg) :
+0
+
+Hauteur d'eau (m) :
+1000
+
+DESCRIPTION DE LA PRISE  
+Volume (m3) :
+0.0
+
+Precision sur ce volume :
+1e-05
+
+Coefficient de trainee sur ce volume :
+1
+
+ENVIRONNEMENT DU FOND MARIN  
+Coefficient de frottement du sol :
+0.5
+
+Raideur d'enfoncement dans le sol (N/m) :
+5e+06
+
+SORTIE TEXTE
+nombre de distance 	:			0
+nombre d effort 	:			0
+nombre de tension 	:			0
+nombre de tension coulisse		:	0
+nombre de position 	:			0
+affichage de l effort sur la structure 	:	0
+affichage du diametre de la prise 	:	0
+affichage de l epaisseur de la prise 	:	0
+affichage du volume de la prise 	:	0
+affichage de la surface filtree 	:	0
+affichage de la vitesse 		:	0
+
+
+input link 0.03
+input sphere_element 75 2 0.2 30.0
+input sphere_element 76 2 0.2 30.0
+input convergence_parameters 1 10 1000000000
+input Auto_convergence
+#input spheric_limit 1.65 0.0 -9.4 1.7 100000000 100000000
+#output no_visible_element 2 65 66
+output color_element   65     2
+output color_element   66     2
+input EI_flexion_cable 77 16490
+input EI_flexion_cable 78 16490
+input EI_flexion_cable 79 16490
+input EI_flexion_cable 80 16490
+input link_flexion_elem2 77 78 180
+input link_flexion_elem2 78 79 180
+input link_flexion_elem2 79 80 180
+input link_flexion_elem2 80 77 180
+output color_element   77     4
+output color_element   78     4
+output color_element   79     4
+output color_element   80     4
+input EI_flexion_cable 81 16490
+input EI_flexion_cable 82 16490
+input EI_flexion_cable 83 16490
+input EI_flexion_cable 84 16490
+input link_flexion_elem2 81 82 180
+input link_flexion_elem2 82 83 180
+input link_flexion_elem2 83 84 180
+input link_flexion_elem2 84 81 180
+output color_element   81     1
+output color_element   82     1
+output color_element   83     1
+output color_element   84     1
+
+

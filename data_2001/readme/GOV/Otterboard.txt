@@ -1,0 +1,7 @@
+Otterboard
+CL = 1.22
+CD = 0.75
+Length = 0.66m
+Height = 0.45m
+Surface = 0.238²
+Mass = 12.7Kg

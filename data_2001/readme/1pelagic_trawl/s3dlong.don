@@ -1,0 +1,1074 @@
+design in the plane normal to axis: 2
+panels number: 25
+
+Panel: 1
+number of nodes around: 10
+nodes of the contour no x y z U V type and following type:
+1	37.000000	0.000000	20.000000	0.000000	27.500000	2	2
+2	46.000000	0.000000	24.000000	5.809953	37.500000	2	2
+3	71.000000	0.000000	22.000000	20.749833	32.500000	2	2
+4	111.000000	0.000000	12.000000	45.649632	17.500000	2	2
+5	111.000000	0.000000	-12.000000	45.649632	-17.500000	2	2
+6	71.000000	0.000000	-22.000000	20.749833	-32.500000	2	2
+7	46.000000	0.000000	-24.000000	5.809953	-37.500000	2	2
+8	37.000000	0.000000	-20.000000	0.000000	-27.500000	2	2
+9	71.000000	0.000000	-3.000000	20.749833	-2.500000	2	2
+10	71.000000	0.000000	3.000000	20.749833	2.500000	2	2
+Traction stiffness (N):	    		25000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.400000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.002800
+Knot size (m):				0.005600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 2
+number of nodes around: 7
+nodes of the contour no x y z U V type and following type:
+1	36.000000	0.000000	32.000000	0.000000	-32.500000	2	2
+2	71.000000	0.000000	53.000000	20.749833	-7.500000	2	2
+3	71.000000	0.000000	60.000000	20.749833	0.000000	3	3
+4	111.000000	0.000000	60.000000	45.649632	0.000000	3	2
+5	111.000000	0.000000	42.000000	45.649632	-24.500000	2	2
+6	71.000000	0.000000	30.000000	20.749833	-42.500000	2	2
+7	46.000000	0.000000	27.000000	5.809953	-39.500000	2	2
+Traction stiffness (N):	    		25000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.400000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.002800
+Knot size (m):				0.005600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 3
+number of nodes around: 7
+nodes of the contour no x y z U V type and following type:
+1	36.000000	0.000000	-32.000000	0.000000	32.500000	2	2
+2	71.000000	0.000000	-53.000000	20.749833	7.500000	2	2
+3	71.000000	0.000000	-60.000000	20.749833	0.000000	3	3
+4	111.000000	0.000000	-60.000000	45.649632	0.000000	3	2
+5	111.000000	0.000000	-42.000000	45.649632	24.500000	2	2
+6	71.000000	0.000000	-30.000000	20.749833	42.500000	2	2
+7	46.000000	0.000000	-27.000000	5.809953	39.500000	2	2
+Traction stiffness (N):	    		25000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.400000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.002800
+Knot size (m):				0.005600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 4
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	113.000000	0.000000	12.000000	0.000000	35.000000	2	2
+2	119.000000	0.000000	10.000000	8.299933	30.000000	2	2
+3	119.000000	0.000000	-10.000000	8.299933	-30.000000	2	2
+4	113.000000	0.000000	-12.000000	0.000000	-35.000000	2	2
+Traction stiffness (N):	    		16000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.200000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.002300
+Knot size (m):				0.004600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 5
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	113.000000	0.000000	60.000000	0.000000	0.000000	3	3
+2	119.000000	0.000000	60.000000	8.299933	0.000000	3	2
+3	119.000000	0.000000	44.000000	8.299933	-33.000000	2	2
+4	113.000000	0.000000	42.000000	0.000000	-49.000000	2	2
+Traction stiffness (N):	    		16000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.200000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.002300
+Knot size (m):				0.004600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 6
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	113.000000	0.000000	-60.000000	0.000000	0.000000	3	3
+2	119.000000	0.000000	-60.000000	8.299933	0.000000	3	2
+3	119.000000	0.000000	-44.000000	8.299933	33.000000	2	2
+4	113.000000	0.000000	-42.000000	0.000000	49.000000	2	2
+Traction stiffness (N):	    		16000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.200000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.002300
+Knot size (m):				0.004600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 7
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	120.000000	0.000000	10.000000	0.000000	60.000000	2	2
+2	126.000000	0.000000	8.000000	16.599866	50.000000	2	2
+3	126.000000	0.000000	-8.000000	16.599866	-50.000000	2	2
+4	120.000000	0.000000	-10.000000	0.000000	-60.000000	2	2
+Traction stiffness (N):	    		10000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.100000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001800
+Knot size (m):				0.003600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 8
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	120.000000	0.000000	60.000000	0.000000	0.000000	3	3
+2	126.000000	0.000000	60.000000	16.599866	0.000000	3	2
+3	126.000000	0.000000	46.000000	16.599866	-74.000000	2	2
+4	120.000000	0.000000	44.000000	0.000000	-86.000000	2	2
+Traction stiffness (N):	    		10000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.100000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001800
+Knot size (m):				0.003600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 9
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	120.000000	0.000000	-60.000000	0.000000	0.000000	3	3
+2	126.000000	0.000000	-60.000000	16.599866	0.000000	3	2
+3	126.000000	0.000000	-46.000000	16.599866	74.000000	2	2
+4	120.000000	0.000000	-44.000000	0.000000	86.000000	2	2
+Traction stiffness (N):	    		10000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.100000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001800
+Knot size (m):				0.003600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 10
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	127.000000	0.000000	8.000000	0.000000	62.500000	2	2
+2	134.000000	0.000000	6.000000	24.899799	47.500000	2	2
+3	134.000000	0.000000	-6.000000	24.899799	-47.500000	2	2
+4	127.000000	0.000000	-8.000000	0.000000	-62.500000	2	2
+Traction stiffness (N):	    		10000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.080000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001800
+Knot size (m):				0.003600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 11
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	127.000000	0.000000	60.000000	0.000000	0.000000	3	3
+2	134.000000	0.000000	60.000000	24.899799	0.000000	3	2
+3	134.000000	0.000000	48.000000	24.899799	-74.500000	2	2
+4	127.000000	0.000000	46.000000	0.000000	-92.500000	2	2
+Traction stiffness (N):	    		10000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.080000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001800
+Knot size (m):				0.003600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 12
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	127.000000	0.000000	-60.000000	0.000000	0.000000	3	3
+2	134.000000	0.000000	-60.000000	24.899799	0.000000	3	2
+3	134.000000	0.000000	-48.000000	24.899799	74.500000	2	2
+4	127.000000	0.000000	-46.000000	0.000000	92.500000	2	2
+Traction stiffness (N):	    		10000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.080000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001800
+Knot size (m):				0.003600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 13
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	135.000000	0.000000	6.000000	0.000000	63.000000	2	2
+2	142.000000	0.000000	4.000000	33.199732	43.000000	2	2
+3	142.000000	0.000000	-4.000000	33.199732	-43.000000	2	2
+4	135.000000	0.000000	-6.000000	0.000000	-63.000000	2	2
+Traction stiffness (N):	    		7000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.060000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001500
+Knot size (m):				0.003000
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 14
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	135.000000	0.000000	60.000000	0.000000	0.000000	3	3
+2	142.000000	0.000000	60.000000	33.199732	0.000000	3	2
+3	142.000000	0.000000	50.000000	33.199732	-79.000000	2	2
+4	135.000000	0.000000	48.000000	0.000000	-99.000000	2	2
+Traction stiffness (N):	    		7000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.060000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001500
+Knot size (m):				0.003000
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 15
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	135.000000	0.000000	-60.000000	0.000000	0.000000	3	3
+2	142.000000	0.000000	-60.000000	33.199732	0.000000	3	2
+3	142.000000	0.000000	-50.000000	33.199732	79.000000	2	2
+4	135.000000	0.000000	-48.000000	0.000000	99.000000	2	2
+Traction stiffness (N):	    		7000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.060000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001500
+Knot size (m):				0.003000
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 16
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	143.000000	0.000000	4.000000	0.000000	64.500000	2	2
+2	156.000000	0.000000	2.000000	82.999331	31.500000	2	2
+3	156.000000	0.000000	-2.000000	82.999331	-31.500000	2	2
+4	143.000000	0.000000	-4.000000	0.000000	-64.500000	2	2
+Traction stiffness (N):	    		7000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.040000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001500
+Knot size (m):				0.003000
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 17
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	143.000000	0.000000	60.000000	0.000000	0.000000	3	3
+2	156.000000	0.000000	60.000000	82.999331	0.000000	3	2
+3	156.000000	0.000000	54.000000	82.999331	-68.500000	2	2
+4	143.000000	0.000000	50.000000	0.000000	-118.500000	2	2
+Traction stiffness (N):	    		7000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.040000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001500
+Knot size (m):				0.003000
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 18
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	143.000000	0.000000	-60.000000	0.000000	0.000000	3	3
+2	156.000000	0.000000	-60.000000	82.999331	0.000000	3	2
+3	156.000000	0.000000	-54.000000	82.999331	68.500000	2	2
+4	143.000000	0.000000	-50.000000	0.000000	118.500000	2	2
+Traction stiffness (N):	    		7000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.040000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001500
+Knot size (m):				0.003000
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 19
+number of nodes around: 3
+nodes of the contour no x y z U V type and following type:
+1	158.000000	0.000000	2.000000	0.000000	54.000000	2	2
+2	172.000000	0.000000	0.000000	165.998661	0.000000	2	2
+3	158.000000	0.000000	-2.000000	0.000000	-54.000000	2	2
+Traction stiffness (N):	    		7000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.025000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001500
+Knot size (m):				0.003000
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 20
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	158.000000	0.000000	60.000000	0.000000	0.000000	3	3
+2	172.000000	0.000000	60.000000	165.998661	0.000000	3	2
+3	172.000000	0.000000	56.000000	165.998661	-62.500000	2	2
+4	158.000000	0.000000	54.000000	0.000000	-112.500000	2	2
+Traction stiffness (N):	    		7000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.025000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001500
+Knot size (m):				0.003000
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 21
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	158.000000	0.000000	-60.000000	0.000000	0.000000	3	3
+2	172.000000	0.000000	-60.000000	165.998661	0.000000	3	2
+3	172.000000	0.000000	-56.000000	165.998661	62.500000	2	2
+4	158.000000	0.000000	-54.000000	0.000000	112.500000	2	2
+Traction stiffness (N):	    		7000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.025000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001500
+Knot size (m):				0.003000
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 22
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	173.000000	0.000000	60.000000	0.000000	0.000000	3	3
+2	185.000000	0.000000	60.000000	331.997323	0.000000	3	2
+3	185.000000	0.000000	56.000000	331.997323	-62.500000	2	2
+4	173.000000	0.000000	56.000000	0.000000	-62.500000	2	2
+Traction stiffness (N):	    		10000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.025000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001800
+Knot size (m):				0.003600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 23
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	173.000000	0.000000	-60.000000	0.000000	0.000000	3	3
+2	185.000000	0.000000	-60.000000	331.997323	0.000000	3	2
+3	185.000000	0.000000	-56.000000	331.997323	62.500000	2	2
+4	173.000000	0.000000	-56.000000	0.000000	62.500000	2	2
+Traction stiffness (N):	    		10000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.025000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.001800
+Knot size (m):				0.003600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 24
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	186.000000	0.000000	60.000000	0.000000	0.000000	3	3
+2	205.000000	0.000000	60.000000	373.496988	0.000000	3	2
+3	205.000000	0.000000	56.000000	373.496988	-62.500000	2	2
+4	186.000000	0.000000	56.000000	0.000000	-62.500000	2	2
+Traction stiffness (N):	    		25000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.025000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.002800
+Knot size (m):				0.005600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+Panel: 25
+number of nodes around: 4
+nodes of the contour no x y z U V type and following type:
+1	186.000000	0.000000	-60.000000	0.000000	0.000000	3	3
+2	205.000000	0.000000	-60.000000	373.496988	0.000000	3	2
+3	205.000000	0.000000	-56.000000	373.496988	62.500000	2	2
+4	186.000000	0.000000	-56.000000	0.000000	62.500000	2	2
+Traction stiffness (N):	    		25000.000000
+Compression stiffness (N):		1.000000
+Mesh opening stiffness (N.m/rad):	0.000000
+Unstretched length (m):			0.025000
+Volumic mass (kg/m3):			1025.000000
+Hydrodynamic diameter (m):		0.002800
+Knot size (m):				0.005600
+Normal Cd:				1.200000
+Tangential Cd:				0.080000
+Meshing step (m):			3.000000
+Type of internal nodes:			2
+Meshing type:				2
+
+hexagonal panels number: 0
+
+Cables number: 26
+
+Cable: 1
+Extremities no x y z type:
+1  0.000000  0.000000  0.000000  1
+2  2.000000  0.000000  0.000000  4
+Traction stiffness (N):	62000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	200.000000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.026000
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			9
+Type of internal nodes:	2
+
+Cable: 2
+Extremities no x y z type:
+1  3.000000  0.000000  1.000000  4
+2  8.000000  0.000000  5.000000  2
+Traction stiffness (N):	200000000.000000
+Compression stiffness (N):	200000000.000000
+Unstretched length (m):	3.000000
+Volumic mass (kg/m3):		1025.000000
+Hydrodynamic diameter (m):	0.010000
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 3
+Extremities no x y z type:
+1  3.000000  0.000000  -1.000000  4
+2  8.000000  0.000000  -5.000000  2
+Traction stiffness (N):	200000000.000000
+Compression stiffness (N):	200000000.000000
+Unstretched length (m):	3.000000
+Volumic mass (kg/m3):		1025.000000
+Hydrodynamic diameter (m):	0.010000
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 4
+Extremities no x y z type:
+1  10.000000  0.000000  4.000000  2
+2  10.000000  0.000000  -4.000000  2
+Traction stiffness (N):	200000000.000000
+Compression stiffness (N):	200000000.000000
+Unstretched length (m):	3.470000
+Volumic mass (kg/m3):		1025.000000
+Hydrodynamic diameter (m):	0.010000
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 5
+Extremities no x y z type:
+1  12.000000  0.000000  8.000000  2
+2  18.000000  0.000000  22.000000  2
+Traction stiffness (N):	50000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	100.000000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.022000
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			7
+Type of internal nodes:	2
+
+Cable: 6
+Extremities no x y z type:
+1  12.000000  0.000000  -8.000000  2
+2  18.000000  0.000000  -22.000000  2
+Traction stiffness (N):	50000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	104.000000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.022000
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			7
+Type of internal nodes:	2
+
+Cable: 7
+Extremities no x y z type:
+1  23.000000  0.000000  30.000000  2
+2  29.000000  0.000000  30.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	5.600000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 8
+Extremities no x y z type:
+1  23.000000  0.000000  19.000000  2
+2  29.000000  0.000000  19.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	5.600000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 9
+Extremities no x y z type:
+1  23.000000  0.000000  -19.000000  2
+2  29.000000  0.000000  -19.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	5.600000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 10
+Extremities no x y z type:
+1  23.000000  0.000000  -30.000000  2
+2  29.000000  0.000000  -30.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	5.600000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 11
+Extremities no x y z type:
+1  31.000000  0.000000  30.000000  2
+2  39.000000  0.000000  27.000000  2
+Traction stiffness (N):	70000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	5.600000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 12
+Extremities no x y z type:
+1  31.000000  0.000000  22.000000  2
+2  39.000000  0.000000  25.000000  2
+Traction stiffness (N):	70000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	5.600000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 13
+Extremities no x y z type:
+1  31.000000  0.000000  -22.000000  2
+2  39.000000  0.000000  -25.000000  2
+Traction stiffness (N):	70000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	5.600000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 14
+Extremities no x y z type:
+1  31.000000  0.000000  -30.000000  2
+2  39.000000  0.000000  -27.000000  2
+Traction stiffness (N):	70000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	5.600000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 15
+Extremities no x y z type:
+1  32.000000  0.000000  32.000000  2
+2  64.000000  0.000000  52.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	21.200000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 16
+Extremities no x y z type:
+1  32.000000  0.000000  16.000000  2
+2  64.000000  0.000000  2.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	20.000000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 17
+Extremities no x y z type:
+1  32.000000  0.000000  -32.000000  2
+2  64.000000  0.000000  -52.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	21.200000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 18
+Extremities no x y z type:
+1  32.000000  0.000000  -16.000000  2
+2  64.000000  0.000000  -2.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	20.000000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			3
+Type of internal nodes:	2
+
+Cable: 19
+Extremities no x y z type:
+1  67.000000  0.000000  2.000000  2
+2  67.000000  0.000000  -2.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	0.800000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 20
+Extremities no x y z type:
+1  67.000000  0.000000  60.000000  3
+2  67.000000  0.000000  55.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	1.700000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 21
+Extremities no x y z type:
+1  67.000000  0.000000  -60.000000  3
+2  67.000000  0.000000  -55.000000  2
+Traction stiffness (N):	20000000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	1.700000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 22
+Extremities no x y z type:
+1  173.000000  0.000000  54.000000  2
+2  185.000000  0.000000  54.000000  2
+Traction stiffness (N):	1600000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	20.000000
+Volumic mass (kg/m3):		1025.000000
+Hydrodynamic diameter (m):	0.022000
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 23
+Extremities no x y z type:
+1  207.000000  0.000000  56.000000  2
+2  207.000000  0.000000  60.000000  3
+Traction stiffness (N):	1600000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	0.010000
+Volumic mass (kg/m3):		1025.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 24
+Extremities no x y z type:
+1  207.000000  0.000000  -56.000000  2
+2  207.000000  0.000000  -60.000000  3
+Traction stiffness (N):	1600000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	0.010000
+Volumic mass (kg/m3):		1025.000000
+Hydrodynamic diameter (m):	0.012500
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 25
+Extremities no x y z type:
+1  20.000000  0.000000  -34.000000  2
+2  20.000000  0.000000  -43.000000  2
+Traction stiffness (N):	1600000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	2.000000
+Volumic mass (kg/m3):		4800.000000
+Hydrodynamic diameter (m):	0.282000
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Cable: 26
+Extremities no x y z type:
+1  186.000000  0.000000  54.000000  2
+2  205.000000  0.000000  54.000000  2
+Traction stiffness (N):	1600000.000000
+Compression stiffness (N):	1.000000
+Unstretched length (m):	22.500000
+Volumic mass (kg/m3):		1025.000000
+Hydrodynamic diameter (m):	0.022000
+Normal Cd:			1.800000
+Tangential Cd:			0.080000
+Bars number:			1
+Type of internal nodes:	2
+
+Sliding cables number: 0
+
+Links number: 52
+nb_pt: 3    	el: 3	nd: 1	el: 2	nd: 1	el: 1	nd: 2	
+nb_pt: 3    	el: 6	nd: 1	el: 4	nd: 2	el: 3	nd: 2	
+nb_pt: 3    	el: 5	nd: 1	el: 4	nd: 1	el: 2	nd: 2	
+nb_pt: 4    	el: 25	nd: 1	el: 10	nd: 1	el: 6	nd: 2	el: 9	nd: 1	
+nb_pt: 4    	el: 10	nd: 2	el: 14	nd: 1	el: 17	nd: 1	pa: 3	nd: 1	
+nb_pt: 4    	el: 14	nd: 2	pa: 3	nd: 7	pa: 1	nd: 7	el: 13	nd: 2	
+nb_pt: 4    	el: 9	nd: 2	el: 13	nd: 1	pa: 1	nd: 8	el: 18	nd: 1	
+nb_pt: 3    	el: 5	nd: 2	el: 8	nd: 1	el: 7	nd: 1	
+nb_pt: 4    	el: 8	nd: 2	el: 12	nd: 1	el: 16	nd: 1	pa: 1	nd: 1	
+nb_pt: 4    	el: 12	nd: 2	pa: 1	nd: 2	pa: 2	nd: 7	el: 11	nd: 2	
+nb_pt: 4    	el: 7	nd: 2	el: 11	nd: 1	el: 15	nd: 1	pa: 2	nd: 1	
+nb_pt: 2    	pa: 3	nd: 3	el: 21	nd: 1	
+nb_pt: 3    	el: 17	nd: 2	el: 21	nd: 2	pa: 3	nd: 2	
+nb_pt: 3    	el: 18	nd: 2	el: 19	nd: 2	pa: 1	nd: 9	
+nb_pt: 3    	el: 16	nd: 2	el: 19	nd: 1	pa: 1	nd: 10	
+nb_pt: 3    	el: 15	nd: 2	el: 20	nd: 2	pa: 2	nd: 2	
+nb_pt: 2    	pa: 2	nd: 3	el: 20	nd: 1	
+nb_pt: 2    	pa: 3	nd: 4	pa: 6	nd: 1	
+nb_pt: 4    	pa: 6	nd: 4	pa: 3	nd: 5	pa: 1	nd: 5	pa: 4	nd: 4	
+nb_pt: 4    	pa: 4	nd: 1	pa: 1	nd: 4	pa: 2	nd: 5	pa: 5	nd: 4	
+nb_pt: 2    	pa: 2	nd: 4	pa: 5	nd: 1	
+nb_pt: 2    	pa: 6	nd: 2	pa: 9	nd: 1	
+nb_pt: 4    	pa: 9	nd: 4	pa: 6	nd: 3	pa: 4	nd: 3	pa: 7	nd: 4	
+nb_pt: 4    	pa: 7	nd: 1	pa: 4	nd: 2	pa: 5	nd: 3	pa: 8	nd: 4	
+nb_pt: 2    	pa: 5	nd: 2	pa: 8	nd: 1	
+nb_pt: 2    	pa: 9	nd: 2	pa: 12	nd: 1	
+nb_pt: 4    	pa: 12	nd: 4	pa: 9	nd: 3	pa: 7	nd: 3	pa: 10	nd: 4	
+nb_pt: 4    	pa: 10	nd: 1	pa: 7	nd: 2	pa: 8	nd: 3	pa: 11	nd: 4	
+nb_pt: 2    	pa: 8	nd: 2	pa: 11	nd: 1	
+nb_pt: 2    	pa: 12	nd: 2	pa: 15	nd: 1	
+nb_pt: 4    	pa: 15	nd: 4	pa: 12	nd: 3	pa: 10	nd: 3	pa: 13	nd: 4	
+nb_pt: 4    	pa: 13	nd: 1	pa: 10	nd: 2	pa: 11	nd: 3	pa: 14	nd: 4	
+nb_pt: 2    	pa: 11	nd: 2	pa: 14	nd: 1	
+nb_pt: 2    	pa: 15	nd: 2	pa: 18	nd: 1	
+nb_pt: 4    	pa: 18	nd: 4	pa: 15	nd: 3	pa: 13	nd: 3	pa: 16	nd: 4	
+nb_pt: 4    	pa: 16	nd: 1	pa: 13	nd: 2	pa: 14	nd: 3	pa: 17	nd: 4	
+nb_pt: 2    	pa: 14	nd: 2	pa: 17	nd: 1	
+nb_pt: 2    	pa: 21	nd: 1	pa: 18	nd: 2	
+nb_pt: 4    	pa: 21	nd: 4	pa: 18	nd: 3	pa: 16	nd: 3	pa: 19	nd: 3	
+nb_pt: 4    	pa: 19	nd: 1	pa: 16	nd: 2	pa: 17	nd: 3	pa: 20	nd: 4	
+nb_pt: 2    	pa: 17	nd: 2	pa: 20	nd: 1	
+nb_pt: 6    	pa: 21	nd: 3	pa: 23	nd: 4	pa: 19	nd: 2	el: 22	nd: 1	pa: 22	nd: 4	pa: 20	nd: 3	
+nb_pt: 2    	pa: 21	nd: 2	pa: 23	nd: 1	
+nb_pt: 2    	pa: 20	nd: 2	pa: 22	nd: 1	
+nb_pt: 2    	pa: 23	nd: 2	pa: 25	nd: 1	
+nb_pt: 6    	pa: 25	nd: 4	pa: 23	nd: 3	el: 22	nd: 2	el: 26	nd: 1	pa: 24	nd: 4	pa: 22	nd: 3	
+nb_pt: 2    	pa: 22	nd: 2	pa: 24	nd: 1	
+nb_pt: 2    	pa: 25	nd: 2	el: 24	nd: 2	
+nb_pt: 5    	el: 24	nd: 1	pa: 25	nd: 3	el: 26	nd: 2	el: 23	nd: 1	pa: 24	nd: 3	
+nb_pt: 2    	pa: 24	nd: 2	el: 23	nd: 2	
+nb_pt: 2    	pa: 1	nd: 3	pa: 2	nd: 6	
+nb_pt: 2  	pa: 3	nd: 6	pa: 1	nd: 6	
+
+Meshing order:
+el:    23  el:    24  pa:    24  pa:    25  pa:    22  pa:    23  pa:     1  pa:     2  pa:     3  pa:     4  
+pa:     5  pa:     6  pa:     7  pa:     8  pa:     9  pa:    10  pa:    11  pa:    12  pa:    13  pa:    14  
+pa:    15  pa:    16  pa:    17  pa:    18  pa:    19  pa:    20  pa:    21  el:     1  el:     2  el:     3  
+el:     4  el:     5  el:     6  el:     7  el:     8  el:     9  el:    10  el:    11  el:    12  el:    13  
+el:    14  el:    15  el:    16  el:    17  el:    18  el:    19  el:    20  el:    21  el:    22  el:    25  
+el:    26  
+
+Number of types of nodes: 4
+
+No du type :			1
+Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
+Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
+Length X,Y,Z (m):		0.000000  0.000000  0.000000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
+External forces X,Y,Z (N):	0.000000  0.000000  0.000000
+Displacement X,Y,Z:		1  1  1
+Limits X,Y,Z (m):		0.000000  0.000000  0.000000
+Limits sense X,Y,Z:		0  0  0
+Symmetry X,Y,Z:			0  0  0
+
+No du type :			2
+Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
+Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
+Length X,Y,Z (m):		0.000000  0.000000  0.000000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
+External forces X,Y,Z (N):	0.000000  0.000000  0.000000
+Displacement X,Y,Z:		0  0  0
+Limits X,Y,Z (m):		0.000000  0.000000  0.000000
+Limits sense X,Y,Z:		0  0  0
+Symmetry X,Y,Z:			0  0  0
+
+No du type :			3
+Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
+Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
+Length X,Y,Z (m):		0.000000  0.000000  0.000000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
+External forces X,Y,Z (N):	0.000000  0.000000  0.000000
+Displacement X,Y,Z:		0  0  0
+Limits X,Y,Z (m):		0.000000  0.000000  0.000000
+Limits sense X,Y,Z:		0  0  0
+Symmetry X,Y,Z:			0  1  0
+
+No du type :			4
+Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
+Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
+Length X,Y,Z (m):		0.000000  0.000000  0.000000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
+External forces X,Y,Z (N):	5600.000000  13000.000000  -15000.000000
+Displacement X,Y,Z:		0  0  0
+Limits X,Y,Z (m):		0.000000  0.000000  0.000000
+Limits sense X,Y,Z:		0  0  0
+Symmetry X,Y,Z:			0  0  0
+
+NUMERIC ENVIRONMENT
+Divisor (s):						0.000050
+
+Convergence threshold (N):				0.010000
+
+Displacement limit for each iteration (m):		10.000000
+
+Maximal number of iterations:				10000
+
+Dynamic: Time step (s):					0.100000
+
+Dynamic: Record time step (s):				0.200000
+
+Dynamic: Beginning time of record (s):			0.000000
+
+Dynamic: End time of record and calculation (s):	0.000000
+
+METEO/OCEANIC ENVIRONMENT
+Current direction (deg):				0.000000
+
+Current speed (m/s):					2.058000
+
+Wave period (s):					10.000000
+
+Wave height (m):					0.000000
+
+Wave direction relatively X (deg):			0.000000
+
+Depth (m):						2000.000000
+
+CATCH DESCRIPTION
+Volume (m3):						0.000000
+
+Accuracy on this volume (m3):				1e-05
+
+Drag coefficient on this volume:			1.000000
+
+BOTTOM SEA ENVIRONMENT
+Wearing coefficient on the bottom:			0.500000
+
+Stiffness of the insertion in the sea bottom (N/m):	5000000.000000
+
+TEXT OUTPUT
+Distances number 		:	2
+Distance: 1 comment: #PELAGIC TRAWL		# no global 1: 1 no global 2: 1 decimal nb: 0
+Distance: 2 comment: #Boat to door distance	# no global 1: 48 no global 2: 49 decimal nb: 2
+
+Forces number 			:	2
+Force: 1 comment: #Boat Z force 		(N)# no global: 48 axe: 3 decimal nb: 0
+Force: 2 comment: #Boat X force 		(N)# no global: 48 axe: 1 decimal nb: 0
+
+Tensions number 		:	3
+Tension: 1 comment: #Warp tension		(N)# cable: 1 extremity node: 49 decimal nb: 0
+Tension: 2 comment: #Bottom bridle tension	(N)# cable: 5 extremity node: 50 decimal nb: 0
+Tension: 3 comment: #Top bridle tension	(N)# cable: 6 extremity node: 51 decimal nb: 0
+
+Sliding tensions number 	:	0
+
+Positions number 		:	3
+Position: 1 comment: #Head line immersion	(m)# no global: 13 axe: 3 decimal nb: 1
+Position: 2 comment: #Bottom line immersion 	(m)# no global: 17 axe: 3 decimal nb: 1
+Position: 3 comment: #Door immersion 		(m)# no global: 49 axe: 3 decimal nb: 1
+
+Structure forces display	 	: 1
+Catch diameter display		 	: 1
+Catch thickness display		  	: 1
+Catch volume display		 	: 1
+Filtrated surface display	 	: 1
+Speed display		 		: 1
+
+
+
+output catch_drag
+output bottom_drag
+output element_drag
+output surface_drag
+input Auto_convergence
+#output no_visible_symmetry
+input convergence_parameters 1 10 100000000000
+output exit_size_diamond_panel
+output panel_drag
+

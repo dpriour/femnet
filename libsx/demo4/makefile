@@ -1,0 +1,11 @@
+#
+#
+include ../libsx_defs
+# include /home/alre/libsx/libsx_defs
+
+
+demo4 : demo4.o
+	$(CC) -o demo4  demo4.o $(LIBS)
+
+clean:
+	rm -f *.o *~ core demo4
