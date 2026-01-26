@@ -74,7 +74,7 @@ shape could be assessed with ./unix tool. ./unix creates an \*.sta file.
 The equilibrated shape is be displayed with ./batz tool (figure 4).
 
 ![Figure 1: Trawl design: netting panels and
-cables.](docs/images/Pictures/10000001000003DA0000022AEC253E1D.png "fig:"){width="17cm"
+cables.](images/Pictures/10000001000003DA0000022AEC253E1D.png "fig:"){width="17cm"
 height="11.352cm"}
 
 ![Figure 2: Trawl design integrated in
