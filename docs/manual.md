@@ -161,26 +161,17 @@ corner 1 is at **0** mesh along U meshes and is at **27.5** mesh along V
 meshes. These number of meshes are calculated from the design.
 The displays the number of meshes for the corners of panel 1. The type
 of corner 1 is **2** and the type of nodes, if any, between corner 1 and
-corner 2 is **2**. This point will be discussed later
-(p[15](#anchor-7)).*
+corner 2 is **2**. This point will be discussed later.
 
-2 46.000000 0.000000 24.000000 7.000000 37.500000 2 2
-
-3 71.000000 0.000000 22.000000 25.000000 32.500000 2 2
-
-4 111.000000 0.000000 12.000000 55.000000 17.500000 2 2
-
-5 111.000000 0.000000 -12.000000 55.000000 -17.500000 2 2
-
-6 71.000000 0.000000 -22.000000 25.000000 -32.500000 2 2
-
-7 46.000000 0.000000 -24.000000 7.000000 -37.500000 2 2
-
-8 37.000000 0.000000 -20.000000 0.000000 -27.500000 2 2
-
-9 71.000000 0.000000 -3.000000 25.000000 -2.500000 2 2
-
-10 71.000000 0.000000 3.000000 25.000000 2.500000 2 2
+**2 46.000000 0.000000 24.000000 7.000000 37.500000 2 2**
+**3 71.000000 0.000000 22.000000 25.000000 32.500000 2 2**
+**4 111.000000 0.000000 12.000000 55.000000 17.500000 2 2**
+**5 111.000000 0.000000 -12.000000 55.000000 -17.500000 2 2**
+**6 71.000000 0.000000 -22.000000 25.000000 -32.500000 2 2**
+**7 46.000000 0.000000 -24.000000 7.000000 -37.500000 2 2**
+**8 37.000000 0.000000 -20.000000 0.000000 -27.500000 2 2**
+**9 71.000000 0.000000 -3.000000 25.000000 -2.500000 2 2**
+**10 71.000000 0.000000 3.000000 25.000000 2.500000 2 2**
 
 ![Figure 7: Mesh coordinates of the corners of the panel 1 of netting,
 displayed with phobos using
@@ -188,182 +179,142 @@ displayed with phobos using
 tool.](images/Pictures/10000001000001FE000002F0ED126AC4.png "fig:")*Figure 7*: Mesh coordinates of the corners of the panel 1 of netting,
 displayed with phobos using \~/femnet/data_2001/readme/1pelagic_trawl/s1. Displayed with phobos tool.
 
-Traction stiffness (N): 25000.000000
+**Traction stiffness (N): 25000.000000**
 
 The traction stiffness, more exactly the force required to double the
 length of the twine, is **25000**N. This value is E.A. E is the Young
 modulus of the material and A (N/m²) is the material section of the
 twine (m², p[125](#anchor-8)).
 
-Compression stiffness (N): 1.000000
+**Compression stiffness (N): 1.000000**
 
 *The compression stiffness is **1**N. That means that there is more or
 less no force required to compressed the twine.*
 
-Mesh opening stiffness (N.m/rad): 0.000000
+**Mesh opening stiffness (N.m/rad): 0.000000**
 
 The mesh opening stiffness is the couple required to open the mesh of 1
 Rad. Generally speaking, use **0**N.m/Rad. For stiff netting see
 p[64](#anchor-9).
 
-Unstretched length (m): 0.400000
+**Unstretched length (m): 0.400000**
 
 *The unstretched length is the length of the mesh side from a middle of
 a knot to the middle of a neighbouring knot.*
 
-Volumic mass (kg/m3): 1025.000000
+**Volumic mass (kg/m3): 1025.000000**
 
 The volumic mass of the netting (material and sea water inside the
 hydrodynamic diameter, see p[127](#anchor-10) a method of assessment).
 Note that the default volumic mass of sea water used here is 1025kg/m³.
 
-Hydrodynamic diameter (m): 0.002800
+**Hydrodynamic diameter (m): 0.002800**
 
 The diameter of the twine. This diameter is used for the calculation of
 the drag, the mass and the floatability.
 
-Knot size (m): 0.005600
+**Knot size (m): 0.005600**
 
 In case of the meshes are closed, the closing could be limited by the
 size of the knot. A default value is twice the twine diameter. 0.0 is
 also used.
 
-Normal Cd: 1.200000
+**Normal Cd: 1.200000**
 
 Normal Cd for the calculation of the drag. 1.2 is an usual value.
 
-Tangential Cd: 0.080000
+**Tangential Cd: 0.080000**
 
 Tangential coefficient for the calculation of the drag. 0.08 is an usual
 value.
 
-Meshing step (m): 27.000000
+**Meshing step (m): 27.000000**
 
 The distance between the numerical nodes created by phobos. Here the
 value is quite large, for finer calculations, as it can be seen in
 following files, this meshing step will decrease.
 
-Type of internal nodes: 2
+**Type of internal nodes: 2**
 
 Type of the numeric nodes created by phobos. This point will be
 discussed later (p[15](#anchor-7)).
 
-Meshing type: 2
+**Meshing type: 2**
 
 When the meshing type is 1 there is no constraint on the creation of the
 nodes by phobos. If the meshing type is **2**, phobos tries to create
 the numeric node on a knot. It is preferable to use meshing type 2.
 
-Panel: 2
+**Panel: 2**
 
 Continue the same for all the panels. Here the panels 3 to 24 have been
 hidden.
 
-number of nodes around: 7
+**number of nodes around: 7**
 
-nodes of the contour no x y z U V type and following type:
+**nodes of the contour no x y z U V type and following type:**
+**1 36.000000 0.000000 32.000000 0.000000 -32.500000 2 2**
+**2 71.000000 0.000000 53.000000 25.000000 -7.500000 2 2**
+**3 71.000000 0.000000 60.000000 25.000000 0.000000 3 3**
+**4 111.000000 0.000000 60.000000 55.000000 0.000000 3 2**
+**5 111.000000 0.000000 42.000000 55.000000 -24.500000 2 2**
+**6 71.000000 0.000000 30.000000 25.000000 -42.500000 2 2**
+**7 46.000000 0.000000 27.000000 7.000000 -39.500000 2 2**
 
-1 36.000000 0.000000 32.000000 0.000000 -32.500000 2 2
-
-2 71.000000 0.000000 53.000000 25.000000 -7.500000 2 2
-
-3 71.000000 0.000000 60.000000 25.000000 0.000000 3 3
-
-4 111.000000 0.000000 60.000000 55.000000 0.000000 3 2
-
-5 111.000000 0.000000 42.000000 55.000000 -24.500000 2 2
-
-6 71.000000 0.000000 30.000000 25.000000 -42.500000 2 2
-
-7 46.000000 0.000000 27.000000 7.000000 -39.500000 2 2
-
-Traction stiffness (N): 25000.000000
-
-Compression stiffness (N): 1.000000
-
-Mesh opening stiffness (N.m/rad): 0.000000
-
-Unstretched length (m): 0.400000
-
-Volumic mass (kg/m3): 1025.000000
-
-Hydrodynamic diameter (m): 0.002800
-
-Knot size (m): 0.005600
-
-Normal Cd: 1.200000
-
-Tangential Cd: 0.080000
-
-Meshing step (m): 27.000000
-
-Type of internal nodes: 2
-
-Meshing type: 2
-
+**Traction stiffness (N): 25000.000000**
+**Compression stiffness (N): 1.000000**
+**Mesh opening stiffness (N.m/rad): 0.000000**
+**Unstretched length (m): 0.400000**
+**Volumic mass (kg/m3): 1025.000000**
+**Hydrodynamic diameter (m): 0.002800**
+**Knot size (m): 0.005600**
+**Normal Cd: 1.200000**
+**Tangential Cd: 0.080000**
+**Meshing step (m): 27.000000**
+**Type of internal nodes: 2**
+**Meshing type: 2**
 .
-
 .
-
 .
+**Panel: 25**
 
-Panel: 25
+**number of nodes around: 4**
+**nodes of the contour no x y z U V type and following type:**
+**1 186.00000 0.000000 -60.000000 0.000000 0.000000 3 3**
+**2 205.00000 0.000000 -60.000000 450.00000 0.000000 3 2**
+**3 205.00000 0.000000 -56.000000 450.00000 62.500000 2 2**
+**4 186.00000 0.000000 -56.000000 0.000000 62.500000 2 2**
 
-number of nodes around: 4
+**Traction stiffness (N): 25000.000000**
+**Compression stiffness (N): 1.000000**
+**Mesh opening stiffness (N.m/rad): 0.000000**
+**Unstretched length (m): 0.025000**
+**Volumic mass (kg/m3): 1025.000000**
+**Hydrodynamic diameter (m): 0.002800**
+**Knot size (m): 0.005600**
+**Normal Cd: 1.200000**
+**Tangential Cd: 0.080000**
+**Meshing step (m): 27.000000**
+**Type of internal nodes: 2**
+**Meshing type: 2**
 
-nodes of the contour no x y z U V type and following type:
+**hexagonal panels number: 0**
 
-1 186.00000 0.000000 -60.000000 0.000000 0.000000 3 3
-
-2 205.00000 0.000000 -60.000000 450.00000 0.000000 3 2
-
-3 205.00000 0.000000 -56.000000 450.00000 62.500000 2 2
-
-4 186.00000 0.000000 -56.000000 0.000000 62.500000 2 2
-
-Traction stiffness (N): 25000.000000
-
-Compression stiffness (N): 1.000000
-
-Mesh opening stiffness (N.m/rad): 0.000000
-
-Unstretched length (m): 0.025000
-
-Volumic mass (kg/m3): 1025.000000
-
-Hydrodynamic diameter (m): 0.002800
-
-Knot size (m): 0.005600
-
-Normal Cd: 1.200000
-
-Tangential Cd: 0.080000
-
-Meshing step (m): 27.000000
-
-Type of internal nodes: 2
-
-Meshing type: 2
-
-hexagonal panels number: 0
-
-Number of panels of hexagonal meshes. Use 0, as the hexagonal meshes are
+**mber of panels of hexagonal meshes. Use 0, as the hexagonal meshes are
 not explained in this document.
 
-Cables number: 26
+**Cables number: 26**
 
 There are **26** cables or bars.
 
-Cable: 1
+**Cable: 1**
 
 The value **1** is not used. In fact the cable (or bar) 1 is the first
 of this list of cables, cable 2 is the second and so on.
 
-Extremities no x y z type:
-
-1 0.000000 0.000000 0.000000 1
-
-2 2.000000 0.000000 0.000000 4
+**Extremities no x y z type:**
+**1 0.000000 0.000000 0.000000 1**
+**2 2.000000 0.000000 0.000000 4**
 
 There are 2 extremities (corners) for each cable or bar. The extremity 1
 is the first, extremity 2 is the second. The coordinates X,Y,Z of
@@ -371,99 +322,69 @@ extremity **1** are **0**m, **0**m, **0**m and **2**m, **0**m, **0**m
 for extremity **2**. The type of node of extremity 1 is **1** and **4**
 for extremity 2 (p[15](#anchor-7)).
 
-Traction stiffness (N): 62000000.000000
+**Traction stiffness (N): 62000000.000000**
 
 This characteristics are the same as the one uses for twines previously
 described.
 
-Compression stiffness (N): 1.000000
+**Compression stiffness (N): 1.000000**
+**Unstretched length (m): 200.000000**
+**Volumic mass (kg/m3): 4800.000000**
+**Hydrodynamic diameter (m): 0.026000**
+**Normal Cd: 1.800000**
+**Tangential Cd: 0.080000**
+**Bars number: 9**
 
-Unstretched length (m): 200.000000
+This cable will be discretized by **9** bars. For finer calculations in
+following files this number will decrease.
 
-Volumic mass (kg/m3): 4800.000000
-
-Hydrodynamic diameter (m): 0.026000
-
-Normal Cd: 1.800000
-
-Tangential Cd: 0.080000
-
-Bars number: 9
-
-*This cable will be discretized by **9** bars. For finer calculations in
-following files this number will decrease.*
-
-Type of internal nodes: 2
+**Type of internal nodes: 2**
 
 The nodes created by the 9 bars are of type **2** (p[15](#anchor-7)).
 
-Cable: 2
+**Cable: 2**
 
 *Continue the same for all the cables and bars. In this document, only
 few cables/bars are shown.*
 
-Extremities no x y z type:
+**Extremities no x y z type:**
+**1 3.000000 0.000000 1.000000 4**
+**2 8.000000 0.000000 5.000000 2**
 
-1 3.000000 0.000000 1.000000 4
-
-2 8.000000 0.000000 5.000000 2
-
-Traction stiffness (N): 200000000.000000
-
-Compression stiffness (N): 200000000.000000
-
-Unstretched length (m): 3.000000
-
-Volumic mass (kg/m3): 1025.000000
-
-Hydrodynamic diameter (m): 0.010000
-
-Normal Cd: 1.800000
-
-Tangential Cd: 0.080000
-
-Bars number: 1
-
-Type of internal nodes: 2
-
+**Traction stiffness (N): 200000000.000000**
+**Compression stiffness (N): 200000000.000000**
+**Unstretched length (m): 3.000000**
+**Volumic mass (kg/m3): 1025.000000**
+**Hydrodynamic diameter (m): 0.010000**
+**Normal Cd: 1.800000**
+**Tangential Cd: 0.080000**
+**Bars number: 1**
+**Type of internal nodes: 2**
 .
-
 .
-
 .
+**Cable: 18**
 
-Cable: 18
+**Extremities no x y z type:**
+**1 32.000000 0.000000 -16.000000 2**
+**2 64.000000 0.000000 -2.000000 2**
 
-Extremities no x y z type:
+**Traction stiffness (N): 20000000.000000**
+**Compression stiffness (N): 1.000000**
+**Unstretched length (m): 20.000000**
+**Volumic mass (kg/m3): 4800.000000**
+**Hydrodynamic diameter (m): 0.012500**
+**Normal Cd: 1.800000**
+**Tangential Cd: 0.080000**
+**Bars number: 1**
+**Type of internal nodes: 2**
 
-1 32.000000 0.000000 -16.000000 2
-
-2 64.000000 0.000000 -2.000000 2
-
-Traction stiffness (N): 20000000.000000
-
-Compression stiffness (N): 1.000000
-
-Unstretched length (m): 20.000000
-
-Volumic mass (kg/m3): 4800.000000
-
-Hydrodynamic diameter (m): 0.012500
-
-Normal Cd: 1.800000
-
-Tangential Cd: 0.080000
-
-Bars number: 1
-
-Type of internal nodes: 2
-
-Sliding cables number: 0
+**Sliding cables number: 0**
 
 This number must be always **0**. There is a new method for the sliding
 ropes which will be described later.
 
-Links number: 52
+**Links number: 52**
 
 *The panels and cables/bars have to be linked together. Here there are
 **52** links. The shows few links. The four corners (panels corners and
@@ -478,21 +399,17 @@ and the cable are linked (links 122 to 127). The tool gengis (gengis in
 \~/femnet/programs) is specifically designed for creating the a first 
 level f \*.don file.*
 
-nb_pt: 3 el: 3 nd: 1 el: 2 nd: 1 el: 1 nd: 2
+**nb_pt: 3 el: 3 nd: 1 el: 2 nd: 1 el: 1 nd: 2**
 
 *This link relies **3** corners: extremity (**nd**) **1** of cable
 (**el**) **3**, extremity (**nd**) **1** of cable (**el**) **2** and
 extremity (**nd**) **2** of cable (**el**) **1**.*
 
-nb_pt: 3 el: 6 nd: 1 el: 4 nd: 2 el: 3 nd: 2
-
+**nb_pt: 3 el: 6 nd: 1 el: 4 nd: 2 el: 3 nd: 2**
 .
-
 .
-
 .
-
-nb_pt: 2 pa: 1 nd: 6 pa: 3 nd: 6
+**nb_pt: 2 pa: 1 nd: 6 pa: 3 nd: 6**
 
 ![Figure 8: Links between components. The two corners noted 52 are
 linked and this link is the 52. View of phobos using
@@ -500,22 +417,15 @@ linked and this link is the 52. View of phobos using
 linked and this link is the 52. View of phobos using
 \~/femnet/data_2001/readme/1pelagic_trawl/s1.
 
-Meshing order:
+**Meshing order:**
+**el: 23 el: 24 pa: 24 pa: 25 pa: 22 pa: 23 ***pa: 1*** pa: 2 pa: 3 pa: 4**
+**pa: 5 pa: 6 pa: 7 pa: 8 pa: 9 pa: 10 pa: 11 pa: 12 pa: 13 pa: 14**
+**pa: 15 pa: 16 pa: 17 pa: 18 pa: 19 pa: 20 pa: 21 el: 1 el: 2 el: 3**
+**el: 4 el: 5 el: 6 el: 7 el: 8 el: 9 el: 10 el: 11 el: 12 el: 13**
+**el: 14 el: 15 el: 16 el: 17 ***el: 18*** el: 19 el: 20 el: 21 el: 22 el:**
+**25 el: 26**
 
-el: 23 el: 24 pa: 24 pa: 25 pa: 22 pa: 23 **pa: 1** pa: 2 pa: 3 pa: 4
-
-pa: 5 pa: 6 pa: 7 pa: 8 pa: 9 pa: 10 pa: 11 pa: 12 pa: 13 pa: 14
-
-pa: 15 pa: 16 pa: 17 pa: 18 pa: 19 pa: 20 pa: 21 el: 1 el: 2 el: 3
-
-el: 4 el: 5 el: 6 el: 7 el: 8 el: 9 el: 10 el: 11 el: 12 el: 13
-
-el: 14 el: 15 el: 16 el: 17 **el: 18** el: 19 el: 20 el: 21 el: 22 el:
-25
-
-el: 26
-
-*The meshing order defined the order by which each component is
+The meshing order defined the order by which each component is
 discretized by phobos. This is in relation with the previous point: the
 links between components. In the list above the panel 1 (**pa: 1**) is
 listed before cable 18 (**el: 18**), that means that the panel 1 is
@@ -528,7 +438,7 @@ be different: because the number of bars in cable 18 is 3 (see
 \~/femnet/data_2001/readme/1pelagic_trawl/s1.don) that leads to create
 on this cable 2 new numeric nodes, and because panel 1 is sown to cable
 18, consequently, on the side of panel 1 there are 2 new numeric nodes
-(links 58, 59) also, as visible on the .*
+(links 58, 59) also, as visible on the .
 
 *If the meshing order does not matter which is quite often the case, the
 list **Meshing order: el: 23 .. .. .. .. ****el: 26** could be replaced
@@ -538,120 +448,95 @@ Another possibility is to use **Meshing order: ****b****ll**, in this
 case diamond netting panels are meshed before cables, and panel n before
 panel n+1 (idem for cables.)*
 
-[]{#anchor-7}Number of types of nodes: 4
+**Number of types of nodes: 4**
 
 There are 4 types of nodes
 
-No du type : 1
+**No du type : 1**
 
 The type 1. Be careful this value **1** is not used: The type 1 is the
 first of this list, the type 2 is the second and so on.
 
-Mass X,Y,Z (kg): 0.000000 0.000000 0.000000
+**Mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
 
 The node mass. The mass along X, Y and Z could be different. Generally
 these 3 masses are equal.
 
-Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000
+**Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
 
 The added mass in case of dynamic.
 
-Length X,Y,Z (m): 0.000000 0.000000 0.000000
+**Length X,Y,Z (m): 0.000000 0.000000 0.000000**
 
 The length of the node along X, Y and Z axis. These lengths could lead
 to floatability due to the volume and drag due to sections.
 
-Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000
+**Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000**
 
 The drag coefficient applied on sections.
 
-External forces X,Y,Z (N): 0.000000 0.000000 0.000000
+**External forces X,Y,Z (N): 0.000000 0.000000 0.000000**
 
 External constant forces along X, Y and Z axis.
 
-Displacement X,Y,Z: 1 1 1
+**Displacement X,Y,Z: 1 1 1**
 
 if **0** the displacement of the nodes with this type is possible. If
 **1** the node is fixed. The displacement is along X, Y and Z.
 
-Limits X,Y,Z (m): 0.000000 0.000000 0.000000
+**Limits X,Y,Z (m): 0.000000 0.000000 0.000000**
 
 In case of bottom sea the limit along Z is minus the depth. The limits
 could be also along X and Y axis.
 
-Limits sense X,Y,Z: 0 0 0
+**Limits sense X,Y,Z: 0 0 0**
 
 If limits sense is **0** there is no limit. If limits sense is **1**,
 the limit previously defined is a floor. If limits sense is **-1**, the
 limit is a ceiling.
 
-Symmetry X,Y,Z: 0 0 0
+**Symmetry X,Y,Z: 0 0 0**
 
 In case of symmetry relatively to the plane Y,Z (Z,X and X,Y) use **1 0
 0** (**0 1 0** and **0 0 1**). In case of no symmetry use **0 0 0**.
 
-No du type : 2
-
-Mass X,Y,Z (kg): 0.000000 0.000000 0.000000
-
-Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000
-
-Length X,Y,Z (m): 0.000000 0.000000 0.000000
-
-Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000
-
-External forces X,Y,Z (N): 0.000000 0.000000 0.000000
-
-Displacement X,Y,Z: 0 0 0
+**No du type : 2**
+**Mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+**Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+**Length X,Y,Z (m): 0.000000 0.000000 0.000000**
+**Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000**
+**External forces X,Y,Z (N): 0.000000 0.000000 0.000000**
+**Displacement X,Y,Z: 0 0 0**
 
 if **0** the displacement of the nodes with this type is possible. If
 **1** the node is fixed. The displacement is along X, Y and Z.
 
-Limits X,Y,Z (m): 0.000000 0.000000 0.000000
+**Limits X,Y,Z (m): 0.000000 0.000000 0.000000**
+**Limits sens X,Y,Z: 0 0 0**
+**Symmetry X,Y,Z: 0 0 0**
 
-Limits sens X,Y,Z: 0 0 0
+**No du type : 3**
+**Mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+**Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+**Length X,Y,Z (m): 0.000000 0.000000 0.000000**
+**Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000**
+**External forces X,Y,Z (N): 0.000000 0.000000 0.000000**
+**Displacement X,Y,Z: 0 0 0**
+**Limits X,Y,Z (m): 0.000000 0.000000 0.000000**
+**Limits sens X,Y,Z: 0 0 0**
+**Symmetry X,Y,Z: 0 1 0**
 
-Symmetry X,Y,Z: 0 0 0
+**No du type : 4**
 
-No du type : 3
-
-Mass X,Y,Z (kg): 0.000000 0.000000 0.000000
-
-Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000
-
-Length X,Y,Z (m): 0.000000 0.000000 0.000000
-
-Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000
-
-External forces X,Y,Z (N): 0.000000 0.000000 0.000000
-
-Displacement X,Y,Z: 0 0 0
-
-Limits X,Y,Z (m): 0.000000 0.000000 0.000000
-
-Limits sens X,Y,Z: 0 0 0
-
-Symmetry X,Y,Z: 0 1 0
-
-No du type : 4
-
-Mass X,Y,Z (kg): 0.000000 0.000000 0.000000
-
-Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000
-
-Length X,Y,Z (m): 0.000000 0.000000 0.000000
-
-Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000
-
-External forces X,Y,Z (N): 5600.000000 13000.000000 -15000.000000
-
-Displacement X,Y,Z: 0 0 0
-
-Limits X,Y,Z (m): 0.000000 0.000000 0.000000
-
-Limits sens X,Y,Z: 0 0 0
-
-Symmetry X,Y,Z: 0 0 0
+**Mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+**Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+**Length X,Y,Z (m): 0.000000 0.000000 0.000000**
+**Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000**
+**External forces X,Y,Z (N): 5600.000000 13000.000000 -15000.000000**
+**Displacement X,Y,Z: 0 0 0**
+**Limits X,Y,Z (m): 0.000000 0.000000 0.000000**
+**Limits sens X,Y,Z: 0 0 0**
+**Symmetry X,Y,Z: 0 0 0**
 
 These 4 types of node show that nodes could be fixed (type 1), free to
 move (type 2), free to move and on symmetry plane (type 3) and free to
@@ -662,50 +547,47 @@ characteristics (drag coefficient, lift coefficient,as it is defined for
 example in [@{Les panneaux de chalut}]), their surface and the water
 speed. For the vertical force use the weight of the trawl door.
 
-NUMERIC ENVIRONMENT
-
-Divisor (s): 0.000050
+**NUMERIC ENVIRONMENT**
+**Divisor (s): 0.000050**
 
 Not used.
 
-Convergence threshold (N): 0.100000
+**Convergence threshold (N): 0.100000**
 
 The equilibrium is reached when the mean disequilibrium force per node
 is smaller than the convergence threshold (N).
 
-Displacement limit for each iteration (m): 10.000000
+**Displacement limit for each iteration (m): 10.000000**
 
 Maximal displacement at each iteration per node (m).
 
-Maximal number of iterations: 10000
+**Maximal number of iterations: 10000**
 
 If the convergence is not reached, the calculation stops when the number
 of iterations reaches this value.
 
-Dynamic: []{#Time step}Time step (s): 0.100000
+**Dynamic: [Time step (s): 0.100000**
 
 In case of dynamic, calculation time step (s).
 
-Dynamic: []{#Record time step}Record time step (s): 0.200000
+**Dynamic: Record time step (s): 0.200000**
 
 In case of dynamic, time step for recording the shape of the structure
 (s). Record time step is equal or larger than time step.
 
-Dynamic: []{#Beginning time of record}Beginning time of record (s):
-0.000000
+**Dynamic:Beginning time of record (s): 0.000000**
 
 In case of dynamic, beginning time for recording the shape of the
 structure (s).
 
-Dynamic: []{#End time of calculation}End time of record and calculation
-(s): 0.000000
+**Dynamic: End time of record and calculation (s): 0.000000**
 
 In case of dynamic, end time for calculation and recording the shape of
 the structure (s).
 
-METEO/OCEANIC ENVIRONMENT
+**METEO/OCEANIC ENVIRONMENT**
 
-Current direction (deg): 0.000000
+**Current direction (deg): 0.000000**
 
 Direction of the current (deg.). When 0, the current is along X axis;
 when 90, the current is along Y axis; when 180, the current is opposite
@@ -713,37 +595,37 @@ X axis; when 270 the current is opposite Y axis. As said previously, the
 boat is, in this model, fixed and the towing speed is represented by a
 current.
 
-Current speed (m/s): 2.058000
+**Current speed (m/s): 2.058000**
 
-Current amplitude (m/s).
+**Current amplitude (m/s).**
 
-[]{#Wave period}Wave period (s): 10.000000
+**Wave period (s): 10.000000**
 
 Wave period, only in case of dynamic (s). The default model is Airy
 intermediate depth. For the other models (Stokes 2d intermediate depth,
 Stokes 3d deep waters) see later "input wave_model".
 
-[]{#Wave height}Wave height (m): 0.000000
+**Wave height (m): 0.000000**
 
-*Wave height only in case of dynamic (m). Wave height is the double of
-wave amplitude.*
+Wave height only in case of dynamic (m). Wave height is the double of
+wave amplitude.
 
-[]{#Wave direction}Wave direction relatively X (deg): 0.000000
+**Wave direction relatively X (deg): 0.000000**
 
-*Wave direction only in case of dynamic (deg.).*
+Wave direction only in case of dynamic (deg.).
 
-[]{#Depth}Depth (m): 2000.000000
+**Depth (m): 2000.000000**
 
 Depth used for wave calculation in case of dynamic (m). This depth is
 also used for visualisation with batz. Be careful, this depth is not
 used as limit of vertical position of nodes. For such limit see type of
 node previously described.
 
-CATCH DESCRIPTION
+**CATCH DESCRIPTION**
 
-Volume (m3): 0.000000
+**Volume (m3): 0.000000**
 
-*The catch in the netting (m*^*3*^*). In fact, it is a volume behind a
+The catch in the netting (m*^*3*^*). In fact, it is a volume behind a
 vertical front (a plane) and the netting. This volume is the fish catch
 but also water. The catch applies a pressure on the netting, be careful
 that the pressure occurs on the inner side of the netting. The inner
@@ -753,51 +635,50 @@ orientation_xy), and with batz (Visualisation, orientation_xy).See
 not appropriate, to change it, replace the V coordinates of the panel by
 their opposite (or the U coordinates by their opposite). For example, in
 the \*.don file, if a V coordinate of a corner of the panel is 10.0
-replace it by -10.0.*
+replace it by -10.0.
 
-Accuracy on this volume: 0.000010
+**Accuracy on this volume: 0.000010**
 
 The position of the front of the catch is calculated by dichotomy using
 this accuracy on the volume (m^3^).
 
-Drag coefficient on this volume: 1.000000
+**Drag coefficient on this volume: 1.000000**
+**Drag coefficient on the catch. 1.40 is an usual value.**
 
-Drag coefficient on the catch. 1.40 is an usual value.
+**BOTTOM SEA ENVIRONMENT**
 
-BOTTOM SEA ENVIRONMENT
+**Wearing coefficient on the bottom: 0.500000**
 
-Wearing coefficient on the bottom: 0.500000
-
-*In case of contact on the bottom and movement of the structure on the
+In case of contact on the bottom and movement of the structure on the
 bottom, the wearing force is proportional to this wearing coefficient
 and vertical force on the bottom. There is a contact with the bottom if
 the position of the node is under the limit defined in type of nodes as
-seen above.*
+seen above.
 
-Stiffness of the insertion in the sea bottom (N/m): 5000000.000000
+**Stiffness of the insertion in the sea bottom (N/m): 5000000.000000**
 
-*In case of contact with the bottom, the vertical force on the node is
+In case of contact with the bottom, the vertical force on the node is
 proportional to its sinking into the ground and the stiffness of the
-insertion in the sea bottom (N/m).*
+insertion in the sea bottom (N/m).
 
-TEXT OUTPUT
+**TEXT OUTPUT**
 
 The following lines are used to gives specific result of the calculation
 
-Distances number : 2
+**Distances number : 2**
 
 Here two distances (m) are displayed.
 
-Distance: 1 comment: #PELAGIC TRAWL \# no global 1: 1 no global 2: 1
-decimal nb: 0
+**Distance: 1 comment: #PELAGIC TRAWL \# no global 1: 1 no global 2: 1
+decimal nb: 0**
 
 The distance **1**. The comment is written between **\# \#**. The
 distance is calculated between the node **1** and **1** (and is zero m
 because the two nodes are the same). This distance is written with **0**
 decimal.
 
-Distance: 2 comment: #Boat to door distance \# no global 1: 48 no global
-2: 49 decimal nb: 2
+**Distance: 2 comment: #Boat to door distance \# no global 1: 48 no global
+2: 49 decimal nb: 2**
 
 *The distance 2. The comment is written between **\# \#**. The distance
 is calculated between the node **48** and **49**. This distance is
@@ -805,23 +686,23 @@ written with **2** decimal. For choosing the nodes use phobos (node
 information, node\_global), or add output no_visible_symmetry at the end
 of \*.don file, and use batz (Node information, number).*
 
-Forces number : 2
+**Forces number : 2**
 
 Here there are 2 forces (N) displayed
 
-Force: 1 comment: #Boat Z force (N)# no global: 48 axe: 3 decimal nb: 0
+**Force: 1 comment: #Boat Z force (N)# no global: 48 axe: 3 decimal nb: 0**
 
 The comment is between **\# \#**. The force applied on **48** along axis
 **3** (Z) is displayed with **0** decimal.
 
-Force: 2 comment: #Boat X force (N)# no global: 48 axe: 1 decimal nb: 0
+**Force: 2 comment: #Boat X force (N)# no global: 48 axe: 1 decimal nb: 0**
 
-Tensions number : 3
+**Tensions number : 3**
 
 Here there are 3 tensions (N) displayed.
 
-Tension: 1 comment: #Warp tension (N)# cable: 1 extremity node: 49
-decimal nb: 0
+**Tension: 1 comment: #Warp tension (N)# cable: 1 extremity node: 49
+decimal nb: 0**
 
 The comment is between **\# \#**. The tension is in cable **1** at the
 node **49** is displayed with **0** decimal. The cable number is visible
@@ -832,114 +713,114 @@ of symmetry, in batz the symmetric of a node covers the number of node
 on the symmetry plane. In this case add at the end of the \*.don file
 "output no_visible_symmetry". Prefer phobos view.
 
-Tension: 2 comment: #Bottom bridle tension (N)# cable: 5 extremity node:
-50 decimal nb: 0
+**Tension: 2 comment: #Bottom bridle tension (N)# cable: 5 extremity node:
+50 decimal nb: 0**
 
-Tension: 3 comment: #Top bridle tension (N)# cable: 6 extremity node: 51
-decimal nb: 0
+**Tension: 3 comment: #Top bridle tension (N)# cable: 6 extremity node: 51
+decimal nb: 0**
 
-Sliding tensions number : 0
+**Sliding tensions number : 0**
 
 Remains at 0.
 
-Positions number : 3
+**Positions number : 3**
 
 Here there are 3 positions (m) of nodes
 
-Position: 1 comment: #Head line immersion (m)# no global: 13 axe: 3
-decimal nb: 1
+**Position: 1 comment: #Head line immersion (m)# no global: 13 axe: 3
+decimal nb: 1**
 
 The comment is between **\# \#**. The position of node **13** along axis
 **3** (Z) is displayed with **1** decimal.
 
-Position: 2 comment: #Bottom line immersion (m)# no global: 17 axe: 3
-decimal nb: 1
+**Position: 2 comment: #Bottom line immersion (m)# no global: 17 axe: 3
+decimal nb: 1**
 
-Position: 3 comment: #Door immersion (m)# no global: 49 axe: 3 decimal
-nb: 1
+**Position: 3 comment: #Door immersion (m)# no global: 49 axe: 3 decimal
+nb: 1**
 
-Structure forces display : 1
+**Structure forces display : 1**
 
 *If 1, the forces (N, along X, Y and Z) applied on the structure is
 displayed at the end of calculation on the terminal, recorded in sta
 file, recorded in detail in efg file, and visible by batz
 (Visualisation, comment). If 0, not.*
 
-Catch diameter display : 1
+**Catch diameter display : 1**
 
 If 1, the diameter of the catch (m) is displayed at the end of
 calculation on the terminal and recorded in sta. If 0 not.
 
-Catch thickness display : 1
+**Catch thickness display : 1**
 
 If 1, the thickness of the catch (m) is displayed at the end of
 calculation on the terminal and recorded in sta. If 0 not.
 
-Catch volume display : 1
+**Catch volume display : 1**
 
 If 1, the volume of the catch (m^3^) is displayed at the end of
 calculation on the terminal and recorded in sta. If 0 not.
 
-Filtrated surface display : 1
+**Filtrated surface display : 1**
 
-If 1, the surface filtrated (m^2^) by the structure is displayed at the
+If 1, the surface filtrated (m^2^) by the netting structure is displayed at the
 end of calculation on the terminal and recorded in sta. If 0 not.
 
-Speed display : 1
+**Speed display : 1**
 
 If 1, the speed (current amplitude m/s) is displayed at the end of
 calculation on the terminal and recorded in sta. If 0 not.
 
-## []{#anchor-11}- The second part of \*.don file:
+## - The second part of \*.don file:
 
 In this second part there are a succession of commands (if any) which
 don't need to follow a specific order.
 
-output catch_drag
+**output catch_drag**
 
 The drag on the catch (N) is displayed at the end of calculation on the
 terminal and recorded in \*.sta file.
 
-output bottom_drag
+**output bottom_drag**
 
 The drag on the bottom (N) is displayed at the end of calculation on the
 terminal and recorded in \*.sta file.
 
-output element_drag
+**output element_drag**
 
 The drag on the cables and bars (N) is displayed at the end of
 calculation on the terminal and recorded in \*.sta filr.
 
-output surface_drag
+**output surface_drag**
 
 The drag on the netting (N) is displayed at the end of calculation on
 the terminal and recorded in \*.sta file.
 
-input Auto_convergence[]{#anchor-12}
+**input Auto_convergence**
 
 *Use a specific function for increasing the speed of convergence, by
 modifying the added stiffness added on the diagonal of the stiffness
 matrix [@Priour2013].*
 
-#output no_visible_symmetry
+**#output no_visible_symmetry**
 
 #indicates that this line is a comment
 
-input convergence_parameters 1 10 100000000000
+**input convergence_parameters 1 10 100000000000**
 
 *The 3 convergence parameters are (**1**) the **relaxation**, (**10**)
 the **print period**, and (**100000000000**) the initial **added
 stiffness** (N).*
 
-*- The **relaxation** is the proportion of calculated displacement at
+- The **relaxation** is the proportion of calculated displacement at
 each iteration which is effectively used for the calculation of the
-position of nodes, it is recommended to use 1.*
+position of nodes, it is recommended to use 1.
 
-*- The **print period** is the iteration period at which informations
+- The **print period** is the iteration period at which informations
 are displayed on the terminal during the calculation (see the first
-column of ).*
+column of ).
 
-*- The **added stiffness** is used to avoid singular matrix in the
+- The **added stiffness** is used to avoid singular matrix in the
 Newton-Raphson scheme [@Priour2013]. In this scheme at each iteration
 the nodes displacement is calculated using f/f', with f the vector of
 force disequilibrium and f' the stiffness matrix (df/dx). To avoid a
@@ -949,21 +830,21 @@ If the line (**input convergence_parameters 1 10 100000000000**) don't
 exist in \*.don file, the convergence parameters of the file
 \~/femnet/programs/param.txt are used. During the calculation, the user
 could change the value of \*.par file if any or of
-\~/femnet/programs/param.txt.*
+\~/femnet/programs/param.txt.
 
-*In case the convergence is difficult to reach, it could be useful to
+In case the convergence is difficult to reach, it could be useful to
 comment **input Auto_convergence**, by replacing it by **\#****input
 Auto_convergence** or removing the line. Then the \*.par file is opened
 if any (if not, open \~/femnet/programs/param.txt), and the user could
 change, during calculation, the value of the added stiffness. A decrease
 of the added stiffness could accelerate the convergence with a risk of
-divergence.*
+divergence.
 
-# []{#anchor-13}./phobos
+# ./phobos
 
 2 ways to use phobos:
 
-## []{#anchor-14}- The first way:
+## \- The first way:
 
 In a terminal run the commands :
 
@@ -1020,9 +901,7 @@ cd \~/femnet/programs
 This command creates directly the s1.mdg file from s1.don file, without
 using the graphical tool.
 
-# 
-
-# []{#anchor-16}./unix
+# \./unix
 
 The equilibrium could be calculated when \*.don file and \*.mdg file
 exist. For calculating the equilibrium of s1, use the commands:
@@ -1076,7 +955,7 @@ the mean disequilibrium (fourth column) is less than 0.1N (the
 convergence threshold defined in the \*.don file). The result is stored
 in the \*.sta file.
 
-# []{#anchor-17}./batz
+# \./batz
 
 To display the result use the commands:
 
@@ -1115,7 +994,7 @@ selected.
 The right vertical cursor is used for displaying dynamic calculation, if
 any.
 
-# []{#anchor-19}Automatic creation of links
+# Automatic creation of links
 
 An another way to create links between points, is to place points in
 \*.don file which have to be linked at the same position (X, Y and Z m).
@@ -1140,7 +1019,7 @@ trawl
 ().](images/Pictures/100000010000024D000002C815AE0BD8.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
-# []{#anchor-21}Refining the calculation 
+# Refining the calculation 
 
 In order to refine the calculation of the equilibrium of the structure:
 
@@ -1226,7 +1105,7 @@ figure is very similar to
 (s1).](images/Pictures/100000010000024D000002C84E243EC1.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
-# []{#anchor-22}Symmetry
+# Symmetry
 
 A structure and its environment could be symmetric. In the following
 figure, the structure presents a vertical plane of symmetry.
@@ -1316,7 +1195,7 @@ design of this trawl don't use the symmetry plane as s1
 ().](images/Pictures/100000010000024D000002C8D2E889F8.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
-# []{#anchor-23}Bottom trawl
+# Bottom trawl
 
 A structure which has a contact with the sea bottom has to be defined
 using specific types of nodes. For example a node which could be in
@@ -1458,7 +1337,7 @@ height="9.495cm"}
 Several scientific papers used this possibility of FEMNET:
 [@{Khaled 2012a}], [@{Khaled 2012b}], [@Prada], [@Priour2015].
 
-# []{#anchor-24}Catch
+# Catch
 
 A catch in a netting, such as an amount of fish in a trawl cod-end,
 creates a pressure on the netting.
@@ -1644,12 +1523,12 @@ height="15.071cm"}
 Several scientific papers used this possibility of FEMNET: [@sala2006],
 [@{Herrmann 2006}], [@{Herrmann 2007}].
 
-# []{#anchor-25}[]{#anchor-9}Flexion
+# Flexion
 
 In case of flexion resistance in cables (twines, beams), this flexion
 resistance can be introduced.
 
-## []{#anchor-26}Stiff netting example.
+## Stiff netting example.
 
 In the example of , the twines of the netting have been discretized as
 cable with a flexion resistance. This flexion resistance is the product
@@ -1700,7 +1579,7 @@ cd \~/femnet/programs
 equilibrium.](images/Pictures/100000010000046D00000115173F3D1E.png "fig:"){width="16.831cm"
 height="3.508cm"}
 
-## []{#anchor-27}Polyamide cylinder example
+## Polyamide cylinder example
 
 A second example of flexion resistance is given, it is made of 4 cables
 (bars) with a flexion resistance (EI = 300000 N.m², equivalent of
@@ -1769,7 +1648,7 @@ equilibrium is reached in 1396 iterations.
 iterations.](images/Pictures/100000010000046D000002076CB899B6.png "fig:"){width="17cm"
 height="7.874cm"}
 
-# []{#anchor-28}Gravity catch
+# Gravity catch
 
 A gravity catch is a catch which presses on the netting bag by its own
 weight. It is expected that the netting is not in water. The "catch"
@@ -1921,7 +1800,7 @@ horizontal line. View of batz using
 \~/femnet/data_200*1/readme/13gravity_catch/g2*.](images/Pictures/100000010000024D000002C852702C06.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
-# []{#anchor-29}./dyna
+# ./dyna
 
 When ./unix is used for evaluating static equilibrium, ./dyna is used
 for evaluating dynamic equilibrium. Dynamic occurs when there are waves,
@@ -1965,7 +1844,7 @@ height, T is wave period and d is depth
 .](images/Pictures/100000010000021E0000020F6F94538D.png "fig:"){width="11.472cm"
 height="11.155cm"}
 
-# []{#anchor-30}FAD
+# FAD
 
 ![Figure 80: The FAD moored by 1500m deep waters and in current of
 1.5m/s. View of batz using
@@ -2020,7 +1899,7 @@ cd \~/femnet/programs
 
 ./dyna \~/femnet/data_2001/readme/7fad/g3
 
-# []{#anchor-32}Mussels longline
+# Mussels longline
 
 In the following example of mussels longline (8long_line/m1) there are
 11 buoys (3 m³ at the extremities and 1.3m³ for the others) and 41
@@ -2169,7 +2048,7 @@ View of batz using
 \~/femnet/data_20*01/readme/8long_line/m1.*](images/Pictures/100000010000068E00000217183E18D4.png "fig:"){width="17cm"
 height="5.419cm"}
 
-# []{#anchor-33}Netting boom
+# Netting boom
 
 Netting booms or gill nets are structures which are very long relatively
 to their width. In the case the variation of behaviour along the length
@@ -2296,7 +2175,7 @@ View of batz using
 \~/femnet/data\_*2001/readme/9gill_net/h1.*](images/Pictures/100000010000075200000233C31197B1.png "fig:"){width="17cm"
 height="7.945cm"}
 
-# []{#anchor-34}Fish cage
+# Fish cage
 
 A fish cage using flexible polyethylene pipes as float, and moored with
 3 lines ended by chains is described ().
@@ -2431,7 +2310,7 @@ complement of wave direction (40deg) to
 180deg.*](images/Pictures/100000010000024D000002C8544496FB.png "fig:"){width="12.467cm"
 height="15.071cm"}
 
-# []{#anchor-35}Bottom seine
+# Bottom seine
 
 The hauling back process of a bottom seine could be assessed with FEMNET
 [@priourseine].
@@ -2676,7 +2555,7 @@ cd \~/femnet/programs
 \~/femnet/data_2*001/readme/11bottom_seine/s4.*](images/Pictures/1000000100000782000004B25C5585FF.png "fig:"){width="17cm"
 height="10.631cm"}
 
-# []{#anchor-36}Symmetry plane
+# Symmetry plane
 
 The symmetry planes are defined using type of node.
 
@@ -2758,7 +2637,7 @@ symmetric part is the half (5Kg).
 
 # 
 
-# []{#anchor-37}Numerical twines
+# Numerical twines
 
 In order to model netting using numerical twines in place of triangular
 elements in a netting panel. The panel must be surrounded by ropes, even
@@ -2802,7 +2681,7 @@ height="9.999cm"}![Figure 122: Same netting using *input netting2ropes 1
 2*](images/Pictures/1000000100000255000002D33B3E8342.png "fig:"){width="8.26cm"
 height="9.999cm"}
 
-# []{#anchor-38}./gengis
+# ./gengis
 
 Gengis is a graphical tool which facilitates the writing of \*.don
 files.
@@ -2950,9 +2829,25 @@ height="13.478cm"}
 -   Zoom, Set Zoom allows to adjust the zoom. Otherwise the mouse wheel
     has a zoom effect. The left mouse button is used for pan move.
 
-# 
+# References
+1	Priour D., 1999, Calculation of net shapes by the finite element method with triangular elements, Commun. Numer. Meth. Engng, 15, 757-765.
+2	D.Priour, 2001, Introduction of mesh resistance to opening in a triangular element for calculation of nets by the finite element method, , 17, 229-237.
+3	D.Priour, 2003, Analysis of nets with hexagonal mesh using triangular elements, , 56, 1721-1733.
+4	D.Priour, 2013, A Finite Element Method for Netting, Application to fish cages and fishing gear, Springer
+5	, 2004, Les panneaux de chalut, Caractéristiques et mise en oeuvre, Quae
+6	 Priour D. & Herrmann B., Catch shape in codend, 2005
+7	R.Khaled, D.Priour & JY.Billard, 2012, Numerical optimization of trawl energy efficiency taking into account  fish distribution, , 54, 34-45.
+8	R.Khaled, D.Priour & JY.Billard, 2012, Cable length optimization for trawl fuel consumption reduction, , 58, 167-179.
+9	A.de la Prada & D.Priour, 2014, The effect of the bottom boundary layer on trawl behaviour, , 101, 142-151.
+10	D.Priour & A.de la Prada, 2015, An experimental/numerical study of the catch weight influence on trawl behavior, , 94, 94-102.
+11	A.Sala, D. Priour, B. Herrmann, 2006, Experimental and theoretical study of red mullet (Mullus barbatus)selectivity in codends of Mediterranean bottom trawls, , 19, 317-327.
+12	B. Herrmann, D. Priour, L. A. Krag, 2006, Theoretical study of the effect of round straps on the selectivity in a diamond mesh cod-end, , 80, 148-157.
+13	B. Herrmann, D. Priour, L. A. Krag, 2007, Simulation-based study of the combined effect on cod-end size selection of turning meshes by 90◦ and reducing the number of meshes in the circumference for round fish, , 84, 222-232.
+14	B.Morvan, D.Priour, Z.Guédé, G.Bles, 2016, Finite element model for the assessment of the mesh resistance to opening of fishing nets, , 123, 303-313.
+15	FG.O’Neill FG & T.O’Donogue, 1997, The fluid dynamic on catch and the geometry of trawl cod-ends, , 453, 1631-1648.
+16	Priour D., Billard J.-Y, 2019, Measurements and numerical modelling of the towing and hauling back phases of a bottom seine.
 
-# []{#anchor-39}Index
+# Index
 
 *input add_z_ele 180.0 79 152*: In case cables/bars are translated in
 the design. In this command the cables/bars are translated along ***z***
@@ -3213,7 +3108,7 @@ node is not null.
 *output surface_drag*: Display on the terminal and record in \*.sta file
 the drag of the netting.
 
-# []{#anchor-40}[]{#anchor-8}Annex 1: Stiffness of cables
+# Annex 1: Stiffness of cables
 
 Du to the braid, the nominal diameter of the cable is not fully made of
 the material: an usual ratio between mechanical diameter and nominal
@@ -3260,9 +3155,9 @@ using a mean ratio between mechanical diameter and nominal diameter of
   40.00                 3,242           3,242           7,565           32,421          108,071         48,632          162,106         43,228
   --------------------- --------------- --------------- --------------- --------------- --------------- --------------- --------------- ---------------
 
-# []{#anchor-10}[]{#anchor-41}Annex 2: Volumic mass of cables
+# Annex 2: Volumic mass of cables
 
-## []{#anchor-42}Assessment using linear mass.
+## Assessment using linear mass.
 
 The volumic mass of cables when under water, could be assessed using the
 diameter (D,m) and linear mass (k, kg/m) of the cable and volumic mass
@@ -3293,7 +3188,7 @@ The volumic mass of cables when under water:
 
 ρ~c~ = M~t~/V~t~ (kg/m~3~)
 
-## []{#anchor-43}Assessment without linear mass
+## Assessment without linear mass
 
 In case the linear mass of the cable is unknown, it could be worth to
 use the following table (proportion of 66% of material in the cable and
@@ -3305,13 +3200,13 @@ use the following table (proportion of 66% of material in the cable and
   Cable density Kg/m³      1100   950   956    1304      5516        989       1839     1927
   ------------------------ ------ ----- ------ --------- ----------- --------- -------- -------
 
-## []{#anchor-44}Rtex vs diameter of twine
+## Rtex vs diameter of twine
 
 <https://www.fao.org/4/ah827e/AH827E03.htm>
 
-# []{#anchor-45}[]{#anchor-46}Annex 3: Foil
+# Annex 3: Foil
 
-## []{#anchor-47}Flume tank model tests
+## Flume tank model tests
 
 In case of foil (trawl door for example), which has been modelled is
 tested (in flume tank for example). In the following command line
@@ -3366,7 +3261,7 @@ Behaviour. Characteristics of trawl door model (surface, mass, cd and
 cl).](images/Pictures/10000001000001920000028C81225D33.png "fig:"){width="13.06cm"
 height="21.183cm"}
 
-## []{#anchor-48}Foil determined by hydrodynamic coefficients and surface
+## Foil determined by hydrodynamic coefficients and surface
 
 In case of foil (trawl door for example), for which the surface is known
 and for which the hydrodynamic coefficients are known. In the following
