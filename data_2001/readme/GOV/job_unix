@@ -1,9 +1,0 @@
-cd ~/femnet/programs
-./phobos ~/femnet/data_2001/readme/GOV/a1
-./unix ~/femnet/data_2001/readme/GOV/a1
-
-cd ~/femnet/programs
-./phobos ~/femnet/data_2001/readme/GOV/a2 ~/femnet/data_2001/readme/GOV/a1
-./unix ~/femnet/data_2001/readme/GOV/a2
-
-
