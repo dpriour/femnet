@@ -1,4 +1,4 @@
-# []{#anchor}FEMNET
+# FEMNET
 
 FEMNET is a numerical modelling dedicated to mechanical assessment of
 flexible structures such as fishing gear and fish cage. This numerical
@@ -12,7 +12,7 @@ been used in several scientific papers: [@{priour 1999}], [@priour2001],
 FEMNET runs on linux.
 
 
-## []{#anchor-2}Download it:
+## Download it:
 
 \- Download the source code
 
@@ -37,7 +37,7 @@ the path of libsx.a in order to indicate the path of your libsx.a.
 \~/femnet/phobos_2005/phobos, \~/femnet/batz/batz and
 \~/femnet/gengis/gengis in \~/femnet/programs.
 
-## []{#anchor-3}Main characteristics to know before to use it
+## Main characteristics to know before to use it
 
 To use FEMNET a main file is required: \*.don. \*.don file has to be
 write by the user. This file describe the structure and its environment.
@@ -62,7 +62,7 @@ batz which display the equilibrium of the structure. It uses mainly
 gengis which is an help for the construction of \*.don file. It records 
 the result in a specific file and in \*.don file.
 
-# []{#anchor-4}From the design to the equilibrated shape
+# From the design to the equilibrated shape
 
 A design of a structure, such as on figure 1, determines the netting panels, the
 cables, the rigging. This design has to be integrated in FEMNET. This
@@ -74,22 +74,21 @@ shape could be assessed with ./unix tool. ./unix creates an \*.sta file.
 The equilibrated shape is be displayed with ./batz tool (figure 4).
 
 ![Figure 1: Trawl design: netting panels and
-cables.](images/Pictures/10000001000003DA0000022AEC253E1D.png "fig:"){width="17cm"
-height="11.352cm"}
+cables.](images/Pictures/10000001000003DA0000022AEC253E1D.png "fig:")*Figure 1*: Trawl design: netting panels and
+cables.
 
 ![Figure 2: Trawl design integrated in
-./phobos.](images/Pictures/10000001000001FB000002B0D3974D97.png "fig:"){width="10.732cm"
-height="14.563cm"}
+./phobos.](images/Pictures/10000001000001FB000002B0D3974D97.png "fig:")*Figure 2*: Trawl design integrated in
+./phobos.
 
 ![Figure 3: Initial shape (not equilibrated) of the
-trawl.](images/Pictures/100000010000024D000002C88C36DDE2.png "fig:"){width="12.467cm"
-height="15.071cm"}
-
+trawl.](images/Pictures/100000010000024D000002C88C36DDE2.png "fig:")*Figure 3*: Initial shape (not equilibrated) of the
+trawl.
 ![Figure 4: Final shape (equilibrated) of the
-trawl.](images/Pictures/100000010000024D000002C8211FC29C.png "fig:"){width="12.467cm"
-height="15.071cm"}
+trawl.](images/Pictures/100000010000024D000002C8211FC29C.png "fig:")*Figure 4*: Final shape (equilibrated) of the
+trawl.
 
-# []{#anchor-5}\*.don file
+# \*.don file
 
 \*.don file has two parts:
 
@@ -103,19 +102,19 @@ These two parts are described in the following.
 \*.don file requires colons (:). Colons (:) are used as separators, for
 example between a comment and a parameter value. It is recommended, if
 you modify a \*.don file, not to delete colons and not to add colons.
-For example in the first line of the following \*.don file (*design in
-the plane normal to axis: 2*), *design in the plane normal to axis *is
-the comment, *2 *is the value of the parameter and between these two
-parts there is a colon (*:*).
+For example in the first line of the following \*.don file (**design in
+the plane normal to axis: 2**), **design in the plane normal to axis** is
+the comment, **2** is the value of the parameter and between these two
+parts there is a colon (**:**).
 
 In the following, s1.don file (in
-\~/femnet/data_2001/readme/1pelagic_trawl) is displayed in bold, a
+\~/femnet/data_2001/readme/1pelagic_trawl) is displayed in **bold**, a
 tentative of explanation is given with figures. This file
 describes a pelagic trawl. In this file the boat is fixed and a current
 represents the towing speed. The file begins with the first part which
 follows a strict template:
 
-## []{#anchor-6}-The first part:
+## \-The first part:
 
 In this first part, the order of the commands must be respected.
 
@@ -132,36 +131,34 @@ Visualisation, contour_cable_bar, Visualisation, axes. If, in place of
 2, 1 is used, the design is in the plane YZ. If 3 is used the design is
 in the plane XY.
 
-![Figure 5: *Design of a pelagic trawl
-\~/femnet/data_2001/readme/1pelagic_trawl/s1 displayed with phobos
-tool.*](images/Pictures/10000001000001FB000002B00DE114D6.png "fig:"){width="11.067cm"
-height="14.321cm"}
-
-panels number: 25
+**panels number: 25**
 
 There are **25** panels of netting of diamond meshes, which can be seen
-in blue on .
+in blue on ![Figure 5: *Design of a pelagic trawl
+\~/femnet/data_2001/readme/1pelagic_trawl/s1 displayed with phobos
+tool.*](images/Pictures/10000001000001FB000002B00DE114D6.png "fig:")
+*Figure 5*: Design of a pelagic trawl
 
-Panel: 1
+**Panel: 1**
 
 The value **1** is not used. In fact the panel 1 is the first of this
 list of panels, panel 2 is the second and so on.
 
-number of nodes around: 10
+**number of nodes around: 10**
 
-The panel 1 is a polygon made of **10** nodes around (see ).
+The panel 1 is a polygon made of **10** nodes around.
 
-nodes of the contour no x y z U V type and following type:
+**nodes of the contour no x y z U V type and following type:**
 
-1 37.000000 0.000000 20.000000 0.000000 27.500000 2 2
+**1 37.000000 0.000000 20.000000 0.000000 27.500000 2 2**
 
-*This list of number are described in the following: The corner 1 is the
+This list of number are described in the following: The corner 1 is the
 first of this list of corners, the corner 2 the second and so on. The
 corner **1** has a position X,Y and Z of **37**m, **0**m and **20**m.
 The user defines an origin for counting the number of meshes for each
 corner. The origin is constant for all the corners of a panel. The
 corner 1 is at **0** mesh along U meshes and is at **27.5** mesh along V
-meshes. These number of meshes are calculated from the design shown on .
+meshes. These number of meshes are calculated from the design.
 The displays the number of meshes for the corners of panel 1. The type
 of corner 1 is **2** and the type of nodes, if any, between corner 1 and
 corner 2 is **2**. This point will be discussed later
@@ -188,8 +185,8 @@ corner 2 is **2**. This point will be discussed later
 ![Figure 7: Mesh coordinates of the corners of the panel 1 of netting,
 displayed with phobos using
 \~/femnet/data_2001/readme/1pelagic_trawl/s1. Displayed with phobos
-tool.](images/Pictures/10000001000001FE000002F0ED126AC4.png "fig:"){width="8.177cm"
-height="12.056cm"}
+tool.](images/Pictures/10000001000001FE000002F0ED126AC4.png "fig:")*Figure 7*: Mesh coordinates of the corners of the panel 1 of netting,
+displayed with phobos using \~/femnet/data_2001/readme/1pelagic_trawl/s1. Displayed with phobos tool.
 
 Traction stiffness (N): 25000.000000
 
@@ -499,8 +496,9 @@ nb_pt: 2 pa: 1 nd: 6 pa: 3 nd: 6
 
 ![Figure 8: Links between components. The two corners noted 52 are
 linked and this link is the 52. View of phobos using
-\~/femnet/data_2001/readme/1pelagic_trawl/s1.](images/Pictures/10000001000001FB000002B0934B0716.png "fig:"){width="10.714cm"
-height="13.866cm"}
+\~/femnet/data_2001/readme/1pelagic_trawl/s1.](images/Pictures/10000001000001FB000002B0934B0716.png "fig:")*Figure 8*: Links between components. The two corners noted 52 are
+linked and this link is the 52. View of phobos using
+\~/femnet/data_2001/readme/1pelagic_trawl/s1.
 
 Meshing order:
 
@@ -974,12 +972,13 @@ cd \~/femnet/programs
 ./phobos
 
 ![Figure 11: Commands for
-phobos.](images/Pictures/100000010000037B000000FF0B8E9075.png "fig:"){width="17cm"
-height="4.888cm"}You get the .
+phobos.](images/Pictures/100000010000037B000000FF0B8E9075.png "fig:")*Figure*: Commands for
+phobos.
+You get the .
 
 ![Figure 12: Window of
-phobos.](images/Pictures/10000001000001FB000002B0417A2802.png "fig:"){width="10.732cm"
-height="14.563cm"}
+phobos.](images/Pictures/10000001000001FB000002B0417A2802.png "fig:")*Figure*: Window of
+phobos.
 
 The main commands are the following:
 
@@ -1034,14 +1033,14 @@ cd \~/femnet/programs
 
 ![Figure 13: Commands for calculating the equilibrium of s1, when s1.don
 and s1.mdg
-exist.](images/Pictures/1000000100000499000000FF1EB2B9EF.png "fig:"){width="17cm"
-height="3.69cm"}
+exist.](images/Pictures/1000000100000499000000FF1EB2B9EF.png "fig:")*Figure*: Commands for calculating the equilibrium of s1, when s1.don
+and s1.mdg exist.
 
 The result is displayed on the and :
 
 ![Figure 14: Iterations due to the calculation of the equilibrium of
-s1.](images/Pictures/1000000100000441000001AFEED1C682.png "fig:"){width="17cm"
-height="5.644cm"}
+s1.](images/Pictures/1000000100000441000001AFEED1C682.png "fig:")*Figure*: Iterations due to the calculation of the equilibrium of
+s1.
 
 In :
 
@@ -1065,8 +1064,9 @@ stiffness varies on due to the line *input Auto_convergence* of s1.don.
 
 ![Figure 15: End of iterations for the calculation of the equilibrium of
 s1. *In this case, it* requires *1570*
-iterations.](images/Pictures/1000000100000441000002F961995F7D.png "fig:"){width="17cm"
-height="12.218cm"}
+iterations.](images/Pictures/1000000100000441000002F961995F7D.png "fig:")*Figure*:End of iterations for the calculation of the equilibrium of
+s1. *In this case, it* requires *1570*.
+iterations
 
 This shows that the equilibrium has been reached in 1546 iterations
 (This number of iterations in very dependant of the added stiffness of
@@ -1086,8 +1086,8 @@ cd \~/femnet/programs
 
 ![Figure 16: Commands for batz. The tool used for displaying the result
 of calculation when \*.don file, \*.mdg file and \*.sta file
-exist.](images/Pictures/100000010000037B000000FF74B36244.png "fig:"){width="17cm"
-height="4.877cm"}
+exist.](images/Pictures/100000010000037B000000FF74B36244.png "fig:")*Figure*: Commands for batz. The tool used for displaying the result
+of calculation when \*.don file, \*.mdg file and \*.sta file exist.
 
 In the the structure is displayed. To display the structure, do:
 
