@@ -1,0 +1,11 @@
+cd ~/femnet/programs
+./phobos /home/daniel/femnet/data_2001/readme/2pelagic_trawl_catch/s3
+./unix /home/daniel/femnet/data_2001/readme/2pelagic_trawl_catch/s3
+
+cd ~/femnet/programs
+./phobos /home/daniel/femnet/data_2001/readme/2pelagic_trawl_catch/s3_catch /home/daniel/femnet/data_2001/readme/2pelagic_trawl_catch/s3
+./unix /home/daniel/femnet/data_2001/readme/2pelagic_trawl_catch/s3_catch
+
+
+convert -density 300 sef_long2.ps sef_long2a.jpg
+

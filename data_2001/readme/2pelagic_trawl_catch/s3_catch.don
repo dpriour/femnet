@@ -1,0 +1,1189 @@
+calcul dans le plan perpendiculaire a y cad coordonnees y cstes : 2
+nombre de panneaux : 25
+
+Panneau : 1  
+ 
+nombre de points du contour : 10
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	37	0	20	0	27.5	2	2
+2	46	0	24	7	37.5	2	2
+3	71	0	22	25	32.5	2	2
+4	111	0	12	55	17.5	2	2
+5	111	0	-12	55	-17.5	2	2
+6	71	0	-22	25	-32.5	2	2
+7	46	0	-24	7	-37.5	2	2
+8	37	0	-20	0	-27.5	2	2
+9	71	0	-3	25	-2.5	2	2
+10	71	0	3	25	2.5	2	2
+
+Raideur traction (N) :		25000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.4
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0028
+largeur noeud :			0.0056
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+Panneau : 2  
+ 
+nombre de points du contour : 7
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	36	0	32	0	-32.5	2	2
+2	71	0	53	25	-7.5	2	2
+3	71	0	60	25	0	3	3
+4	111	0	60	55	0	3	2
+5	111	0	42	55	-24.5	2	2
+6	71	0	30	25	-42.5	2	2
+7	46	0	27	7	-39.5	2	2
+
+Raideur traction (N) :		25000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.4
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0028
+largeur noeud :			0.0056
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 3  
+ 
+nombre de points du contour : 7
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	36	0	-32	0	32.5	2	2
+2	71	0	-53	25	7.5	2	2
+3	71	0	-60	25	0	3	3
+4	111	0	-60	55	0	3	2
+5	111	0	-42	55	24.5	2	2
+6	71	0	-30	25	42.5	2	2
+7	46	0	-27	7	39.5	2	2
+
+Raideur traction (N) :		25000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.4
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0028
+largeur noeud :			0.0056
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 4  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	113	0	12	0	35	2	2
+2	119	0	10	10	30	2	2
+3	119	0	-10	10	-30	2	2
+4	113	0	-12	0	-35	2	2
+
+Raideur traction (N) :		16000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.2
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0023
+largeur noeud :			0.0046
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 5  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	113	0	60	0	0	3	3
+2	119	0	60	10	0	3	2
+3	119	0	44	10	-33	2	2
+4	113	0	42	0	-49	2	2
+
+Raideur traction (N) :		16000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.2
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0023
+largeur noeud :			0.0046
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 6  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	113	0	-60	0	0	3	3
+2	119	0	-60	10	0	3	2
+3	119	0	-44	10	33	2	2
+4	113	0	-42	0	49	2	2
+
+Raideur traction (N) :		16000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.2
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0023
+largeur noeud :			0.0046
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 7  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	120	0	10	0	60	2	2
+2	126	0	8	20	50	2	2
+3	126	0	-8	20	-50	2	2
+4	120	0	-10	0	-60	2	2
+
+Raideur traction (N) :		10000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.1
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0018
+largeur noeud :			0.0036
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 8  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	120	0	60	0	0	3	3
+2	126	0	60	20	0	3	2
+3	126	0	46	20	-74	2	2
+4	120	0	44	0	-86	2	2
+
+Raideur traction (N) :		10000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.1
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0018
+largeur noeud :			0.0036
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 9  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	120	0	-60	0	0	3	3
+2	126	0	-60	20	0	3	2
+3	126	0	-46	20	74	2	2
+4	120	0	-44	0	86	2	2
+
+Raideur traction (N) :		10000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.1
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0018
+largeur noeud :			0.0036
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 10  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	127	0	8	0	62.5	2	2
+2	134	0	6	30	47.5	2	2
+3	134	0	-6	30	-47.5	2	2
+4	127	0	-8	0	-62.5	2	2
+
+Raideur traction (N) :		10000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.08
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0018
+largeur noeud :			0.0036
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 11  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	127	0	60	0	0	3	3
+2	134	0	60	30	0	3	2
+3	134	0	48	30	-74.5	2	2
+4	127	0	46	0	-92.5	2	2
+
+Raideur traction (N) :		10000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.08
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0018
+largeur noeud :			0.0036
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 12  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	127	0	-60	0	0	3	3
+2	134	0	-60	30	0	3	2
+3	134	0	-48	30	74.5	2	2
+4	127	0	-46	0	92.5	2	2
+
+Raideur traction (N) :		10000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.08
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0018
+largeur noeud :			0.0036
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 13  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	135	0	6	0	63	2	2
+2	142	0	4	40	43	2	2
+3	142	0	-4	40	-43	2	2
+4	135	0	-6	0	-63	2	2
+
+Raideur traction (N) :		7000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.06
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0015
+largeur noeud :			0.003
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 14  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	135	0	60	0	0	3	3
+2	142	0	60	40	0	3	2
+3	142	0	50	40	-79	2	2
+4	135	0	48	0	-99	2	2
+
+Raideur traction (N) :		7000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.06
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0015
+largeur noeud :			0.003
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 15  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	135	0	-60	0	0	3	3
+2	142	0	-60	40	0	3	2
+3	142	0	-50	40	79	2	2
+4	135	0	-48	0	99	2	2
+
+Raideur traction (N) :		7000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.06
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0015
+largeur noeud :			0.003
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 16  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	143	0	4	0	64.5	2	2
+2	156	0	2	100	31.5	2	2
+3	156	0	-2	100	-31.5	2	2
+4	143	0	-4	0	-64.5	2	2
+
+Raideur traction (N) :		7000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.04
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0015
+largeur noeud :			0.003
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 17  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	143	0	60	0	0	3	3
+2	156	0	60	100	0	3	2
+3	156	0	54	100	-68.5	2	2
+4	143	0	50	0	-118.5	2	2
+
+Raideur traction (N) :		7000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.04
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0015
+largeur noeud :			0.003
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 18  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	143	0	-60	0	0	3	3
+2	156	0	-60	100	0	3	2
+3	156	0	-54	100	68.5	2	2
+4	143	0	-50	0	118.5	2	2
+
+Raideur traction (N) :		7000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.04
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0015
+largeur noeud :			0.003
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 19  
+ 
+nombre de points du contour : 3
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	158	0	2	0	54	2	2
+2	172	0	0	200	0	2	2
+3	158	0	-2	0	-54	2	2
+
+Raideur traction (N) :		7000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.025
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0015
+largeur noeud :			0.003
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 20  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	158	0	60	0	0	3	3
+2	172	0	60	200	0	3	2
+3	172	0	56	200	-62.5	2	2
+4	158	0	54	0	-112.5	2	2
+
+Raideur traction (N) :		7000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.025
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0015
+largeur noeud :			0.003
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 21  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	158	0	-60	0	0	3	3
+2	172	0	-60	200	0	3	2
+3	172	0	-56	200	62.5	2	2
+4	158	0	-54	0	112.5	2	2
+
+Raideur traction (N) :		7000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.025
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0015
+largeur noeud :			0.003
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+Panneau : 22  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	173	0	60	0	0	3	3
+2	185	0	60	400	0	3	2
+3	185	0	56	400	-62.5	2	2
+4	173	0	56	0	-62.5	2	2
+
+Raideur traction (N) :		10000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.025
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0018
+largeur noeud :			0.0036
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+Panneau : 23  
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	173	0	-60	0	0	3	3
+2	185	0	-60	400	0	3	2
+3	185	0	-56	400	62.5	2	2
+4	173	0	-56	0	62.5	2	2
+
+Raideur traction (N) :		10000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.025
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0018
+largeur noeud :			0.0036
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+Panneau : 24  
+ 
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	186	0	60	0	0	3	3
+2	205	0	60	450	0	3	2
+3	205	0	56	450	-62.5	2	2
+4	186	0	56	0	-62.5	2	2
+
+Raideur traction (N) :		25000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.025
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0028
+largeur noeud :			0.0056
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		0.3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+Panneau : 25  
+nombre de points du contour : 4
+points du contour dans l ordre du contour no x y z U V no_type no_type_suivant :
+1	186	0	-60	0	0	3	3
+2	205	0	-60	450	0	3	2
+3	205	0	-56	450	62.5	2	2
+4	186	0	-56	0	62.5	2	2
+
+Raideur traction (N) :		25000
+Raideur compression (N) :	1
+Raideur ouverture (N.m/rad) :	0
+Maille au repos (m) :		0.025
+Masse volumique (kg/m3) :	1025
+Diametre hydrodynamique (m) :	0.0028
+largeur noeud :			0.0056
+Cd normal :			1.2
+Cd tangentiel :			0.08
+Pas du maillage (m) :		0.3
+type des noeuds interieurs :	2
+type de maillage :		2
+
+
+nombre de panneaux hexagonaux : 0
+
+
+nombre d elements : 26
+
+Element : 1  
+Description des extremites no x y z no_type:
+1 	0 	0 	0 	1
+2 	2 	0 	0 	4
+
+
+Raideur traction (N) :			62e+06
+Raideur compression (N) :		1
+Longueur au repos (m) :			200
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.026
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				9
+type des noeuds interieurs :		2
+
+Element : 2  
+Description des extremites :
+1 	3 	0 	1 	4
+2 	8 	0 	5 	2
+
+
+Raideur traction (N) :			20e+07
+Raideur compression (N) :		20e+07
+Longueur au repos (m) :			3
+Masse volumique (kg/m3) :		1025
+Diametre hydrodynamique (m) :		0.01
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 3  
+Description des extremites :
+1 	3 	0 	-1 	4
+2 	8 	0 	-5 	2
+
+
+Raideur traction (N) :			20e+07
+Raideur compression (N) :		20e+07
+Longueur au repos (m) :			3
+Masse volumique (kg/m3) :		1025
+Diametre hydrodynamique (m) :		0.01
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 4  
+ 
+Description des extremites :
+1 	10 	0 	4 	2
+2 	10 	0 	-4 	2
+
+
+Raideur traction (N) :			20e+07
+Raideur compression (N) :		20e+07
+Longueur au repos (m) :			3.47
+Masse volumique (kg/m3) :		1025
+Diametre hydrodynamique (m) :		0.01
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 5  
+Description des extremites :
+1 	12 	0 	8 	2
+2 	18 	0 	22 	2
+
+
+Raideur traction (N) :			5e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			100
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.022
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				7
+type des noeuds interieurs :		2
+
+Element : 6
+Description des extremites :
+1 	12 	0 	-8 	2
+2 	18 	0 	-22 	2
+
+Raideur traction (N) :			5e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			100
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.022
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				7
+type des noeuds interieurs :		2
+
+Element : 7
+Description des extremites :
+1 	23 	0 	30 	2
+2 	29 	0 	30 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			5.6
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 8 
+Description des extremites :
+1 	23 	0 	19 	2
+2 	29 	0 	19 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			5.6
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+
+Element : 9  
+Description des extremites :
+1 	23 	0 	-19 	2
+2 	29 	0 	-19 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			5.6
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 10  
+Description des extremites :
+1 	23 	0 	-30 	2
+2 	29 	0 	-30 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			5.6
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 11  
+Description des extremites :
+1 	31 	0 	30 	2
+2 	39 	0 	27 	2
+
+Raideur traction (N) :			7e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			5.6
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 12
+Description des extremites :
+1 	31 	0 	22 	2
+2 	39 	0 	25 	2
+
+Raideur traction (N) :			7e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			5.6
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 13  
+Description des extremites :
+1 	31 	0 	-22 	2
+2 	39 	0 	-25 	2
+
+Raideur traction (N) :			7e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			5.6
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+Element : 14  
+Description des extremites :
+1 	31 	0 	-30 	2
+2 	39 	0 	-27 	2
+
+Raideur traction (N) :			7e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			5.6
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 15  
+Description des extremites :
+1 	32 	0 	32 	2
+2 	64 	0 	52 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			21.20
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 16
+Description des extremites :
+1 	32 	0 	16 	2
+2 	64 	0 	2 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			20
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+Element : 17  
+Description des extremites :
+1 	32 	0 	-32 	2
+2 	64 	0 	-52 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			21.20
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+
+Element : 18
+Description des extremites :
+1 	32 	0 	-16 	2
+2 	64 	0 	-2 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			20
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+Element : 19
+Description des extremites :
+1 	67 	0 	2 	2
+2 	67 	0 	-2 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			0.80
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+Element : 20
+Description des extremites :
+1 	67 	0 	60 	3
+2 	67 	0 	55 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			1.70
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+Element : 21
+Description des extremites :
+1 	67 	0 	-60 	3
+2 	67 	0 	-55 	2
+
+Raideur traction (N) :			2e+07
+Raideur compression (N) :		1
+Longueur au repos (m) :			1.70
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+Element : 22
+Description des extremites :
+1 	173 	0 	54 	2
+2 	185 	0 	54 	2
+
+Raideur traction (N) :			16e+05
+Raideur compression (N) :		1
+Longueur au repos (m) :			20
+Masse volumique (kg/m3) :		1025
+Diametre hydrodynamique (m) :		0.022
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+Element : 23
+Description des extremites :
+1 	207 	0 	56 	2
+2 	207 	0 	60 	3
+
+Raideur traction (N) :			16e+05
+Raideur compression (N) :		1
+Longueur au repos (m) :			0.01
+Masse volumique (kg/m3) :		1025
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+Element : 24
+Description des extremites :
+1 	207 	0 	-56 	2
+2 	207 	0 	-60 	3
+
+Raideur traction (N) :			16e+05
+Raideur compression (N) :		1
+Longueur au repos (m) :			0.01
+Masse volumique (kg/m3) :		1025
+Diametre hydrodynamique (m) :		0.0125
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+Element : 25
+Description des extremites :
+1 	20 	0 	-34 	2
+2 	20 	0 	-43 	2
+
+Raideur traction (N) :			16e+05
+Raideur compression (N) :		1
+Longueur au repos (m) :			2.00
+Masse volumique (kg/m3) :		4800
+Diametre hydrodynamique (m) :		0.282
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+Element : 26
+Description des extremites :
+1 	186 	0 	54 	2
+2 	205 	0 	54 	2
+
+Raideur traction (N) :			16e+05
+Raideur compression (N) :		1
+Longueur au repos (m) :			22.5
+Masse volumique (kg/m3) :		1025
+Diametre hydrodynamique (m) :		0.022
+Coefficient de trainee normal :		1.8
+Coefficient de trainee tangent :	0.08
+nb barre :				1
+type des noeuds interieurs :		2
+ 
+nombre de coulisse : 0
+
+Nombre de liaison : 52
+nb_pt :3	el: 3	nd: 1	el: 2	nd: 1	el: 1	nd: 2	
+nb_pt :3	el: 6	nd: 1	el: 4	nd: 2	el: 3	nd: 2	
+nb_pt :3	el: 5	nd: 1	el: 4	nd: 1	el: 2	nd: 2	
+nb_pt :4	el: 25	nd: 1	el: 10	nd: 1	el: 6	nd: 2	el: 9	nd: 1	
+nb_pt :4	el: 10	nd: 2	el: 14	nd: 1	el: 17	nd: 1	pa: 3	nd: 1	
+nb_pt :4	el: 14	nd: 2	pa: 3	nd: 7	pa: 1	nd: 7	el: 13	nd: 2	
+nb_pt :4	el: 9	nd: 2	el: 13	nd: 1	pa: 1	nd: 8	el: 18	nd: 1	
+nb_pt :3	el: 5	nd: 2	el: 8	nd: 1	el: 7	nd: 1	
+nb_pt :4	el: 8	nd: 2	el: 12	nd: 1	el: 16	nd: 1	pa: 1	nd: 1	
+nb_pt :4	el: 12	nd: 2	pa: 1	nd: 2	pa: 2	nd: 7	el: 11	nd: 2	
+nb_pt :4	el: 7	nd: 2	el: 11	nd: 1	el: 15	nd: 1	pa: 2	nd: 1	
+nb_pt :2	pa: 3	nd: 3	el: 21	nd: 1	
+nb_pt :3	el: 17	nd: 2	el: 21	nd: 2	pa: 3	nd: 2	
+nb_pt :3	el: 18	nd: 2	el: 19	nd: 2	pa: 1	nd: 9	
+nb_pt :3	el: 16	nd: 2	el: 19	nd: 1	pa: 1	nd: 10	
+nb_pt :3	el: 15	nd: 2	el: 20	nd: 2	pa: 2	nd: 2	
+nb_pt :2	pa: 2	nd: 3	el: 20	nd: 1	
+nb_pt :2	pa: 3	nd: 4	pa: 6	nd: 1	
+nb_pt :4	pa: 6	nd: 4	pa: 3	nd: 5	pa: 1	nd: 5	pa: 4	nd: 4	
+nb_pt :4	pa: 4	nd: 1	pa: 1	nd: 4	pa: 2	nd: 5	pa: 5	nd: 4	
+nb_pt :2	pa: 2	nd: 4	pa: 5	nd: 1	
+nb_pt :2	pa: 6	nd: 2	pa: 9	nd: 1	
+nb_pt :4	pa: 9	nd: 4	pa: 6	nd: 3	pa: 4	nd: 3	pa: 7	nd: 4	
+nb_pt :4	pa: 7	nd: 1	pa: 4	nd: 2	pa: 5	nd: 3	pa: 8	nd: 4	
+nb_pt :2	pa: 5	nd: 2	pa: 8	nd: 1	
+nb_pt :2	pa: 9	nd: 2	pa: 12	nd: 1	
+nb_pt :4	pa: 12	nd: 4	pa: 9	nd: 3	pa: 7	nd: 3	pa: 10	nd: 4	
+nb_pt :4	pa: 10	nd: 1	pa: 7	nd: 2	pa: 8	nd: 3	pa: 11	nd: 4	
+nb_pt :2	pa: 8	nd: 2	pa: 11	nd: 1	
+nb_pt :2	pa: 12	nd: 2	pa: 15	nd: 1	
+nb_pt :4	pa: 15	nd: 4	pa: 12	nd: 3	pa: 10	nd: 3	pa: 13	nd: 4	
+nb_pt :4	pa: 13	nd: 1	pa: 10	nd: 2	pa: 11	nd: 3	pa: 14	nd: 4	
+nb_pt :2	pa: 11	nd: 2	pa: 14	nd: 1	
+nb_pt :2	pa: 15	nd: 2	pa: 18	nd: 1	
+nb_pt :4	pa: 18	nd: 4	pa: 15	nd: 3	pa: 13	nd: 3	pa: 16	nd: 4	
+nb_pt :4	pa: 16	nd: 1	pa: 13	nd: 2	pa: 14	nd: 3	pa: 17	nd: 4	
+nb_pt :2	pa: 14	nd: 2	pa: 17	nd: 1	
+nb_pt :2	pa: 21	nd: 1	pa: 18	nd: 2	
+nb_pt :4	pa: 21	nd: 4	pa: 18	nd: 3	pa: 16	nd: 3	pa: 19	nd: 3	
+nb_pt :4	pa: 19	nd: 1	pa: 16	nd: 2	pa: 17	nd: 3	pa: 20	nd: 4	
+nb_pt :2	pa: 17	nd: 2	pa: 20	nd: 1	
+nb_pt :6	pa: 21	nd: 3	pa: 23	nd: 4	pa: 19	nd: 2	el: 22	nd: 1	pa: 22	nd: 4	pa: 20	nd: 3	
+nb_pt :2	pa: 21	nd: 2	pa: 23	nd: 1	
+nb_pt :2	pa: 20	nd: 2	pa: 22	nd: 1	
+nb_pt :2	pa: 23	nd: 2	pa: 25	nd: 1	
+nb_pt :6	pa: 25	nd: 4	pa: 23	nd: 3	el: 22	nd: 2	el: 26	nd: 1	pa: 24	nd: 4	pa: 22	nd: 3	
+nb_pt :2	pa: 22	nd: 2	pa: 24	nd: 1	
+nb_pt :2	pa: 25	nd: 2	el: 24	nd: 2	
+nb_pt :5	el: 24	nd: 1	pa: 25	nd: 3	el: 26	nd: 2	el: 23	nd: 1	pa: 24	nd: 3	
+nb_pt :2	pa: 24	nd: 2	el: 23	nd: 2	
+nb_pt :2	pa: 1	nd: 3	pa: 2	nd: 6	
+nb_pt :2	pa: 1	nd: 6	pa: 3	nd: 6	
+
+ordre de maillage:
+el: 23 el: 24
+ pa: 24 pa: 25 pa: 22 pa: 23 pa: 1 pa: 2 pa: 3 pa: 4 pa: 5 pa: 6 pa: 7 pa: 8 pa: 9
+ pa: 10 pa: 11 pa: 12 pa: 13 pa: 14 pa: 15 pa: 16
+ pa: 17 pa: 18 pa: 19 pa: 20 pa: 21
+el: 1 el: 2 el: 3 el: 4 el: 5 el: 6 el: 7 el: 8 el: 9
+ el: 10 el: 11 el: 12 el: 13 el: 14 el: 15 el: 16 
+ el: 17 el: 18 el: 19 el: 20 el: 21 el: 22 el: 25 el: 26
+
+
+
+Nombre de Types de noeud dans la structure : 4
+No du type :			1  
+Masses X,Y,Z (kg) :		0	0	0 
+Masses ajoutees X,Y,Z (kg) :	0	0	0 
+Longueurs X,Y,Z (m) :		0	0	0 
+Coef. trainee X,Y,Z :		1.2	1.2	1.2 
+Efforts exterieurs X,Y,Z (N) :	0	0	0 
+Deplacement X,Y,Z :		1	1	1 
+Limites X,Y,Z (m) :		0	0	0 
+Sens des limites X,Y,Z :	0	0	0 
+Symetrie X,Y,Z :		0	0	0 
+ 
+No du type :			2  
+Masses X,Y,Z (kg) :		0	0	0 
+Masses ajoutees X,Y,Z (kg) :	0	0	0 
+Longueurs X,Y,Z (m) :		0	0	0 
+Coef. trainee X,Y,Z :		1.2	1.2	1.2 
+Efforts exterieurs X,Y,Z (N) :	0	0	0 
+Deplacement X,Y,Z :		0	0	0 
+Limites X,Y,Z (m) :		0	0	0 
+Sens des limites X,Y,Z :	0	0	0 
+Symetrie X,Y,Z :		0	0	0 
+ 
+No du type :			3  
+Masses X,Y,Z (kg) :		0	0	0 
+Masses ajoutees X,Y,Z (kg) :	0	0	0 
+Longueurs X,Y,Z (m) :		0	0	0 
+Coef. trainee X,Y,Z :		1.2	1.2	1.2 
+Efforts exterieurs X,Y,Z (N) :	0	0	0 
+Deplacement X,Y,Z :		0	0	0 
+Limites X,Y,Z (m) :		0	0	0 
+Sens des limites X,Y,Z :	0	0	0 
+Symetrie X,Y,Z :		0	1	0 
+ 
+No du type :			4  
+Masses X,Y,Z (kg) :		0	0	0 
+Masses ajoutees X,Y,Z (kg) :	0	0	0 
+Longueurs X,Y,Z (m) :		0	0	0 
+Coef. trainee X,Y,Z :		1.2	1.2	1.2 
+Efforts exterieurs X,Y,Z (N) :	5600	13000	-15000 
+Deplacement X,Y,Z :		0	0	0 
+Limites X,Y,Z (m) :		0	0	0 
+Sens des limites X,Y,Z :	0	0	0 
+Symetrie X,Y,Z :		0	0	0 
+ 
+ENVIRONNEMENT NUMERIQUE  
+Diviseur (s) :
+5e-05
+
+Seuil de convergence (N) :
+0.1
+
+Limite de deplacement a chaque iteration (m) :
+10
+
+Nombre maximum d'iterations :
+10000
+
+Dynamique : Pas de temps du calcul (s) :
+0.1
+
+Dynamique : Pas de temps de stockage (s) :
+0.2
+
+Dynamique : Temps de debut du stockage (s) :
+0
+
+Dynamique : Temps de fin du calcul et du stockage (s) :
+0
+
+ENVIRONNEMENT METEOROLOGIQUE ET OCEANIQUE  
+Courant  
+Direction (deg) :
+0
+
+Vitesse (m/s) :
+2.058
+
+Houle  
+Periode (s) :
+10
+
+Hauteur (m) :
+0
+
+Direction par rapport a X (deg) :
+0
+
+Hauteur d'eau (m) :
+2000
+
+DESCRIPTION DE LA PRISE  
+Volume (m3) :
+0.5
+
+Precision sur ce volume :
+1e-5
+
+Coefficient de trainee sur ce volume :
+1
+
+ENVIRONNEMENT DU FOND MARIN  
+Coefficient de frottement du sol :
+0.5
+
+Raideur d'enfoncement dans le sol (N/m) :
+5e+06
+
+SORTIE TEXTE
+nombre de distance 			:			1
+distance numero		: 1
+commentaire		: #57/52 TRAWL	      	   	   		       #
+no noeud global 1	: 1
+no noeud global 2	: 1
+nombre de decimale	: 0
+nombre d effort 			:	0
+nombre de tension 			:	0
+nombre de tension coulisse		:	0
+nombre de position 			:	1
+position numero		: 1
+commentaire		: #Half spreading doors					(m)#
+no noeud global		: 49
+axe			: 2
+nombre de decimale	: 3
+affichage de l effort sur la structure 	:	1
+affichage du diametre de la prise 	:	1
+affichage de l epaisseur de la prise 	:	1
+affichage du volume de la prise 	:	1
+affichage de la surface filtree 	:	1
+affichage de la vitesse 		:	1
+output catch_drag
+output bottom_drag
+output element_drag
+output surface_drag
+input Auto_convergence
+input convergence_parameters 1 10 100000000000
+
