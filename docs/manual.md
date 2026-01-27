@@ -173,6 +173,18 @@ corner 2 is **2**. This point will be discussed later.
 **9 71.000000 0.000000 -3.000000 25.000000 -2.500000 2 2**
 **10 71.000000 0.000000 3.000000 25.000000 2.500000 2 2**
 
+![Figure 6: Design of panel 1. Twines diameter, mesh
+side are displayed, as well as the number of meshes
+and the cutting. The origin of mesh counting is the
+knot under the red dot. Only one twine on 10 is
+drawn.](images/Pictures/figure6.png "fig:")*Figure 6*: Design of panel 1. Twines diameter, mesh
+side are displayed, as well as the number of meshes
+and the cutting. The origin of mesh counting is the
+knot under the red dot. Only one twine on 10 is
+drawn.
+
+
+
 ![Figure 7: Mesh coordinates of the corners of the panel 1 of netting,
 displayed with phobos using
 \~/femnet/data_2001/readme/1pelagic_trawl/s1. Displayed with phobos
