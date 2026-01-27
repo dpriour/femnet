@@ -164,13 +164,21 @@ of corner 1 is **2** and the type of nodes, if any, between corner 1 and
 corner 2 is **2**. This point will be discussed later.
 
 **2 46.000000 0.000000 24.000000 7.000000 37.500000 2 2**
+
 **3 71.000000 0.000000 22.000000 25.000000 32.500000 2 2**
+
 **4 111.000000 0.000000 12.000000 55.000000 17.500000 2 2**
+
 **5 111.000000 0.000000 -12.000000 55.000000 -17.500000 2 2**
+
 **6 71.000000 0.000000 -22.000000 25.000000 -32.500000 2 2**
+
 **7 46.000000 0.000000 -24.000000 7.000000 -37.500000 2 2**
+
 **8 37.000000 0.000000 -20.000000 0.000000 -27.500000 2 2**
+
 **9 71.000000 0.000000 -3.000000 25.000000 -2.500000 2 2**
+
 **10 71.000000 0.000000 3.000000 25.000000 2.500000 2 2**
 
 ![Figure 6: Design of panel 1. Twines diameter, mesh
@@ -183,8 +191,6 @@ and the cutting. The origin of mesh counting is the
 knot under the red dot. Only one twine on 10 is
 drawn.
 
-
-
 ![Figure 7: Mesh coordinates of the corners of the panel 1 of netting,
 displayed with phobos using
 \~/femnet/data_2001/readme/1pelagic_trawl/s1. Displayed with phobos
@@ -196,7 +202,7 @@ displayed with phobos using \~/femnet/data_2001/readme/1pelagic_trawl/s1. Displa
 The traction stiffness, more exactly the force required to double the
 length of the twine, is **25000**N. This value is E.A. E is the Young
 modulus of the material and A (N/m²) is the material section of the
-twine (m², p[125](#anchor-8)).
+twine (m²).
 
 **Compression stiffness (N): 1.000000**
 
