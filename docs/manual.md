@@ -271,25 +271,44 @@ hidden.
 **number of nodes around: 7**
 
 **nodes of the contour no x y z U V type and following type:**
+
 **1 36.000000 0.000000 32.000000 0.000000 -32.500000 2 2**
+
 **2 71.000000 0.000000 53.000000 25.000000 -7.500000 2 2**
+
 **3 71.000000 0.000000 60.000000 25.000000 0.000000 3 3**
+
 **4 111.000000 0.000000 60.000000 55.000000 0.000000 3 2**
+
 **5 111.000000 0.000000 42.000000 55.000000 -24.500000 2 2**
+
 **6 71.000000 0.000000 30.000000 25.000000 -42.500000 2 2**
+
 **7 46.000000 0.000000 27.000000 7.000000 -39.500000 2 2**
 
+
 **Traction stiffness (N): 25000.000000**
+
 **Compression stiffness (N): 1.000000**
+
 **Mesh opening stiffness (N.m/rad): 0.000000**
+
 **Unstretched length (m): 0.400000**
+
 **Volumic mass (kg/m3): 1025.000000**
+
 **Hydrodynamic diameter (m): 0.002800**
+
 **Knot size (m): 0.005600**
+
 **Normal Cd: 1.200000**
+
 **Tangential Cd: 0.080000**
+
 **Meshing step (m): 27.000000**
+
 **Type of internal nodes: 2**
+
 **Meshing type: 2**
 .
 .
@@ -297,23 +316,40 @@ hidden.
 **Panel: 25**
 
 **number of nodes around: 4**
+
 **nodes of the contour no x y z U V type and following type:**
+
 **1 186.00000 0.000000 -60.000000 0.000000 0.000000 3 3**
+
 **2 205.00000 0.000000 -60.000000 450.00000 0.000000 3 2**
+
 **3 205.00000 0.000000 -56.000000 450.00000 62.500000 2 2**
+
 **4 186.00000 0.000000 -56.000000 0.000000 62.500000 2 2**
 
+
 **Traction stiffness (N): 25000.000000**
+
 **Compression stiffness (N): 1.000000**
+
 **Mesh opening stiffness (N.m/rad): 0.000000**
+
 **Unstretched length (m): 0.025000**
+
 **Volumic mass (kg/m3): 1025.000000**
+
 **Hydrodynamic diameter (m): 0.002800**
+
 **Knot size (m): 0.005600**
+
 **Normal Cd: 1.200000**
+
 **Tangential Cd: 0.080000**
+
 **Meshing step (m): 27.000000**
+
 **Type of internal nodes: 2**
+
 **Meshing type: 2**
 
 **hexagonal panels number: 0**
@@ -331,7 +367,9 @@ The value **1** is not used. In fact the cable (or bar) 1 is the first
 of this list of cables, cable 2 is the second and so on.
 
 **Extremities no x y z type:**
+
 **1 0.000000 0.000000 0.000000 1**
+
 **2 2.000000 0.000000 0.000000 4**
 
 There are 2 extremities (corners) for each cable or bar. The extremity 1
@@ -346,11 +384,17 @@ This characteristics are the same as the one uses for twines previously
 described.
 
 **Compression stiffness (N): 1.000000**
+
 **Unstretched length (m): 200.000000**
+
 **Volumic mass (kg/m3): 4800.000000**
+
 **Hydrodynamic diameter (m): 0.026000**
+
 **Normal Cd: 1.800000**
+
 **Tangential Cd: 0.080000**
+
 **Bars number: 9**
 
 This cable will be discretized by **9** bars. For finer calculations in
@@ -366,17 +410,28 @@ The nodes created by the 9 bars are of type **2** (p[15](#anchor-7)).
 few cables/bars are shown.*
 
 **Extremities no x y z type:**
+
 **1 3.000000 0.000000 1.000000 4**
+
 **2 8.000000 0.000000 5.000000 2**
 
+
 **Traction stiffness (N): 200000000.000000**
+
 **Compression stiffness (N): 200000000.000000**
+
 **Unstretched length (m): 3.000000**
+
 **Volumic mass (kg/m3): 1025.000000**
+
 **Hydrodynamic diameter (m): 0.010000**
+
 **Normal Cd: 1.800000**
+
 **Tangential Cd: 0.080000**
+
 **Bars number: 1**
+
 **Type of internal nodes: 2**
 .
 .
@@ -384,17 +439,28 @@ few cables/bars are shown.*
 **Cable: 18**
 
 **Extremities no x y z type:**
+
 **1 32.000000 0.000000 -16.000000 2**
+
 **2 64.000000 0.000000 -2.000000 2**
 
+
 **Traction stiffness (N): 20000000.000000**
+
 **Compression stiffness (N): 1.000000**
+
 **Unstretched length (m): 20.000000**
+
 **Volumic mass (kg/m3): 4800.000000**
+
 **Hydrodynamic diameter (m): 0.012500**
+
 **Normal Cd: 1.800000**
+
 **Tangential Cd: 0.080000**
+
 **Bars number: 1**
+
 **Type of internal nodes: 2**
 
 **Sliding cables number: 0**
@@ -436,11 +502,17 @@ linked and this link is the 52. View of phobos using
 \~/femnet/data_2001/readme/1pelagic_trawl/s1.
 
 **Meshing order:**
+
 **el: 23 el: 24 pa: 24 pa: 25 pa: 22 pa: 23 ***pa: 1*** pa: 2 pa: 3 pa: 4**
+
 **pa: 5 pa: 6 pa: 7 pa: 8 pa: 9 pa: 10 pa: 11 pa: 12 pa: 13 pa: 14**
+
 **pa: 15 pa: 16 pa: 17 pa: 18 pa: 19 pa: 20 pa: 21 el: 1 el: 2 el: 3**
+
 **el: 4 el: 5 el: 6 el: 7 el: 8 el: 9 el: 10 el: 11 el: 12 el: 13**
+
 **el: 14 el: 15 el: 16 el: 17 ***el: 18*** el: 19 el: 20 el: 21 el: 22 el:**
+
 **25 el: 26**
 
 The meshing order defined the order by which each component is
@@ -519,11 +591,18 @@ In case of symmetry relatively to the plane Y,Z (Z,X and X,Y) use **1 0
 0** (**0 1 0** and **0 0 1**). In case of no symmetry use **0 0 0**.
 
 **No du type : 2**
+
+
 **Mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+
 **Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+
 **Length X,Y,Z (m): 0.000000 0.000000 0.000000**
+
 **Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000**
+
 **External forces X,Y,Z (N): 0.000000 0.000000 0.000000**
+
 **Displacement X,Y,Z: 0 0 0**
 
 if **0** the displacement of the nodes with this type is possible. If
@@ -534,26 +613,46 @@ if **0** the displacement of the nodes with this type is possible. If
 **Symmetry X,Y,Z: 0 0 0**
 
 **No du type : 3**
+
+
 **Mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+
 **Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+
 **Length X,Y,Z (m): 0.000000 0.000000 0.000000**
+
 **Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000**
+
 **External forces X,Y,Z (N): 0.000000 0.000000 0.000000**
+
 **Displacement X,Y,Z: 0 0 0**
+
 **Limits X,Y,Z (m): 0.000000 0.000000 0.000000**
+
 **Limits sens X,Y,Z: 0 0 0**
+
 **Symmetry X,Y,Z: 0 1 0**
+
 
 **No du type : 4**
 
+
 **Mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+
 **Added mass X,Y,Z (kg): 0.000000 0.000000 0.000000**
+
 **Length X,Y,Z (m): 0.000000 0.000000 0.000000**
+
 **Drag coefficient X,Y,Z: 1.200000 1.200000 1.200000**
+
 **External forces X,Y,Z (N): 5600.000000 13000.000000 -15000.000000**
+
 **Displacement X,Y,Z: 0 0 0**
+
 **Limits X,Y,Z (m): 0.000000 0.000000 0.000000**
+
 **Limits sens X,Y,Z: 0 0 0**
+
 **Symmetry X,Y,Z: 0 0 0**
 
 These 4 types of node show that nodes could be fixed (type 1), free to
@@ -566,6 +665,7 @@ example in [@{Les panneaux de chalut}]), their surface and the water
 speed. For the vertical force use the weight of the trawl door.
 
 **NUMERIC ENVIRONMENT**
+
 **Divisor (s): 0.000050**
 
 Not used.
@@ -661,7 +761,8 @@ The position of the front of the catch is calculated by dichotomy using
 this accuracy on the volume (m^3^).
 
 **Drag coefficient on this volume: 1.000000**
-**Drag coefficient on the catch. 1.40 is an usual value.**
+
+Drag coefficient on the catch. 1.40 is an usual value.
 
 **BOTTOM SEA ENVIRONMENT**
 
@@ -908,7 +1009,7 @@ To display the links between components, do: Display, link_number.
 
 To display the type of the nodes, do: Node information, node_type,.
 
-## []{#anchor-15}- The second way:
+## - The second way:
 
 In a terminal run the commands :
 
