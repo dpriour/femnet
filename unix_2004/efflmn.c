@@ -44,8 +44,9 @@ void efflmn(int elem,double *VV,double *LMN,double longueur_repos)
  	printf(" LMN = ");  	imprvectreel(3, LMN);*/
   
   	/* Definition de l'angle theta1, entre la direction du vecteur VV et le vecteur LMN. */
-     	if(LMN[1] != 0.0) theta1 =  atan(LMN[2]/LMN[1]);
-     	if(LMN[1] == 0.0) theta1 = PI/4;
+     	//if(LMN[1] != 0.0) theta1 =  atan(LMN[2]/LMN[1]);
+     	//if(LMN[1] == 0.0) theta1 = PI/4;
+     	theta1 =  atan2(LMN[2],LMN[1]);
      	
 	/*printf(" theta1 = %lf   \n",theta1/PI*180);  */
   
