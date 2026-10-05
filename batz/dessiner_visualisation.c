@@ -558,7 +558,7 @@ void dessiner_contour_element3()
 	for (no=1;no<=NOMBRE_SURFACES+NOMBRE_SURF_HEXA+NOMBRE_ELEMENTS+NOMBRE_COULISSES;no++)
 		{ 
 		pa = profondeur[no];
-		if (pa == 0) printf("attention : pa = %8d no = %8d   \n",pa,no);
+		if (pa == 0) printf("warning in dessiner_contour_element3: pa = %8d no = %8d   \n",pa,no);
 		if ((pa > 0) && (pa <= NOMBRE_SURFACES))
 			{
 			/*printf("pa = %8d panel %d color = %8d   \n",pa,Surface[pa].type,panneau[Surface[pa].type].flag_dessin);*/
@@ -879,6 +879,7 @@ void dessiner_contour_element3()
 				produit_scal_vect_double(Element[pa].diametrehydro / 2.0, W, W);	/*W is normal to U&V and of diametrehydro length*/
 				for (zj=1;zj<=20;zj++)
 					{
+					//printf("TypeElement[%d].flag_dessin %d  \n",Element[pa].type,TypeElement[Element[pa].type].flag_dessin);
 					alpha = (zj -1)*2*PI/20;
 					betaa  = (zj -0)*2*PI/20;
 					x3 = ext1[1] + cos(alpha) * V[1] + sin(alpha) * W[1];	y3 = ext1[2] + cos(alpha) * V[2] + sin(alpha) * W[2];
@@ -1069,7 +1070,11 @@ void draw_contour_element3(int pa)
 		if ((TypeElement[Element[pa].type].flag_dessin != 0) && (Element[pa].flag_dessin != 0))
 			{	
 			condition_draw_contour_element3 = 1;	//draw
-			flag_draw_contour_element3 = Element[pa].flag_dessin;
+			//flag_draw_contour_element3 = Element[pa].flag_dessin;
+			//flag_draw_contour_element3 = Element[Element[pa].type].flag_dessin;
+			flag_draw_contour_element3 = TypeElement[Element[pa].type].flag_dessin;
+ 			//printf("TypeElement[%4d].flag_dessin %4d\n",pa,TypeElement[Element[pa].type].flag_dessin);/**/
+			//printf("pa %6d type %4d Element[pa].flag_dessin %4d Element[Element[pa].type].flag_dessin %4d\n",pa,Element[pa].type,Element[pa].flag_dessin,Element[Element[pa].type].flag_dessin);
 			}
 		}
 	else
@@ -5115,6 +5120,8 @@ void draw_twines_color(int color, int pa, float ua, float xa, float ya, float ub
 	
 void draw_segment_color(int color, double x1m, double y1m, double x2m, double y2m)
 	{
+	//printf("color %8d \n",color);
+
 	if (color == 0) TraceSegment( WHITE, (double) x1m, (double) y1m, (double) x2m, (double) y2m);
 	if (color == 1) TraceSegment( BLACK, (double) x1m, (double) y1m, (double) x2m, (double) y2m);
 	if (color == 2) TraceSegment(  BLUE, (double) x1m, (double) y1m, (double) x2m, (double) y2m);
