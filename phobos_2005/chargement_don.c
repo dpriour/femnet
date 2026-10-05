@@ -1567,6 +1567,7 @@ if (Structure.version >= 2)
 
 	for (pa=1;pa<=Structure.nombreCoulisses;pa++)	coulisse[pa].flag_dessin = 1;
 	for (pa=1;pa<=Structure.nb_winch;pa++)	winch[pa].flag_dessin = 1;
+	initialisation_nb_color();
 	Sortie_texte.panel_drag = 0;
 	Structure.link_distance = -1.0; /*if -1 that means that there is no automatic linking if >= 0 that means that there is automatic linking. It is necessary because it must be done at the end (after add_cage add_filet_pred)*/
 /* debut modifdp du 4 mars 2010*/
@@ -6743,7 +6744,7 @@ void creer_fichier()
   	f2 = fopen(tonom,"w");
 	if (Structure.version == 1)    	fprintf(f2,"Fichier  %s.mdg\n",fname1);
 	if (Structure.version == 2)    	fprintf(f2,"version_2  %s.mdg\n",fname1);
-    	fprintf(f2,"IFREMER - Module Filiere - \n");
+    	fprintf(f2,"FEMNET - d Priour - \n");
     	fprintf(f2,"DESCRIPTION DE LA STRUCTURE\n");
     	fprintf(f2,"Nombre de noeuds\n");
     	fprintf(f2,"%8d\n",Structure.nb_global);
@@ -8333,4 +8334,21 @@ void base1(double angl1,int axeangl1,double angl2,int  axeangl2,int  nbcol,doubl
 
 }
 
+void initialisation_nb_color()
+	{
+	int no,rr,gg,bb;
+	
+	nb_col = 50;
+	if (colo != NULL)        free(colo);
+	colo = (int *) Malloc_int(1 + nb_col);
+	
+	for (no=0;no<=nb_col;no++)
+		{
+		rr = (int) (255*no/nb_col);
+		gg = (int) (0);
+		bb = (int) (255-rr);
+		colo[no] = ColorRGB(rr,gg,bb);
+		}
+	}
+	
 		
