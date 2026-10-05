@@ -79,8 +79,9 @@ if(elem == 1)
  	}*/
   
   	/* Definition de l'angle theta1, entre la direction du vecteur VV et le vecteur NM. */
-     	if(NM[1] != 0.0) theta1 =  atan(NM[2]/NM[1]);
-     	if(NM[1] == 0.0) theta1 = PI/4;
+     	//if(NM[1] != 0.0) theta1 =  atan(NM[2]/NM[1]);
+     	//if(NM[1] == 0.0) theta1 = PI/4;
+     	theta1 =  atan2(NM[2],NM[1]);
      	
 	/*printf(" theta1 = %lf   \n",theta1/PI*180);  */
   
