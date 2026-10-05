@@ -46,6 +46,7 @@ void produit_scal_vect_12(double scal, double vect_1[13], double *vect_2);
 void produit_scal_vect_6(double scal, double vect_1[13], double *vect_2);
 double produit_scal(double vect_1[4], double vect_2[4]);
 void base1(double angl1,int axeangl1,double angl2,int  axeangl2,int  nbcol,double *vect);
+void initialisation_nb_color();
 	
 			
 	
@@ -154,6 +155,7 @@ void dessiner_volume_element();
 void dessiner_masse_element();
 void dessiner_masse_lineique();
 void dessiner_flottabilite();
+void dessiner_exit_size();
 void dessiner_EI_flexion_cable();
 void dessiner_courant();
 void dessiner_Prise_volume();
@@ -187,6 +189,7 @@ void dessiner_defaut_discretisation();
 void dessiner_numerotation_globale();
 void draw_segment_color(int color, double x1m, double y1m, double x2m, double y2m);
 void TraceSegment(int icolor, double dx1, double dy1, double dx2, double dy2);
+void EffaceTriangle(int icolor, double dx1, double dy1, double dx2, double dy2, double dx3, double dy3);
 
 /*prototypes de Checked_menu.c*/
 void Checked_dessiner_contour_hexa();
@@ -198,6 +201,7 @@ void Checked_dessiner_contour_coulisse();
 void Checked_dessiner_contour_balls();
 void Checked_dessiner_liaison();
 void Checked_angle_flexion_cable();
+void Checked_exit_size();
 void Checked_dessiner_lie();
 void Checked_numerotation_hexa();
 void Checked_numerotation_panneau();
