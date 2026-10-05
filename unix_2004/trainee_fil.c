@@ -48,8 +48,9 @@ void trainee_fil(int elem, double *VV, double *tfuv)
      	base1(alpha2,3,0.0,3,3,VV);
      	
   	/* Definition de l'angle theta1, entre la direction du vecteur VV et le vecteur NM. */
-     	if(NM[1] != 0.0) theta1 =  atan(NM[2]/NM[1]);
-     	if(NM[1] == 0.0) theta1 = PI/4;
+     	//if(NM[1] != 0.0) theta1 =  atan(NM[2]/NM[1]);
+     	//if(NM[1] == 0.0) theta1 = PI/4;
+     	theta1 =  atan2(NM[2],NM[1]);
      	
   	/* Definition des efforts, tangent et normal, pour un seul cote de maille, projetees sur X et Y,
      	appelees respectivement Tx, Ty, Nx, Ny */  
@@ -108,8 +109,9 @@ void trainee_fil(int elem, double *VV, double *tfuv)
      	base1(alpha2,3,0.0,3,3,VV);
      	
   	/* Definition de l'angle theta1, entre la direction du vecteur VV et le vecteur NM. */
-     	if(NM[1] != 0.0) theta1 =  atan(NM[2]/NM[1]);
-     	if(NM[1] == 0.0) theta1 = PI/4;
+     	//if(NM[1] != 0.0) theta1 =  atan(NM[2]/NM[1]);
+     	//if(NM[1] == 0.0) theta1 = PI/4;
+     	theta1 =  atan2(NM[2],NM[1]);
      	
   	/* Definition des efforts, tangent et normal, pour un seul cote de maille, projetees sur X et Y,
      	appelees respectivement Tx, Ty, Nx, Ny */  
