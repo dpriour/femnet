@@ -771,6 +771,8 @@ void button_up(Widget w, int button, int x, int y, void *data)
                 max1 = (me->select_y1 > me->select_y2) ? me->select_y1 : me->select_y2;
                 min2 = (me->select_z1 < me->select_z2) ? me->select_z1 : me->select_z2;
                 max2 = (me->select_z1 > me->select_z2) ? me->select_z1 : me->select_z2;
+        	printf("miny %d maxy %d\n", min1,max1);
+        	printf("minz %d maxz %d\n", min2,max2);
 
                 /* Sélectionner les points dans le rectangle */
                 me->num_selected = 0;
@@ -793,6 +795,8 @@ void button_up(Widget w, int button, int x, int y, void *data)
                 max1 = (me->select_z1 > me->select_z2) ? me->select_z1 : me->select_z2;
                 min2 = (me->select_x1 < me->select_x2) ? me->select_x1 : me->select_x2;
                 max2 = (me->select_x1 > me->select_x2) ? me->select_x1 : me->select_x2;
+        	printf("minz %d maxz %d\n", min1,max1);
+        	printf("minx %d maxx %d\n", min2,max2);
 
                 /* Sélectionner les points dans le rectangle */
                 me->num_selected = 0;
@@ -816,6 +820,8 @@ void button_up(Widget w, int button, int x, int y, void *data)
                 max1 = (me->select_x1 > me->select_x2) ? me->select_x1 : me->select_x2;
                 min2 = (me->select_y1 < me->select_y2) ? me->select_y1 : me->select_y2;
                 max2 = (me->select_y1 > me->select_y2) ? me->select_y1 : me->select_y2;
+        	printf("minx %d maxx %d\n", min1,max1);
+        	printf("miny %d maxy %d\n", min2,max2);
 
                 /* Sélectionner les points dans le rectangle */
                 me->num_selected = 0;
@@ -1831,18 +1837,18 @@ void save_file(Widget w, void *data)
                 }
 
                 /* Écrire les paramètres physiques du panneau */
-                fprintf(fp_don, "Traction stiffness (N):            25000.000000\n");
-                fprintf(fp_don, "Compression stiffness (N):        1.000000\n");
-                fprintf(fp_don, "Mesh opening stiffness (N.m/rad):    0.000000\n");
-                fprintf(fp_don, "Unstretched length (m):            0.400000\n");
-                fprintf(fp_don, "Volumic mass (kg/m3):            1025.000000\n");
-                fprintf(fp_don, "Hydrodynamic diameter (m):        0.002800\n");
-                fprintf(fp_don, "Knot size (m):                0.000000\n");
-                fprintf(fp_don, "Normal Cd:                1.200000\n");
-                fprintf(fp_don, "Tangential Cd:                0.080000\n");
-                fprintf(fp_don, "Meshing step (m):            3.000000\n");
-                fprintf(fp_don, "Type of internal nodes:            %d\n", me->panels[panel_num].type);
-                fprintf(fp_don, "Meshing type:                2\n\n");
+                fprintf(fp_don, "Traction stiffness (N):			25000.000000\n");
+                fprintf(fp_don, "Compression stiffness (N):		1.000000\n");
+                fprintf(fp_don, "Mesh opening stiffness (N.m/rad):	0.000000\n");
+                fprintf(fp_don, "Unstretched length (m):			0.400000\n");
+                fprintf(fp_don, "Volumic mass (kg/m3):			1025.000000\n");
+                fprintf(fp_don, "Hydrodynamic diameter (m):		0.002800\n");
+                fprintf(fp_don, "Knot size (m):				0.000000\n");
+                fprintf(fp_don, "Normal Cd:				1.200000\n");
+                fprintf(fp_don, "Tangential Cd:				0.080000\n");
+                fprintf(fp_don, "Meshing step (m):			3.000000\n");
+                fprintf(fp_don, "Type of internal nodes:			%d\n", me->panels[panel_num].type);
+                fprintf(fp_don, "Meshing type:				2\n\n");
             }
 
             /* Écrire les informations sur les panneaux hexagonaux et les câbles */
@@ -1866,15 +1872,15 @@ void save_file(Widget w, void *data)
                         (double)(me->points[p2_idx].y/me->zoom_pixel_m),
                         (double)(me->points[p2_idx].z/me->zoom_pixel_m),
                         me->points[p2_idx].type);
-                fprintf(fp_don, "Traction stiffness (N):        62000000.000000\n");
-                fprintf(fp_don, "Compression stiffness (N):    1.000000\n");
-                fprintf(fp_don, "Unstretched length (m):        200.000000\n");
-                fprintf(fp_don, "Volumic mass (kg/m3):        4800.000000\n");
-                fprintf(fp_don, "Hydrodynamic diameter (m):    0.026000\n");
-                fprintf(fp_don, "Normal Cd:            1.800000\n");
-                fprintf(fp_don, "Tangential Cd:            0.080000\n");
-                fprintf(fp_don, "Bars number:            9\n");
-                fprintf(fp_don, "Type of internal nodes:        %d\n\n", me->cables[i].type);
+                fprintf(fp_don, "Traction stiffness (N):		62000000.000000\n");
+                fprintf(fp_don, "Compression stiffness (N):	1.000000\n");
+                fprintf(fp_don, "Unstretched length (m):		200.000000\n");
+                fprintf(fp_don, "Volumic mass (kg/m3):		4800.000000\n");
+                fprintf(fp_don, "Hydrodynamic diameter (m):	0.026000\n");
+                fprintf(fp_don, "Normal Cd:			1.800000\n");
+                fprintf(fp_don, "Tangential Cd:			0.080000\n");
+                fprintf(fp_don, "Bars number:			9\n");
+                fprintf(fp_don, "Type of internal nodes:		%d\n\n", me->cables[i].type);
             }
 
             /* Calculer le nombre d'interconnections (composantes connexes) */
@@ -2034,7 +2040,7 @@ skip_don_details:
 
             /* Écrire tous les cables */
             for (i = 0; i < me->num_cables; i++) {
-                fprintf(fp_don, "el:     %d ", i + 1);
+                fprintf(fp_don, "el:    %d  ", i + 1);
             }
             if (me->num_cables > 0) {
                 fprintf(fp_don, "\n");
@@ -2053,76 +2059,69 @@ skip_don_details:
 
             /* Écrire les informations pour chaque type de nœud */
             for (i = 1; i <= max_node_type; i++) {
-                fprintf(fp_don, "No du type :            %d\n", i);
-                fprintf(fp_don, "Mass X,Y,Z (kg):        0.000000  0.000000  0.000000\n");
-                fprintf(fp_don, "Added mass X,Y,Z (kg):        0.000000  0.000000  0.000000\n");
-                fprintf(fp_don, "Length X,Y,Z (m):        0.000000  0.000000  0.000000\n");
-                fprintf(fp_don, "Drag coefficient X,Y,Z:        1.200000  1.200000  1.200000\n");
-                fprintf(fp_don, "External forces X,Y,Z (N):    0.000000  0.000000  0.000000\n");
-                fprintf(fp_don, "Displacement X,Y,Z:        1  1  1\n");
-                fprintf(fp_don, "Limits X,Y,Z (m):        0.000000  0.000000  0.000000\n");
-                fprintf(fp_don, "Limits sens X,Y,Z:        0  0  0\n");
-                fprintf(fp_don, "Symetry X,Y,Z:            0  0  0\n\n");
+                fprintf(fp_don, "No du type:			%d\n", i);
+                fprintf(fp_don, "Mass X,Y,Z (kg):		0.000000  0.000000  0.000000\n");
+                fprintf(fp_don, "Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000\n");
+                fprintf(fp_don, "Length X,Y,Z (m):		0.000000  0.000000  0.000000\n");
+                fprintf(fp_don, "Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000\n");
+                fprintf(fp_don, "External forces X,Y,Z (N):	0.000000  0.000000  0.000000\n");
+                fprintf(fp_don, "Displacement X,Y,Z:		1  1  1\n");
+                fprintf(fp_don, "Limits X,Y,Z (m):		0.000000  0.000000  0.000000\n");
+                fprintf(fp_don, "Limits sens X,Y,Z:		0  0  0\n");
+                fprintf(fp_don, "Symetry X,Y,Z:			0  0  0\n\n");
             }
 
             /* Écrire l'environnement numérique et les paramètres */
             fprintf(fp_don, "NUMERIC ENVIRONMENT\n");
-            fprintf(fp_don, "Divisor (s):                        0.000050\n");
+            fprintf(fp_don, "Divisor (s):						0.000050\n");
+            fprintf(fp_don, "Convergence threshold (N):				0.0100000\n");
+            fprintf(fp_don, "Displacement limit for each iteration (m):		10.000000\n");
+            fprintf(fp_don, "Maximal number of iterations:				10000\n");
             fprintf(fp_don, "\n");
-            fprintf(fp_don, "Convergence threshold (N):                0.0100000\n");
+
+            fprintf(fp_don, "DYNAMIC\n");
+            fprintf(fp_don, "Dynamic: Time step (s):					0.100000\n");
+            fprintf(fp_don, "Dynamic: Record time step (s):				0.200000\n");
+            fprintf(fp_don, "Dynamic: Beginning time of record (s):			0.000000\n");
+            fprintf(fp_don, "Dynamic: End time of record and calculation (s):	0.000000\n");
             fprintf(fp_don, "\n");
-            fprintf(fp_don, "Displacement limit for each iteration (m):        10.000000\n");
-            fprintf(fp_don, "\n");
-            fprintf(fp_don, "Maximal number of iterations:                10000\n");
-            fprintf(fp_don, "\n");
-            fprintf(fp_don, "Dynamic: Time step (s):                    0.100000\n");
-            fprintf(fp_don, "\n");
-            fprintf(fp_don, "Dynamic: Record time step (s):                0.200000\n");
-            fprintf(fp_don, "\n");
-            fprintf(fp_don, "Dynamic: Beginning time of record (s):            0.000000\n");
-            fprintf(fp_don, "\n");
-            fprintf(fp_don, "Dynamic: End time of record and calculation (s):    0.000000\n");
-            fprintf(fp_don, "\n");
+
             fprintf(fp_don, "METEO/OCEANIC ENVIRONMENT\n");
-            fprintf(fp_don, "Current direction (deg):                0.000000\n");
+            fprintf(fp_don, "Current direction (deg):				0.000000\n");
+            fprintf(fp_don, "Current speed (m/s):					2.058000\n");
+            fprintf(fp_don, "Wave period (s):					10.000000\n");
+            fprintf(fp_don, "Wave height (m):					0.000000\n");
+            fprintf(fp_don, "Wave direction relatively X (deg):			0.000000\n");
+            fprintf(fp_don, "Depth (m):						2000.000000\n");
             fprintf(fp_don, "\n");
-            fprintf(fp_don, "Current speed (m/s):                    2.058000\n");
-            fprintf(fp_don, "\n");
-            fprintf(fp_don, "Wave period (s):                    10.000000\n");
-            fprintf(fp_don, "\n");
-            fprintf(fp_don, "Wave height (m):                    0.000000\n");
-            fprintf(fp_don, "\n");
-            fprintf(fp_don, "Wave direction relatively X (deg):            0.000000\n");
-            fprintf(fp_don, "\n");
-            fprintf(fp_don, "Depth (m):                        2000.000000\n");
-            fprintf(fp_don, "\n");
+
             fprintf(fp_don, "CATCH DESCRIPTION\n");
-            fprintf(fp_don, "Volume (m3):                        0.000000\n");
+            fprintf(fp_don, "Volume (m3):						0.000000\n");
+            fprintf(fp_don, "Accuracy on this volume:				0.000010\n");
+            fprintf(fp_don, "Drag coefficient on this volume:			1.000000\n");
             fprintf(fp_don, "\n");
-            fprintf(fp_don, "Accuracy on this volume:                0.000010\n");
-            fprintf(fp_don, "\n");
-            fprintf(fp_don, "Drag coefficient on this volume:            1.000000\n");
-            fprintf(fp_don, "\n");
+
             fprintf(fp_don, "BOTTOM SEA ENVIRONMENT\n");
-            fprintf(fp_don, "Wearing coefficient on the bottom:            0.500000\n");
+            fprintf(fp_don, "Wearing coefficient on the bottom:			0.500000\n");
+            fprintf(fp_don, "Stiffness of the insertion in the sea bottom (N/m):	5000000.000000\n");
             fprintf(fp_don, "\n");
-            fprintf(fp_don, "Stiffness of the insertion in the sea bottom (N/m):    5000000.000000\n");
-            fprintf(fp_don, "\n");
+
             fprintf(fp_don, "TEXT OUTPUT\n");
-            fprintf(fp_don, "Distances number         :    0\n");
-            fprintf(fp_don, "Forces number             :    0\n");
-            fprintf(fp_don, "Tensions number         :    0\n");
-            fprintf(fp_don, "Sliding tensions number     :    0\n");
-            fprintf(fp_don, "Positions number         :    0\n");
+            fprintf(fp_don, "Distances number:		0\n");
+            fprintf(fp_don, "Forces number:			0\n");
+            fprintf(fp_don, "Tensions number:		0\n");
+            fprintf(fp_don, "Sliding tensions number:	0\n");
+            fprintf(fp_don, "Positions number:		0\n");
             fprintf(fp_don, "\n");
-            fprintf(fp_don, "Structure forces display         : 1\n");
-            fprintf(fp_don, "Catch diameter display             : 1\n");
-            fprintf(fp_don, "Catch thickness display             : 1\n");
-            fprintf(fp_don, "Catch volume display             : 1\n");
-            fprintf(fp_don, "Filtrated surface display         : 1\n");
-            fprintf(fp_don, "Speed display                 : 1\n");
+            
+            fprintf(fp_don, "Structure forces display:	1\n");
+            fprintf(fp_don, "Catch diameter display:		1\n");
+            fprintf(fp_don, "Catch thickness display:	1\n");
+            fprintf(fp_don, "Catch volume display:		1\n");
+            fprintf(fp_don, "Filtrated surface display:	1\n");
+            fprintf(fp_don, "Speed display:			1\n");
             fprintf(fp_don, "\n");
-            fprintf(fp_don, "\n");
+
             fprintf(fp_don, "input Auto_convergence\n");
             fprintf(fp_don, "input convergence_parameters 1 10 100000000000\n");
             fprintf(fp_don, "input link 0.5\n");
