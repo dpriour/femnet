@@ -43,16 +43,18 @@ void damping_coulisse()
   			/* alpha3 = angle de rotation de l element autour de l'axe OZ, de telle sorte que 
   			l element soit dans le plan XOZ. */ 
    
-  			if (vect[4] != vect[1]) 	alpha3 =   atan((vect[5]-vect[2])/(vect[4]-vect[1]));
-  			else				alpha3 =   0.0;
+  			//if (vect[4] != vect[1]) 	alpha3 =   atan((vect[5]-vect[2])/(vect[4]-vect[1]));
+  			//else				alpha3 =   0.0;
+  			alpha3 =   atan2((vect[5]-vect[2]),(vect[4]-vect[1]));
   		
 			base1( alpha3, 3, 0.0,  1,  6, vect);
 
   			/* beta2 = angle de rotation de l element autour de l'axe OY, de telle sorte que 
   			l element soit parallele a OX. */ 
    
-  			if (vect[4] != vect[1]) 	beta2 =   atan((vect[6]-vect[3])/(vect[4]-vect[1]));
-  			else				beta2 =   0.0;
+  			//if (vect[4] != vect[1]) 	beta2 =   atan((vect[6]-vect[3])/(vect[4]-vect[1]));
+  			//else				beta2 =   0.0;
+  			beta2 =   atan2((vect[6]-vect[3]),(vect[4]-vect[1]));
   		
 			/*base1( beta2, 2, 0.0,  1,  6, vect);*/
 
