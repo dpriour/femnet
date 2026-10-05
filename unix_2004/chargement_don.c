@@ -2302,8 +2302,8 @@ if (Structure.version == 2)
 				actual_mass_in_air = ref_volume_actual*ratio_mass_in_air_volume;
 				model_density = RHO*model_mass_in_air*(model_mass_in_air-model_mass_in_water);
 				actual_volume = (model_mass_in_air-model_mass_in_water)/RHO/model_mass_in_air*actual_mass_in_air;
-				TypeNoeud[node_type].mx = actual_mass_in_air;		TypeNoeud[node_type].my = actual_mass_in_air;		TypeNoeud[node_type].my = actual_mass_in_air;
-				TypeNoeud[node_type].majx = actual_mass_in_air;		TypeNoeud[node_type].majy = actual_mass_in_air;		TypeNoeud[node_type].majy = actual_mass_in_air;
+				TypeNoeud[node_type].mx = actual_mass_in_air;		TypeNoeud[node_type].my = actual_mass_in_air;		TypeNoeud[node_type].mz = actual_mass_in_air;
+				TypeNoeud[node_type].majx = actual_mass_in_air;		TypeNoeud[node_type].majy = actual_mass_in_air;		TypeNoeud[node_type].majz = actual_mass_in_air;
 				TypeNoeud[node_type].lonx = pow(actual_volume,1.0/3.0);	TypeNoeud[node_type].lony = pow(actual_volume,1.0/3.0);	TypeNoeud[node_type].lonz = pow(actual_volume,1.0/3.0);
 				TypeNoeud[node_type].cdx = 0.0;				TypeNoeud[node_type].cdy = 0.0;				TypeNoeud[node_type].cdz = 0.0;
 				Fd = 0.5*RHO*foil_cd*actual_foil_surface*Courant.vitesse*Courant.vitesse;
