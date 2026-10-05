@@ -60,7 +60,9 @@ typedef struct MyProgram
 CLASS float minx,maxx,miny,maxy,minz,maxz,ecartmax; //valeursmaximales des coordonnees//
 CLASS float binx,baxx,biny,baxy,binz,baxz,bcartmax; //valeursmaximales des coordonnees dessinnees//*/
 CLASS Widget w[200];
-CLASS int total2global[NBMAXNOEUD],profondeur[NBMAXNOEUD],gris_interne,gris_externe;/*
+CLASS int total2global[NBMAXNOEUD],profondeur[NBMAXNOEUD],gris_interne,gris_externe;
+CLASS int *colo,nb_col;
+/*
 CLASS char fname1[128],fname2[128],fname3[128];
 CLASS char fname[128],oldfic[128],newfic[128];
 CLASS float *h1x,*h2x,*h1y,*h2y,*g1x,*g2x,*g1y,*g2y;
