@@ -293,4 +293,4 @@ Add the project licence here if/when a licence is defined for the GitHub reposit
 
 For the detailed documentation, including all commands, parameters, examples and appendices, see:
 
-**[Readme_web.pdf](Readme_web.pdf)**
+**[manual.pdf](manual.pdf)**
