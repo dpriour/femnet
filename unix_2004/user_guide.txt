@@ -1390,7 +1390,7 @@ input cable_contact	198	172
 
 //in case openfoam is used with femnet, use
 input openfoam /home/daniel/hexa/data_2001/rostock_99/C/
-//1) if *.pre and *.spe dont exit (*.pre is a pressure file per triangular elemnt when *.spe file is a speed file per node)
+//1) if *.pre and *.spe dont exist (*.pre is a pressure file per triangular elemnt when *.spe file is a speed file per node)
 //femnet calculates the equilibrium of the structure and save the result in *.sta as usual
 //2) openfoam calculated the flow around the structure and create a *.pre or *.spe file
 //3) if *.pre file exists femnet will use it or if *.spe file exists and *.pre dont exist femnet will use *.spe file for the calculation of equilibrium
