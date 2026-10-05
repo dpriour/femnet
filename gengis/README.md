@@ -1,82 +1,101 @@
 # Geometry Editor
 
-Éditeur graphique de géométrie utilisant la bibliothèque libsx.
+A graphical geometry editor using the GTK library.
 
-## Fonctionnalités
+## Features
 
-### 1. Mode Création de Polygones
-- Cliquez pour ajouter des sommets au polygone
-- Pour fermer un polygone : cliquez près du premier point
-- Les polygones sont dessinés en **bleu**
+### 1. Panel Creation Mode
+- Click to add vertices to the panel
+- To close a panel: click on the last point
+- Panels are drawn in **blue**
 
-### 2. Mode Création de Segments
-- Cliquez sur deux points pour créer un segment
-- Vous pouvez cliquer sur des points existants ou créer de nouveaux points
-- Les segments sont dessinés en **vert**
+### 2. Cable Creation Mode
+- Click on two points to create a cable
+- You can click on existing points or create new ones
+- Cables are drawn in **green**
 
-### 3. Mode Création de Liens
-- Cliquez sur deux points **existants** pour créer un lien
-- Les liens sont dessinés en **rouge pointillé**
-- Utile pour connecter des sommets de différents polygones ou extrémités de segments
+### 3. Link Creation Mode
+- Click near two **existing** points to create a link
+- Links are drawn in **red dotted lines**
+- Useful for connecting vertices of different panels or endpoints of cables
 
-## Utilisation
+## Usage
 
-### Compilation
+### Compile
 ```bash
 make
 ```
 
-### Exécution
+### Run
 ```bash
-./geometry_editor
+./gengis
 ```
 ou
 ```bash
 make run
 ```
 
-### Nettoyage
+### Cleanup
 ```bash
 make clean
 ```
 
 ## Interface
 
-### Menu "Actions"
-- **Créer Polygones** : Active le mode création de polygones
-- **Créer Segments** : Active le mode création de segments
-- **Créer Liens** : Active le mode création de liens
-- **Effacer Tout** : Efface tous les objets de la zone de dessin
-- **Quitter** : Ferme l'application
+### "File" Menu
+- **Save**: Save in dat and don files. dat file is compatible with ./gengis when don file is compatible with the remaining tools of FEMNET
+- **Load file**: Load dat file
+- **Quit**: Closes the application
 
-### Zone de dessin
-- **Points** : Affichés en noir avec un petit carré
-- **Polygones** : Lignes bleues reliant les sommets
-- **Segments** : Lignes vertes entre deux points
-- **Liens** : Lignes rouges pointillées entre deux points
+### "Actions" Menu
+- **Create Panels**: Activates panel creation mode
+- **Create Cables**: Activates cable creation mode
+- **Create Links**: Activates link creation mode
+- **Modify UV**: Change the mesh coordinates of panels points
+- **View plane...**: choose the view axis (along X, Y or Z)
+- **Clear All**: Clears all objects from the drawing area
 
-## Structure du code
+### "Zoom" Menu
+- **Set Zoom...**: Choose zoom factor (1.0 for 100%)
+- **Set Zoom pixel/m**: Choose the ration between pixels (used in Gengis) and m (used in don file)
 
-- `main.c` : Programme principal et initialisation de l'interface
-- `main.h` : Définitions des structures de données
-- `callbacks.c` : Implémentation des callbacks et logique du programme
-- `callbacks.h` : Prototypes des fonctions callbacks
-- `Makefile` : Configuration de compilation
+### "Alignment" Menu
+- **Alignment mode**: Select points, cables, and/or panels
+- **Modify X**: Change the X coordinates of selected points
+- **Modify Y**: Change the Y coordinates of selected points
+- **Modify Z**: Change the Z coordinates of selected points
+- **Modify Type**: Change the type of selected points, cables, and or panels
 
-## Limites
+### Area Drawing
+- **Points**: Displayed in black with a small square
+- **Panels**: Blue lines connecting vertices
+- **Cables**: Green lines between two points
+- **Links**: Red dotted lines between two points
+
+## Code Structure
+
+- `gtk3_main.c`: Main program and interface initialization
+- `main.h`: Data structure definitions
+- `callbacks.c`: Callback implementation and program logic
+- `callbacks.h`: Callback function prototypes
+- `gtk3_drawing.c`: Drawing implementation
+- `gtk3_drawing.h`: Drawing function prototypes
+- `Makefile`: Compilation configuration
+
+## Limits
 
 - Maximum 1000 points
-- Maximum 100 polygones
-- Maximum 100 segments
-- Maximum 200 liens
-- Maximum 50 sommets par polygone
+- Maximum 100 panels
+- Maximum 100 cables
+- Maximum 200 links
+- Maximum 50 vertices per panel
 
-## Dépendances
+## Dependencies
 
-- libsx (bibliothèque graphique X11)
+- GTK (graphics library)
 - X11, Xaw, Xmu, Xt
-- Bibliothèque mathématique (libm)
+- Mathematical library (libm)
 
-## Auteur
+## Author
 
-Créé avec Claude Code
+Created with Claude Code
