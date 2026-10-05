@@ -33,6 +33,7 @@ void dessiner()
 	mode = GetMenuItemChecked(w[8]);	if (mode == 1) dessiner_numero_barre();
 	mode = GetMenuItemChecked(w[13]);	if (mode == 1) dessiner_order_liaison();
 	mode = GetMenuItemChecked(w[103]);	if (mode == 1) dessiner_numero_liaison();
+	mode = GetMenuItemChecked(w[104]);	if (mode == 1) dessiner_exit_size();
 	mode = GetMenuItemChecked(w[85]);	if (mode == 1) dessiner_ordre_maillage();
 	mode = GetMenuItemChecked(w[14]);	if (mode == 1) dessiner_numero_total();
 	mode = GetMenuItemChecked(w[23]);	if (mode == 1) dessiner_numero_global();
@@ -1711,7 +1712,7 @@ void dessiner_nb_cotes_mailles()
 void dessiner_longueur_cotes()
 	{
 	int pa,no,deb,fin,col;
-	float x1,y1,longueur,long_l,long_m,long_n,nbmax,nbU,nbV;
+	float x1,y1,longueur,longueur2,long_l,long_m,long_n,nbmax,nbU,nbV,U1,U2,V1,V2,u1,u2,v1,v2;
 	char str[80],str_l[80],str_m[80],str_n[80];
 	
 	lecture_des();
@@ -1733,13 +1734,13 @@ void dessiner_longueur_cotes()
 				deb = panneau[pa].noeud_contour[no];
 				if (no != panneau[pa].nb_noeud_contour) fin = panneau[pa].noeud_contour[no+1];
 				if (no == panneau[pa].nb_noeud_contour) fin = panneau[pa].noeud_contour[1];
-				nbU = fabs(noeud[deb].U - noeud[fin].U);
-				nbV = fabs(noeud[deb].V - noeud[fin].V);
-				if (nbU > nbV) 	nbmax = nbU;
-				else 		nbmax = nbV;
-				longueur = nbmax * 2.0 *panneau[pa].longueur_repos; 
-				sprintf(str,"%.3g",longueur);
-				
+				u1 = noeud[deb].u;
+				v1 = noeud[deb].v;
+				u2 = noeud[fin].u;
+				v2 = noeud[fin].v;
+				longueur2 = panneau[pa].longueur_repos*(fabs(u1-u2)+fabs(v1-v2)); 
+				sprintf(str,"%.3g",longueur2);
+				//printf("pa %d deb %d u1 %f v1 %f u2 %f v2 %f lr %f\n",pa,deb,u1,v1,u2,v2,panneau[pa].longueur_repos);				
 				x1 = (float) (0.5 * (noeud[deb].x + noeud[fin].x) - binx) / (baxx - binx);
 				y1 = (float) (0.5 * (noeud[deb].y + noeud[fin].y) - biny) / (baxy - biny);
 				
@@ -3485,6 +3486,76 @@ void dessiner_flottabilite()
 		}
 	}
 
+void dessiner_exit_size()
+	{
+	int pa,no,col,deb,no_triangle,cote;
+	float x1,y1,flotab,max_exit,min_exit;
+	char str[80];
+	double Vn[4],Vm[4];	
+	double norm_n,norm_m,scal,cos_gamma,sin_gamma,dn,dm,exit_size;
+	int pt1,pt2,pt3,co;
+	
+	lecture_des();
+	
+	Color(RED);
+	x1 = (float) (0.0);
+	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
+	Text(x1,y1,"exit size (m)");
+
+	max_exit = -1.0;
+	for (pa=1;pa<=Structure.NbTypesurf;pa++)
+		{ 
+		if (panneau[pa].flag_dessin != 0)
+			{
+			if (max_exit == -1.0)
+				{
+				max_exit = surface[panneau[pa].numero_triangle[1]].exit_size;
+				min_exit = surface[panneau[pa].numero_triangle[1]].exit_size;
+				}
+			for (no_triangle=1;no_triangle<=panneau[pa].nb_triangle_interieur;no_triangle++)
+				{ 
+				if (surface[panneau[pa].numero_triangle[no_triangle]].exit_size > max_exit) max_exit = surface[panneau[pa].numero_triangle[no_triangle]].exit_size;
+				if (surface[panneau[pa].numero_triangle[no_triangle]].exit_size < min_exit) min_exit = surface[panneau[pa].numero_triangle[no_triangle]].exit_size;
+				}
+			}
+		}
+	printf("max_exit %f min_exit %f\n",max_exit,min_exit);
+
+	for (pa=1;pa<=Structure.NbTypesurf;pa++)
+		{ 
+		if (panneau[pa].flag_dessin != 0)
+			{
+			for (no_triangle=1;no_triangle<=panneau[pa].nb_triangle_interieur;no_triangle++)
+				{ 
+				
+				x1 = 0.0;
+				y1 = 0.0;
+				sprintf(str,"%lf",surface[panneau[pa].numero_triangle[no_triangle]].exit_size);
+				for (cote=1;cote<=3;cote++)
+					{ 
+					deb = panneau[pa].triangle_interieur[no_triangle][cote  ];
+					x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+					y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+					}
+				x1 = (float) (x1 / 3.0);
+				y1 = (float) (y1 / 3.0);
+				//Text(x1,y1,str);
+      		
+ 				pt1 = surface[panneau[pa].numero_triangle[no_triangle]].extremite[1];
+				pt2 = surface[panneau[pa].numero_triangle[no_triangle]].extremite[2];
+				pt3 = surface[panneau[pa].numero_triangle[no_triangle]].extremite[3];
+				
+				co = (int) ((surface[panneau[pa].numero_triangle[no_triangle]].exit_size-min_exit)/(max_exit-min_exit) * nb_col);
+				col  = colo[co];
+				//printf("pa %4d no_triangle %4d exit %lf\n",pa,no_triangle,surface[panneau[pa].numero_triangle[no_triangle]].exit_size);
+				EffaceTriangle(col, noeud[pt1].x, noeud[pt1].y, noeud[pt2].x, noeud[pt2].y, noeud[pt3].x, noeud[pt3].y);
+     		
+				
+				}
+			}
+		}
+	}
+
 void dessiner_EI_flexion_cable()
 	{
 	int pa,no,col,deb;
@@ -4719,7 +4790,7 @@ void dessiner_tension()
 
 	for (pa=1;pa<=Structure.NbTypesurf;pa++)
 		{ 
-	for (no_triangle=1;no_triangle<=panneau[pa].nb_triangle_interieur;no_triangle++)
+		for (no_triangle=1;no_triangle<=panneau[pa].nb_triangle_interieur;no_triangle++)
 			{ 
 			x1 = 0.0;
 			y1 = 0.0;
@@ -5019,8 +5090,11 @@ void dessiner_numerotation_globale()
 void dessiner_nrj()
 	{
 	int i,pa,col,deb_total,no_triangle,no_tri_hexa,cote,no,deb,fin;
-	float x1,y1,x3,y3;
+	int pt1,pt2,pt3,co;
+	float x1,y1,x3,y3,max_energy,min_energy;
 	char str[80];
+	nb_col = 50;
+	int rr,gg,bb;
 	
 	lecture_des();
 	/*col=GetRGBColor(0,255,255);
@@ -5033,22 +5107,53 @@ void dessiner_nrj()
 	Text(x3,y3,"energie potentielle (J) par cable ou fils elementaires");
 
 	Color(BLUE);
+	max_energy = -1.0;
 	for (pa=1;pa<=Structure.NbTypesurf;pa++)
 		{ 
-		for (no_triangle=1;no_triangle<=panneau[pa].nb_triangle_interieur;no_triangle++)
-			{ 
-			x1 = 0.0;
-			y1 = 0.0;
-			sprintf(str,"%lf",surface[panneau[pa].numero_triangle[no_triangle]].nrj);
-			for (cote=1;cote<=3;cote++)
-				{ 
-				deb_total = panneau[pa].triangle_interieur[no_triangle][cote  ];
-				x1 += (float) (noeud[deb_total].x - binx) / (baxx - binx);
-				y1 += (float) (noeud[deb_total].y - biny) / (baxy - biny);
+		if (panneau[pa].flag_dessin != 0)
+			{
+			if (max_energy == -1.0)
+				{
+				max_energy = surface[panneau[pa].numero_triangle[1]].nrj;
+				min_energy = surface[panneau[pa].numero_triangle[1]].nrj;
 				}
-			x1 = (float) (x1 / 3.0);
-			y1 = (float) (y1 / 3.0);
-			Text(x1,y1,str);
+			for (no_triangle=1;no_triangle<=panneau[pa].nb_triangle_interieur;no_triangle++)
+				{ 
+				if (surface[panneau[pa].numero_triangle[no_triangle]].nrj > max_energy) max_energy = surface[panneau[pa].numero_triangle[no_triangle]].nrj;
+				if (surface[panneau[pa].numero_triangle[no_triangle]].nrj < min_energy) min_energy = surface[panneau[pa].numero_triangle[no_triangle]].nrj;
+				}
+			}
+		}
+	printf("max_energy %f min_energy %f\n",max_energy,min_energy);
+
+	for (pa=1;pa<=Structure.NbTypesurf;pa++)
+		{ 
+		if (panneau[pa].flag_dessin != 0)
+			{
+			for (no_triangle=1;no_triangle<=panneau[pa].nb_triangle_interieur;no_triangle++)
+				{ 
+				x1 = 0.0;
+				y1 = 0.0;
+				sprintf(str,"%lf",surface[panneau[pa].numero_triangle[no_triangle]].nrj);
+				for (cote=1;cote<=3;cote++)
+					{ 
+					deb_total = panneau[pa].triangle_interieur[no_triangle][cote  ];
+					x1 += (float) (noeud[deb_total].x - binx) / (baxx - binx);
+					y1 += (float) (noeud[deb_total].y - biny) / (baxy - biny);
+					}
+				x1 = (float) (x1 / 3.0);
+				y1 = (float) (y1 / 3.0);
+				//Text(x1,y1,str);
+		
+				pt1 = surface[panneau[pa].numero_triangle[no_triangle]].extremite[1];
+				pt2 = surface[panneau[pa].numero_triangle[no_triangle]].extremite[2];
+				pt3 = surface[panneau[pa].numero_triangle[no_triangle]].extremite[3];
+				
+				co = (int) ((surface[panneau[pa].numero_triangle[no_triangle]].nrj-min_energy)/(max_energy-min_energy) * nb_col);
+				col  = colo[co];
+				//printf("pa %4d no_triangle %4d co %5d\n",pa,no_triangle,co);
+				EffaceTriangle(col, noeud[pt1].x, noeud[pt1].y, noeud[pt2].x, noeud[pt2].y, noeud[pt3].x, noeud[pt3].y);
+				}
 			}
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
@@ -5227,5 +5332,30 @@ void TraceSegment(int icolor, double dx1, double dy1, double dx2, double dy2)
 	Line_to((float)xx2,(float)yy2);
 	Line_end();
 	}
+	
+void EffaceTriangle(int icolor, double dx1, double dy1, double dx2, double dy2, double dx3, double dy3)
+	{
+	/*efface dans la couleur icolor la surface du triangle sur l ecran
+	les coordonnees des 3 sommets sont dx1,dx2 ...*/
+	float xx1,xx2,xx3,yy1,yy2,yy3;
+	extern void Move_to (float ,float );
+	extern void Line_to (float ,float );
+	extern void Surface_end();
+	
+	xx1 = (REEL) (dx1 - binx) / (baxx - binx);
+	xx2 = (REEL) (dx2 - binx) / (baxx - binx);
+	xx3 = (REEL) (dx3 - binx) / (baxx - binx);
+	yy1 = (REEL) (dy1 - biny) / (baxy - biny);
+	yy2 = (REEL) (dy2 - biny) / (baxy - biny);
+	yy3 = (REEL) (dy3 - biny) / (baxy - biny);
+	
+	Color(icolor);
+	Move_to((float)xx1,(float)yy1);
+	Line_to((float)xx2,(float)yy2);
+	Line_to((float)xx3,(float)yy3);
+	Line_to((float)xx1,(float)yy1);
+	Surface_end();
+	}
+
 	
 
