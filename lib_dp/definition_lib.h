@@ -1264,6 +1264,7 @@ typedef struct 	surface {
 	double pressure_n;			//presure normal to the traiangular surface
 	double pressure_t1;			//presure tangent to the traiangular surface along ?
 	double pressure_t2;			//presure tangent to the traiangular surface along ?
+	double exit_size;			//circle diameter passing trough meshes
 	double min_exit_size;			//minimum of circle diameter passing trough meshes
 	double max_exit_size;			//maximum of circle diameter passing trough meshes
 	double mean_exit_size;			//mzan of circle diameter passing trough meshes
