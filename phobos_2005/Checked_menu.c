@@ -84,6 +84,15 @@ void Checked_angle_flexion_cable()
 	dessiner();
 	}
 
+void Checked_exit_size()
+	{
+	int mode;
+	mode = GetMenuItemChecked(w[104]);
+	if (mode == 0) SetMenuItemChecked(w[104],1);
+	if (mode == 1) SetMenuItemChecked(w[104],0);
+	dessiner();
+	}
+
 void Checked_dessiner_lie()
 	{
 	int mode;
