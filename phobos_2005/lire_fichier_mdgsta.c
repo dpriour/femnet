@@ -17,6 +17,8 @@ void lire_fichier_mdgsta()
 	float elongation,elongation1,elongation2,elongation3,lgrepos,raideur_traction,raideur_compression,ftmp1,ftmp2,ftmp3;
 	float energie,temp1,temp2,temp3,norm_temp;
 	double dtmp;
+	double Vn[4],Vm[4];	
+	double norm_n,norm_m,scal,cos_gamma,sin_gamma,dn,dm,exit_size;
 	
 	mode = GetMenuItemChecked(w[59]);
 	if (mode == 0) nb_maille_total();
@@ -122,11 +124,23 @@ void lire_fichier_mdgsta()
        					
       		/*somme des energies contenues dans un fil m et n*/
       		surface[i].nrj = surface[i].nrj2 + surface[i].nrj1;
+      		
+      		//exit_size
+		Vm[1] = surface[i].m[1];	Vm[2] = surface[i].m[2];	Vm[3] = surface[i].m[3];
+		Vn[1] = surface[i].n[1];	Vn[2] = surface[i].n[2];	Vn[3] = surface[i].n[3];
+		norm_n = sqrt(produit_scal(Vn,Vn));	
+		norm_m = sqrt(produit_scal(Vm,Vm));	
+		scal = produit_scal(Vn,Vm);
+		cos_gamma = scal/norm_n/norm_m;
+		if (cos_gamma >  1.0) cos_gamma =  1.0;
+		if (cos_gamma < -1.0) cos_gamma = -1.0;
+		sin_gamma = sqrt(1.0 - cos_gamma*cos_gamma);
+		dn = norm_m*sin_gamma;
+		dm = norm_n*sin_gamma;
+		if (dn <= dm) surface[i].exit_size = dn;
+		if (dm <= dn) surface[i].exit_size = dm;
       					
-      		/*printf("%d lgrepos=%.3g lg_tendue1=%f tension1=%f nrj1=%f\n",i,lgrepos,surface[i].lg_tendue1,surface[i].tension1,surface[i].nrj1); 
-		printf("%d lgrepos=%.3g lg_tendue2=%f tension2=%f nrj2=%f nrj=%f\n",i,lgrepos,surface[i].lg_tendue2,surface[i].tension2,surface[i].nrj2,surface[i].nrj);
-		*/
-		
+		//N & M		
     		temp1 = surface[i].n[2]*surface[i].m[3] - surface[i].n[3]*surface[i].m[2];
     		temp2 = surface[i].n[3]*surface[i].m[1] - surface[i].n[1]*surface[i].m[3];
     		temp3 = surface[i].n[1]*surface[i].m[2] - surface[i].n[2]*surface[i].m[1];
