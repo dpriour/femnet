@@ -3,7 +3,7 @@
 
 void init_display(int argc, char **argv, MyProgram *me)
 	{
-	/*on est rendu a w[103] et on est limite a w[200] cf phobos.h*/
+	/*on est rendu a w[104] et on est limite a w[200] cf phobos.h*/
 	
 	if (OpenDisplay(argc, argv) == FALSE) return;
 
@@ -87,6 +87,7 @@ void init_display(int argc, char **argv, MyProgram *me)
 	w[68]  = MakeMenuItem(w[38], "buoyancy", 		Checked_flottabilite, me);
 	w[99]  = MakeMenuItem(w[38], "EI_flexion_cable", 	Checked_EI_flexion_cable, me);
 	w[100] = MakeMenuItem(w[38], "angle_flexion_cable", 	Checked_angle_flexion_cable, me);
+	w[104] = MakeMenuItem(w[38], "exit_size", 		Checked_exit_size, me);
 
 	w[47]  = MakeMenu("Node information");
 	w[14]  = MakeMenuItem(w[47], "node_total", 		Checked_numerotation_total, me);
