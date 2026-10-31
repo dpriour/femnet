@@ -1,0 +1,320 @@
+ballast_calcul2.c:		//vol_node = TypeElement[no_cable].lgrepos * PI * TypeElement[no_cable].diametrehydro * TypeElement[no_cable].diametrehydro / 4.0 / TypeElement[no_cable].nb_barre / 2.0;
+ballast_calcul2.c:			//vol_node = TypeElement[no_cable].lgrepos * PI * TypeElement[no_cable].diametrehydro * TypeElement[no_cable].diametrehydro / 4.0 / TypeElement[no_cable].nb_barre / 2.0;
+ballast_calcul2.c:				//vol_node = TypeElement[no_cable].lgrepos * PI * TypeElement[no_cable].diametrehydro * TypeElement[no_cable].diametrehydro / 4.0 / TypeElement[no_cable].nb_barre / 2.0;
+ballast_calcul2.c:			//vol_node = TypeElement[no_cable].lgrepos * PI * TypeElement[no_cable].diametrehydro * TypeElement[no_cable].diametrehydro / 4.0 / TypeElement[no_cable].nb_barre / 2.0;
+calculeffort_sta.c:	if ((theta <= PI/2) && (theta >= -PI/2))
+calculeffort_Zhan.c:	Vw[1] = Courant.vitesse*cos(Courant.direction*PI/180.0) * panneau[Surface[zi].type].current_reduction;
+calculeffort_Zhan.c:	Vw[2] = Courant.vitesse*sin(Courant.direction*PI/180.0) * panneau[Surface[zi].type].current_reduction;
+catch_hexa.c:	  		wfcodend[3*elem-2] =   wf[3*elem-2] * cos(PI/180*Courant.direction) + wf[3*elem-1] * sin(PI/180*Courant.direction);
+catch_hexa.c:	  		wfcodend[3*elem-1] = - wf[3*elem-2] * sin(PI/180*Courant.direction) + wf[3*elem-1] * cos(PI/180*Courant.direction);
+catch_hexa.c:		teta = PI/180*Courant.direction;
+catch_hexa.c:	theta = theta / 180 * PI;
+catch_hexa.c:  				Prise.angle_twines = Prise.angle_twines + acos(cosa)*180.0/PI;
+catch_hexa.c:				//printf("angle_twines %8.2lf ",acos(cosa)*180.0/PI);
+catch_hexa.c:  				Prise.angle_twines = Prise.angle_twines + acos(cosa)*180.0/PI;
+catch_hexa.c:				//printf("angle_twines %8.2lf ",acos(cosa)*180.0/PI);
+catch_hexa.c:  				Prise.angle_twines = Prise.angle_twines + acos(cosa)*180.0/PI;
+catch_hexa.c:				//printf("angle_twines %8.2lf ",acos(cosa)*180.0/PI);
+catch_hexa.c:  				Prise.angle_twines = Prise.angle_twines + acos(cosa)*180.0/PI;
+catch_hexa.c:				//printf("angle_twines %8.2lf ",acos(cosa)*180.0/PI);
+catch_hexa.c:  				Prise.angle_twines = Prise.angle_twines + acos(cosa)*180.0/PI;
+catch_hexa.c:				//printf("angle_twines %8.2lf ",acos(cosa)*180.0/PI);
+catch_hexa.c:  				Prise.angle_twines = Prise.angle_twines + acos(cosa)*180.0/PI;
+catch_hexa.c:				//printf("angle_twines %8.2lf ",acos(cosa)*180.0/PI);
+catch_hexa.c:						VV[1] = vitesseM*cos(directionM*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+catch_hexa.c:						VV[2] = vitesseM*sin(directionM*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+catch_hexa.c:						VV[1] = vitesseM*cos(directionM*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+catch_hexa.c:						VV[2] = vitesseM*sin(directionM*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+chaineeff3.c:	   				wa[3*zi-2] += amplitude_effort_frottement * cos(PI/180*Courant.direction);
+chaineeff3.c:	   				wa[3*zi-1] += amplitude_effort_frottement * sin(PI/180*Courant.direction);*/
+chaineeff3.c:	   				wa[3*zi-2] += amplitude_effort_frottement * cos(PI/180*Courant.direction);
+chaineeff3.c:	   				wa[3*zi-1] += amplitude_effort_frottement * sin(PI/180*Courant.direction);*/
+chargement_don.c:				TypeNoeud[node_type].fextx = Fd*cos(PI/180*Courant.direction) - Fl*sin(PI/180*Courant.direction);
+chargement_don.c:				TypeNoeud[node_type].fexty = Fd*sin(PI/180*Courant.direction) + Fl*cos(PI/180*Courant.direction);
+chargement_don.c:				TypeNoeud[node_type].fextx = Fd*cos(PI/180*Courant.direction) - Fl*sin(PI/180*Courant.direction);
+chargement_don.c:				TypeNoeud[node_type].fexty = Fd*sin(PI/180*Courant.direction) + Fl*cos(PI/180*Courant.direction);
+chargement_don.c:					tmp_d2 = TypeElement[temp_int].lgrepos * PI * TypeElement[temp_int].diametrehydro * TypeElement[temp_int].diametrehydro / 4.0;
+chargement_don.c:					TypeNoeud[i].speedx[pa] = tmp_d1 * cos(TypeNoeud[i].speedo[pa]*PI/180);
+chargement_don.c:					TypeNoeud[i].speedy[pa] = tmp_d1 * sin(TypeNoeud[i].speedo[pa]*PI/180);
+chargement_don.c:				S_Vol_Unit = 4.0 / 3.0 * PI * S_Diam * S_Diam * S_Diam / 8.0;
+chargement_don.c:				S_Surf_Unit = PI * S_Diam * S_Diam / 4.0;
+chargement_don.c:				E_Vol = E_Length * PI * E_Diam * E_Diam / 4.0;
+chargement_don.c:				F_Diam = sqrt(4.0 * F_Vol / E_Length / PI);
+chargement_don.c:				S_Vol_Unit = 4.0 / 3.0 * PI * S_Diam * S_Diam * S_Diam / 8.0;
+chargement_don.c:				S_Surf_Unit = PI * S_Diam * S_Diam / 4.0;
+chargement_don.c:				E_Vol = E_Length * PI * E_Diam * E_Diam / 4.0;
+chargement_don.c:				F_Diam = sqrt(4.0 * F_Vol / E_Length / PI);
+chargement_don.c:					xxp11 = (float) add_cage_xxo - add_cage_diam/2*cos(2*PI*fl/add_cage_nsegment);
+chargement_don.c:					yyp11 = (float) add_cage_yyo - add_cage_diam/2*sin(2*PI*fl/add_cage_nsegment);
+chargement_don.c:					xxp12 = (float) add_cage_xxo - add_cage_diam/2*cos(2*PI*(fl+1)/add_cage_nsegment);
+chargement_don.c:					yyp12 = (float) add_cage_yyo - add_cage_diam/2*sin(2*PI*(fl+1)/add_cage_nsegment);
+chargement_don.c:					xxp21 = (float) add_cage_xxo - (add_cage_diam/2+distance_anneaux)*cos(2*PI*fl/add_cage_nsegment);
+chargement_don.c:					yyp21 = (float) add_cage_yyo - (add_cage_diam/2+distance_anneaux)*sin(2*PI*fl/add_cage_nsegment);
+chargement_don.c:					xxp22 = (float) add_cage_xxo - (add_cage_diam/2+distance_anneaux)*cos(2*PI*(fl+1)/add_cage_nsegment);
+chargement_don.c:					yyp22 = (float) add_cage_yyo - (add_cage_diam/2+distance_anneaux)*sin(2*PI*(fl+1)/add_cage_nsegment);
+chargement_don.c:						volume_imerge1 =(PI*diametre_pehd*diametre_pehd/4*add_cage_nsegment)*(longueur_premiere_rangee + longueur_deuxieme_rangee+hauteur_pieds+distance_anneaux);
+chargement_don.c:						masse1 = PI/4*add_cage_nsegment*rho_pehd*(diametre_pehd*diametre_pehd -(diametre_pehd-2*epaisseur_pehd)*(diametre_pehd-2*epaisseur_pehd))*(longueur_premiere_rangee + longueur_deuxieme_rangee+hauteur_pieds+distance_anneaux+longueur_rangee_haute);
+chargement_don.c:						TypeElement[zi+4].diametrehydro=sqrt(volume_imerge1/(PI*hauteur_pieds*add_cage_nsegment/4));
+chargement_don.c:						TypeElement[zi+4].rhoelement=masse1/(hauteur_pieds*PI*TypeElement[zi+4].diametrehydro*TypeElement[zi+4].diametrehydro*add_cage_nsegment/4);
+chargement_don.c:						volume_imerge2 =(PI*diametre_pehd*diametre_pehd/4*add_cage_nsegment)*(longueur_premiere_rangee + longueur_deuxieme_rangee+hauteur_pieds+distance_anneaux+longueur_rangee_haute);
+chargement_don.c:						masse2 = PI/4*add_cage_nsegment*rho_pehd*(diametre_pehd*diametre_pehd -(diametre_pehd-2*epaisseur_pehd)*(diametre_pehd-2*epaisseur_pehd))*(longueur_premiere_rangee + longueur_deuxieme_rangee+hauteur_pieds+distance_anneaux+longueur_rangee_haute)+PI/4*add_cage_nsegment*RHO*(diametre_pehd-2*epaisseur_pehd)*(diametre_pehd-2*epaisseur_pehd)*(longueur_premiere_rangee + longueur_deuxieme_rangee+hauteur_pieds+distance_anneaux+longueur_rangee_haute);
+chargement_don.c:						TypeElement[zi+4].diametrehydro=sqrt(volume_imerge2/(PI*hauteur_pieds*add_cage_nsegment/4));
+chargement_don.c:						TypeElement[zi+4].rhoelement=masse2/(hauteur_pieds*PI*TypeElement[zi+4].diametrehydro*TypeElement[zi+4].diametrehydro*add_cage_nsegment/4);
+chargement_don.c:					xxp11 = (float) add_cage_xxo - add_cage_diam/2*cos(2*PI*fl/add_cage_nsegment);
+chargement_don.c:					yyp11 = (float) add_cage_yyo - add_cage_diam/2*sin(2*PI*fl/add_cage_nsegment);
+chargement_don.c:					xxp12 = (float) add_cage_xxo - add_cage_diam/2*cos(2*PI*(fl+1)/add_cage_nsegment);
+chargement_don.c:					yyp12 = (float) add_cage_yyo - add_cage_diam/2*sin(2*PI*(fl+1)/add_cage_nsegment);
+chargement_don.c:					xxp21 = (float) add_cage_xxo - (add_cage_diam/2+distance_anneaux)*cos(2*PI*fl/add_cage_nsegment);
+chargement_don.c:					yyp21 = (float) add_cage_yyo - (add_cage_diam/2+distance_anneaux)*sin(2*PI*fl/add_cage_nsegment);
+chargement_don.c:					xxp22 = (float) add_cage_xxo - (add_cage_diam/2+distance_anneaux)*cos(2*PI*(fl+1)/add_cage_nsegment);
+chargement_don.c:					yyp22 = (float) add_cage_yyo - (add_cage_diam/2+distance_anneaux)*sin(2*PI*(fl+1)/add_cage_nsegment);
+chargement_don.c:						volume_imerge1 =(PI*diametre_pehd*diametre_pehd/4*add_cage_nsegment)*(longueur_premiere_rangee + longueur_deuxieme_rangee+hauteur_pieds+distance_anneaux);
+chargement_don.c:						masse1 = PI/4*add_cage_nsegment*rho_pehd*(diametre_pehd*diametre_pehd -(diametre_pehd-2*epaisseur_pehd)*(diametre_pehd-2*epaisseur_pehd))*(longueur_premiere_rangee + longueur_deuxieme_rangee+hauteur_pieds+distance_anneaux+longueur_rangee_haute);
+chargement_don.c:						TypeElement[zi+4].diametrehydro=sqrt(volume_imerge1/(PI*hauteur_pieds*add_cage_nsegment/4));
+chargement_don.c:						TypeElement[zi+4].rhoelement=masse1/(hauteur_pieds*PI*TypeElement[zi+4].diametrehydro*TypeElement[zi+4].diametrehydro*add_cage_nsegment/4);
+chargement_don.c:						volume_imerge2 =(PI*diametre_pehd*diametre_pehd/4*add_cage_nsegment)*(longueur_premiere_rangee + longueur_deuxieme_rangee+hauteur_pieds+distance_anneaux+longueur_rangee_haute);
+chargement_don.c:						masse2 = PI/4*add_cage_nsegment*rho_pehd*(diametre_pehd*diametre_pehd -(diametre_pehd-2*epaisseur_pehd)*(diametre_pehd-2*epaisseur_pehd))*(longueur_premiere_rangee + longueur_deuxieme_rangee+hauteur_pieds+distance_anneaux+longueur_rangee_haute)+PI/4*add_cage_nsegment*RHO*(diametre_pehd-2*epaisseur_pehd)*(diametre_pehd-2*epaisseur_pehd)*(longueur_premiere_rangee + longueur_deuxieme_rangee+hauteur_pieds+distance_anneaux+longueur_rangee_haute);
+chargement_don.c:						TypeElement[zi+4].diametrehydro=sqrt(volume_imerge2/(PI*hauteur_pieds*add_cage_nsegment/4));
+chargement_don.c:						TypeElement[zi+4].rhoelement=masse2/(hauteur_pieds*PI*TypeElement[zi+4].diametrehydro*TypeElement[zi+4].diametrehydro*add_cage_nsegment/4);
+chargement_don.c:					xxp11 = (float) add_filet_pred_xxo - add_diam_lest/2*cos(2*PI*fl/add_filet_pred_nsegment);
+chargement_don.c:					yyp11 = (float) add_filet_pred_yyo - add_diam_lest/2*sin(2*PI*fl/add_filet_pred_nsegment);
+chargement_don.c:					xxp12 = (float) add_filet_pred_xxo - add_diam_lest/2*cos(2*PI*(fl+1)/add_filet_pred_nsegment);
+chargement_don.c:					yyp12 = (float) add_filet_pred_yyo - add_diam_lest/2*sin(2*PI*(fl+1)/add_filet_pred_nsegment);
+chargement_don.c:					xxp22 = (float) add_filet_pred_xxo - add_diam_lest/2*cos(2*PI*(fl+2)/add_filet_pred_nsegment);
+chargement_don.c:					yyp22 = (float) add_filet_pred_yyo - add_diam_lest/2*sin(2*PI*(fl+2)/add_filet_pred_nsegment);
+chargement_don.c:					xxp32 = add_filet_pred_xxo - add_filet_pred_diam/2*cos(2*PI*fl/add_filet_pred_nsegment);
+chargement_don.c:					yyp32 = add_filet_pred_yyo - add_filet_pred_diam/2*sin(2*PI*fl/add_filet_pred_nsegment);
+chargement_don.c:					xxp42 = (float) (add_filet_pred_xxo - ((add_diam_lest)/2-add_cage_dist_ann-(add_diam_lest/2-add_filet_pred_diam/2)) * cos(2 * PI*fl/add_filet_pred_nsegment));
+chargement_don.c:					yyp42 = (float) (add_filet_pred_yyo - ((add_diam_lest)/2-add_cage_dist_ann-(add_diam_lest/2-add_filet_pred_diam/2)) * sin(2 * PI*fl/add_filet_pred_nsegment));
+chargement_don.c:					volume_contour_pred = (PI*diametre_pehd*diametre_pehd/4*add_filet_pred_nsegment)*longueur_contour_filet_pred;
+chargement_don.c:					masse_contour_pred = PI/4*add_filet_pred_nsegment*rho_pehd*(diametre_pehd*diametre_pehd -(diametre_pehd-2*epaisseur_pehd)*(diametre_pehd-2*epaisseur_pehd))*longueur_contour_filet_pred +PI/4*add_filet_pred_nsegment*RHO*(diametre_pehd-2*epaisseur_pehd)*(diametre_pehd-2*epaisseur_pehd)*longueur_contour_filet_pred + 20*longueur_contour_filet_pred*add_filet_pred_nsegment ;
+courantelem8.c:	     	V[1] = Courant.vitesse*cos(Courant.direction*PI/180);
+courantelem8.c:	     	V[2] = Courant.vitesse*sin(Courant.direction*PI/180);
+courantelem8.c:						V[1] = vitesseM*cos(directionM*PI/180.0);
+courantelem8.c:						V[2] = vitesseM*sin(directionM*PI/180.0);
+courantelem8.c:						V[1] = vitesseM*cos(directionM*PI/180.0);
+courantelem8.c:						V[2] = vitesseM*sin(directionM*PI/180.0);
+eff1.c:     	V[1] = Courant.vitesse*cos(Courant.direction*PI/180.0);
+eff1.c:     	V[2] = Courant.vitesse*sin(Courant.direction*PI/180.0);
+eff1.c:  	V[1] = Courant.vitesse*cos(Courant.direction*PI/180);
+eff1.c:  	V[2] = Courant.vitesse*sin(Courant.direction*PI/180);
+efflmn.c:     	if (VV[2] == 0.0 && VV[1] <  0.0) alpha2 = PI;
+efflmn.c:	/*printf(" alpha2 = %lf   \n",alpha2/PI*180);  */
+efflmn.c:     	//if(LMN[1] == 0.0) theta1 = PI/4;
+efflmn.c:	/*printf(" theta1 = %lf   \n",theta1/PI*180);  */
+efforttraineeelem.c:		if ((theta < PI/2) &&  (theta > -PI/2))			sign = 1;
+effort_trainee_elem_flottant.c:	len = pow((Element[zg].lgrepos*PI*pow(Element[zg].diametrehydro,2)/8.0),(1.0/3.0));		//size of the cubique volume per node
+efforttraineeelem_tab.c:		if ((theta >= TypeElement[zg].angle_tab_drag_lift[zj]*PI/180.0) && (theta < TypeElement[zg].angle_tab_drag_lift[zj+1]*PI/180.0))
+efforttraineeelem_tab.c:			theta_min = TypeElement[zg].angle_tab_drag_lift[zj]*PI/180.0;	theta_max = TypeElement[zg].angle_tab_drag_lift[zj+1]*PI/180.0;
+efforttraineeelem_tab.c:	if (theta == TypeElement[zg].angle_tab_drag_lift[nb_tab]*PI/180.0)
+efforttraineeelem_tab.c:	if (theta < PI/2)
+effuv2.c:     	if (VV[2] == 0.0 && VV[1] <  0.0) alpha2 = PI;
+effuv2.c:	/*printf(" alpha2 = %lf   \n",alpha2/PI*180);  */
+effuv2.c:     	//if(NM[1] == 0.0) theta1 = PI/4;
+effuv2.c:	/*printf(" theta1 = %lf   \n",theta1/PI*180);  */
+etirement_hexa.c:	/*printf("etirement_hexa alpha1 = %12.2lf  beta1= %12.2lf \n",alpha1/PI*180,beta1/PI*180);  */
+fermeture2.c:				angle = PI / 2.0;
+fermeture2.c:			/*angle_mini correspond au contact des fils u et v angle_mini est compris entre 0 et PI/2*/
+fermeture2.c:			if ((fabs(angle) < angle_mini) || (fabs(angle-PI/2.0) < angle_mini) || (fabs(angle-PI) < angle_mini))
+fermeture2.c:				if ((angle<=PI/2.0) && (angle > (PI/2.0 - angle_mini)))
+fermeture2.c:					angle0 = PI/2.0 - angle_mini;
+fermeture2.c:				if ((angle > PI/2.0) && (angle < (PI/2.0 + angle_mini)))
+fermeture2.c:					angle0 = PI/2.0 + angle_mini;
+fermeture2.c:				if (angle > (PI - angle_mini))
+fermeture2.c:					angle0 = PI - angle_mini;
+filethydro4_sta.c:		Vw[1] = Courant.vitesse*cos(Courant.direction*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+filethydro4_sta.c:		Vw[2] = Courant.vitesse*sin(Courant.direction*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+flexion2.c:				angle = PI / 2.0;
+flotteurelement2.c:	    		CC = PI * Element[zi].diametrehydro * Element[zi].diametrehydro / 4.0 * RHO * G;
+flotteursurf3.c:   			f_u = RHO * G * PI * Surface[elem].diametrehydro * Surface[elem].diametrehydro * Surface[elem].lgrepos / 4.0;
+flotteursurf3.c:   			f_v = RHO * G * PI * Surface[elem].diametrehydro * Surface[elem].diametrehydro * Surface[elem].lgrepos / 4.0;
+flotteursurf3.c:   			f_l = RHO * G * PI * Surf_Hexa[elem].diam_hydro_l * Surf_Hexa[elem].diam_hydro_l * Surf_Hexa[elem].lo_repos / 4.0;
+flotteursurf3.c:   			f_m = RHO * G * PI * Surf_Hexa[elem].diam_hydro_m * Surf_Hexa[elem].diam_hydro_m * Surf_Hexa[elem].mo_repos / 4.0;
+flotteursurf3.c:   			f_n = RHO * G * PI * Surf_Hexa[elem].diam_hydro_n * Surf_Hexa[elem].diam_hydro_n * Surf_Hexa[elem].no_repos / 4.0;
+flotteursurf4.c:		f_l = RHO * G * PI * Surf_Hexa[elem].diam_hydro_l * Surf_Hexa[elem].diam_hydro_l * Surf_Hexa[elem].lo_repos / 4.0;
+flotteursurf4.c:		f_m = RHO * G * PI * Surf_Hexa[elem].diam_hydro_m * Surf_Hexa[elem].diam_hydro_m * Surf_Hexa[elem].mo_repos / 4.0;
+flotteursurf4.c:		f_n = RHO * G * PI * Surf_Hexa[elem].diam_hydro_n * Surf_Hexa[elem].diam_hydro_n * Surf_Hexa[elem].no_repos / 4.0;
+fond.c:	   			wanoeud[3*zi-2] += amplitude_effort_frottement * cos(PI/180*Courant.direction);
+fond.c:	   			wanoeud[3*zi-1] += amplitude_effort_frottement * sin(PI/180*Courant.direction);
+fond.c:	      				ze[3*zi-2][eca+2] += Bottom.raideur * Bottom.coef_frottement * cos(PI/180*Courant.direction);
+fond.c:		      			ze[3*zi-2][eca+1] += Bottom.raideur * Bottom.coef_frottement * sin(PI/180*Courant.direction);
+fond.c:					affectation_pardiso(Bottom.raideur * Bottom.coef_frottement * cos(PI/180*Courant.direction), 3*zi-2, 3*zi);
+fond.c:					affectation_pardiso(Bottom.raideur * Bottom.coef_frottement * sin(PI/180*Courant.direction), 3*zi-2, 3*zi-1);
+initialisation.c:  	//k = 2 PI / Lambda
+initialisation.c:  	//-> 0 = G periode² / 2 / PI * tanh(2 PI/Lamda depth) - lambda
+initialisation.c:	  	lambda = G / 2.0 / PI * Houle.periode * Houle.periode;	//initial value
+initialisation.c:	  		ff= G*Houle.periode*Houle.periode/2.0/PI*tanh(2.0*PI*Houle.depth/lambda)-lambda;
+initialisation.c:	  		ffprim = -G*Houle.periode*Houle.periode*Houle.depth/lambda/lambda/cosh(2.0*PI*Houle.depth/lambda)/cosh(2.0*PI*Houle.depth/lambda)-1.0;
+initialisation.c:	  	Houle.lambda = G / 2.0 / PI * Houle.periode * Houle.periode; 	//value for large depth
+initialisation.c:	  	printf("G/2/PI*T²                 	= %lf m\n",Houle.lambda);
+initialisation.c:	  	lambda = G / 2.0 / PI * Houle.periode * Houle.periode;	//initial value
+initialisation.c:  			ff= G*Houle.periode*Houle.periode/2.0/PI*tanh(2.0*PI*Houle.depth/lambda)-lambda;
+initialisation.c:  			ffprim = -G*Houle.periode*Houle.periode*Houle.depth/lambda/lambda/cosh(2.0*PI*Houle.depth/lambda)/cosh(2.0*PI*Houle.depth/lambda)-1.0;
+initialisation.c:	  	Houle.lambda = G / 2.0 / PI * Houle.periode * Houle.periode; 	//value for large depth
+initialisation.c:	  	printf("G/2/PI*T²                            		= %lf m\n",Houle.lambda);
+initialisation.c:	  	lambda = G / 2.0 / PI * Houle.periode * Houle.periode;	//initial value
+initialisation.c:			ff=lambda/Houle.periode-(((2.0*PI*PI*(Houle.hauteur/2.0)*(Houle.hauteur/2.0))/lambda/lambda+1.0)*sqrt(lambda*G))/(sqrt(2.0)*sqrt(PI));
+initialisation.c:			ffprim = (sqrt(8.0*PI*PI*PI)*(Houle.hauteur/2.0)*(Houle.hauteur/2.0)*sqrt(lambda*G))/lambda/lambda/lambda-(((2.0*PI*PI*(Houle.hauteur/2.0)*(Houle.hauteur/2.0))/lambda/lambda+1.0)*G)/(sqrt(8.0*PI)*sqrt(lambda*G))+1.0/Houle.periode;
+initialisation.c:	  	Houle.lambda = G / 2.0 / PI * Houle.periode * Houle.periode; 	//value for large depth
+initialisation.c:	  	printf("G/2/PI*T²                              	= %lf m\n",Houle.lambda);
+initialisation.c:		Houle.k = 2*PI/Houle.lambda;
+initialisation.c:		kk = 2*PI/Houle.lambda;
+initialisation.c:  	Houle.k     = 2.0 * PI / Houle.lambda;
+initialisation.c:  	Houle.omega = 2.0 * PI / Houle.periode;
+initialisation.c:    		Element[zi].mass = Element[zi].lgrepos * PI * Element[zi].diametrehydro * Element[zi].diametrehydro / 4.0 * Element[zi].rhoelement;
+initialisation_pondFS.c:		Element[zi].lcube = pow((Element[zi].lgrepos*PI*pow(Element[zi].diametrehydro,2)/8.0),(1.0/3.0));		//size of the cubique volume per node
+initialisation_pondFS.c:		Surface[zi].lcube = pow((Surface[zi].lgrepos*PI*pow(Surface[zi].diametrehydro,2)/6.0*Surface[zi].nb_cote_u_ou_v),(1.0/3.0));		//size of the cubique volume per node
+inner_surface.c:					v1 = - PI*aa*aa/bb/bb*(bb*bb*cc-cc*cc*cc/3.0-2.0*bb*bb*bb/3.0);
+inner_surface.c:					ve = 4.0/3.0*PI*aa*aa*bb - v1;
+inner_surface.c:					ve = - PI*aa*aa/bb/bb*(bb*bb*cc-cc*cc*cc/3.0-2.0*bb*bb*bb/3.0);
+inner_surface.c:					v1 = - PI*aa*aa/bb/bb*(bb*bb*cc-cc*cc*cc/3.0-2.0*bb*bb*bb/3.0);
+inner_surface.c:					ve = 4.0/3.0*PI*aa*aa*bb - v1;
+inner_surface.c:					ve = - PI*aa*aa/bb/bb*(bb*bb*cc-cc*cc*cc/3.0-2.0*bb*bb*bb/3.0);
+inner_surface.c:					v1 = - PI*aa*aa/bb/bb*(bb*bb*cc-cc*cc*cc/3.0-2.0*bb*bb*bb/3.0);
+inner_surface.c:					ve = 4.0/3.0*PI*aa*aa*bb - v1;
+inner_surface.c:					ve = - PI*aa*aa/bb/bb*(bb*bb*cc-cc*cc*cc/3.0-2.0*bb*bb*bb/3.0);
+inner_surface.c:	courant_vector[1] = cos(Courant.direction*PI/180.0);
+inner_surface.c:	courant_vector[2] = sin(Courant.direction*PI/180.0);
+inner_surface.c:			temp_acos = PI / 2.0 - acos(produit_scal(normal_vector, courant_vector) / nn / mm);
+inner_surface.c:			temp_acos = PI / 2.0 - acos(produit_scal(normal_vector, courant_vector) / nn / mm);
+inner_surface.c:			temp_acos = PI / 2.0 - acos(produit_scal(normal_vector, courant_vector) / nn / mm);
+inner_surface.c:			temp_acos = PI / 2.0 - acos(produit_scal(normal_vector, courant_vector) / nn / mm);
+inner_surface.c:			temp_acos = PI / 2.0 - acos(produit_scal(normal_vector, courant_vector) / nn / mm);
+inner_surface.c:			temp_acos = PI / 2.0 - acos(produit_scal(normal_vector, courant_vector) / nn / mm);
+jacobi_environ.c:	     	masse_jacobi[yc(zu,1)] += Surface[zu].lgrepos*PI*Surface[zu].diametrehydro*Surface[zu].diametrehydro*Surface[zu].rhosurface / 4.0 * 2.0 * Surface[zu].nb_cote_u_ou_v / 3.0;
+jacobi_environ.c:	     	masse_jacobi[yc(zu,2)] += Surface[zu].lgrepos*PI*Surface[zu].diametrehydro*Surface[zu].diametrehydro*Surface[zu].rhosurface / 4.0 * 2.0 * Surface[zu].nb_cote_u_ou_v / 3.0;
+jacobi_environ.c:	     	masse_jacobi[yc(zu,3)] += Surface[zu].lgrepos*PI*Surface[zu].diametrehydro*Surface[zu].diametrehydro*Surface[zu].rhosurface / 4.0 * 2.0 * Surface[zu].nb_cote_u_ou_v / 3.0;
+jacobi_environ.c:	     	masse_jacobi[yc(zu,4)] += Surface[zu].lgrepos*PI*Surface[zu].diametrehydro*Surface[zu].diametrehydro*Surface[zu].rhosurface / 4.0 * 2.0 * Surface[zu].nb_cote_u_ou_v / 3.0;
+jacobi_environ.c:	     	masse_jacobi[yc(zu,5)] += Surface[zu].lgrepos*PI*Surface[zu].diametrehydro*Surface[zu].diametrehydro*Surface[zu].rhosurface / 4.0 * 2.0 * Surface[zu].nb_cote_u_ou_v / 3.0;
+jacobi_environ.c:	     	masse_jacobi[yc(zu,6)] += Surface[zu].lgrepos*PI*Surface[zu].diametrehydro*Surface[zu].diametrehydro*Surface[zu].rhosurface / 4.0 * 2.0 * Surface[zu].nb_cote_u_ou_v / 3.0;
+jacobi_environ.c:	     	masse_jacobi[yc(zu,7)] += Surface[zu].lgrepos*PI*Surface[zu].diametrehydro*Surface[zu].diametrehydro*Surface[zu].rhosurface / 4.0 * 2.0 * Surface[zu].nb_cote_u_ou_v / 3.0;
+jacobi_environ.c:	     	masse_jacobi[yc(zu,8)] += Surface[zu].lgrepos*PI*Surface[zu].diametrehydro*Surface[zu].diametrehydro*Surface[zu].rhosurface / 4.0 * 2.0 * Surface[zu].nb_cote_u_ou_v / 3.0;
+jacobi_environ.c:	     	masse_jacobi[yc(zu,9)] += Surface[zu].lgrepos*PI*Surface[zu].diametrehydro*Surface[zu].diametrehydro*Surface[zu].rhosurface / 4.0 * 2.0 * Surface[zu].nb_cote_u_ou_v / 3.0;
+jacobi_environ.c:			d_jacobi[zu]=2.0*PI/sqrt(d_jacobi[zu]);
+opening.c:	VV[1] = cos(Courant.direction*PI/180.0);
+opening.c:	VV[2] = sin(Courant.direction*PI/180.0);
+opening.c:				angle_open = 180.0  / PI * (acos(ps));
+opening.c:					angle_open = 180.0  / PI * (acos(ps/norm_n/norm_m));
+opening.c:					angle_open = 180.0  / PI * (acos(ps/norm_n/norm_m));
+opening.c:					angle_open = 180.0  / PI * (acos(ps/norm_n/norm_m));
+output_pressure.c:	Vw[1] = Courant.vitesse*cos(Courant.direction*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+output_pressure.c:	Vw[2] = Courant.vitesse*sin(Courant.direction*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+pesanteurelem.c: 	Element[zi].lgrepos * PI * Element[zi].diametrehydro * Element[zi].diametrehydro / 4.0 * Element[zi].rhoelement
+pesanteurelem.c:    		//p = Element[zi].lgrepos * PI * Element[zi].diametrehydro * Element[zi].diametrehydro / 4.0 * Element[zi].rhoelement * G;
+pliage_barre_pardiso4.c:	I = PI*D*D*D*D/64.;   // Moment quadratique d'un cable de nylon de 1cm²
+pliage_barre_pardiso4.c:	beta=TypeElement[type1].angle_link_flexion2[znn]*PI/180;
+pliage_barre_pardiso4.c:	printf("alpha (deg.) %lf beta (deg.) %lf\n",alpha*180/PI,beta*180/PI);
+pliage_triangle4.c:	   					if ((fabs(Alpha) >= seuil) && (fabs(Alpha-PI) >= seuil) && (racine!=0.0)) /*verifie si les 2 fils sont alignes*/
+pliage_triangle4.c:	   						if (fabs(Alpha-PI) < seuil)
+pliage_triangle4.c:	   					if ((fabs(Alpha) >= seuil) && (fabs(Alpha-PI) >= seuil) && (racine != 0.0)) /*verifie si les 2 fils sont alignes*/
+pliage_triangle.c:   	if ((fabs(Alph) > seui) && (fabs(PI-Alph) > seui))
+pliage_triangle.c:			Beta = PI - seui;
+pliage_triangle.c:   	if ((fabs(Alph) > seui) && (fabs(PI-Alph) > seui))
+pliage_triangle.c:			Beta = PI - seui;
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV = n2*nn*mm*d_vect[1]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV = n2*nn*mm*d_vect[1]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV = n2*nn*mm*d_vect[1]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV = m2*mm*nn*d_vect[2]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV = m2*mm*nn*d_vect[2]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV = m2*mm*nn*d_vect[2]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV1 = n2*nn*mm*d_vect[1]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV2 = m2*mm*nn*d_vect[2]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV1 = n2*nn*mm*d_vect[1]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV2 = m2*mm*nn*d_vect[2]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV1 = n2*nn*mm*d_vect[1]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV2 = m2*mm*nn*d_vect[2]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV1 = n2*nn*mm*d_vect[1]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV2 = m2*mm*nn*d_vect[2]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV1 = n2*nn*mm*d_vect[1]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV2 = m2*mm*nn*d_vect[2]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV1 = n2*nn*mm*d_vect[1]*sin(0.00001-PI);
+pliage_triangle.c:	if ((fabs(alph) >= 0.00001) && (fabs(alph-PI) >= 0.00001))
+pliage_triangle.c:			VV2 = m2*mm*nn*d_vect[2]*sin(0.00001-PI);
+poidstriang.c:     	P = Surface[elem].lgrepos*PI*Surface[elem].diametrehydro*Surface[elem].diametrehydro*Surface[elem].rhosurface * G / 4.0;
+poidstri_hexa.c:     	Pl = Surf_Hexa[elem].lo_repos*PI*Surf_Hexa[elem].diam_hydro_l*Surf_Hexa[elem].diam_hydro_l*Surf_Hexa[elem].rhosurface * G / 4.0;
+poidstri_hexa.c:      	Pm = Surf_Hexa[elem].mo_repos*PI*Surf_Hexa[elem].diam_hydro_m*Surf_Hexa[elem].diam_hydro_m*Surf_Hexa[elem].rhosurface * G / 4.0;
+poidstri_hexa.c:     	Pn = Surf_Hexa[elem].no_repos*PI*Surf_Hexa[elem].diam_hydro_n*Surf_Hexa[elem].diam_hydro_n*Surf_Hexa[elem].rhosurface * G / 4.0;
+rota1.c:  	if (Np[2] == 0.0 && Np[1] < 0.0) alpha1 = PI;
+rota1.c:  	if (Np[1] == 0.0 && Np[3] < 0.0) beta1 = PI;
+rotation3.c:  	if  (norm[2] == 0.0 && norm[1] < 0.0)           alpha =   PI;
+rotation3.c:  	if (norm[1] == 0.0 && norm[3] < 0.0) betaa =   PI;
+rotation4.c:  	if  (norm[2] == 0.0 && norm[1] < 0.0)           *angle3 =   PI;
+rotation4.c:  	if (norm[1] == 0.0 && norm[3] < 0.0) *angle2 =   PI;
+totalhydro2.c:     		V[1] = Courant.vitesse*cos(Courant.direction*PI/180.0) * panneau[pa].current_reduction;
+totalhydro2.c:     		V[2] = Courant.vitesse*sin(Courant.direction*PI/180.0) * panneau[pa].current_reduction;
+traineecourant2.c:      			wanoeud[3*zi-2] += immersion * Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:      			wanoeud[3*zi-1] += immersion * Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:      				//ze[3*zi-2][eca + 2] +=         Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:      				//ze[3*zi-1][eca + 1] +=         Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:				affectation_ze_rang(3*zi-2, 3*zi-0, Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse);
+traineecourant2.c:				affectation_ze_rang(3*zi-1, 3*zi-0, Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Courant.direction) * modulevitesse);
+traineecourant2.c:				affectation_pardiso(Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse, 3*zi-2, 3*zi);
+traineecourant2.c:				affectation_pardiso(Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Courant.direction) * modulevitesse, 3*zi-1, 3*zi);
+traineecourant2.c:			Structure.node_drag = Structure.node_drag +  immersion * Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse;		
+traineecourant2.c:      			wanoeud[3*zi-2] += Noeud[zi].lonz* Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:      			wanoeud[3*zi-1] += Noeud[zi].lonz* Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:			Structure.node_drag = Structure.node_drag + Noeud[zi].lonz* Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse;		
+traineecourant2.c:			/*printf("node drag %i %lf \n",zi,Noeud[zi].lonz* Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse);*/
+traineecourant2.c:     		 	wanoeud[3*zi-2] += immersion * Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:      			wanoeud[3*zi-1] += immersion * Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:      				//ze[3*zi-2][eca + 2] +=         Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:      				//ze[3*zi-1][eca + 1] +=         Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:				affectation_ze_rang(3*zi-2, 3*zi-0, Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse);
+traineecourant2.c:				affectation_ze_rang(3*zi-1, 3*zi-0, Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Courant.direction) * modulevitesse);
+traineecourant2.c:				affectation_pardiso(Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse, 3*zi-2, 3*zi);
+traineecourant2.c:				affectation_pardiso(Noeud[zi].cdy*Noeud[zi].lony * sin(PI/180*Courant.direction) * modulevitesse, 3*zi-1, 3*zi);
+traineecourant2.c:			Structure.node_drag = Structure.node_drag + immersion * Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse;    			
+traineecourant2.c:      			wanoeud[3*zi-2] -= Noeud[zi].lonz* Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:      			wanoeud[3*zi-1] -= Noeud[zi].lonz* Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Courant.direction) * modulevitesse;
+traineecourant2.c:			Structure.node_drag = Structure.node_drag - Noeud[zi].lonz* Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Courant.direction) * modulevitesse; 
+trainee_fil2.c:     	if (VV[2] == 0.0 && VV[1] <  0.0) alpha2 = PI;
+trainee_fil2.c:     	//if(NM[1] == 0.0) theta1 = PI/4;
+trainee_fil2.c:	/*printf(" alpha1 %lf  ",alpha1/PI*180);
+trainee_fil2.c:	printf(" beta1 %lf  ",beta1/PI*180);  
+trainee_fil2.c:	printf(" alpha2 %lf  ",alpha2/PI*180); 
+trainee_fil2.c:     	if (VV[2] == 0.0 && VV[1] <  0.0) alpha2 = PI;
+trainee_fil2.c:	/*printf(" alpha2 = %lf   \n",alpha2/PI*180);  */
+trainee_fil2.c:     	//if(NM[1] == 0.0) theta1 = PI/4;
+trainee_fil.c:     	if (VV[2] == 0.0 && VV[1] <  0.0) alpha2 = PI;
+trainee_fil.c:	/*printf(" alpha2 = %lf   \n",alpha2/PI*180);  */
+trainee_fil.c:     	//if(NM[1] == 0.0) theta1 = PI/4;
+trainee_fil.c:     	if (VV[2] == 0.0 && VV[1] <  0.0) alpha2 = PI;
+trainee_fil.c:	/*printf(" alpha2 = %lf   \n",alpha2/PI*180);  */
+trainee_fil.c:     	//if(NM[1] == 0.0) theta1 = PI/4;
+trainee_front.c:	     	V[1] = Courant.vitesse*cos(Courant.direction*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+trainee_front.c:	     	V[2] = Courant.vitesse*sin(Courant.direction*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+trainee_front.c:					V[1] = vitesseM*cos(directionM*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+trainee_front.c:					V[2] = vitesseM*sin(directionM*PI/180.0) * panneau[Surface[elem].type].current_reduction;
+traineevent1.c:      			wanoeud[3*zi-2] += tirant_air * Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:      			wanoeud[3*zi-1] += tirant_air * Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:      				ze[3*zi-2][eca + 2] -=         Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:      				ze[3*zi-1][eca + 1] -=         Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:				affectation_pardiso(-Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Vent.direction) * modulevitesse, 3*zi-2, 3*zi);
+traineevent1.c:				affectation_pardiso(-Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Vent.direction) * modulevitesse, 3*zi-1, 3*zi);
+traineevent1.c:      			wanoeud[3*zi-2] += Noeud[zi].lonz* Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:      			wanoeud[3*zi-1] += Noeud[zi].lonz* Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:     		 	wanoeud[3*zi-2] += tirant_air * Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:      			wanoeud[3*zi-1] += tirant_air * Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:      				ze[3*zi-2][eca + 2] -=         Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:      				ze[3*zi-1][eca + 1] -=         Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:				affectation_pardiso(-Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Vent.direction) * modulevitesse, 3*zi-2, 3*zi);
+traineevent1.c:				affectation_pardiso(-Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Vent.direction) * modulevitesse, 3*zi-1, 3*zi);
+traineevent1.c:      			wanoeud[3*zi-2] -= Noeud[zi].lonz* Noeud[zi].cdx*Noeud[zi].lony * cos(PI/180*Vent.direction) * modulevitesse;
+traineevent1.c:      			wanoeud[3*zi-1] -= Noeud[zi].lonz* Noeud[zi].cdy*Noeud[zi].lonx * sin(PI/180*Vent.direction) * modulevitesse;
