@@ -1,0 +1,63 @@
+%!PS
+/dictlocal 12 dict def 
+/Reencode { 
+dictlocal begin 
+/Nvvect exch def 
+/Nomnvpolice exch def 
+/Nompolicedebase exch def 
+/Policedebasedict Nompolicedebase findfont def 
+/nouveaudict Policedebasedict maxlength dict def 
+Policedebasedict { 
+exch dup /FID ne { 
+dup /Encoding eq { 
+exch dup length array copy 
+nouveaudict 3 1 roll put } { 
+exch nouveaudict 3 1 roll put } 
+ifelse } { pop pop } ifelse } forall 
+nouveaudict /FontName Nomnvpolice put 
+Nvvect aload pop Nvvect length 2 idiv { 
+nouveaudict /Encoding get 3 1 roll put } 
+repeat Nomnvpolice nouveaudict definefont pop end} 
+def /francvect [ 
+244/ocircumflex 
+232/egrave 
+233/eacute 
+234/ecircumflex 
+224/agrave 
+231/ccedilla 
+238/icircumflex 
+249/ugrave 
+226/acircumflex 
+235/edieresis 
+239/idieresis 
+]def 
+/Courier
+/Courier-fr francvect Reencode 
+/Courier-fr findfont 
+ 0 scalefont setfont
+ 0.000000 setlinewidth
+  20.000000  0 translate stroke 
+ 00 rotate stroke
+ [] 0 setdash
+% macro rectangle plein  
+/boite{
+	/Dimy exch def		% recherche larg y dans pile
+	/Dimx exch def		% recherche larg x dans pile
+	0    Dimy rlineto	% trace 
+	Dimx 0    rlineto
+	0    Dimy neg rlineto
+	closepath		% ferme la boite
+	fill			% remplissage
+	stroke			% affichage
+	} def
+
+
+
+
+10 25 translate
+0.15 0.15 scale
+newpath
+6.66666 6.66666 scale
+.2 setgray 95 -10 moveto  (postscript.ps dpriour@gmail.com) show 
+1 1 1 setrgbcolor
+ showpage

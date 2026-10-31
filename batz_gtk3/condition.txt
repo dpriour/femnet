@@ -1,0 +1,68 @@
+File print 		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise
+File vertical scale	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise
+File cut_depth		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+File video_parameters	possible et avec une police noire si *.dyn charge sinon impossible et avec une police grise 
+File video		possible et avec une police noire si *.dyn charge sinon impossible et avec une police grise 
+Visualisation triangle_contour		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation orientation_xy		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation cable/bar_contour		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation node_contour		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation u_twines		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation v_twines		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation u&v_twines		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation twines_period		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation free_surface		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation ballast_altitude		possible et avec une police noire si *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation cube_size		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation catch_front_surface	possible et avec une police noire si *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation axes		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation repere		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation grid		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation comment		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation external_efforts		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Visualisation trajectory		possible et avec une police noire si *.dyn charge sinon impossible et avec une police grise 
+Visualisation immersion		possible et avec une police noire si *.dyn charge sinon impossible et avec une police grise 
+Visualisation symmetry/no symmetry		possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+
+Element information twines_contact	possible et avec une police noire si *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information solidity_ratio	possible et avec une police noire si *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information max_exit_size	possible et avec une police noire si *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information bar_number	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information cable_type	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information traction_stiffness	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information compression_stiffness	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information opening_stiffness	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information tension	possible et avec une police noire si *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information potential_energy	possible et avec une police noire si *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information unstretched_length	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information stretched_length	possible et avec une police noire si *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information density	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information diameter	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information knot_size	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information cd_coefficient	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information f_coefficient	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information section	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information volume	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information element_mass	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Element information linear_mass	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+
+Node information type	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Node information number	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Node information mass	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Node information length	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Node information cd	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Node information external_force	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Node information limit	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Node information limit_orientation	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Node information fixed/free	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Node information symmetry	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+Node information meshes_number	possible et avec une police noire si *.mdg ou *.sta ou *.dyn charge sinon impossible et avec une police grise 
+
+
+
+
+
+
+
+
+
