@@ -11,8 +11,9 @@
 #endif
 */
 
-#include "libsx.h"		/* should come first, defines libsx stuff  */
+#include "gtk3_compat.h"		/* should come first, defines libsx stuff  */
 #include "../lib_dp/definition_lib.h"
+#include "../lib_dp/graphic.h"
 //#include "4c19.h"
 /*
 typedef struct MyProgram
@@ -40,8 +41,8 @@ typedef struct MyProgram
 #endif
 
 /* define's */
-#define X_SIZE 467		/* default draw area size, change as desired */
-#define Y_SIZE 600
+#define X_SIZE 910		/* default draw area size, change as desired */
+#define Y_SIZE 1200
 
 #include "const.h"
 

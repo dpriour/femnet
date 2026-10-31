@@ -2,6 +2,12 @@
 
 void dessiner()
 	{
+	/* GTK only permits drawing inside the drawing area's "draw" signal. */
+	if (!Gtk3DrawingIsActive())
+		{
+		Gtk3RequestRedraw();
+		return;
+		}
 	int pa,no,mode_u,mode_v,condition_draw_element,zi;
 	extern void Move_to (float ,float );
 	extern void Line_to (float ,float );
@@ -25,6 +31,8 @@ void dessiner()
 
 	mode_u = GetMenuItemChecked(w[11]);
 	mode_v = GetMenuItemChecked(w[29]);
+	mode_u = GetMenuItemChecked(w[105]);
+	mode_v = GetMenuItemChecked(w[105]);
 	if (((mode_u == 1) || (mode_v == 1)) && (Flag_Fichier_final_charge   == 1)) rotation_fils();
 	/*printf("NOMBRE_SURFACES = %8d \n",NOMBRE_SURFACES);
 	printf("NOMBRE_SURF_HEXA = %8d \n",NOMBRE_SURF_HEXA);
@@ -48,7 +56,9 @@ void dessiner()
 				if (GetMenuItemChecked(w[80]) == 1) white_triangle_diamond(pa);
 				if (GetMenuItemChecked(w[10]) == 1) white_triangle_diamond(pa);
 				if (GetMenuItemChecked(w[11]) == 1) white_triangle_diamond(pa);
+				if (GetMenuItemChecked(w[11]) == 1) white_triangle_diamond(pa);
 				if (GetMenuItemChecked(w[29]) == 1) white_triangle_diamond(pa);
+				if (GetMenuItemChecked(w[105]) == 1) white_triangle_diamond(pa);
 				if (GetMenuItemChecked(w[20]) == 1) white_triangle_diamond(pa);
 				/* debut modifdp du 4 mars 2010*/
 				if (GetMenuItemChecked(w[94]) == 1) white_triangle_diamond(pa);
@@ -97,7 +107,9 @@ void dessiner()
 				if (GetMenuItemChecked(w[16]) == 1) draw_orientation_xy_diamond(pa);
 				if (GetMenuItemChecked(w[80]) == 1) draw_nb_mailles_diamond(pa);
 				if (GetMenuItemChecked(w[11]) == 1) draw_fils_u(pa);
+				if (GetMenuItemChecked(w[105]) == 1) draw_fils_u(pa);
 				if (GetMenuItemChecked(w[29]) == 1) draw_fils_v(pa);
+				if (GetMenuItemChecked(w[105]) == 1) draw_fils_v(pa);
 				if (GetMenuItemChecked(w[10]) == 1) draw_contour_triangle_diamond(pa);
 				if (GetMenuItemChecked(w[20]) == 1) draw_angle_fils(pa);
 				/* debut modifdp du 4 mars 2010*/
@@ -403,6 +415,8 @@ void dessiner2()
 	
 	mode_u = GetMenuItemChecked(w[11]);
 	mode_v = GetMenuItemChecked(w[29]);
+	mode_u = GetMenuItemChecked(w[105]);
+	mode_v = GetMenuItemChecked(w[105]);
 	if ((mode_u == 1) && (mode_v == 0) && (Flag_Fichier_final_charge   == 1)) {rotation_fils(); dessiner_fils_u();}
 	if ((mode_u == 0) && (mode_v == 1) && (Flag_Fichier_final_charge   == 1)) {rotation_fils(); dessiner_fils_v();}
 	if ((mode_u == 1) && (mode_v == 1) && (Flag_Fichier_final_charge   == 1)) {rotation_fils(); dessiner_fils_uv();}
@@ -700,11 +714,6 @@ void TraceSegment(int icolor, double dx1, double dy1, double dx2, double dy2)
 	3 : red
 	4 : green
 	5 : yellow
-	6 : cyan
-	7 : purple
-	8 : light blue
-	9 : orange
-	10 : light purple
 	*/
 	Color(icolor);
 	if (icolor == 1 )	Color(BLACK);

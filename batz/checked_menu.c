@@ -1,7 +1,7 @@
 #include "batz.h"
 
 
-void Checked_dessiner_contour_element()
+void Checked_dessiner_contour_element(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[9]);
@@ -10,7 +10,7 @@ void Checked_dessiner_contour_element()
 	dessiner();
 	}
 
-void Checked_dessiner_contour_noeud()
+void Checked_dessiner_contour_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[90]);
@@ -18,7 +18,7 @@ void Checked_dessiner_contour_noeud()
 	if (mode == 1) SetMenuItemChecked(w[90],0);
 	dessiner();
 	}
-void Checked_dessiner_afficher_houle()
+void Checked_dessiner_afficher_houle(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[91]);
@@ -26,7 +26,7 @@ void Checked_dessiner_afficher_houle()
 	if (mode == 1) SetMenuItemChecked(w[91],0);
 	dessiner();
 	}
-void Checked_dessiner_contour_coulisse()
+void Checked_dessiner_contour_coulisse(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[70]);
@@ -35,7 +35,7 @@ void Checked_dessiner_contour_coulisse()
 	dessiner();
 	}
 
-void Checked_dessiner_contour_winch()
+void Checked_dessiner_contour_winch(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[87]);
@@ -44,7 +44,7 @@ void Checked_dessiner_contour_winch()
 	dessiner();
 	}
 
-void Checked_dessiner_contour_ball()
+void Checked_dessiner_contour_ball(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[88]);
@@ -61,7 +61,7 @@ void Checked_dessiner_contour_ball()
 	dessiner();
 	}
 
-void Checked_dessiner_contour_triangle()
+void Checked_dessiner_contour_triangle(Widget widget, void *data)
 	{
 	int mode,elem;
 	mode = GetMenuItemChecked(w[10]);
@@ -84,7 +84,7 @@ void Checked_dessiner_contour_triangle()
 		dessiner();
 	}
 
-void Checked_dessiner_orientation_xy()
+void Checked_dessiner_orientation_xy(Widget widget, void *data)
 	{
 	int mode,elem;
 	mode = GetMenuItemChecked(w[16]);
@@ -107,13 +107,14 @@ void Checked_dessiner_orientation_xy()
 	dessiner();
 	}
 
-void Checked_dessiner_fils_u()
+void Checked_dessiner_fils_u(Widget widget, void *data)
 	{
 	int mode,elem;
 	mode = GetMenuItemChecked(w[11]);
 	if (mode == 0) 
 		{
 		SetMenuItemChecked(w[11],1);
+		SetMenuItemChecked(w[105],0);
 	  	for (elem = 1 ; elem<= NOMBRE_SURFACES ; elem++) 
 	  		{
 	  		Surface[elem].flag_dessin_u = 1;
@@ -130,13 +131,14 @@ void Checked_dessiner_fils_u()
 	dessiner();
 	}
 
-void Checked_dessiner_fils_v()
+void Checked_dessiner_fils_v(Widget widget, void *data)
 	{
 	int mode,elem;
 	mode = GetMenuItemChecked(w[29]);
 	if (mode == 0) 
 		{
 		SetMenuItemChecked(w[29],1);
+		SetMenuItemChecked(w[105],0);
 	  	for (elem = 1 ; elem<= NOMBRE_SURFACES ; elem++) 
 	  		{
 	  		Surface[elem].flag_dessin_v = 1;
@@ -153,7 +155,34 @@ void Checked_dessiner_fils_v()
 	dessiner();
 	}
 
-void Checked_dessiner_surface_front()
+void Checked_dessiner_fils_u_v(Widget widget, void *data)
+	{
+	int mode,elem;
+	mode = GetMenuItemChecked(w[105]);
+	if (mode == 0) 
+		{
+		SetMenuItemChecked(w[105],1);
+		SetMenuItemChecked(w[11],0);
+		SetMenuItemChecked(w[29],0);
+	  	for (elem = 1 ; elem<= NOMBRE_SURFACES ; elem++) 
+	  		{
+	  		Surface[elem].flag_dessin_u = 1;
+	  		Surface[elem].flag_dessin_v = 1;
+	  		}
+		}
+	if (mode == 1) 
+		{
+		SetMenuItemChecked(w[105],0);
+	  	for (elem = 1 ; elem<= NOMBRE_SURFACES ; elem++) 
+	  		{
+	  		Surface[elem].flag_dessin_u = 0;
+	  		Surface[elem].flag_dessin_v = 0;
+	  		}
+		}
+	dessiner();
+	}
+
+void Checked_dessiner_surface_front(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[15]);
@@ -162,7 +191,7 @@ void Checked_dessiner_surface_front()
 	dessiner();
 	}
 
-void Checked_dessiner_axes()
+void Checked_dessiner_axes(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[17]);
@@ -171,7 +200,7 @@ void Checked_dessiner_axes()
 	dessiner();
 	}
 
-void Checked_dessiner_repere()
+void Checked_dessiner_repere(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[93]);
@@ -180,7 +209,7 @@ void Checked_dessiner_repere()
 	dessiner();
 	}
 
-void Checked_dessiner_quadrillage()
+void Checked_dessiner_quadrillage(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[18]);
@@ -189,7 +218,7 @@ void Checked_dessiner_quadrillage()
 	dessiner();
 	}
 
-void Checked_dessiner_surface_libre()
+void Checked_dessiner_surface_libre(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[14]);
@@ -206,7 +235,7 @@ void Checked_dessiner_surface_libre()
 	dessiner();
 	}
 
-void Checked_dessiner_ballast_altitude()
+void Checked_dessiner_ballast_altitude(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[100]);
@@ -224,7 +253,7 @@ void Checked_dessiner_ballast_altitude()
 	}
 
 
-void Checked_dessiner_cube_size()
+void Checked_dessiner_cube_size(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[101]);
@@ -240,7 +269,7 @@ void Checked_dessiner_cube_size()
 	}
 
 /* debut modifdp du 4 mars 2010*/
-void Checked_solidity_ratio()
+void Checked_solidity_ratio(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[94]);
@@ -279,7 +308,7 @@ void Checked_solidity_ratio()
 	dessiner();
 	}
 	
-void Checked_max_exit_size()
+void Checked_max_exit_size(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[102]);
@@ -318,7 +347,7 @@ void Checked_max_exit_size()
 	dessiner();
 	}
 	
-void Checked_flow_orientation()
+void Checked_flow_orientation(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[95]);
@@ -357,7 +386,7 @@ void Checked_flow_orientation()
 	dessiner();
 	}
 	
-void Checked_angle_fils()
+void Checked_angle_fils(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[20]);
@@ -398,7 +427,7 @@ void Checked_angle_fils()
 	dessiner();
 	}
 	
-void Checked_orientation_volume()
+void Checked_orientation_volume(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[21]);
@@ -437,7 +466,7 @@ void Checked_orientation_volume()
 	dessiner();
 	}
 	
-void Checked_volume_elementaire()
+void Checked_volume_elementaire(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[22]);
@@ -476,7 +505,7 @@ void Checked_volume_elementaire()
 	dessiner();
 	}
 	
-void Checked_surface_elementaire()
+void Checked_surface_elementaire(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[23]);
@@ -515,7 +544,7 @@ void Checked_surface_elementaire()
 	dessiner();
 	}
 	
-void Checked_defaut_discretisation()
+void Checked_defaut_discretisation(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[84]);
@@ -555,7 +584,7 @@ void Checked_defaut_discretisation()
 	dessiner();
 	}
 	
-void Checked_profondeur_barycentre()
+void Checked_profondeur_barycentre(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[24]);
@@ -594,7 +623,7 @@ void Checked_profondeur_barycentre()
 	dessiner();
 	}
 	
-void Checked_numero_element()
+void Checked_numero_element(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[25]);
@@ -634,7 +663,7 @@ void Checked_numero_element()
 	dessiner();
 	}
 	
-void Checked_type_element()
+void Checked_type_element(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[27]);
@@ -673,7 +702,7 @@ void Checked_type_element()
 	dessiner();
 	}
 	
-void Checked_commentaire()
+void Checked_commentaire(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[71]);
@@ -685,7 +714,7 @@ void Checked_commentaire()
 	dessiner();
 	}
 	
-void Checked_animation()
+void Checked_animation(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[77]);
@@ -701,7 +730,7 @@ void Checked_animation()
 	/* fin modifdp du 26 mars 2010*/
 	}
 	
-void Checked_animation_video()
+void Checked_animation_video(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[92]);
@@ -717,7 +746,7 @@ void Checked_animation_video()
 	/* fin modifdp du 26 mars 2010*/
 	}
 
-void Checked_animation_eigenvalue()
+void Checked_animation_eigenvalue(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[104]);
@@ -729,7 +758,7 @@ void Checked_animation_eigenvalue()
 	animation_eigenvalue(0);
 	}
 
-void Checked_symmetry_no_symmetry()
+void Checked_symmetry_no_symmetry(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[103]);
@@ -771,7 +800,7 @@ void Checked_symmetry_no_symmetry()
 	dessiner();
 	}
 
-void Checked_efforts_externes()
+void Checked_efforts_externes(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[74]);
@@ -783,7 +812,7 @@ void Checked_efforts_externes()
 	dessiner();
 	}
 	
-void Checked_eigen_values()
+void Checked_eigen_values(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[97]);
@@ -795,7 +824,7 @@ void Checked_eigen_values()
 	dessiner();
 	}
 	
-void Checked_immersion()
+void Checked_immersion(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[86]);
@@ -807,7 +836,7 @@ void Checked_immersion()
 	dessiner();
 	}
 	
-void Checked_trajectoire()
+void Checked_trajectoire(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[85]);
@@ -819,7 +848,7 @@ void Checked_trajectoire()
 	dessiner();
 	}
 	
-void Checked_deplacement()
+void Checked_deplacement(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[83]);
@@ -831,7 +860,7 @@ void Checked_deplacement()
 	dessiner();
 	}
 	
-void Checked_raideur_traction()
+void Checked_raideur_traction(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[56]);
@@ -870,7 +899,7 @@ void Checked_raideur_traction()
 	dessiner();
 	}
 	
-void Checked_raideur_compression()
+void Checked_raideur_compression(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[57]);
@@ -909,7 +938,7 @@ void Checked_raideur_compression()
 	dessiner();
 	}
 	
-void Checked_raideur_ouverture()
+void Checked_raideur_ouverture(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[72]);
@@ -948,7 +977,7 @@ void Checked_raideur_ouverture()
 	dessiner();
 	}
 	
-void Checked_tension()
+void Checked_tension(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[58]);
@@ -987,7 +1016,7 @@ void Checked_tension()
 	dessiner();
 	}
 	
-void Checked_nrj()
+void Checked_nrj(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[82]);
@@ -1026,7 +1055,7 @@ void Checked_nrj()
 	dessiner();
 	}
 	
-void Checked_longueur_repos()
+void Checked_longueur_repos(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[59]);
@@ -1065,7 +1094,7 @@ void Checked_longueur_repos()
 	dessiner();
 	}
 	
-void Checked_longueur_tendue()
+void Checked_longueur_tendue(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[60]);
@@ -1104,7 +1133,7 @@ void Checked_longueur_tendue()
 	dessiner();
 	}
 	
-void Checked_masse_volumique()
+void Checked_masse_volumique(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[61]);
@@ -1143,7 +1172,7 @@ void Checked_masse_volumique()
 	dessiner();
 	}
 	
-void Checked_diametre()
+void Checked_diametre(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[62]);
@@ -1182,7 +1211,7 @@ void Checked_diametre()
 	dessiner();
 	}
 	
-void Checked_largeur_noeud()
+void Checked_largeur_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[73]);
@@ -1221,7 +1250,7 @@ void Checked_largeur_noeud()
 	dessiner();
 	}
 	
-void Checked_coefficient_cd()
+void Checked_coefficient_cd(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[63]);
@@ -1260,7 +1289,7 @@ void Checked_coefficient_cd()
 	dessiner();
 	}
 	
-void Checked_coefficient_f()
+void Checked_coefficient_f(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[64]);
@@ -1299,7 +1328,7 @@ void Checked_coefficient_f()
 	dessiner();
 	}
 	
-void Checked_section_element()
+void Checked_section_element(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[65]);
@@ -1338,7 +1367,7 @@ void Checked_section_element()
 	dessiner();
 	}
 	
-void Checked_volume_element()
+void Checked_volume_element(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[66]);
@@ -1377,7 +1406,7 @@ void Checked_volume_element()
 	dessiner();
 	}
 	
-void Checked_masse_element()
+void Checked_masse_element(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[67]);
@@ -1416,7 +1445,7 @@ void Checked_masse_element()
 	dessiner();
 	}
 	
-void Checked_masse_lineique()
+void Checked_masse_lineique(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[68]);
@@ -1456,7 +1485,7 @@ void Checked_masse_lineique()
 	}
 	
 
-void Checked_flottabilite()
+void Checked_flottabilite(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[69]);
@@ -1497,7 +1526,7 @@ void Checked_flottabilite()
 /* fin modifdp du 4 mars 2010*/
 	
 
-void Checked_type_noeud()
+void Checked_type_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[28]);
@@ -1519,7 +1548,7 @@ void Checked_type_noeud()
 	dessiner();
 	}
 	
-void Checked_numero_noeud()
+void Checked_numero_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[33]);
@@ -1541,7 +1570,7 @@ void Checked_numero_noeud()
 	dessiner();
 	}
 	
-void Checked_masse_noeud()
+void Checked_masse_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[32]);
@@ -1564,7 +1593,7 @@ void Checked_masse_noeud()
 	}
 	
 	
-void Checked_longueur_noeud()
+void Checked_longueur_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[35]);
@@ -1587,7 +1616,7 @@ void Checked_longueur_noeud()
 	}
 	
 	
-void Checked_cd_noeud()
+void Checked_cd_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[38]);
@@ -1610,7 +1639,7 @@ void Checked_cd_noeud()
 	}
 	
 	
-void Checked_effort_noeud()
+void Checked_effort_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[41]);
@@ -1633,7 +1662,7 @@ void Checked_effort_noeud()
 	}
 	
 	
-void Checked_limite_noeud()
+void Checked_limite_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[44]);
@@ -1656,7 +1685,7 @@ void Checked_limite_noeud()
 	}
 	
 	
-void Checked_sens_limite_noeud()
+void Checked_sens_limite_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[47]);
@@ -1679,7 +1708,7 @@ void Checked_sens_limite_noeud()
 	}
 	
 	
-void Checked_deplacement_noeud()
+void Checked_deplacement_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[50]);
@@ -1703,7 +1732,7 @@ void Checked_deplacement_noeud()
 	
 	
 
-void Checked_symmetrie_noeud()
+void Checked_symmetrie_noeud(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[53]);
@@ -1726,7 +1755,7 @@ void Checked_symmetrie_noeud()
 	}
 
 
-void Checked_nb_mailles()
+void Checked_nb_mailles(Widget widget, void *data)
 	{
 	int mode;
 	mode = GetMenuItemChecked(w[80]);

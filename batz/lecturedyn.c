@@ -1,5 +1,44 @@
 #include "batz.h"
 
+static int nb_noeuds_dynamiques_alloues = 0;
+static int nb_elements_dynamiques_alloues = 0;
+static int donnees_dynamiques_allouees = 0;
+
+static void liberer_donnees_dynamiques(void)
+	{
+	int elem, dernier_noeud;
+	if (!donnees_dynamiques_allouees) return;
+
+	free(temps);
+	temps = NULL;
+	/* recherche_symetrie peut aussi allouer les tableaux sur les copies miroir. */
+	dernier_noeud = nb_noeuds_dynamiques_alloues;
+	if (dernier_noeud <= (DIM1 - 1) / 2) dernier_noeud *= 2;
+	else dernier_noeud = DIM1 - 1;
+	for (elem=1;elem<=dernier_noeud;elem++)
+		{
+		free(Noeud[elem].dx); Noeud[elem].dx = NULL;
+		free(Noeud[elem].dy); Noeud[elem].dy = NULL;
+		free(Noeud[elem].dz); Noeud[elem].dz = NULL;
+		free(Noeud[elem].hz); Noeud[elem].hz = NULL;
+		free(Noeud[elem].ex); Noeud[elem].ex = NULL;
+		free(Noeud[elem].ey); Noeud[elem].ey = NULL;
+		free(Noeud[elem].ez); Noeud[elem].ez = NULL;
+		free(Noeud[elem].gx); Noeud[elem].gx = NULL;
+		free(Noeud[elem].gy); Noeud[elem].gy = NULL;
+		free(Noeud[elem].gz); Noeud[elem].gz = NULL;
+		}
+	for (elem=1;elem<=nb_elements_dynamiques_alloues;elem++)
+		{
+		free(Element[elem].dtension); Element[elem].dtension = NULL;
+		free(Element[elem].dlgtendue); Element[elem].dlgtendue = NULL;
+		free(Element[elem].dnrj); Element[elem].dnrj = NULL;
+		}
+	nb_noeuds_dynamiques_alloues = 0;
+	nb_elements_dynamiques_alloues = 0;
+	donnees_dynamiques_allouees = 0;
+	}
+
 /*lecture du fichier de resultat dynamique si il existe*/
 
 int lecturedyn(char *nomfichier)
@@ -15,6 +54,8 @@ int lecturedyn(char *nomfichier)
 	
 	test=(Houle.direction>90.0 && Houle.direction<270.0) || (Houle.direction<-90.0 && Houle.direction>-270.0);
 
+	/* Release arrays from a previous .dyn load before opening the next one. */
+	liberer_donnees_dynamiques();
 
   	strcpy(tonom,nomfichier);
 
@@ -53,6 +94,9 @@ int lecturedyn(char *nomfichier)
 			Element[elem].dlgtendue = 	(double *) Malloc_double(1 + nbtemps);
  			Element[elem].dnrj = 		(double *) Malloc_double(1 + nbtemps);
   			}
+		nb_noeuds_dynamiques_alloues = NOMBRE_NOEUDS;
+		nb_elements_dynamiques_alloues = NOMBRE_ELEMENTS;
+		donnees_dynamiques_allouees = 1;
   
     		/* lecture des nouvelles coordonnees des noeuds du maillage. */
 		printf("nbtemps = %8d \n",nbtemps);

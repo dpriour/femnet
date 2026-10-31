@@ -33,8 +33,8 @@ char *GetFile(char *_path);				/* pas de changement */
 
 
 /*prototypes de charger.c*/
-void charger_initial();
-void charger_final();
+void charger_initial(Widget widget, void *data);
+void charger_final(Widget widget, void *data);
 void calcul_houle2();
 void initialisation_min_max();
 void initialisation_surface_front();
@@ -48,7 +48,7 @@ void initialisation_nb_Vfils_hexa();
 void ajout_symetrique(double decalx, double decaly, double decalz, int signx, int signy, int signz );
 void recherche_symetrie();
 void portrait();
-void Genere_ps();
+void Genere_ps(Widget widget, void *data);
 void initialisation_ps();
 void initialisation_elongation();
 void initialisation_couleur_tension_final();
@@ -78,89 +78,79 @@ float produit_scal(float vect_1[4], float vect_2[4]);
 double produit_scal_double(double vect_1[4], double vect_2[4]);
 	
 /*prototypes de checked_menu.c*/
-void Checked_dessiner_contour_element();
-void Checked_dessiner_contour_noeud();
-void Checked_dessiner_afficher_houle();
-void Checked_dessiner_contour_coulisse();
-void Checked_dessiner_contour_winch();
-void Checked_dessiner_contour_ball();
-void Checked_dessiner_contour_triangle();
-void Checked_dessiner_orientation_xy();
-void Checked_dessiner_fils_u();
-void Checked_dessiner_fils_v();
-void Checked_dessiner_surface_front();
-void Checked_dessiner_axes();
-void Checked_dessiner_repere();
-void Checked_dessiner_quadrillage();
-void Checked_dessiner_surface_libre();
-void Checked_dessiner_ballast_altitude();
-void Checked_dessiner_cube_size();
+void Checked_dessiner_contour_element(Widget widget, void *data);
+void Checked_dessiner_contour_noeud(Widget widget, void *data);
+void Checked_dessiner_afficher_houle(Widget widget, void *data);
+void Checked_dessiner_contour_coulisse(Widget widget, void *data);
+void Checked_dessiner_contour_winch(Widget widget, void *data);
+void Checked_dessiner_contour_ball(Widget widget, void *data);
+void Checked_dessiner_contour_triangle(Widget widget, void *data);
+void Checked_dessiner_orientation_xy(Widget widget, void *data);
+void Checked_dessiner_fils_u(Widget widget, void *data);
+void Checked_dessiner_fils_v(Widget widget, void *data);
+void Checked_dessiner_fils_u_v(Widget widget, void *data);
+void Checked_dessiner_surface_front(Widget widget, void *data);
+void Checked_dessiner_axes(Widget widget, void *data);
+void Checked_dessiner_repere(Widget widget, void *data);
+void Checked_dessiner_quadrillage(Widget widget, void *data);
+void Checked_dessiner_surface_libre(Widget widget, void *data);
+void Checked_dessiner_ballast_altitude(Widget widget, void *data);
+void Checked_dessiner_cube_size(Widget widget, void *data);
 /* debut modifdp du 4 mars 2010*/
-void Checked_solidity_ratio();
-void Checked_max_exit_size();
-void Checked_flow_orientation();
+void Checked_solidity_ratio(Widget widget, void *data);
+void Checked_max_exit_size(Widget widget, void *data);
+void Checked_flow_orientation(Widget widget, void *data);
 /* fin modifdp du 4 mars 2010*/
-void Checked_angle_fils();
-void Checked_orientation_volume();
-void Checked_volume_elementaire();
-void Checked_surface_elementaire();
-void Checked_defaut_discretisation();
-void Checked_profondeur_barycentre();
-void Checked_numero_element();
-void Checked_type_element();
-void Checked_commentaire();
-void Checked_efforts_externes();
-void Checked_eigen_values();
-void Checked_deplacement();
-void Checked_animation();
-void Checked_animation_video();
-void Checked_animation_eigenvalue();
-void Checked_symmetry_no_symmetry();
-void Checked_dessiner_afficher_houle();
-void Checked_immersion();
-void Checked_trajectoire();
-void Checked_raideur_traction();
-void Checked_raideur_compression();
-void Checked_raideur_ouverture();
-void Checked_tension();
-void Checked_nrj();
-void Checked_longueur_repos();
-void Checked_longueur_tendue();
-void Checked_masse_volumique();
-void Checked_diametre();
-void Checked_largeur_noeud();
-void Checked_coefficient_cd();
-void Checked_coefficient_f();
-void Checked_section_element();
-void Checked_volume_element();
-void Checked_masse_element();
-void Checked_masse_lineique();
-void Checked_flottabilite();
-void Checked_type_noeud();
-void Checked_numero_noeud();
-void Checked_masse_noeud();
-void Checked_longueur_noeud();
-void Checked_cd_noeud();
-void Checked_effort_noeud();
-void Checked_limite_noeud();
-void Checked_sens_limite_noeud();
-void Checked_deplacement_noeud();
-void Checked_symmetrie_noeud();
-void Checked_nb_mailles();
+void Checked_angle_fils(Widget widget, void *data);
+void Checked_orientation_volume(Widget widget, void *data);
+void Checked_volume_elementaire(Widget widget, void *data);
+void Checked_surface_elementaire(Widget widget, void *data);
+void Checked_defaut_discretisation(Widget widget, void *data);
+void Checked_profondeur_barycentre(Widget widget, void *data);
+void Checked_numero_element(Widget widget, void *data);
+void Checked_type_element(Widget widget, void *data);
+void Checked_commentaire(Widget widget, void *data);
+void Checked_efforts_externes(Widget widget, void *data);
+void Checked_eigen_values(Widget widget, void *data);
+void Checked_deplacement(Widget widget, void *data);
+void Checked_animation(Widget widget, void *data);
+void Checked_animation_video(Widget widget, void *data);
+void Checked_animation_eigenvalue(Widget widget, void *data);
+void Checked_symmetry_no_symmetry(Widget widget, void *data);
+void Checked_immersion(Widget widget, void *data);
+void Checked_trajectoire(Widget widget, void *data);
+void Checked_raideur_traction(Widget widget, void *data);
+void Checked_raideur_compression(Widget widget, void *data);
+void Checked_raideur_ouverture(Widget widget, void *data);
+void Checked_tension(Widget widget, void *data);
+void Checked_nrj(Widget widget, void *data);
+void Checked_longueur_repos(Widget widget, void *data);
+void Checked_longueur_tendue(Widget widget, void *data);
+void Checked_masse_volumique(Widget widget, void *data);
+void Checked_diametre(Widget widget, void *data);
+void Checked_largeur_noeud(Widget widget, void *data);
+void Checked_coefficient_cd(Widget widget, void *data);
+void Checked_coefficient_f(Widget widget, void *data);
+void Checked_section_element(Widget widget, void *data);
+void Checked_volume_element(Widget widget, void *data);
+void Checked_masse_element(Widget widget, void *data);
+void Checked_masse_lineique(Widget widget, void *data);
+void Checked_flottabilite(Widget widget, void *data);
+void Checked_type_noeud(Widget widget, void *data);
+void Checked_numero_noeud(Widget widget, void *data);
+void Checked_masse_noeud(Widget widget, void *data);
+void Checked_longueur_noeud(Widget widget, void *data);
+void Checked_cd_noeud(Widget widget, void *data);
+void Checked_effort_noeud(Widget widget, void *data);
+void Checked_limite_noeud(Widget widget, void *data);
+void Checked_sens_limite_noeud(Widget widget, void *data);
+void Checked_deplacement_noeud(Widget widget, void *data);
+void Checked_symmetrie_noeud(Widget widget, void *data);
+void Checked_nb_mailles(Widget widget, void *data);
 
 
 /*prototypes de commentaire.c*/
 void commentaire();
-
-
-/*prototypes utilises par dessiner_info_element.c*/
-void Color(int c);
-void Line(float x1,float y1,float x2, float y2);
-void Text(float x,float y,char *str);
-void Move_to(float x,float y);
-void Line_to(float x,float y);
-void Line_end();
-void Surface_end();
 
 
 /*prototypes de dessiner_info_element.c*/
@@ -222,9 +212,6 @@ void draw_longueur_repos_hexa(int pa);
 void draw_longueur_repos_barre(int pa);
 void draw_longueur_repos_coulisse(int pa);
 void dessiner_longueur_tendue();
-void draw_longueur_tendue_diamond(int pa);
-void draw_longueur_tendue_hexa(int pa);
-void draw_longueur_tendue_element(int pa);
 void draw_longueur_tendue_coulisse(int pa);
 void dessiner_masse_volumique();
 void draw_masse_volumique_diamond(int pa);
@@ -279,10 +266,6 @@ void draw_volume_elementaire_hexa(int pa);
 void dessiner_orientation_xy_element();
 void draw_orientation_xy_diamond(int pa);
 void draw_orientation_xy_hexa(int pa);
-void draw_longueur_repos_diamond(int pa);
-void draw_longueur_tendue_coulisse(int pa);
-void draw_volume_elementaire_diamond(int pa);
-void draw_volume_elementaire_hexa(int pa);
 
 /*prototypes de dessiner_info_noeud.c*/
 void dessiner_type_noeud();
@@ -338,10 +321,6 @@ void draw_symmetrie_noeud_coulisse(int pa);
 void dessiner_nb_mailles();
 void draw_nb_mailles_diamond(int paa);
 void draw_nb_mailles_hexa(int paa);
-
-
-/*prototypes utilises par dessiner_ps.c*/
-void ColorRGB_ps(int r, int v, int b);
 
 
 /*prototypes de dessiner_ps.c*/
@@ -416,19 +395,18 @@ void draw_segment_color(int color, double x1m, double y1m, double x2m, double y2
 void white_triangle_diamond(int pa);
 void white_triangle_hexa(int pa);
 
-
 /*prototypes de filet.c*/
 void fils_contour_calculer();
 void  hachu4_u(int pa, float vh[],float uh1[],float uh2[],float nh,float Uh,float Ui);
 void  hachu4_v(int pa, float vh[],float uh1[],float uh2[],float nh,float Uh,float Ui);
-void dessiner_quadrillage();
 
 /*prototypes de filet_hexa.c*/
 void fils_contour_hexa();
 void  hachu_hexa_u(int pa, float vh[],float uh1[],float uh2[],float nh,float Uh,float Ui);
 void  hachu_hexa_v(int pa, float vh[],float uh1[],float uh2[],float nh,float Uh,float Ui);
 
-/*prototypes degfx_base.c*/
+/*prototypes gfx_base.c*/
+void Text(float x,float y,char *str);
 int ColorRGB(int r, int v, int b);
 void Color(int c);
 void Line(float xx1,float yy1,float xx2, float yy2);
@@ -437,7 +415,6 @@ void Line_to (float x,float y);
 void Line_end ();
 void Surface_end();
 void Circle (float x,float y,float r);
-void Text(float x,float y,char *str);
 void Motif(int m);
 void Size_font(int coef);
 void Line_larg(int n);
@@ -450,14 +427,12 @@ void TraceClip();
 
 /*prototypes de init_display.c*/
 void init_display(int argc, char **argv, MyProgram *me);
+void initialiser_menu_chargements(void);
 void init_display_text(int argc, char **argv, MyProgram *me);
 
 /*prototypes de interieur_triangle.c*/
 int interieur_triangle(double xx1, double xx2, double xx3, double yy1, double yy2, double yy3);
 double surface_triangle(double x1, double y1, double x2, double y2, double x3, double y3);
-
-/*prototypes delecturedo3.c*/
-int lectureDo3(char *nomfichier);
 
 /*prototypes de animation.c*/
 void animation();
@@ -474,7 +449,7 @@ void lecture_des2(char *nomfichier);
 int lecture_chaine(FILE *fic, char *chain);
 int lecture_commentaire(FILE *fic, char *chain);
 
-/*prototypes delecturedyn.c*/
+/*prototypes de lecturedyn.c*/
 int lecturedyn(char *nomfichier);
 
 
@@ -483,10 +458,6 @@ int lectureDo3(char *nomfichier);
 
 /*prototypes de lecturesta.c*/
 int lecturesta(char *nomfichier);
-
-
-/*prototypes de lecturedyn.c*/
-int lecturedyn(char *nomfichier);
 
 
 /*prototypes de multireq.c*/
@@ -528,7 +499,7 @@ void tri();
 
 
 /*prototypes de quitter.c*/
-void quitter();
+void quitter(Widget widget, void *data);
 
 /*prototypes de redisplay.c*/
 void redisplay(Widget ww, int new_width, int new_height, void *data);

@@ -1,7 +1,54 @@
 #include "batz.h"
 #include <time.h>
 #include <unistd.h>
+#include <glib/gstdio.h>
 #include "omp.h"
+
+static int run_video_tool(char **argv)
+	{
+	GError *error = NULL;
+	int status = 0;
+	if (!g_spawn_sync(NULL, argv, NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, NULL, &status, &error))
+		{
+		fprintf(stderr, "Échec du lancement de %s : %s\n", argv[0], error->message);
+		g_error_free(error);
+		return 0;
+		}
+	if (!g_spawn_check_wait_status(status, &error))
+		{
+		fprintf(stderr, "Échec de %s : %s\n", argv[0], error->message);
+		g_error_free(error);
+		return 0;
+		}
+	return 1;
+	}
+
+static int convert_ps_frame_to_png(const char *ps_path, const char *png_path)
+	{
+	char *output_arg = g_strdup_printf("-sOutputFile=%s", png_path);
+	char *argv[] = {"gs", "-q", "-dNOPAUSE", "-dBATCH", "-sDEVICE=png16m", "-r180", output_arg, (char *)ps_path, NULL};
+	int result = run_video_tool(argv);
+	g_free(output_arg);
+	return result;
+	}
+
+static int encode_png_frames_to_avi(const char *base, int frame_count, int fps)
+	{
+	char *location_arg = g_strdup_printf("location=%s%%05d.png", base);
+	char *stop_arg = g_strdup_printf("stop-index=%d", frame_count);
+	char *caps_arg = g_strdup_printf("caps=image/png,framerate=%d/1", fps > 0 ? fps : 12);
+	char *output_path = g_strdup_printf("%s.avi", base);
+	char *output_arg = g_strdup_printf("location=%s", output_path);
+	char *argv[] = {"gst-launch-1.0", "-e", "multifilesrc", location_arg, "start-index=1", stop_arg, caps_arg, "do-timestamp=true",
+		"!", "pngparse", "!", "avimux", "!", "filesink", output_arg, NULL};
+	int result = run_video_tool(argv);
+	g_free(location_arg);
+	g_free(stop_arg);
+	g_free(caps_arg);
+	g_free(output_path);
+	g_free(output_arg);
+	return result;
+	}
 
 void animation2(int code_video)
 	{
@@ -14,7 +61,7 @@ void animation2(int code_video)
 	extern void Move_to (float ,float );
 	extern void Line_to (float ,float );
 	extern void Surface_end();
-	char text[10];
+	char text[32];
 	float valinter;
 	float valinter2;
 	int nb_angle;
@@ -22,10 +69,10 @@ void animation2(int code_video)
 	float xa,ya,za,xb,yb,zb,xc,yc,zc;
 	time_t sleep_ralenti_microsec;
 	float sleep_ralenti;
-	char buf[255];
+	char *frame_png_path = NULL;
 	double vect1[4],vect2[4],vect3[4];
-	char command[1000];
 	int rrr,aaa;
+	int frames_ok = 1;
 	double x1,x2,x3,x4,x5,x6,x7,x8,y1,y2,y3,y4,y5,y6,y7,y8,z1,z2,z3,z4,z5,z6,z7,z8;
 	double angle_ball_1,angle_ball_2;
 	double ext1[4],ext2[4];
@@ -58,21 +105,20 @@ void animation2(int code_video)
 
 				valinter2 = te1*Passtockage*step_animation+depart_anim_sec; /*time corresponding to te step*/
 
-				sprintf(text,"%f",valinter2);
+				snprintf(text, sizeof(text), "%f", valinter2);
   				SetStringEntry(w[91], text);
 
-				printf("time animation_video %s / %7.2f   ",text,fin_anim_sec);
+				printf("time animation_video %s / %7.2f   \n",text,fin_anim_sec);
 				if (code_video == 0)
 					{
 					printf("\n");
 					}
 				if (code_video == 1)
 					{
-					sprintf(buf,"%s%05d",fname1,aaa);
-					flag_ps = TRUE;
+					frame_png_path = g_strdup_printf("%s%05d.png", fname1, aaa);
+					flag_ps = FALSE;
+					if (!BeginDrawAreaPngFrame()) frames_ok = 0;
 					ClearDrawArea();
-					strcpy(nom_fichier,buf);
-					Chk_ps_open();
 					}
 				
 				if (Ball.flag_dessin != 0)
@@ -321,10 +367,9 @@ void animation2(int code_video)
 	
 				if (code_video == 1)
 					{
-			 		Chk_ps_close();
-					flag_ps = FALSE;
-					sprintf(command,"convert -density 180x180 %s%05d.ps -depth 8  %s%05d.png",fname1,aaa,fname1,aaa);		system(command);	/*create png file*/
-					sprintf(command,"rm %s%05d.ps",fname1,aaa);/**/									system(command);	/*delete ps file*/
+					if (!EndDrawAreaPngFrame(frame_png_path)) frames_ok = 0;
+					g_free(frame_png_path);
+					frame_png_path = NULL;
 					sleep_ralenti=Passtockage*ralenti_animation;
 					}
 				/*******************************************************effacement**********************************************************************/
@@ -531,12 +576,18 @@ void animation2(int code_video)
 		printf("begining of encoding, File: %s\n" , fname1);
 		rrr=floor(1.0/(Passtockage*ralenti_animation));
 		printf("FPS = rrr = %d\n", rrr);
-		sprintf(command,"rm %s.avi",fname1);												system(command);	/*delete avi file*/
-		//sprintf(command,"avconv -threads %d -f image2 -r %d -i %s%%05d.png -s wxga -r %d %s.avi", nb_thread, rrr, fname1, rrr, fname1);	system(command);	/*create avi file*/
-		//sprintf(command,"avconv -threads %d -f image2 -r %d -i %s%%05d.png -r %d %s.avi", nb_thread, rrr, fname1, rrr, fname1);	system(command);	/*create avi file*/
-		sprintf(command,"ffmpeg -f image2 -i %s%%05d.png -r 12  %s.avi", fname1, fname1);	system(command);
-		sprintf(command,"rm %s*.png",fname1);												system(command);	/*delete png file*/
-		printf("end of encoding, File : %s\n" , fname1);
+		if (frames_ok && encode_png_frames_to_avi(fname1, aaa, rrr))
+			{
+			int frame;
+			for (frame = 1; frame <= aaa; frame++)
+				{
+				char *png_path = g_strdup_printf("%s%05d.png", fname1, frame);
+				g_remove(png_path);
+				g_free(png_path);
+				}
+			printf("Video created: %s.avi\n", fname1);
+			}
+		else fprintf(stderr, "Video creation failed; PNG frames are kept in %sNNNNN.png\n", fname1);
 		}	
 	flag_plain_color = FALSE;
 	}
@@ -557,7 +608,6 @@ void animation_eigenvalue(int code_video)
 	float sleep_ralenti;
 	char buf[255];
 	double vect1[4],vect2[4],vect3[4];
-	char command[1000];
 	int aaa;
 
 	flag_plain_color = TRUE;
@@ -581,7 +631,7 @@ void animation_eigenvalue(int code_video)
 			aaa=aaa+1;
 			nb_total = NOMBRE_SURFACES+NOMBRE_SURF_HEXA+NOMBRE_ELEMENTS+NOMBRE_COULISSES;
 
-			printf("time animation_video %7d / %7d   ",te,nbtemps);
+			printf("time animation_video %7d / %7d   \n",te,nbtemps);
 
 			if (code_video == 0)
 				{
@@ -637,8 +687,13 @@ void animation_eigenvalue(int code_video)
 				{
 		 		Chk_ps_close();
 				flag_ps = FALSE;
-				sprintf(command,"convert -density 180x180 %s%05d.ps -depth 8  %s%05d.png",fname1,aaa,fname1,aaa);		system(command);	/*create png file*/
-				sprintf(command,"rm %s%05d.ps",fname1,aaa);/**/									system(command);	/*delete ps file*/
+					{
+					char *ps_path = g_strdup_printf("%s%05d.ps", fname1, aaa);
+					char *png_path = g_strdup_printf("%s%05d.png", fname1, aaa);
+					if (convert_ps_frame_to_png(ps_path, png_path)) g_remove(ps_path);
+					g_free(ps_path);
+					g_free(png_path);
+					}
 				sleep_ralenti=Passtockage*ralenti_animation;
 				}
 			/*******************************************************effacement**********************************************************************/

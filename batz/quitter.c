@@ -1,7 +1,6 @@
 #include "batz.h"
 
-void quitter()
-	{
-	exit(0);
-	}
-
+void quitter(Widget widget, void *data)
+{
+    exit(0);
+}

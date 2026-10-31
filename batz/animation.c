@@ -9,7 +9,7 @@ void animation()
 	extern void Move_to (float ,float );
 	extern void Line_to (float ,float );
 	extern void Surface_end();
-	char text[10];
+	char text[32];
 	float valinter;
 	float valinter2;
 	int nb_angle;
@@ -42,7 +42,7 @@ void animation()
 
 				valinter2 = te1*Passtockage*step_animation+depart_anim_sec; /*time corresponding to te step*/
 
-				sprintf(text,"%f",valinter2);
+				snprintf(text, sizeof(text), "%f", valinter2);
   				SetStringEntry(w[91], text);
 
 
@@ -479,7 +479,7 @@ void animation_video()
 	float valinter;
 	float valinter2;
 	int nbtemps_bis,nb_angle;
-	char text[10];
+	char text[32];
 	float ve1[4],ve2[4],ve3[4],ve12[4],ve23[4],ve31[4],extr1[4],extr2[4];
 	float u1,u2,u3,v1,v2,v3,u12,u23,u31,ua,ub,uc;
 	float xa,ya,za,xb,yb,zb,xc,yc,zc,debb,prob,proc,x1m,x2m,y1m,y2m,z1m,z2m;
@@ -513,7 +513,7 @@ void animation_video()
 
 				valinter2 = te1*Passtockage*step_animation+depart_anim_sec; /*time corresponding to te step*/
 
-				sprintf(text,"%f",valinter2);  
+				snprintf(text, sizeof(text), "%f", valinter2);
   				SetStringEntry(w[91], text);
 
 				printf("time animation_video %s / %7.2f ",text,fin_anim_sec);/**/

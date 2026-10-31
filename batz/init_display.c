@@ -5,50 +5,55 @@ void init_display(int argc, char **argv, MyProgram *me)
   	char cvalue[4];
   	float coupe=0.5;
   	int width;
-	/* debut modifdp du 4 mars 2010*/
-	/*on est rendu a w[103] et on est limite a w[200] cf batz.h*/
-	/* fin modifdp du 4 mars 2010*/
+	XFont my_font = GetFont("-adobe-helvetica-bold-i-normal--0-480-0-0-p-0-iso8859-1");	/*on est rendu a w[103] et on est limite a w[200] cf batz.h*/
 	if (OpenDisplay(argc, argv) == FALSE) return;
 	w[0]  = MakeMenu("File");
-	w[1]  = MakeMenuItem(w[0], "load_initial_file", 		charger_initial, 	me);		/*fait*/
-	w[8]  = MakeMenuItem(w[0], "load_final_file",			charger_final, 		me);		/*fait*/
+   	if (my_font != NULL) {        SetWidgetFont(w[0], my_font);     }
+	w[1] = MakeMenuItem(w[0], "load_initial_file", 			charger_initial, 	me);	
+	w[8] = MakeMenuItem(w[0], "load_final_file", 			charger_final,		me);	
 	//w[75] = MakeMenuItem(w[0], "portrait_mode", 			portrait, 		NULL);
 	w[2]  = MakeMenuItem(w[0], "print", 				Genere_ps, 		NULL);
-	w[30] = MakeMenuItem(w[0], "twines_period", 			edit, 			NULL);		/*idem*/
-	w[96] = MakeMenuItem(w[0], "scale", 				edit_echelle, 		NULL);		/*idem*/
+	w[96] = MakeMenuItem(w[0], "vertical scale", 			edit_echelle, 		NULL);
 	w[76] = MakeMenuItem(w[0], "cut_depth", 			edit_coupe, 		NULL);
 	/*w[78] = MakeMenuItem(w[0], "animation_slowing", 		edit_animation, 	NULL);*/
-	w[79] = MakeMenuItem(w[0], "animation_parameters", 		edit_nb_animation, 	NULL);
-	//w[98] = MakeMenuItem(w[0], "eigen_values_parameters", 		edit_eigenvalues, 	NULL);
-	w[7]  = MakeMenuItem(w[0], "quit",				quitter, 		me);		/*idem*/
+	w[79] = MakeMenuItem(w[0], "video_parameters", 			edit_nb_animation, 	NULL);
+	//w[77]  = MakeMenuItem(w[0], "animation", 			Checked_animation, 			me);
+	w[92]  = MakeMenuItem(w[0], "video", 				Checked_animation_video, 		me);
+	//w[98] = MakeMenuItem(w[0], "eigen_values_parameters", 	edit_eigenvalues, 	NULL);
+	w[7]  = MakeMenuItem(w[0], "quit",				quitter, 		me);
+	SetWidgetSensitive(w[2], 0);
+	SetWidgetSensitive(w[96], 0);
+	SetWidgetSensitive(w[76], 0);
+	SetWidgetSensitive(w[79], 0);
+	SetWidgetSensitive(w[92], 0);
 
 	w[3]   = MakeMenu("Visualisation");
-	w[10]  = MakeMenuItem(w[3], "triangle_contour", 		Checked_dessiner_contour_triangle, 	me);	/*fait*/
+	w[10] = MakeMenuItem(w[3], "triangle_contour",                  Checked_dessiner_contour_triangle, 	me);	
 	w[16]  = MakeMenuItem(w[3], "orientation_xy", 			Checked_dessiner_orientation_xy, 	me);
 	w[9]   = MakeMenuItem(w[3], "cable/bar_contour", 		Checked_dessiner_contour_element, 	me);
 	w[90]  = MakeMenuItem(w[3], "node_contour", 			Checked_dessiner_contour_noeud,		me);
 	//w[70]  = MakeMenuItem(w[3], "coulisse_contour", 		Checked_dessiner_contour_coulisse, 	me);
-	//w[87]  = MakeMenuItem(w[3], "winch_contour", 		Checked_dessiner_contour_winch, 	me);
+	//w[87]  = MakeMenuItem(w[3], "winch_contour", 			Checked_dessiner_contour_winch, 	me);
 	//w[88]  = MakeMenuItem(w[3], "ball_contour", 			Checked_dessiner_contour_ball, 		me);
 	w[11]  = MakeMenuItem(w[3], "u_twines", 			Checked_dessiner_fils_u, 		me);
 	w[29]  = MakeMenuItem(w[3], "v_twines", 			Checked_dessiner_fils_v, 		me);
+	w[105]  = MakeMenuItem(w[3], "u&v_twines", 			Checked_dessiner_fils_u_v, 		me);
+	w[30] = MakeMenuItem(w[3], "twines_period", 			edit, 			NULL);
 	w[14]  = MakeMenuItem(w[3], "free_surface", 			Checked_dessiner_surface_libre, 	me);
 	w[100]  = MakeMenuItem(w[3], "ballast_altitude", 		Checked_dessiner_ballast_altitude, 	me);
 	w[101]  = MakeMenuItem(w[3], "cube_size", 			Checked_dessiner_cube_size, 		me);
 	w[15]  = MakeMenuItem(w[3], "catch_front_surface", 		Checked_dessiner_surface_front, 	me);
-	w[17]  = MakeMenuItem(w[3], "axes", 				Checked_dessiner_axes, 			me);
+	w[17]  = MakeMenuItem(w[3], "axes", 				Checked_dessiner_axes,			me);
 	w[93]  = MakeMenuItem(w[3], "repere", 				Checked_dessiner_repere, 		me);
 	w[18]  = MakeMenuItem(w[3], "grid", 				Checked_dessiner_quadrillage, 		me);
-	w[71]  = MakeMenuItem(w[3], "comment", 			Checked_commentaire, 			me);
-	w[74]  = MakeMenuItem(w[3], "external_efforts",		Checked_efforts_externes, 		me);
+	w[71]  = MakeMenuItem(w[3], "comment", 				Checked_commentaire, 			me);
+	w[74]  = MakeMenuItem(w[3], "external_efforts",			Checked_efforts_externes, 		me);
 	//w[97]  = MakeMenuItem(w[3], "eigen_values",			Checked_eigen_values, 			me);
 	//w[83]  = MakeMenuItem(w[3], "displacement",			Checked_deplacement, 			me);
 	w[85]  = MakeMenuItem(w[3], "trajectory",			Checked_trajectoire, 			me);
 	w[86]  = MakeMenuItem(w[3], "immersion",			Checked_immersion, 			me);
-	w[77]  = MakeMenuItem(w[3], "animation", 			Checked_animation, 			me);
-	w[92]  = MakeMenuItem(w[3], "animation+video", 		Checked_animation_video, 		me);
-	//w[104]  = MakeMenuItem(w[3], "animation_eigenvalue", 	Checked_animation_eigenvalue, 		me);
-	w[103]  = MakeMenuItem(w[3], "symmetry/no symmetry", 	Checked_symmetry_no_symmetry, 		me);
+	//w[104]  = MakeMenuItem(w[3], "animation_eigenvalue", 		Checked_animation_eigenvalue, 		me);
+	w[103]  = MakeMenuItem(w[3], "symmetry/no symmetry", 		Checked_symmetry_no_symmetry, 		me);
 	
 	w[19] = MakeMenu("Element information");
 	w[20] = MakeMenuItem(w[19], "twines_contact", 			Checked_angle_fils, 		me);
@@ -74,10 +79,10 @@ void init_display(int argc, char **argv, MyProgram *me)
 	w[61] = MakeMenuItem(w[19],  "density", 			Checked_masse_volumique,	me);
 	w[62] = MakeMenuItem(w[19],  "diameter", 			Checked_diametre,		me);
 	w[73] = MakeMenuItem(w[19],  "knot_size", 			Checked_largeur_noeud,		me);
-	w[63] = MakeMenuItem(w[19],  "cd_coefficient", 		Checked_coefficient_cd,		me);
+	w[63] = MakeMenuItem(w[19],  "cd_coefficient", 			Checked_coefficient_cd,		me);
 	w[64] = MakeMenuItem(w[19],  "f_coefficient", 			Checked_coefficient_f,		me);
 	w[65] = MakeMenuItem(w[19],  "section", 			Checked_section_element,	me);
-	w[66] = MakeMenuItem(w[19],  "volume", 			Checked_volume_element,		me);
+	w[66] = MakeMenuItem(w[19],  "volume", 				Checked_volume_element,		me);
 	w[67] = MakeMenuItem(w[19],  "element_mass", 			Checked_masse_element,		me);
 	w[68] = MakeMenuItem(w[19],  "linear_mass", 			Checked_masse_lineique,		me);
 	//w[69] = MakeMenuItem(w[19],  "buoyancy", 			Checked_flottabilite,		me);
@@ -100,13 +105,13 @@ void init_display(int argc, char **argv, MyProgram *me)
 	SetButtonUpCB  (w[4],  button_up);
 	w[5] = MakeHorizScrollbar(X_SIZE, Rotation_Y, me);
 	w[6] = MakeVertScrollbar(Y_SIZE, Rotation_X, me);
-	w[81] = MakeVertScrollbar(Y_SIZE, edit_coupe2, me);
+	//w[81] = MakeHorizScrollbar(X_SIZE, edit_coupe2, me);
 	w[89] = MakeVertScrollbar(Y_SIZE, edit_temps1, me);
 
-          SetScrollbar(w[5] , (float) 0.0, (float) 360.0, (float) 1.0);
-          SetScrollbar(w[6] , (float) 0.0, (float) 360.0, (float) 1.0);
-          SetScrollbar(w[81], (float) 0.0, (float)   1.0, (float) 0.2);
-          SetScrollbar(w[89], (float) 0.0, (float)   1.0, (float) 0.1);
+          SetScrollbar(w[5] , (float) 0.0, (float) 360.0, (float) 1.0);	//Rotation_Y
+          SetScrollbar(w[6] , (float) 0.0, (float) 360.0, (float) 1.0);	//Rotation_X
+          //SetScrollbar(w[81], (float) 0.0, (float)   1.0, (float) 0.2);	//edit_coupe2
+          SetScrollbar(w[89], (float) 0.0, (float)   1.0, (float) 0.1);	//edit_temps1
 
   	width = 40;
   	sprintf(cvalue, "%d", 0);
@@ -118,18 +123,22 @@ void init_display(int argc, char **argv, MyProgram *me)
   	sprintf(cvalue, "%d", 0);
   	w[91]  = MakeStringEntry(cvalue, width, Entry_Temps, me);
 
-  	SetWidgetPos(w[12], PLACE_RIGHT, w[4], PLACE_UNDER, w[6]);
-  	SetWidgetPos(w[13], PLACE_UNDER, w[4], PLACE_RIGHT, w[5]);
-  	SetWidgetPos(w[91], PLACE_RIGHT, w[12], PLACE_UNDER, w[6]);
-  	SetWidgetPos(w[6 ], PLACE_RIGHT, w[4], NO_CARE, NULL); /* curs v 2 */
-  	SetWidgetPos(w[81], PLACE_RIGHT, w[6], NO_CARE, NULL); /* curs v 2 */
-  	SetWidgetPos(w[89], PLACE_RIGHT, w[81], NO_CARE, NULL); /* curs v 2 */
+ 	//SetWidgetPos(w[81], PLACE_UNDER, w[4], NO_CARE, NULL); /* curs h 2 */
 	SetWidgetPos(w[5 ], PLACE_UNDER, w[4], NO_CARE, NULL); /* curs h 1 */
+   	SetWidgetPos(w[6 ], PLACE_RIGHT, w[4], NO_CARE, NULL); /* curs v 1 */
+   	SetWidgetPos(w[89], PLACE_RIGHT, w[6], NO_CARE, NULL); /* curs v 2 */
+ 	//SetWidgetPos(w[12], PLACE_RIGHT, w[5], PLACE_UNDER, w[6]);
+ 	SetWidgetPos(w[12], PLACE_RIGHT, w[5], NO_CARE, w[6]);
+  	SetWidgetPos(w[13], PLACE_UNDER, w[12], PLACE_UNDER, w[12]);
+  	SetWidgetPos(w[91], PLACE_RIGHT, w[12], PLACE_UNDER, w[89]);
 	SetWidgetPos(w[4 ], PLACE_UNDER, w[0], NO_CARE, NULL);
 	SetWidgetPos(w[3 ], PLACE_RIGHT, w[0], NO_CARE, NULL);
 	SetWidgetPos(w[19], PLACE_RIGHT, w[3], NO_CARE, NULL);
 	SetWidgetPos(w[31], PLACE_RIGHT, w[19], NO_CARE, NULL);
+	/* Keep the rotation control at the bottom edge, below the side controls. */
+	SetWidgetGridPosition(w[5], 0, 5, 4, 1);
 
+	initialiser_menu_chargements();
 	ShowDisplay();
 	GetStandardColors();
 	}

@@ -3,7 +3,7 @@
 #include <string.h>
 #include <math.h>
 
-#include "libsx.h"		/* should come first, defines libsx stuff  */
+#include "gtk3_compat.h"		/* should come first, defines libsx stuff  */
 #include "../lib_dp/definition_lib.h"
 //#include "4c19.h"
 

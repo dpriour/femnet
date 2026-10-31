@@ -3167,3 +3167,4 @@ int lecture_commentaire(FILE *fic, char *chain)
 	}
 	
 	
+

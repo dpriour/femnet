@@ -1,15 +1,82 @@
 #include "batz.h"
 
-/*int i;*/
+static int fichier_mdg_charge=0;
+static int fichier_sta_charge=0;
+static int fichier_dyn_charge=0;
 
-void charger_initial()
+static void mettre_a_jour_menu_fichier(void)
+	{
+	int resultat_charge=fichier_mdg_charge||fichier_sta_charge||fichier_dyn_charge;
+	int resultat_sta_dyn=fichier_sta_charge||fichier_dyn_charge;
+	SetWidgetSensitive(w[2], resultat_charge);
+	SetWidgetSensitive(w[96], resultat_charge);
+	SetWidgetSensitive(w[76], resultat_charge);
+	SetWidgetSensitive(w[79], fichier_dyn_charge);
+	SetWidgetSensitive(w[92], fichier_dyn_charge);
+	SetWidgetSensitive(w[10], resultat_charge);
+	SetWidgetSensitive(w[16], resultat_charge);
+	SetWidgetSensitive(w[9], resultat_charge);
+	SetWidgetSensitive(w[90], resultat_charge);
+	SetWidgetSensitive(w[11], resultat_charge);
+	SetWidgetSensitive(w[29], resultat_charge);
+	SetWidgetSensitive(w[105], resultat_charge);
+	SetWidgetSensitive(w[30], resultat_charge);
+	SetWidgetSensitive(w[14], resultat_charge);
+	SetWidgetSensitive(w[100], resultat_sta_dyn);
+	SetWidgetSensitive(w[101], resultat_charge);
+	SetWidgetSensitive(w[15], resultat_sta_dyn);
+	SetWidgetSensitive(w[17], resultat_charge);
+	SetWidgetSensitive(w[93], resultat_charge);
+	SetWidgetSensitive(w[18], resultat_charge);
+	SetWidgetSensitive(w[71], resultat_charge);
+	SetWidgetSensitive(w[74], resultat_charge);
+	SetWidgetSensitive(w[85], fichier_dyn_charge);
+	SetWidgetSensitive(w[86], fichier_dyn_charge);
+	SetWidgetSensitive(w[103], resultat_charge);
+	SetWidgetSensitive(w[20], resultat_sta_dyn);
+	SetWidgetSensitive(w[94], resultat_sta_dyn);
+	SetWidgetSensitive(w[102], resultat_sta_dyn);
+	SetWidgetSensitive(w[25], resultat_charge);
+	SetWidgetSensitive(w[27], resultat_charge);
+	SetWidgetSensitive(w[56], resultat_charge);
+	SetWidgetSensitive(w[57], resultat_charge);
+	SetWidgetSensitive(w[72], resultat_charge);
+	SetWidgetSensitive(w[58], resultat_sta_dyn);
+	SetWidgetSensitive(w[82], resultat_sta_dyn);
+	SetWidgetSensitive(w[59], resultat_charge);
+	SetWidgetSensitive(w[60], resultat_sta_dyn);
+	SetWidgetSensitive(w[61], resultat_charge);
+	SetWidgetSensitive(w[62], resultat_charge);
+	SetWidgetSensitive(w[73], resultat_charge);
+	SetWidgetSensitive(w[63], resultat_charge);
+	SetWidgetSensitive(w[64], resultat_charge);
+	SetWidgetSensitive(w[65], resultat_charge);
+	SetWidgetSensitive(w[66], resultat_charge);
+	SetWidgetSensitive(w[67], resultat_charge);
+	SetWidgetSensitive(w[68], resultat_charge);
+	SetWidgetSensitive(w[28], resultat_charge);
+	SetWidgetSensitive(w[33], resultat_charge);
+	SetWidgetSensitive(w[32], resultat_charge);
+	SetWidgetSensitive(w[35], resultat_charge);
+	SetWidgetSensitive(w[38], resultat_charge);
+	SetWidgetSensitive(w[41], resultat_charge);
+	SetWidgetSensitive(w[44], resultat_charge);
+	SetWidgetSensitive(w[47], resultat_charge);
+	SetWidgetSensitive(w[50], resultat_charge);
+	SetWidgetSensitive(w[53], resultat_charge);
+	SetWidgetSensitive(w[80], resultat_charge);
+	}
+
+void initialiser_menu_chargements(void){mettre_a_jour_menu_fichier();}
+
+void charger_initial(Widget widget, void *data)
 	{
 	int j,zi,no;
 
 	/*int j,no,zi;*/
 
 	/*fname = (char *) GetFile(NULL);*/
-	strcpy(fname , (char *) GetFile("../data_2001"));
+	g_strlcpy(fname, Gtk3GetFileFiltered("../data_2001", "*.mdg"), sizeof(fname));
 	//strcpy(fname , (char *) GetFile("../"));
 	/*strcpy(fname , (char *) GetFile("/home/moi/hexa/data_2001"));*/
 
@@ -104,10 +171,14 @@ void charger_initial()
     	printf("elongationmin 		= %f\n",elongationmin);
     	printf("elongationmax 		= %f\n",elongationmax);
 	FreeStandardColors();
+	fichier_mdg_charge=1;
+	fichier_sta_charge=0;
+	fichier_dyn_charge=0;
+	mettre_a_jour_menu_fichier();
 	}
 
 
-void charger_final()
+void charger_final(Widget widget, void *data)
 	{
 	int j,no,zi,elem, rrr,flag_dyn,pa;
 	double Vn[4],Vm[4],norm_n,norm_m,scal,cos_gamma,sin_gamma,dn,dm,d_min,max_exit,min_exit,std_dev;
@@ -116,7 +187,7 @@ void charger_final()
 	if (Structure.graphic == 1)
 		{		
 		/*strcpy(newfic , (char *) GetFile("../data_2001"));*/
-		strcpy(fname , (char *) GetFile("../data_2001"));
+		g_strlcpy(fname, Gtk3GetFinalFile("../data_2001"), sizeof(fname));
 		//strcpy(fname , (char *) GetFile("../"));
 		}
 	if (Structure.graphic == 2)
@@ -168,13 +239,15 @@ void charger_final()
       		}
      		
      	
-	lecturesta(fname1);
+	fichier_sta_charge=(lecturesta(fname1)==1);
 	mesure_defaut_discretisation();
 	nbtemps = 0;
 	initialisation_min_max();
 	SetMenuItemChecked(w[103],0);
 
 	flag_dyn = lecturedyn(fname1);
+	fichier_dyn_charge=(flag_dyn==1);
+	mettre_a_jour_menu_fichier();
 	
 	/* initialisation parametre animation*/
 	nb_animation = 1;
@@ -247,6 +320,10 @@ void charger_final()
   		Surface[elem].flag_dessin_v = 0;
   		Surface[elem].flag_dessin_orientation_xy = 0;
   		}
+	/* Show the loaded model immediately instead of leaving a blank canvas
+	 * until the user discovers that a visualization mode must be enabled. */
+	SetMenuItemChecked(w[10], 1);
+	SetMenuItemChecked(w[9], 1);
   	for (elem = 1 ; elem<= NOMBRE_SURFACES ; elem++) 
   		{
 		Vn[1] = Surface[elem].nx;	Vn[2] = Surface[elem].ny;	Vn[3] = Surface[elem].nz; /*u twine vector*/
@@ -317,6 +394,7 @@ void charger_final()
 		}
 	Ball.flag_dessin = 0;
 	FreeStandardColors();
+	Gtk3RequestRedraw();
 	}
 
 
@@ -3565,26 +3643,38 @@ void portrait()
 	}
 
 
-void Genere_ps()
+void Genere_ps(Widget widget, void *data)
 	{
-	flag_ps = TRUE;
-	flag_plain_color = TRUE;
-	ClearDrawArea();
-	/*strcpy(nom_fichier,GetStringEntry(w_main[1]));*/
-	strcpy(nom_fichier,fname1);
-	/*Retrace_fenetre();*/
-    	printf("fname1 = %s \n",fname1);/**/
-	/*mode_portrait = FALSE;*/
-	Chk_ps_open();
-	dessiner();
-	Chk_ps_close();
-	flag_ps = FALSE;
-	flag_plain_color = FALSE;
-	/*printf("convert -density 300 %s.ps %s.jpg \n",fname1,fname1);
-	system("convert -density 300 %s.ps s.jpg \n",fname1);*/
-	/*system("convert -density 300 ../data_2001/optim/gloria/LM_2_12_s_043_p_02_n_03_X.ps ../data_2001/optim/gloria/LM_2_12_s_043_p_02_n_03_Xa.jpg");*/
-	/*system("convert < command.txt");	*/
-	/*system("rm *.ps");*/
+	char suggested[4096];
+	char path[4096];
+	char folder[sizeof(fname)];
+	const char *base = strrchr(fname1, '/');
+	const char *name = base ? base + 1 : fname1;
+	char *last_slash;
+	size_t length;
+	(void)widget;
+	(void)data;
+
+	if (name[0] == '\0') name = "batz";
+	snprintf(suggested, sizeof(suggested), "%s", name);
+	length = strlen(suggested);
+	if (length < 4 || strcmp(suggested + length - 4, ".png") != 0)
+		strncat(suggested, ".png", sizeof(suggested) - length - 1);
+
+	g_strlcpy(folder, fname, sizeof(folder));
+	last_slash = strrchr(folder, '/');
+	if (last_slash)
+		{
+		if (last_slash == folder) last_slash[1] = '\0';
+		else *last_slash = '\0';
+		}
+	else folder[0] = '\0';
+	g_strlcpy(path, GetSaveFile(suggested, folder), sizeof(path));
+	length = strlen(path);
+	if (length > 0 && (length < 4 || strcmp(path + length - 4, ".png") != 0))
+		strncat(path, ".png", sizeof(path) - length - 1);
+	if (path[0] != '\0' && !SaveDrawAreaAsPng(path))
+		fprintf(stderr, "Impossible de créer le PNG : %s\n", path);
 	}
 
 

@@ -14,11 +14,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "libsx.h"
+#include "gtk3_compat.h"
 #include "batz.h"
 
-#define MIN(a,b) (((a)<(b))?(a):(b))
-#define MAX(a,b) (((a)>(b))?(a):(b))
+//#define MIN(a,b) (((a)<(b))?(a):(b))
+//#define MAX(a,b) (((a)>(b))?(a):(b))
 
 typedef struct 
 	{
@@ -360,7 +360,7 @@ void edit_temps1(Widget ww, float val, void *junk)
 		valinter2 = (float) valinter + Debutstockage;
 
 		char text[10];
-		sprintf(text,"%7.2f",valinter2);  
+		sprintf(text,"%.3g",valinter2);  
 
   		SetStringEntry(w[91], text);
 
@@ -452,7 +452,7 @@ void Entry_Temps(Widget ww, char *string, void *junk)
 
 
 	char text[10];
-	sprintf(text,"%7.2f",val);  
+	sprintf(text,"%.3g",val);  
   	SetStringEntry(w[91], text);
 
 	}

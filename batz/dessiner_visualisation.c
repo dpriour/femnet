@@ -3968,17 +3968,34 @@ void dessiner_fils_uv_initial()
 
 void dessiner_surface_libre()
 	{
+	int pa, no;
 	extern void TraceSegment(int icolor, double dx01, double dy01, double dx02, double dy02);
 
-	TraceSegment(BLUE, surface_libre[1][1], surface_libre[2][1], surface_libre[1][2], surface_libre[2][2]);
-	TraceSegment(BLUE, surface_libre[1][2], surface_libre[2][2], surface_libre[1][3], surface_libre[2][3]);
-	TraceSegment(BLUE, surface_libre[1][3], surface_libre[2][3], surface_libre[1][4], surface_libre[2][4]);
-	TraceSegment(BLUE, surface_libre[1][4], surface_libre[2][4], surface_libre[1][1], surface_libre[2][1]);
+	//TraceSegment(RED, surface_libre[1][1], surface_libre[2][1], surface_libre[1][2], surface_libre[2][2]);
+	//TraceSegment(RED, surface_libre[1][2], surface_libre[2][2], surface_libre[1][3], surface_libre[2][3]);
+	//TraceSegment(RED, surface_libre[1][3], surface_libre[2][3], surface_libre[1][4], surface_libre[2][4]);
+	//TraceSegment(RED, surface_libre[1][4], surface_libre[2][4], surface_libre[1][1], surface_libre[2][1]);
 	
 	TraceSegment(BLACK, surface_fond[1][1], surface_fond[2][1], surface_fond[1][2], surface_fond[2][2]);
 	TraceSegment(BLACK, surface_fond[1][2], surface_fond[2][2], surface_fond[1][3], surface_fond[2][3]);
 	TraceSegment(BLACK, surface_fond[1][3], surface_fond[2][3], surface_fond[1][4], surface_fond[2][4]);
 	TraceSegment(BLACK, surface_fond[1][4], surface_fond[2][4], surface_fond[1][1], surface_fond[2][1]);
+	/* Draw the wave in the same GTK draw pass as the free surface. */
+	if (Houle.nb_point >= 2 && nbtemps > 0)
+		{
+		pa = 1 + (int)((nbtemps - 1) * temps_t);
+		if (pa < 1) pa = 1;
+		if (pa > nbtemps) pa = nbtemps;
+		for (no = 1; no < Houle.nb_point; no += 2)
+			TraceSegment(BLUE, Houle.U[no][pa], Houle.V[no][pa], Houle.U[no+1][pa], Houle.V[no+1][pa]);
+		}
+	else
+		{
+		TraceSegment(BLUE, surface_libre[1][1], surface_libre[2][1], surface_libre[1][2], surface_libre[2][2]);
+		TraceSegment(BLUE, surface_libre[1][2], surface_libre[2][2], surface_libre[1][3], surface_libre[2][3]);
+		TraceSegment(BLUE, surface_libre[1][3], surface_libre[2][3], surface_libre[1][4], surface_libre[2][4]);
+		TraceSegment(BLUE, surface_libre[1][4], surface_libre[2][4], surface_libre[1][1], surface_libre[2][1]);
+		}
 	/*
 	printf("surface_libre[1][1] %8.2lf surface_libre[2][1] %8.2lf  surface_libre[3][1] %8.2lf \n",surface_libre[1][1],surface_libre[2][1],surface_libre[3][1]);
 	printf("surface_libre[1][4] %8.2lf surface_libre[2][4] %8.2lf  surface_libre[3][4] %8.2lf \n",surface_libre[1][4],surface_libre[2][4],surface_libre[3][4]);
