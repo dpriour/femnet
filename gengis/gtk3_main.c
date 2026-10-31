@@ -797,11 +797,9 @@ int main(int argc, char **argv)
     gtk_widget_grab_focus(drawing_area);
 
     /* Messages de démarrage */
-    printf("Gengis démarré (GTK 3)\n");
-    printf("Mode par défaut: Création de paneles\n");
-    printf("Cliquez pour ajouter des points\n");
-    printf("Utilisez la molette pour zoomer/dézoomer\n");
-
+    printf("Gengis started (GTK 3)\n");
+    printf("Use menus to created netting panels and  cables\n");
+    printf("Use the scroll wheel to zoom in/out\n");
     /* Boucle principale GTK */
     gtk_main();
 

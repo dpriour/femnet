@@ -78,7 +78,7 @@ void gammah();
 void gammah2();
 
 /*prototypes de hauling_cable.c*/
-void hauling_cable();
+void hauling_cable(char *nomfichier);
 int find_bar(double speed, int cable, int extremity);
 
 /*prototypes de inertie_element2.c*/
@@ -277,7 +277,7 @@ int largeurbande();
 int largeurmatrice();
 
 /*prototypes de lectParam2.c*/
-int lectParam2();
+//int lectParam2();
 
 /*prototypes de lectureDo4.c*/
 int lectureDo4(char *nomfichier);

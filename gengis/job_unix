@@ -1,0 +1,8 @@
+alrep
+./phobos ~/femnet/gengis/boat
+alreu
+./unix ~/femnet/gengis/boat
+alred
+./dyna ~/femnet/gengis/boat
+
+./phobos /home/daniel/femnet/gengis/

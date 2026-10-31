@@ -75,6 +75,7 @@ void draw_everything(MyProgram *me);
 /* Fonctions de conversion de coordonnées */
 void screen_to_world(MyProgram *me, int sx, int sy, int *wx, int *wy, int *wz);
 void world_to_screen(MyProgram *me, int wx, int wy, int wz, int *sx, int *sy);
+void world_to_screen_float(MyProgram *me, float wx, float wy, float wz, int *sx, int *sy);
 
 /* Fonctions pour undo (Ctrl+Z) */
 void save_state(MyProgram *me);

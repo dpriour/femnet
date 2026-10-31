@@ -1002,8 +1002,15 @@ void add_point(MyProgram *me, int x, int y)
 
 void draw_everything(MyProgram *me)
 {
-    int i, j;
+    int i, j, no;
     int sx1, sy1, sx2, sy2;
+    float window_width, window_height, x_tick, y_tick;
+    char num_str[16];
+	//printf("me->draw_area_width %d me->draw_area_height %d  \n",me->draw_area_width ,me->draw_area_height);
+	//printf("me->zoom_factor %f \n",me->zoom_factor);
+	window_width = me->draw_area_width/me->zoom_factor;
+	window_height = me->draw_area_height/me->zoom_factor;
+	//printf("window_width %f window_height %f  \n",window_width ,window_heigth);
 
     /* Dessiner les axes selon le plan de vue */
     if (me->show_axes) {
@@ -1015,15 +1022,118 @@ void draw_everything(MyProgram *me)
                 world_to_screen(me, 0, -10000, 0, &sx1, &sy1);
                 world_to_screen(me, 0, 10000, 0, &sx2, &sy2);
                 DrawLine(sx1, sy1, sx2, sy2);
-                world_to_screen(me, 0, 100, 0, &sx1, &sy1);
-                DrawText("Y", sx1 + 10, sy1 + 5);
+		if ((window_width>100) && (window_width<=1000))
+			{
+                	world_to_screen(me, 0, 100, 0, &sx1, &sy1);
+                	DrawText("Y", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*100;
+                		world_to_screen(me, 0, x_tick, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%3.0fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
+		if ((window_width>10) && (window_width<=100))
+			{
+                	world_to_screen(me, 0, 10, 0, &sx1, &sy1);
+                	DrawText("Y", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*10;
+                		world_to_screen(me, 0, x_tick, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%2.0fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
+		if ((window_width>1) && (window_width<=10))
+			{
+                	world_to_screen(me, 0, 1, 0, &sx1, &sy1);
+                	DrawText("Y", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*1;
+                		world_to_screen(me, 0, x_tick, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%1.0fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
+		if ((window_width>0.1) && (window_width<=1))
+			{
+                	world_to_screen_float(me, 0, 0.1, 0, &sx1, &sy1);
+	               	DrawText("Y", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*0.1;
+				//printf("x_tick %f\n", x_tick);
+                		world_to_screen_float(me, 0, x_tick, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%1.1fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
 
-                /* Axe Z (vertical) */
+               /* Axe Z (vertical) */
                 world_to_screen(me, 0, 0, -10000, &sx1, &sy1);
                 world_to_screen(me, 0, 0, 10000, &sx2, &sy2);
                 DrawLine(sx1, sy1, sx2, sy2);
-                world_to_screen(me, 0, 0, 100, &sx1, &sy1);
-                DrawText("Z", sx1 + 5, sy1 - 10);
+		//printf("sx1 %d sy1 %d\n", sx1,sy1);
+		if ((window_height>100) && (window_height<=1000))
+			{
+       	        	world_to_screen(me, 0, 0, 100, &sx1, &sy1);
+                	DrawText("Z", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*100;
+                		world_to_screen(me, 0, 0, y_tick, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%3.0fpx", y_tick);
+                		DrawText(num_str, sx1 - 40, sy1);
+				}
+			}
+		if ((window_height>10) && (window_height<=100))
+			{
+       	        	world_to_screen(me, 0, 0, 10, &sx1, &sy1);
+                	DrawText("Z", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*10;
+                		world_to_screen(me, 0, 0, y_tick, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%2.0fpx", y_tick);
+                		DrawText(num_str, sx1 - 35, sy1);
+				}
+			}
+		if ((window_height>1) && (window_height<=10))
+			{
+       	        	world_to_screen(me, 0, 0, 1, &sx1, &sy1);
+                	DrawText("Z", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*1;
+                		world_to_screen(me, 0, 0, y_tick, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%1.0fpx", y_tick);
+                		DrawText(num_str, sx1 - 20, sy1);
+				}
+			}
+		if ((window_height>0.1) && (window_height<=1))
+			{
+       	        	world_to_screen_float(me, 0, 0, 0.1, &sx1, &sy1);
+                	DrawText("Z", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*0.1;
+				//printf("y_tick %f\n", y_tick);
+                		world_to_screen_float(me, 0, 0, y_tick, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%1.1fpx", y_tick);
+                		DrawText(num_str, sx1 - 40, sy1);
+				}
+			}
                 break;
 
             case 2:  /* Normal=Y, écran montre Z (horizontal) et X (vertical) */
@@ -1031,15 +1141,116 @@ void draw_everything(MyProgram *me)
                 world_to_screen(me, 0, 0, -10000, &sx1, &sy1);
                 world_to_screen(me, 0, 0, 10000, &sx2, &sy2);
                 DrawLine(sx1, sy1, sx2, sy2);
-                world_to_screen(me, 0, 0, 100, &sx1, &sy1);
-                DrawText("Z", sx1 + 10, sy1 + 5);
+		if ((window_width>100) && (window_width<=1000))
+			{
+                	world_to_screen(me, 0, 0, 100, &sx1, &sy1);
+                	DrawText("Z", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*100;
+                		world_to_screen(me, 0, 0, x_tick, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%3.0fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
+		if ((window_width>10) && (window_width<=100))
+			{
+                	world_to_screen(me, 0, 0, 10, &sx1, &sy1);
+                	DrawText("Z", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*10;
+                		world_to_screen(me, 0, 0, x_tick, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%2.0fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
+		if ((window_width>1) && (window_width<=10))
+			{
+                	world_to_screen(me, 0, 0, 1, &sx1, &sy1);
+                	DrawText("Z", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*1;
+                		world_to_screen(me, 0, 0, x_tick, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%1.0fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
+		if ((window_width>0.1) && (window_width<=1))
+			{
+                	world_to_screen_float(me, 0, 0, 0.1, &sx1, &sy1);
+	               	DrawText("Z", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*0.1;
+				//printf("x_tick %f\n", x_tick);
+                		world_to_screen_float(me, 0, 0, x_tick, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%1.1fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
 
                 /* Axe X (vertical) */
                 world_to_screen(me, -10000, 0, 0, &sx1, &sy1);
                 world_to_screen(me, 10000, 0, 0, &sx2, &sy2);
                 DrawLine(sx1, sy1, sx2, sy2);
-                world_to_screen(me, 100, 0, 0, &sx1, &sy1);
-                DrawText("X", sx1 + 5, sy1 - 10);
+		if ((window_height>100) && (window_height<=1000))
+			{
+       	        	world_to_screen(me, 100, 0, 0, &sx1, &sy1);
+                	DrawText("X", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*100;
+                		world_to_screen(me, y_tick, 0, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%3.0fpx", y_tick);
+                		DrawText(num_str, sx1 - 40, sy1);
+				}
+			}
+		if ((window_height>10) && (window_height<=100))
+			{
+       	        	world_to_screen(me, 10, 0, 0, &sx1, &sy1);
+                	DrawText("X", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*10;
+                		world_to_screen(me, y_tick, 0, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%2.0fpx", y_tick);
+                		DrawText(num_str, sx1 - 35, sy1);
+				}
+			}
+		if ((window_height>1) && (window_height<=10))
+			{
+       	        	world_to_screen(me, 1, 0, 0, &sx1, &sy1);
+                	DrawText("X", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*1;
+                		world_to_screen(me, y_tick, 0, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%1.0fpx", y_tick);
+                		DrawText(num_str, sx1 - 20, sy1);
+				}
+			}
+		if ((window_height>0.1) && (window_height<=1))
+			{
+       	        	world_to_screen_float(me, 0.1, 0, 0, &sx1, &sy1);
+                	DrawText("X", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*0.1;
+                		world_to_screen_float(me, y_tick, 0, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%1.1fpx", y_tick);
+                		DrawText(num_str, sx1 - 40, sy1);
+				}
+			}
                 break;
 
             case 3:  /* Normal=Z, écran montre X (horizontal) et Y (vertical) */
@@ -1048,23 +1259,123 @@ void draw_everything(MyProgram *me)
                 world_to_screen(me, -10000, 0, 0, &sx1, &sy1);
                 world_to_screen(me, 10000, 0, 0, &sx2, &sy2);
                 DrawLine(sx1, sy1, sx2, sy2);
-                world_to_screen(me, 100, 0, 0, &sx1, &sy1);
-                DrawText("X", sx1 + 10, sy1 + 5);
+		if ((window_width>100) && (window_width<=1000))
+			{
+                	world_to_screen(me, 100, 0, 0, &sx1, &sy1);
+                	DrawText("X", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*100;
+                		world_to_screen(me, x_tick, 0, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%3.0fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
+		if ((window_width>10) && (window_width<=100))
+			{
+                	world_to_screen(me, 10, 0, 0, &sx1, &sy1);
+                	DrawText("X", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*10;
+                		world_to_screen(me, x_tick, 0, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%2.0fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
+		if ((window_width>1) && (window_width<=10))
+			{
+                	world_to_screen(me, 1, 0, 0, &sx1, &sy1);
+                	DrawText("X", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*1;
+                		world_to_screen(me, x_tick, 0, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%1.0fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
+		if ((window_width>0.1) && (window_width<=1))
+			{
+                	world_to_screen_float(me, 0.1, 0, 0, &sx1, &sy1);
+	               	DrawText("X", sx1, sy1 + 20);
+			for (no=-20;no<=20;no++)
+				{
+				x_tick = no*0.1;
+	               		world_to_screen_float(me, x_tick, 0, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1, sy1+5);
+                		sprintf(num_str, "%1.1fpx", x_tick);
+                		DrawText(num_str, sx1, sy1 - 5);
+				}
+			}
 
                 /* Axe Y (vertical) */
                 world_to_screen(me, 0, -10000, 0, &sx1, &sy1);
                 world_to_screen(me, 0, 10000, 0, &sx2, &sy2);
                 DrawLine(sx1, sy1, sx2, sy2);
-                world_to_screen(me, 0, 100, 0, &sx1, &sy1);
-                DrawText("Y", sx1 + 5, sy1 - 10);
+ 		if ((window_height>100) && (window_height<=1000))
+			{
+       	        	world_to_screen(me, 0, 100, 0, &sx1, &sy1);
+                	DrawText("Y", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*100;
+                		world_to_screen(me, 0, y_tick, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%3.0fpx", y_tick);
+                		DrawText(num_str, sx1 - 40, sy1);
+				}
+			}
+		if ((window_height>10) && (window_height<=100))
+			{
+       	        	world_to_screen(me, 0, 10, 0, &sx1, &sy1);
+                	DrawText("Y", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*10;
+                		world_to_screen(me, 0, y_tick, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%2.0fpx", y_tick);
+                		DrawText(num_str, sx1 - 35, sy1);
+				}
+			}
+		if ((window_height>1) && (window_height<=10))
+			{
+       	        	world_to_screen(me, 0, 1, 0, &sx1, &sy1);
+                	DrawText("Y", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*1;
+                		world_to_screen(me, 0, y_tick, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%1.0fpx", y_tick);
+                		DrawText(num_str, sx1 - 20, sy1);
+				}
+			}
+		if ((window_height>0.1) && (window_height<=1))
+			{
+       	        	world_to_screen_float(me, 0, 0.1, 0, &sx1, &sy1);
+                	DrawText("Y", sx1 + 5, sy1);
+			for (no=-20;no<=20;no++)
+				{
+				y_tick = no*0.1;
+                		world_to_screen_float(me, 0, y_tick, 0, &sx1, &sy1);
+               			DrawLine(sx1, sy1, sx1+5, sy1);
+                		sprintf(num_str, "%1.1fpx", y_tick);
+                		DrawText(num_str, sx1 - 40, sy1);
+				}
+			}
                 break;
         }
 
         /* Marquer l'origine */
-        world_to_screen(me, 0, 0, 0, &sx1, &sy1);
-        DrawLine(sx1-5, sy1, sx1+5, sy1);
-        DrawLine(sx1, sy1-5, sx1, sy1+5);
-        DrawText("0", sx1-10, sy1+15);
+        //world_to_screen(me, 0, 0, 0, &sx1, &sy1);
+        //DrawLine(sx1-5, sy1, sx1+5, sy1);
+        //DrawLine(sx1, sy1-5, sx1, sy1+5);
+        //DrawText("0", sx1-10, sy1+15);
     }
 
     /* Dessiner les paneles EN PREMIER (en arrière-plan) */
@@ -1376,6 +1687,7 @@ void draw_everything(MyProgram *me)
                 /* Dessiner un petit carré autour du point */
                 int size = (int)(3 * me->zoom_factor);
                 if (size < 2) size = 2;
+                size = 5;
                 DrawLine(sx-size, sy-size, sx+size, sy-size);
                 DrawLine(sx+size, sy-size, sx+size, sy+size);
                 DrawLine(sx+size, sy+size, sx-size, sy+size);
@@ -1453,6 +1765,32 @@ void world_to_screen(MyProgram *me, int wx, int wy, int wz, int *sx, int *sy)
     *sy = (int)(world_y * me->zoom_factor + me->pan_y);
 }
 
+void world_to_screen_float(MyProgram *me, float wx, float wy, float wz, int *sx, int *sy)
+{
+    /* Convertir les coordonnées monde en coordonnées écran (avec zoom et pan) */
+    /* en fonction du plan de vue actuel */
+    float world_x, world_y;
+
+    switch (me->view_plane) {
+        case 1:  /* Normal=X, écran montre Y (horizontal) et Z (vertical) */
+            world_x = wy;
+            world_y = wz;
+            break;
+        case 2:  /* Normal=Y, écran montre Z (horizontal) et X (vertical) */
+            world_x = wz;
+            world_y = wx;
+            break;
+        case 3:  /* Normal=Z, écran montre X (horizontal) et Y (vertical) */
+        default:
+            world_x = wx;
+            world_y = wy;
+            break;
+    }
+
+    *sx = (int)(world_x * me->zoom_factor + me->pan_x);
+    *sy = (int)(world_y * me->zoom_factor + me->pan_y);
+}
+
 /* ===== CALLBACKS POUR LE ZOOM ===== */
 
 void zoom_in(Widget w, void *data)
@@ -1491,7 +1829,8 @@ void zoom_reset(Widget w, void *data)
 
     /* Vérifier que le zoom est dans une plage raisonnable */
     if (new_zoom < 0.1) new_zoom = 0.1;
-    if (new_zoom > 10.0) new_zoom = 10.0;
+    //if (new_zoom > 10.0) new_zoom = 10.0;
+    if (new_zoom > 1000.0) new_zoom = 1000.0;
 
     me->zoom_factor = new_zoom;
     me->pan_x = 0;

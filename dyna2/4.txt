@@ -1,0 +1,42 @@
+			if (strcmp(chaine,"hauling_cable4") == 0)
+				{
+				itmp = fscanf(fic,"%d",&i);		/*cable*/				
+				itmp = fscanf(fic,"%lf",&TypeElement[i].haul_mini);
+				itmp = fscanf(fic,"%lf",&TypeElement[i].haul_maxi);
+				itmp = fscanf(fic,"%d",&TypeElement[i].nb_times);
+				TypeElement[i].times  = (double *) Realloc_double(TypeElement[i].times   ,1 + TypeElement[i].nb_times);				
+				TypeElement[i].haul_v = (double *) Realloc_double(TypeElement[i].haul_v  ,1 + TypeElement[i].nb_times);				
+				TypeElement[i].haul_ext = (int *) Realloc_int(TypeElement[i].haul_ext  ,1 + TypeElement[i].nb_times);				
+				for (pa=1;pa<=TypeElement[i].nb_times;pa++)
+					{
+					itmp = fscanf(fic,"%lf",&TypeElement[i].times[pa]);	// Recupere tous les temps
+					}
+				for (pa=1;pa<=TypeElement[i].nb_times;pa++)
+					{
+					itmp = fscanf(fic,"%lf",&TypeElement[i].haul_v[pa]);	// Recupere les vitesses a chaque pas de temps
+					}
+				for (pa=1;pa<=TypeElement[i].nb_times;pa++)
+					{
+					itmp = fscanf(fic,"%d",&TypeElement[i].haul_ext[pa]);	// Recupere les extremites utilisees a chaque pas de temps
+					}
+				printf("The cable %d is reduced\n",i);
+				printf("the times table is : ");
+				for (pa=1;pa<=TypeElement[i].nb_times;pa++)
+					{
+					printf("     %8.2lf",TypeElement[i].times[pa]);
+					}
+					printf("  s\n");
+				printf("the hauling speed :  ");
+				for (pa=1;pa<=TypeElement[i].nb_times;pa++)
+					{
+					printf("     %8.2lf",TypeElement[i].haul_v[pa]);
+					}
+					printf("  m/s\n");
+				printf("the extremity     :  ");
+				for (pa=1;pa<=TypeElement[i].nb_times;pa++)
+					{
+					printf("     %8d",TypeElement[i].haul_ext[pa]);
+					}
+					printf("\n");
+				}
+
