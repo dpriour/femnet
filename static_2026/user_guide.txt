@@ -5,7 +5,7 @@ compile libsx (in order to get /hexa/libsx/src/libsx.a, it is the graphic librar
 compile lib_dp 
 compile batz (it is a graphic tool to see calculated structures)
 compile phobos (it is a graphic tool to see the design of the structures)
-compile unix_2004 (it is the tool for calculate the equilibrium of the structure in quasi static conditions)
+compile static_2026 (it is the tool for calculate the equilibrium of the structure in quasi static conditions)
 compile  dyna2 (it is the tool for calculate the equilibrium of the structure in dynamic conditions)
 
 Errors :
@@ -462,7 +462,7 @@ input symy_U 20 2 3 4 5 6 7 8 9 10 11 25 26 27 28 29 30 31 32 33 34
 such as the volume of the bar
 is split between each extremity. The node is a cube of side = pow(volum_elem /2,1/3). The drag coef is calculated
 in order to have a similar drag: cd  = Element[zg].cdnormal*Element[zg].lgrepos*Element[zg].diametrehydro/(lonx*lonz);
-it is used in dyna2 but maybe needed to be used in unix_2004. This is a default behaviour
+it is used in dyna2 but maybe needed to be used in static_2026. This is a default behaviour
 if input elem_noeud the drag and floatability is calculated along all the bar*/
 //this not compatible with input tab_drag_filt 
 input elem_noeud 15 32
@@ -1055,7 +1055,7 @@ output orientation_netting 14 1 2 3 4 5 6 7 8 9 10 11 12 13 14  5.0
 // dont touch Select cluster library:
 // a line is in the window "Use this link line: " such as
 // -Wl,--start-group  $(MKLROOT)/lib/ia32/libmkl_intel.a $(MKLROOT)/lib/ia32/libmkl_gnu_thread.a $(MKLROOT)/lib/ia32/libmkl_core.a -Wl,--end-group -fopenmp -lpthread -lm
-// open the makefile in unix and dyna2, add the previous line to cc $@.c libfil.a -L/usr/X11R6/lib/ -lm -o $@
+// open the makefile in static and dyna2, add the previous line to cc $@.c libfil.a -L/usr/X11R6/lib/ -lm -o $@
 // that gives
 // cc $@.c libfil.a -L/usr/X11R6/lib/ -lm -o $@ -Wl,--start-group  $(MKLROOT)/lib/ia32/libmkl_intel.a $(MKLROOT)/lib/ia32/libmkl_gnu_thread.a $(MKLROOT)/lib/ia32/libmkl_core.a -Wl,--end-group -fopenmp -lpthread -lm
 // to find MKLROOT, sudo updatedb and wait
@@ -1192,7 +1192,7 @@ input hauling_cable4   14 0.010 25.0054 12
 0.3280915  	0.4192035  	0.6014275  	0.6476359 	0.7226532  	0.8624705  	1.0208409 	1.1929073 	1.4543323  	1.8277355  	1.8187668  	1.8142825
 2 		2 		2 		2 		2 		2 		2 		2 		2 		2 		2		2
 
-//in order to calculate the total height of the structure. The result is recorded in the file output in the directiry ../hexa/unix_2004/output
+//in order to calculate the total height of the structure. The result is recorded in the file output in the directiry ../femnet/static_2026/output
 //this result is used by the executable ../hexa/Mos_auto/ex
 output Delta_h
 
@@ -1347,7 +1347,7 @@ sudo apt-get install libxt-dev
 //equation2 : wave speed : c² = G/k tnah(k d)
 //equation3 : wave length : lambda = c . T
 //3 equations with 3 unknows (lambda, c and k) give one equation : G T² / 2 / pi tanh(2 pi /lambda) - lambda = 0
-//this equation is solved in initialisation.c in unix
+//this equation is solved in initialisation.c in static
 
 
 //3 wave models are usable: Airy intermediate depth, Stokes intermediate depth, Stokes 3d deep waters

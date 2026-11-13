@@ -128,7 +128,7 @@ void imprvectreel1(int nb, int dec, double *vect)
   		}
   	if (dec > 12)
   		{
-	    	printf(" Sorry, change the code in imprvecreeel in /unix_2004/imprimvectreel.c : it must be <= 12");
+	    	printf(" Sorry, change the code in imprvecreeel in /static_2026/imprimvectreel.c : it must be <= 12");
   		}
   	/*if (10*(elem/10) != elem) printf("\n");*/
   	printf(" \n");
@@ -246,7 +246,7 @@ void imprvectreel2(int nb, int dec, int col, double *vect)
   		}
   	if (dec > 12)
   		{
-	    	printf(" Sorry, change the code in imprvecreeel in /unix_2004/imprimvectreel.c : dec must be <= 12 and not %d",dec);
+	    	printf(" Sorry, change the code in imprvecreeel in /static_2026/imprimvectreel.c : dec must be <= 12 and not %d",dec);
   		}
   	/*if (10*(elem/10) != elem) printf("\n");*/
   	printf(" \n");

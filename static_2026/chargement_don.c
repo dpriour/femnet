@@ -1103,7 +1103,7 @@ if (Structure.version == 2)
 	Grid_drag.pas = 0; 			/*the default value = 0, in this case there is no calculation of drag grid*/
 	Foot_print.nb = 0;
 	Structure.eigenvalues = 0;
-	Structure.convergence_parameters = 0;	//default value, the convergence parameters are those of ~/hexa/unix_2004/param.txt
+	Structure.convergence_parameters = 0;	//default value, the convergence parameters are those of ~/hexa/static_2026/param.txt
 	Structure.delta_h1 = 0;			//default value no calculation of total height
 	Structure.curvature = 0;
 	Structure.hauling_cable4_tension = 0;	//default value no record of hauling tensions in *.hwt file

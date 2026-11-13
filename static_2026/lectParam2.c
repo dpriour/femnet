@@ -22,7 +22,7 @@ int lectParam2(char *nomfichier)
 		  	strcat(tonom,"/param.txt");	
     			//printf("%s %s %s \n","file ",tonom," exists");
 			}
-  		//strcpy(tonom,"/home/daniel/femnet/unix_2004/param.txt");
+  		//strcpy(tonom,"/home/daniel/femnet/static_2026/param.txt");
   		}
   	if (Structure.convergence_parameters == 1)
   		{
@@ -38,7 +38,7 @@ int lectParam2(char *nomfichier)
   		{
     		printf(" \n");
     		printf("%s %s %s \n","file ",tonom," don't exist ?");
-    		//printf("Create the file param.txt in the current folder (~/hexa/unix_2004/)\n");
+    		//printf("Create the file param.txt in the current folder (~/femnet/static_2026/)\n");
 			strcpy(tonom,CWD);
     		printf("Create the file param.txt in the current folder (%s)\n",tonom);
     		printf("This file has a real on the first line\n");
