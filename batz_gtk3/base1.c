@@ -1,5 +1,4 @@
 #include "batz.h"
-/*#include "4c19.h"*/
 
 void base1(double angl1,int axeangl1,double angl2,int  axeangl2,int  nbcol,double *vect)
 

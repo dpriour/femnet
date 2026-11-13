@@ -768,7 +768,7 @@ void Checked_symmetry_no_symmetry(Widget widget, void *data)
 		}
 	if (mode == 1) SetMenuItemChecked(w[103],0);
 	printf("Structure.symetry %d\n",Structure.symetry);
-	printf("mode %d\n",mode); 
+	//printf("mode %d\n",mode); 
 	if (mode == 0)	
 		{
 		if (Structure.symetry == 0)
@@ -777,10 +777,27 @@ void Checked_symmetry_no_symmetry(Widget widget, void *data)
 			}
 		if ((Structure.symetry == 1) || (Structure.symetry == 2) || (Structure.symetry == 4))
 			{
-			NOMBRE_ELEMENTS  = (int) NOMBRE_ELEMENTS / 2;
+			//symetry x, symetry y, symetry z
+			NOMBRE_ELEMENTS  = (int)NOMBRE_ELEMENTS / 2;
 			NOMBRE_SURFACES  = (int)NOMBRE_SURFACES / 2;
 		  	NOMBRE_SURF_HEXA = (int)NOMBRE_SURF_HEXA / 2;
 			NOMBRE_NOEUDS    = (int)NOMBRE_NOEUDS / 2;
+			}
+		if ((Structure.symetry == 3) || (Structure.symetry == 5) || (Structure.symetry == 6))
+			{
+			//symetry xy, symetry xz, symetry yz
+			NOMBRE_ELEMENTS  = (int)NOMBRE_ELEMENTS / 4;
+			NOMBRE_SURFACES  = (int)NOMBRE_SURFACES / 4;
+		  	NOMBRE_SURF_HEXA = (int)NOMBRE_SURF_HEXA / 4;
+			NOMBRE_NOEUDS    = (int)NOMBRE_NOEUDS / 4;
+			}
+		if (Structure.symetry == 7)
+			{
+			//symetry xyz
+			NOMBRE_ELEMENTS  = (int)NOMBRE_ELEMENTS / 8;
+			NOMBRE_SURFACES  = (int)NOMBRE_SURFACES / 8;
+		  	NOMBRE_SURF_HEXA = (int)NOMBRE_SURF_HEXA / 8;
+			NOMBRE_NOEUDS    = (int)NOMBRE_NOEUDS / 8;
 			}
 		}
 	if (mode == 1)	
@@ -791,12 +808,30 @@ void Checked_symmetry_no_symmetry(Widget widget, void *data)
 			}
 		if ((Structure.symetry == 1) || (Structure.symetry == 2) || (Structure.symetry == 4))
 			{
+			//symetry x, symetry y, symetry z
 			NOMBRE_ELEMENTS  = 2 * NOMBRE_ELEMENTS;
 			NOMBRE_SURFACES  = 2 * NOMBRE_SURFACES;
 		  	NOMBRE_SURF_HEXA = 2 * NOMBRE_SURF_HEXA;
 			NOMBRE_NOEUDS    = 2 * NOMBRE_NOEUDS;
 			}
+		if ((Structure.symetry == 3) || (Structure.symetry == 5) || (Structure.symetry == 6))
+			{
+			//symetry xy, symetry xz, symetry yz
+			NOMBRE_ELEMENTS  = 4 * NOMBRE_ELEMENTS;
+			NOMBRE_SURFACES  = 4 * NOMBRE_SURFACES;
+		  	NOMBRE_SURF_HEXA = 4 * NOMBRE_SURF_HEXA;
+			NOMBRE_NOEUDS    = 4 * NOMBRE_NOEUDS;
+			}
+		if (Structure.symetry == 7)
+			{
+			//symetry xyz
+			NOMBRE_ELEMENTS  = 8 * NOMBRE_ELEMENTS;
+			NOMBRE_SURFACES  = 8 * NOMBRE_SURFACES;
+		  	NOMBRE_SURF_HEXA = 8 * NOMBRE_SURF_HEXA;
+			NOMBRE_NOEUDS    = 8 * NOMBRE_NOEUDS;
+			}
 		}
+	printf("NOMBRE_ELEMENTS %d\n",NOMBRE_ELEMENTS); 
 	dessiner();
 	}
 

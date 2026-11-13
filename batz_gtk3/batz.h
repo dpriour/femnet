@@ -14,7 +14,6 @@
 #include "gtk3_compat.h"		/* should come first, defines libsx stuff  */
 #include "../lib_dp/definition_lib.h"
 #include "../lib_dp/graphic.h"
-//#include "4c19.h"
 /*
 typedef struct MyProgram
 	{

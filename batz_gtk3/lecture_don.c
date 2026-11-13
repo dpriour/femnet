@@ -2983,7 +2983,7 @@ void lecture_des()
 	/*chargement du fichier dessin.txt, qui contient les ordres de dessin des elements
 	si 1 on dessine si 0 on ne dessine pas*/
 	
-	printf("debut lecture_des \n");/**/
+	/*printf("debut lecture_des \n");*/
 	char c,tonom[100];
 	int pa;
 	FILE *fic;
@@ -2999,14 +2999,14 @@ void lecture_des()
     		exit(0);/**/
   		} 
 
-	printf("debut lecture_des Structure.symetry %d\n",Structure.symetry);/**/
-	printf("debut lecture_des NbTypesurf %d\n",NbTypesurf);/**/
-	printf("debut lecture_des NbTypesurfHexa %d\n",NbTypesurfHexa);/**/
-	printf("debut lecture_des NbTypeelem %d\n",NbTypeelem);/**/
-	printf("debut lecture_des NOMBRE_COULISSES %d\n",NOMBRE_COULISSES);/**/
-	printf("debut lecture_des NOMBRE_WINCHS %d\n",NOMBRE_WINCHS);/**/
-	printf("debut lecture_des NOMBRE_ELEMENTS %d\n",NOMBRE_ELEMENTS);/**/
-	printf("debut lecture_des NOMBRE_NOEUDS %d\n",NOMBRE_NOEUDS);/**/
+	/*printf("debut lecture_des Structure.symetry %d\n",Structure.symetry);
+	printf("debut lecture_des NbTypesurf %d\n",NbTypesurf);
+	printf("debut lecture_des NbTypesurfHexa %d\n",NbTypesurfHexa);
+	printf("debut lecture_des NbTypeelem %d\n",NbTypeelem);
+	printf("debut lecture_des NOMBRE_COULISSES %d\n",NOMBRE_COULISSES);
+	printf("debut lecture_des NOMBRE_WINCHS %d\n",NOMBRE_WINCHS);
+	printf("debut lecture_des NOMBRE_ELEMENTS %d\n",NOMBRE_ELEMENTS);
+	printf("debut lecture_des NOMBRE_NOEUDS %d\n",NOMBRE_NOEUDS);*/
     	for (pa=1;pa<=NbTypesurf;pa++)
     		{
     		do  c=fgetc(fic); while (c !=':'); 
@@ -3034,6 +3034,7 @@ void lecture_des()
     		do  c=fgetc(fic); while (c !=':'); 
     		fscanf(fic,"%d\n",&Winch[pa].flag_dessin);
     		}
+ 	//printf("Structure.symetry %4d\n",Structure.symetry);/**/
 	if (Structure.symetry == 0)
 		{
 		for (pa=1;pa<=NOMBRE_ELEMENTS;pa++)
@@ -3042,13 +3043,39 @@ void lecture_des()
 	    		fscanf(fic,"%d\n",&Element[pa].flag_dessin);
 			}
 		}
-	if (Structure.symetry == 2)
+	if ((Structure.symetry == 1) || (Structure.symetry == 2) || (Structure.symetry == 4))
 		{
 		for (pa=1;pa<=NOMBRE_ELEMENTS/2;pa++)
 			{
 	    		do  c=fgetc(fic); while (c !=':'); 
 	    		fscanf(fic,"%d\n",&Element[pa].flag_dessin);
 	    		Element[pa+NOMBRE_ELEMENTS/2].flag_dessin = Element[pa].flag_dessin;
+			}
+		}
+	if ((Structure.symetry == 3) || (Structure.symetry == 5) || (Structure.symetry == 6))
+		{
+		for (pa=1;pa<=NOMBRE_ELEMENTS/2;pa++)
+			{
+	    		do  c=fgetc(fic); while (c !=':'); 
+	    		fscanf(fic,"%d\n",&Element[pa].flag_dessin);
+	    		Element[pa+1*NOMBRE_ELEMENTS/4].flag_dessin = Element[pa].flag_dessin;
+	    		Element[pa+2*NOMBRE_ELEMENTS/4].flag_dessin = Element[pa].flag_dessin;
+	    		Element[pa+3*NOMBRE_ELEMENTS/4].flag_dessin = Element[pa].flag_dessin;
+			}
+		}
+	if (Structure.symetry == 7)
+		{
+		for (pa=1;pa<=NOMBRE_ELEMENTS/2;pa++)
+			{
+	    		do  c=fgetc(fic); while (c !=':'); 
+	    		fscanf(fic,"%d\n",&Element[pa].flag_dessin);
+	    		Element[pa+1*NOMBRE_ELEMENTS/8].flag_dessin = Element[pa].flag_dessin;
+	    		Element[pa+2*NOMBRE_ELEMENTS/8].flag_dessin = Element[pa].flag_dessin;
+	    		Element[pa+3*NOMBRE_ELEMENTS/8].flag_dessin = Element[pa].flag_dessin;
+	    		Element[pa+4*NOMBRE_ELEMENTS/8].flag_dessin = Element[pa].flag_dessin;
+	    		Element[pa+5*NOMBRE_ELEMENTS/8].flag_dessin = Element[pa].flag_dessin;
+	    		Element[pa+6*NOMBRE_ELEMENTS/8].flag_dessin = Element[pa].flag_dessin;
+	    		Element[pa+7*NOMBRE_ELEMENTS/8].flag_dessin = Element[pa].flag_dessin;
 			}
 		}
 	if (Structure.symetry == 0)

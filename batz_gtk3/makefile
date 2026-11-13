@@ -11,7 +11,7 @@ SRCS=base1.c batz.c charger.c dessiner_ps.c dessiner_visualisation.c \
 	qsort.c filet.c filet_hexa.c gfx_base.c postscript.c volume.c \
 	interieur_triangle.c multireq.c commentaire.c checked_menu.c alloc.c \
 	lecturedyn.c animation.c animation2.c anim_rotation2.c zoom.c \
-	../unix_2004/nrutil.c gtk3_compat.c
+	../static_2026/nrutil.c gtk3_compat.c
 OBJS=$(SRCS:.c=.o)
 
 .PHONY: all clean
