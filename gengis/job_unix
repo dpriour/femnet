@@ -1,7 +1,7 @@
 alrep
 ./phobos ~/femnet/gengis/boat
 alreu
-./unix ~/femnet/gengis/boat
+./static ~/femnet/gengis/boat
 alred
 ./dyna ~/femnet/gengis/boat
 
