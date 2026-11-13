@@ -121,7 +121,7 @@ void vitesseh2();
 
 
 /**********************************************************************/
-/*unix_2004*/
+/*static_2026*/
 /*prototypes de catch_hexa.c*/
 double surface_triangle2(double XX1, double YY1, double ZZ1, double XX2, double YY2, double ZZ2, double XX3, double YY3, double ZZ3);
 double longueur_segment2(double XX1, double YY1, double ZZ1, double XX2, double YY2, double ZZ2);

@@ -5,7 +5,7 @@
 #include<stdio.h>
 #include "omp.h"
 #include <math.h>
-#include "../unix_2004/nr.h"
+#include "../static_2026/nr.h"
 
 
 /* 
