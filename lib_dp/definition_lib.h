@@ -477,7 +477,7 @@ typedef struct 	noeud {
 
 typedef struct numerique {
 	float Diviseur;			//raideur additionnelle en N//
-	int Nbmaxiterations;		//nb max d iterations realisees dans unix//
+	int Nbmaxiterations;		//nb max d iterations realisees dans static//
 	float Seuilconvergence;		//seuil de convergence en N//
 	float Deplacement;		//deplacement maximal autorise en m//
 	float Pascalcul;		//pas de calcul en dynamique en s//
@@ -530,7 +530,7 @@ typedef struct opening_angle_stripe
 
 typedef struct optimization
    	{
-   	int	type;		//type of optimization cf user guide in unix_2004//
+   	int	type;		//type of optimization cf user guide in static_2026//
 	int 	nb_step;	//nb of step, default = 10//
 	double 	prop;		//proportion of displacement relatively to the maximal size of the panel, default = 5%//
 	double 	prop_max;		//proportion of displacement relatively to the maximal size of the panel, default = 5%//
@@ -1076,7 +1076,7 @@ typedef struct structure
 	double 	*times_drag_panel;	//in case of modification of the panel drag in dynamic: ratio of all the panels at each times
 	double 	*ratio_drag_panel;	//in case of modification of the panel drag in dynamic: ratio of all the panels at each times
 	double ratio_num_temp;		//ratio of K[i][i] < num_temps relatively to the nb of DOF
-	int convergence_parameters;	//if 1 the convergence parameters are defined if 0 they are defined in ~/hexa/unix_2004/param.txt
+	int convergence_parameters;	//if 1 the convergence parameters are defined if 0 they are defined in ~/femnet/satic_2026/param.txt
 	int total1,total2;		//if total1 & total2 are != 0 they are link in the same global node
 	int delta_h1;			//if 1 the size of the structure along X Y and Z is stored in tmp file
 	double delta_h2;  		//if delta_h1 == 1 the height of the structure is delta_h2

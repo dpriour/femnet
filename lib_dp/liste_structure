@@ -1,45 +1,45 @@
 		Liste des strutures situées dans definition_lib:
 
-	ball					batz, phobos, unix_2004, dyna2
+	ball					batz, phobos, static_2026, dyna2
 	barre					phobos
 	barre_winch				phobos
-	bottom					batz, phobos, unix, dyna, temporis
+	bottom					batz, phobos, static, dyna, temporis
 	champ					batz, temporis
-	codend					unix, dyna
+	codend					static, dyna
 	commentaire				batz, phobos, temporis
 	connect_panel_node			phobos
-	coulisse				batz, phobos, unix, dyna, temporis
-	courant					batz, phobos, unix, dyna, temporis
-	element					batz, phobos, unix, dyna, temporis
-	houle					batz, phobos, unix, dyna, temporis
+	coulisse				batz, phobos, static, dyna, temporis
+	courant					batz, phobos, static, dyna, temporis
+	element					batz, phobos, static, dyna, temporis
+	houle					batz, phobos, static, dyna, temporis
 	inversion_triangles			phobos
-	lien					phobos, unix, dyna2
-	noeud					batz, phobos, unix, dyna, temporis
+	lien					phobos, static, dyna2
+	noeud					batz, phobos, static, dyna, temporis
 	numerique				phobos
-	opening_angle				phobos, unix, dyna2
-	opening_mesh				phobos, unix, dyna2
-	opening_angle_stripe			phobos, unix, dyna2
+	opening_angle				phobos, static, dyna2
+	opening_mesh				phobos, static, dyna2
+	opening_angle_stripe			phobos, static, dyna2
 	optimization
 	ordre					phobos
 	panneau					phobos
 	pan_hexa				phobos
 	plan					phobos
-	plan_cutting				unix, dyna2
-	prise					batz, phobos, unix, dyna, temporis
-	recouvrement_X				unix, dyna2
-	sortie_texte				batz, phobos, unix, dyna, temporis
+	plan_cutting				static, dyna2
+	prise					batz, phobos, static, dyna, temporis
+	recouvrement_X				static, dyna2
+	sortie_texte				batz, phobos, static, dyna, temporis
 	sphere_element				batz, phobos
-	spheric_limit				unix, dyna2
+	spheric_limit				static, dyna2
 	voisin
-	structure				batz, phobos, unix, dyna, temporis
-	surface					batz, phobos, unix, dyna2, temporis
-	surf_hexa				batz, phobos, unix, dyna2, temporis
+	structure				batz, phobos, static, dyna, temporis
+	surface					batz, phobos, static, dyna2, temporis
+	surf_hexa				batz, phobos, static, dyna2, temporis
 	two_parameters
 	type_noeud_XYZ_SUPINF			phobos
-	value					batz, unix, dyna2
-	vector_tension_bar			unix, dyna2
-	vent					unix, dyna2
-	winch					batz, phobos, unix, dyna2
+	value					batz, static, dyna2
+	vector_tension_bar			static, dyna2
+	vent					static, dyna2
+	winch					batz, phobos, static, dyna2
 
 
 

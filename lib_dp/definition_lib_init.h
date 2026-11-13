@@ -721,7 +721,7 @@ typedef struct filiere
 
 typedef struct optimization
    	{
-   	int	type;		/*type of optimization cf user guide in unix_2004*/
+   	int	type;		/*type of optimization cf user guide in static_2026*/
 	int 	nb_step;	/*nb of step, default = 10*/
 	double 	prop;		/*proportion of displacement relatively to the maximal size of the panel, default = 5%*/
 	double 	prop_max;		/*proportion of displacement relatively to the maximal size of the panel, default = 5%*/
@@ -819,7 +819,7 @@ typedef struct ordre
 	
 typedef struct numerique {
 	float DIVISEUR;			/*raideur additionnelle en N*/
-	int Nbmaxiterations;		/*nb max d iterations realisees dans unix*/
+	int Nbmaxiterations;		/*nb max d iterations realisees dans static*/
 	float Seuilconvergence;		/*seuil de convergence en N*/
 	float Deplacement;		/*deplacement maximal autorise en m*/
 	float Pascalcul;		/*pas de calcul en dynamique en s*/
