@@ -719,10 +719,9 @@ output node_drag
 output element_drag
 output surface_drag
 output bottom_drag
-input hauling_cable4   14 0.010 50.0 2 
+input hauling_cable7   14 0.6 3000.0 2 2
 10 	3010  
 1.0 	1.0 
-2 	2
 input speed_type_node2  1 2 	
 1500 	3020
 0  	-1	
