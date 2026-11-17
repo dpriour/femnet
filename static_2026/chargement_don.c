@@ -163,7 +163,7 @@ void charger(char *nomfichier)
 	
     	do  c=fgetc(fic); while (c !=':'); 
     	itmp = fscanf(fic,"%d\n",&Structure.NbTypesurf );
-	printf("lecture %d panneaux\n",Structure.NbTypesurf); /**/
+	//printf("lecture %d panneaux\n",Structure.NbTypesurf); /**/
     	
 	for (pa=1;pa<=Structure.NbTypesurf;pa++)
 		{
@@ -276,7 +276,7 @@ void charger(char *nomfichier)
 	/*elements*****************************************************/
     	do  c=fgetc(fic); while (c !=':'); 
     	itmp = fscanf(fic,"%d\n",&Structure.NbTypeelem);
-	printf("lecture %d elements filaires\n",Structure.NbTypeelem); /**/
+	//printf("lecture %d elements filaires\n",Structure.NbTypeelem); /**/
 	for (pa=1;pa<=Structure.NbTypeelem;pa++)
 		{
     		do  c=fgetc(fic); while (c !=':'); 
@@ -287,7 +287,7 @@ void charger(char *nomfichier)
 			if (no ==1)
 				{
 				itmp = fscanf(fic,"%d %lf %lf %lf %d",&temp_num,&TypeElement[pa].x1,&TypeElement[pa].y1,&TypeElement[pa].z1,&temp_num);
-				printf(" %lf %lf %lf \n",TypeElement[pa].x1,TypeElement[pa].y1,TypeElement[pa].z1);/**/
+				//printf(" %lf %lf %lf \n",TypeElement[pa].x1,TypeElement[pa].y1,TypeElement[pa].z1);/**/
 				}
 			else if (no ==2)
 				{
@@ -2251,6 +2251,19 @@ if (Structure.version == 2)
 				pa = 0;
 				//exit(0);
 				}
+			if (strcmp(chaine,"foil3") == 0)
+				{
+				itmp = fscanf(fic,"%d", &node_type);
+				itmp = fscanf(fic,"%lf",&TypeNoeud[node_type].foil3_surface);
+				itmp = fscanf(fic,"%lf",&TypeNoeud[node_type].foil3_cd);
+				itmp = fscanf(fic,"%lf",&TypeNoeud[node_type].foil3_cl);
+				itmp = fscanf(fic,"%lf",&TypeNoeud[node_type].foil3_cz);
+				printf("foil3\n");
+				printf("TypeNoeud[%d].foil3_surface %lf (m²)\n",node_type,TypeNoeud[node_type].foil3_surface);
+				printf("TypeNoeud[%d].foil3_cd %lf ",node_type,TypeNoeud[node_type].foil3_cd);
+				printf("TypeNoeud[%d].foil3_cl %lf ",node_type,TypeNoeud[node_type].foil3_cl);
+				printf("TypeNoeud[%d].foil3_cz %lf\n",node_type,TypeNoeud[node_type].foil3_cz);
+				}
 			if (strcmp(chaine,"foil2") == 0)
 				{
 				itmp = fscanf(fic,"%d", &node_type);
@@ -2957,25 +2970,25 @@ if (Structure.version == 2)
 				itmp = fscanf(fic,"%d",&TypeElement[i].haul_extremity);
 				itmp = fscanf(fic,"%lf",&TypeElement[i].haul_mini);
 				itmp = fscanf(fic,"%lf",&TypeElement[i].haul_maxi);
-				itmp = fscanf(fic,"%d",&TypeElement[i].nb_times);
-				TypeElement[i].times  = (double *) Realloc_double(TypeElement[i].times   ,1 + TypeElement[i].nb_times);				
-				TypeElement[i].haul_v = (double *) Realloc_double(TypeElement[i].haul_v  ,1 + TypeElement[i].nb_times);				
-				for (pa=1;pa<=TypeElement[i].nb_times;pa++)
+				itmp = fscanf(fic,"%d",&TypeElement[i].nb_haul_times);
+				TypeElement[i].times  = (double *) Realloc_double(TypeElement[i].times   ,1 + TypeElement[i].nb_haul_times);				
+				TypeElement[i].haul_v = (double *) Realloc_double(TypeElement[i].haul_v  ,1 + TypeElement[i].nb_haul_times);				
+				for (pa=1;pa<=TypeElement[i].nb_haul_times;pa++)
 					{
 					itmp = fscanf(fic,"%lf",&TypeElement[i].times[pa]);
 					}
-				for (pa=1;pa<=TypeElement[i].nb_times;pa++)
+				for (pa=1;pa<=TypeElement[i].nb_haul_times;pa++)
 					{
 					itmp = fscanf(fic,"%lf",&TypeElement[i].haul_v[pa]);
 					}
 				printf("The cable %d is reduced by its extremity %d\n",i,TypeElement[i].haul_extremity);
 				printf("the times table is :\n");
-				for (pa=1;pa<=TypeElement[i].nb_times;pa++)
+				for (pa=1;pa<=TypeElement[i].nb_haul_times;pa++)
 					{
 					printf("     %8.2lf",TypeElement[i].times[pa]);
 					}
 					printf("  s\n");
-				for (pa=1;pa<=TypeElement[i].nb_times;pa++)
+				for (pa=1;pa<=TypeElement[i].nb_haul_times;pa++)
 					{
 					printf("     %8.2lf",TypeElement[i].haul_v[pa]);
 					}
@@ -3111,6 +3124,41 @@ if (Structure.version == 2)
 					printf("     %8d",TypeElement[i].haul_ext[pa]);
 					}
 					printf("\n");
+				}
+			if (strcmp(chaine,"hauling_cable7") == 0)
+				{
+				itmp = fscanf(fic,"%d",&zi);		/*cable*/				
+				itmp = fscanf(fic,"%lf",&tmp_d1);/*length minimun*/	TypeElement[zi].haul_mini = tmp_d1 / TypeElement[zi].nb_barre;
+				itmp = fscanf(fic,"%lf",&tmp_d1);/*length maximun*/	TypeElement[zi].haul_maxi = tmp_d1 / TypeElement[zi].nb_barre;
+				itmp = fscanf(fic,"%d",&TypeElement[zi].haul_extremity);	//position of the drum
+				itmp = fscanf(fic,"%d",&TypeElement[zi].nb_haul_times);
+				TypeElement[zi].haul_times  = (double *) Realloc_double(TypeElement[zi].haul_times   ,1 + TypeElement[zi].nb_haul_times);				
+				TypeElement[zi].haul_v = (double *) Realloc_double(TypeElement[zi].haul_v  ,1 + TypeElement[zi].nb_haul_times);				
+				for (pa=1;pa<=TypeElement[zi].nb_haul_times;pa++)
+					{
+					itmp = fscanf(fic,"%lf",&TypeElement[zi].haul_times[pa]);	// Recupere tous les temps
+					}
+				for (pa=1;pa<=TypeElement[zi].nb_haul_times;pa++)
+					{
+					itmp = fscanf(fic,"%lf",&TypeElement[zi].haul_v[pa]);	// Recupere les vitesses a chaque pas de temps
+					}
+				printf("Cable %d is reduced: ",zi);
+				printf("lengths minimun %8.2lf ",TypeElement[zi].haul_mini*TypeElement[zi].nb_barre);
+				printf("maximum %8.2lf ",TypeElement[zi].haul_maxi*TypeElement[zi].nb_barre);
+				printf("extremity %d\n",TypeElement[zi].haul_extremity);
+				printf("the times table is : ");
+				for (pa=1;pa<=TypeElement[zi].nb_haul_times;pa++)
+					{
+					printf("     %8.2lf",TypeElement[zi].haul_times[pa]);
+					}
+					printf("  s\n");
+				printf("the hauling speed :  ");
+				for (pa=1;pa<=TypeElement[zi].nb_haul_times;pa++)
+					{
+					printf("     %8.2lf",TypeElement[zi].haul_v[pa]);
+					}
+					printf("  m/s\n");
+				printf("\n");
 				}
 			if (strcmp(chaine,"catch_gravity") == 0)
 				{
