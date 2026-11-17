@@ -29,7 +29,8 @@ BIBOBJ =flotteurelement_dyna2 ecrituredynamique ecriturehauling creedynamique fi
 	../static_2026/etat_convergence ../static_2026/etirement5 ../static_2026/surglob2 ../static_2026/spheric_limit1 ../static_2026/cut_triangle\
 	../static_2026/affectation ../static_2026/new_coor ../static_2026/trouve_valeur ../static_2026/effort_trainee_elem_flottant ../static_2026/basic_bar_drag1\
 	../static_2026/affectation_ia ../static_2026/affectation_pardiso ../static_2026/pliage_barre_pardiso2_2 ../static_2026/pliage_barre_pardiso4\
-	../static_2026/cage_volume  ../lib_dp/alloc ../static_2026/gasdev ../static_2026/ran1  ../static_2026/nrutil ../static_2026/calculeffort_Zhan calculeffort_Zhan_dyna
+	../static_2026/cage_volume  ../lib_dp/alloc ../static_2026/gasdev ../static_2026/ran1  ../static_2026/nrutil ../static_2026/calculeffort_Zhan calculeffort_Zhan_dyna\
+	dynamic_foil3
 #	ball_drag ball_netting_contact ball_pesanteur ball_contact ball_inertie
 	
 OBJETS = $(BIBOBJ:=.o)
