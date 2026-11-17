@@ -1443,3 +1443,17 @@ The cz (along Z) is 0.0.
 //2 the number of bar elements inside a full numerical twine:
 input netting2ropes 4 10 0.0 0.5 3 2 
 
+//in case of dynamic. reduction of cable length.  indicate the number of the cable (15), the minimal (10.0) and the maximal (1000.0) 
+length of the cable
+//the extremity by which the cable is reuced (2), the number (2) of times in the times table, the table of times (10.0 1495), 
+the table of hauling speed (1.0 1.0)
+input hauling_cable7   15 10.0 1000.0 2 2
+10.0	1495  
+1.0	1.0 
+
+
+//In case of foil (trawl door for example). In this command the foil is
+modelled by node type 4. The actual surface of the foil is 4.5m². The cd is 0.75. The cl is 1.22.
+The cz (along Z) is 0.0. The cd and cl refer to the horizontal water speed. This is usable in static and dynamic
+input foil3 4 4.5 0.75  1.22 0.0
+
