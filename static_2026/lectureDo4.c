@@ -59,7 +59,7 @@ int lectureDo4(char *nomfichier)
   		}
 
   	i = NOMBRE_NOEUDS;
-  	printf("%s %d %s \n","reading ",i," nodes");
+  	//printf("%s %d %s \n","reading ",i," nodes");
 
        	n_ligne = 1+3*NOMBRE_NOEUDS;
        	p_colonne = 2*DIM3;
@@ -273,7 +273,7 @@ int lectureDo4(char *nomfichier)
   		}
 	
   	i = NOMBRE_ELEMENTS;
-  	printf("%s %d %s \n","reading ",i," bars");
+  	//printf("%s %d %s \n","reading ",i," bars");
 
   	do  pr=fgets(t1,256,f1); while (pr == NULL || *pr =='\n');
   	/* Element[i].extremite[1] et Element[i].extremite[2] sont les numeros du noeud i, extremites des bouts. */
@@ -286,7 +286,7 @@ int lectureDo4(char *nomfichier)
     		buffer = fgets(t1,256,f1); 
     		/*do  pr=fgets(t1,256,f1); while (pr == NULL || *pr =='\n');*/
 		/*printf("Element[%d].lgrepos = %lf \n",i,Element[i].lgrepos);*/
-		printf("bar i  %d extremities %d %d pro %lf %lf type %d\n",i,Element[i].extremite[1],Element[i].extremite[2],Element[i].pro[1],Element[i].pro[2],Element[i].type);
+		//printf("bar i  %d extremities %d %d pro %lf %lf type %d\n",i,Element[i].extremite[1],Element[i].extremite[2],Element[i].pro[1],Element[i].pro[2],Element[i].type);
 		Element[i].netting2ropes_panel = 0;	//default value: this bar element belongs to a cable not a panel
 		if (Element[i].type < 0)
 			{
@@ -410,7 +410,7 @@ int lectureDo4(char *nomfichier)
 			Element[i].ftangent            = panneau[panel].ftangent * sqrt(panneau[panel].netting_2_ropes_period);
 			Element[i].EI_flexion          = 0.0;
 			}
-		printf("Element[%d].lgrepos %lf\n",i,Element[i].lgrepos);
+		//printf("Element[%d].lgrepos %lf\n",i,Element[i].lgrepos);
 	  	}
 
 
@@ -584,9 +584,7 @@ if ((Structure.version >= 2) || (Ball.nb >= 1))
 	for (i=1;i<=tmp_winch;i++)
   		{ 
     		itmp = fscanf(f1,"%d %d %d %lf %lf %d",&tmp_i1,&tmp_i2,&tmp_i3,&tmp_d1,&tmp_d2,&tmp_i4);	buffer = fgets(t1,256,f1); 
-		printf("tmp_i1 %3d tmp_i2 %3d tmp_i3 %3d tmp_d1 %7.3lf tmp_d2 %7.3lf tmp_i4 %3d tmp_i5 %3d\n",tmp_i1,tmp_i2,tmp_i3,tmp_d1,tmp_d2,tmp_i4,tmp_i5);
-		/*
-		*/
+		//printf("tmp_i1 %3d tmp_i2 %3d tmp_i3 %3d tmp_d1 %7.3lf tmp_d2 %7.3lf tmp_i4 %3d tmp_i5 %3d\n",tmp_i1,tmp_i2,tmp_i3,tmp_d1,tmp_d2,tmp_i4,tmp_i5);
 		
 		if (tmp_i4 != tmp_i5)
 			{
