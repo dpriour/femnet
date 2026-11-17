@@ -235,6 +235,9 @@ void flotteursurf3();
 /*prototypes de flotteursurf4.c*/
 void flotteursurf4();
 
+/*prototypes de static_foil3.c*/
+void static_foil3();
+
 /*prototypes de fond.c*/
 void fond();
 
