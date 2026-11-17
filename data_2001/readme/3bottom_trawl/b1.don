@@ -1772,7 +1772,7 @@ No du type :			1
 Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Length X,Y,Z (m):		0.000000  0.000000  0.000000
-Drag coefficient X,Y,Z:	1.200000  1.200000  1.200000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
 External forces X,Y,Z (N):	0.000000  0.000000  0.000000
 Displacement X,Y,Z:		1  1  1
 Limits X,Y,Z (m):		0.000000  0.000000  0.000000
@@ -1783,7 +1783,7 @@ No du type :			2
 Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Length X,Y,Z (m):		0.000000  0.000000  0.000000
-Drag coefficient X,Y,Z:	1.200000  1.200000  1.200000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
 External forces X,Y,Z (N):	0.000000  0.000000  0.000000
 Displacement X,Y,Z:		0  0  0
 Limits X,Y,Z (m):		0.000000  0.000000  -56.000000
@@ -1794,7 +1794,7 @@ No du type :			3
 Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Length X,Y,Z (m):		0.000000  0.000000  0.000000
-Drag coefficient X,Y,Z:	1.200000  1.200000  1.200000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
 External forces X,Y,Z (N):	0.000000  0.000000  0.000000
 Displacement X,Y,Z:		0  0  0
 Limits X,Y,Z (m):		0.000000  0.000000  -56.000000
@@ -1805,7 +1805,7 @@ No du type :			4
 Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Length X,Y,Z (m):		0.000000  0.000000  0.000000
-Drag coefficient X,Y,Z:	1.200000  1.200000  1.200000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
 External forces X,Y,Z (N):	0.000000  0.000000  0.000000
 Displacement X,Y,Z:		0  0  0
 Limits X,Y,Z (m):		0.000000  0.000000  -56.000000
@@ -1816,8 +1816,8 @@ No du type :			5
 Mass X,Y,Z (kg):		700.000000  700.000000  700.000000
 Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Length X,Y,Z (m):		0.000000  0.000000  0.000000
-Drag coefficient X,Y,Z:	1.200000  1.200000  1.200000
-External forces X,Y,Z (N):	1978.000000  2095.000000  0.000000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
+External forces X,Y,Z (N):	0.000000  0.000000  0.000000
 Displacement X,Y,Z:		0  0  0
 Limits X,Y,Z (m):		0.000000  0.000000  -56.000000
 Limits sense X,Y,Z:		0  0  1
@@ -1827,8 +1827,8 @@ No du type :			6
 Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Length X,Y,Z (m):		0.448000  0.448000  0.448000
-Drag coefficient X,Y,Z:	0.000000  0.000000  0.000000
-External forces X,Y,Z (N):	1978.000000  2095.000000  0.000000
+Drag coefficient X,Y,Z:		0.000000  0.000000  0.000000
+External forces X,Y,Z (N):	0.000000  0.000000  0.000000
 Displacement X,Y,Z:		0  0  0
 Limits X,Y,Z (m):		0.000000  0.000000  -56.000000
 Limits sense X,Y,Z:		0  0  1
@@ -1838,7 +1838,7 @@ No du type :			7
 Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Length X,Y,Z (m):		0.000000  0.000000  0.000000
-Drag coefficient X,Y,Z:	1.200000  1.200000  1.200000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
 External forces X,Y,Z (N):	0.000000  0.000000  0.000000
 Displacement X,Y,Z:		0  0  0
 Limits X,Y,Z (m):		0.000000  0.000000  -55.850000
@@ -1849,7 +1849,7 @@ No du type :			8
 Mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Added mass X,Y,Z (kg):		0.000000  0.000000  0.000000
 Length X,Y,Z (m):		0.000000  0.000000  0.000000
-Drag coefficient X,Y,Z:	1.200000  1.200000  1.200000
+Drag coefficient X,Y,Z:		1.200000  1.200000  1.200000
 External forces X,Y,Z (N):	0.000000  0.000000  0.000000
 Displacement X,Y,Z:		0  0  0
 Limits X,Y,Z (m):		0.000000  0.000000  -55.850000
@@ -1934,6 +1934,8 @@ output element_drag
 output bottom_drag
 #output catch_drag
 input convergence_parameters 1 10 100000000000
+input foil3 5 1.318 1.152  1.22 0.0
+input foil3 6 1.318 1.152  1.22 0.0
 
 
 
