@@ -39,9 +39,9 @@ for (zg = 1 ; zg <= NOMBRE_SURFACES ; zg++)
 	wasurf[yc(zg,2)] += nt[2] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils u
 	wasurf[yc(zg,3)] += nt[3] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils u
 
-	drag_tmp[1] = nt[1];
-	drag_tmp[2] = nt[2];
-	drag_tmp[3] = nt[3];
+	drag_tmp[1] = nt[1] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[2] = nt[2] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[3] = nt[3] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;
     		
 	//fils v
 	ba[1] = Surface[zg].mx;
@@ -49,14 +49,14 @@ for (zg = 1 ; zg <= NOMBRE_SURFACES ; zg++)
 	ba[3] = Surface[zg].mz;
 
 	//printf("fil51 ba %5.2lf %5.2lf %5.2lf Vw  %5.2lf %5.2lf %5.2lf\n",ba[1],ba[2],ba[3],Vw[1],Vw[2],Vw[3]);
-	basic_bar_drag1(Surface[zg].diametrehydro, Surface[zg].lgrepos, Surface[zg].cdnormal, Surface[zg].ftangent, ba, Vw, nt);	//nt trainee (drag + lift) sur un seul fils u
+	basic_bar_drag1(Surface[zg].diametrehydro, Surface[zg].lgrepos, Surface[zg].cdnormal, Surface[zg].ftangent, ba, Vw, nt);	//nt trainee (drag + lift) sur un seul fils v
 	wasurf[yc(zg,1)] += nt[1] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils v
 	wasurf[yc(zg,2)] += nt[2] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils v
 	wasurf[yc(zg,3)] += nt[3] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils v
 
-	drag_tmp[1] += nt[1];
-	drag_tmp[2] += nt[2];
-	drag_tmp[3] += nt[3];
+	drag_tmp[1] += nt[1] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[2] += nt[2] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[3] += nt[3] * Surface[zg].pondFS[1] * Surface[zg].nb_cote_u_ou_v / 3.0;
 	
 	depl_tmp[1] = wf[yc(zg,1)] -  wf1[yc(zg,1)];	//deplacement (m) of first vertex	
 	depl_tmp[2] = wf[yc(zg,2)] -  wf1[yc(zg,2)];	
@@ -79,9 +79,9 @@ for (zg = 1 ; zg <= NOMBRE_SURFACES ; zg++)
 	wasurf[yc(zg,5)] += nt[2] * Surface[zg].pondFS[2] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils u
 	wasurf[yc(zg,6)] += nt[3] * Surface[zg].pondFS[2] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils u
 		
-	drag_tmp[1] = nt[1];
-	drag_tmp[2] = nt[2];
-	drag_tmp[3] = nt[3];
+	drag_tmp[1] = nt[1] * Surface[zg].pondFS[2] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[2] = nt[2] * Surface[zg].pondFS[2] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[3] = nt[3] * Surface[zg].pondFS[2] * Surface[zg].nb_cote_u_ou_v / 3.0;
     		
 	//fils v
 	ba[1] = Surface[zg].mx;
@@ -94,9 +94,9 @@ for (zg = 1 ; zg <= NOMBRE_SURFACES ; zg++)
 	wasurf[yc(zg,5)] += nt[2] * Surface[zg].pondFS[2] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils v
 	wasurf[yc(zg,6)] += nt[3] * Surface[zg].pondFS[2] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils v
  
- 	drag_tmp[1] += nt[1];
-	drag_tmp[2] += nt[2];
-	drag_tmp[3] += nt[3];
+ 	drag_tmp[1] += nt[1] * Surface[zg].pondFS[2] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[2] += nt[2] * Surface[zg].pondFS[2] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[3] += nt[3] * Surface[zg].pondFS[2] * Surface[zg].nb_cote_u_ou_v / 3.0;
 	
 	depl_tmp[1] = wf[yc(zg,4)] -  wf1[yc(zg,4)];	//deplacement (m) of second vertex	
 	depl_tmp[2] = wf[yc(zg,5)] -  wf1[yc(zg,5)];	
@@ -121,9 +121,9 @@ for (zg = 1 ; zg <= NOMBRE_SURFACES ; zg++)
 	wasurf[yc(zg,8)] += nt[2] * Surface[zg].pondFS[3] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils u
 	wasurf[yc(zg,9)] += nt[3] * Surface[zg].pondFS[3] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils u
 		
-	drag_tmp[1] = nt[1];
-	drag_tmp[2] = nt[2];
-	drag_tmp[3] = nt[3];
+	drag_tmp[1] = nt[1] * Surface[zg].pondFS[3] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[2] = nt[2] * Surface[zg].pondFS[3] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[3] = nt[3] * Surface[zg].pondFS[3] * Surface[zg].nb_cote_u_ou_v / 3.0;
     		
 	//fils v
 	ba[1] = Surface[zg].mx;
@@ -136,9 +136,9 @@ for (zg = 1 ; zg <= NOMBRE_SURFACES ; zg++)
 	wasurf[yc(zg,8)] += nt[2] * Surface[zg].pondFS[3] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils v
 	wasurf[yc(zg,9)] += nt[3] * Surface[zg].pondFS[3] * Surface[zg].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils v
  
- 	drag_tmp[1] += nt[1];
-	drag_tmp[2] += nt[2];
-	drag_tmp[3] += nt[3];
+ 	drag_tmp[1] += nt[1] * Surface[zg].pondFS[3] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[2] += nt[2] * Surface[zg].pondFS[3] * Surface[zg].nb_cote_u_ou_v / 3.0;
+	drag_tmp[3] += nt[3] * Surface[zg].pondFS[3] * Surface[zg].nb_cote_u_ou_v / 3.0;
 	
 	depl_tmp[1] = wf[yc(zg,7)] -  wf1[yc(zg,7)];	//deplacement (m) of second vertex	
 	depl_tmp[2] = wf[yc(zg,8)] -  wf1[yc(zg,8)];	
