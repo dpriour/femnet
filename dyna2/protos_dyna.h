@@ -40,6 +40,9 @@ int creedynamique(char *nomfichier);
 /*prototypes de deplacement.c*/
 void  deplacement(char *nomfichier);
 
+/*dynamic_foil3.c*/
+void dynamic_foil3();
+
 /*prototypes de ecrituredynamique.c*/
 int ecrituredynamique(char *nomfichier);
 
