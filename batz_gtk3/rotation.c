@@ -274,7 +274,7 @@ void rotation()
 		}*/
 		
 	/*rotation des noeuds en dynamique*/
-  	printf("debut rotation %d noeuds\n",NOMBRE_NOEUDS);/**/
+  	//printf("debut rotation %d noeuds\n",NOMBRE_NOEUDS);/**/
 	if (nbtemps > 1)
 		{
 		for (pa=1;pa<=nbtemps;pa++)
@@ -302,9 +302,9 @@ void rotation()
 				}
 			}
 		}
-  	printf("fin rotation noeuds\n");/**/
+  	//printf("fin rotation noeuds\n");/**/
 		
-  	printf("debut rotation SL: %d points\n",Houle.nb_point);/**/
+  	//printf("debut rotation SL: %d points\n",Houle.nb_point);/**/
 
 	/*rotation de la surface libre en dynamique bis*/
 	if (nbtemps > 1)
@@ -321,7 +321,7 @@ void rotation()
 		}
 	/*
 	*/
-  	printf("fin rotation SL\n");/**/
+  	//printf("fin rotation SL\n");/**/
 		
 	/*rotation of eigenvectors*/
 	if (Structure.eigenvalues > 0)
