@@ -69,6 +69,16 @@ char *nomfichier;
 	 			}
 	 		}
 	    	fprintf(f2,"\n");
+		for (zi=1;zi<=Structure.NbTypeelem;zi++)
+			{
+			if (TypeElement[zi].nb_haul_times >= 2)	/*the cable zi is reduced in case of hauling times table*/
+				{
+    				//fprintf(f2," %d",TypeElement[zi].haul_bar);
+    				//fprintf(f2," %11.6lf",TypeElement[zi].wt);
+    				fprintf(f2," %11.6lf",Element[TypeElement[zi].haul_bar].wt);
+	 			}
+	 		}
+	    	fprintf(f2,"\n");
    		fclose(f2);
 	    	}
   	/*ecriture ballast*/
