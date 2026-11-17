@@ -156,6 +156,40 @@ void initialisation_hauling_cable()
 		  			}
 		  		}				
 			}
+		if (TypeElement[zi].nb_haul_times >= 2)
+			{
+		  	for (zj = 1 ; zj<= NOMBRE_ELEMENTS ; zj++)
+		  		{
+		  		if (Element[zj].type == zi)
+		  			{
+					/*printf("zj  %d extremities %d %d pro %lf %lf\n",zj,Element[zj].extremite[1],Element[zj].extremite[2],Element[zj].pro[1],Element[zj].pro[2]);*/
+		  			if ((TypeElement[zi].haul_extremity == 1) && (Element[zj].pro[1] == 0.0))
+		  				{
+						TypeElement[zi].haul_bar = zj;			/*first bar which is reduced*/
+						TypeElement[zi].haul_node = yb(zj,6)/3;		/*next node which is removed*/
+						printf("a the first bar reduced is  %d its extremities are nodes %d %d at proportion of the cable reference %lf %lf. That means that the first bar is %d and the next node removed is %d\n",zj,yb(zj,3)/3,yb(zj,6)/3,Element[zj].pro[1],Element[zj].pro[2],TypeElement[zi].haul_bar,TypeElement[zi].haul_node);
+						}
+		  			if ((TypeElement[zi].haul_extremity == 1) && (Element[zj].pro[2] == 0.0))
+		  				{
+						TypeElement[zi].haul_bar = zj;
+						TypeElement[zi].haul_node = yb(zj,3)/3;
+						printf("b the first bar reduced is  %d its extremities are nodes %d %d at proportion of the cable reference %lf %lf. That means that the first bar is %d and the next node removed is %d\n",zj,yb(zj,3)/3,yb(zj,6)/3,Element[zj].pro[1],Element[zj].pro[2],TypeElement[zi].haul_bar,TypeElement[zi].haul_node);
+						}
+		  			if ((TypeElement[zi].haul_extremity == 2) && (Element[zj].pro[1] == 1.0))
+		  				{
+						TypeElement[zi].haul_bar = zj;
+						TypeElement[zi].haul_node = yb(zj,6)/3;
+						printf("c the first bar reduced is  %d its extremities are nodes %d %d at proportion of the cable reference %lf %lf. That means that the first bar is %d and the next node removed is %d\n",zj,yb(zj,3)/3,yb(zj,6)/3,Element[zj].pro[1],Element[zj].pro[2],TypeElement[zi].haul_bar,TypeElement[zi].haul_node);
+						}
+		  			if ((TypeElement[zi].haul_extremity == 2) && (Element[zj].pro[2] == 1.0))
+		  				{
+						TypeElement[zi].haul_bar = zj;
+						TypeElement[zi].haul_node = yb(zj,3)/3;
+						printf("d the first bar reduced is  %d its extremities are nodes %d %d at proportion of the cable reference %lf %lf. That means that the first bar is %d and the next node removed is %d\n",zj,yb(zj,3)/3,yb(zj,6)/3,Element[zj].pro[1],Element[zj].pro[2],TypeElement[zi].haul_bar,TypeElement[zi].haul_node);
+						}
+		  			}
+		  		}				
+			}
 		}
  	}
 
