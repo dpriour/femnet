@@ -146,7 +146,7 @@ int main(int argc,char *argv[])
       			TEST_fin*/
       				
       			misezero4();			/*printf("misezero		ze[%5d][%5d] = %17.0lf\n",150,1500,ze[150][1500]);*/
- 			miseajourPondFS();
+			miseajourPondFS();
  			
 			//printf("misezero\n");imprvectreel1(435, 0, wasurf);
       			/*efforts sur les triangles de filet*****************************************************************************/
@@ -249,6 +249,7 @@ int main(int argc,char *argv[])
 			/*imprvectreel(1320, wasurf);*/   
       			fond();  	//force on nodes
 			if (Structure.nb_deck > 0) deck_contact();
+			static_foil3();/**/ 	
       			//fond2();     		//force on elements	
 			//printf("fonde		");imprvectreel(21, waelem);/**/
       			//imprvectreel(6, wanoeud);   			
@@ -583,6 +584,7 @@ int main(int argc,char *argv[])
 		spheric_limit1();/**/
       		fond();     //force on nodes	
 		if (Structure.nb_deck > 0) deck_contact();
+		static_foil3();/**/ 	
 		ecriturestatique(nomfichier);/**/
 		sortie_texte_ecran();
   		symetrie2();
