@@ -115,6 +115,113 @@ void hauling_cable(char *nomfichier)
 				}
 			}
 		}
+		if (TypeElement[zi].nb_haul_times >= 2)	/*the cable zi is reduced in case of times table*/
+		{
+			/*the hauling speed in m/s*/
+			TypeElement[zi].haul_speed = 0.0;			/*the default hauling speed*/
+			extremity = TypeElement[zi].haul_extremity;
+      			for (zg=1;zg<=TypeElement[zi].nb_haul_times-1;zg++)
+			{
+				if ((times >= TypeElement[zi].haul_times[zg]) && (times <= TypeElement[zi].haul_times[zg+1]))
+				{
+					if (TypeElement[zi].haul_times[zg] != TypeElement[zi].haul_times[zg+1])
+					{
+						TypeElement[zi].haul_speed = TypeElement[zi].haul_v[zg] + (TypeElement[zi].haul_v[zg+1]-TypeElement[zi].haul_v[zg])*(times-TypeElement[zi].haul_times[zg])/(TypeElement[zi].haul_times[zg+1]-TypeElement[zi].haul_times[zg]);
+					}
+					else
+					{
+						TypeElement[zi].haul_speed = TypeElement[zi].haul_v[zg];
+					}
+				}
+			}
+
+
+			/*reduction in m*/				
+			reduction = TypeElement[zi].haul_speed * Pascalcul;
+			//printf("zi %d speed %lf reduction %lf haul_mini %lf haul_maxi %lf\n",zi,TypeElement[zi].haul_speed,reduction,TypeElement[zi].haul_mini,TypeElement[zi].haul_maxi);/**/
+						
+			/*printf("cable zi %d bar zj %d no %d speed %lf length bar %lf reduction %lf\n",zi,zj,no,TypeElement[zi].haul_speed,Element[zj].lgrepos,reduction);*/
+			
+			
+			if (TypeElement[zi].haul_speed >= 0.0)	//hauling
+			{
+				trouve =  find_bar(TypeElement[zi].haul_speed, zi, extremity);
+				TypeElement[zi].haul_bar = trouve;
+				//TypeElement[zi].wt = Element[trouve].wt;	//stackage of the tension of the reduced bar in TypeElement[zi].wt
+				//printf("zi %d  trouve  %d extremity %d  wt %lf\n",zi,trouve,extremity,TypeElement[zi].wt);
+				if (trouve != 0)
+				{
+					if (Element[trouve].lgrepos - reduction > TypeElement[zi].haul_mini)
+					{
+						Element[trouve].lgrepos = Element[trouve].lgrepos - reduction;
+						//TypeElement[zi].haul_energy = TypeElement[zi].haul_energy + reduction * Element[trouve].wt;
+						TypeElement[zi].haul_energy = reduction * Element[trouve].wt;
+						Structure.haul_energy += reduction * Element[trouve].wt;
+						//printf(" lgrepos %6.2lf tension %6.0lf energy %6.0lf J ",Element[trouve].lgrepos,Element[trouve].wt,TypeElement[zi].haul_energy);/**/
+						//printf("haul_energy %5.0lf \n",Structure.haul_energy);
+					}
+					else
+					{
+						//TypeElement[zi].haul_energy = TypeElement[zi].haul_energy + (Element[trouve].lgrepos - TypeElement[zi].haul_mini) * Element[trouve].wt;
+						TypeElement[zi].haul_energy = (Element[trouve].lgrepos - TypeElement[zi].haul_mini) * Element[trouve].wt;
+						Structure.haul_energy += (Element[trouve].lgrepos - TypeElement[zi].haul_mini) * Element[trouve].wt;
+						//printf("l       %lf t       %lf e       %lf J    ",Element[trouve].lgrepos,Element[trouve].wt,TypeElement[zi].haul_energy);					
+						//printf("o l d bar %d  ",TypeElement[zi].haul_bar);/**/
+						reduction_new = reduction + TypeElement[zi].haul_mini - Element[trouve].lgrepos;
+						Element[trouve].lgrepos = TypeElement[zi].haul_mini;
+						/*research of the next bar*/
+						trouve =  find_bar(TypeElement[zi].haul_speed, zi, extremity);
+						//printf("zb %d  trouve  %d extremity %d\n",zi,trouve,extremity);
+						if (trouve != 0)
+						{
+							Element[trouve].lgrepos = Element[trouve].lgrepos - reduction_new;
+							//TypeElement[zi].haul_energy = TypeElement[zi].haul_energy + reduction_new * Element[trouve].wt;
+							TypeElement[zi].haul_energy = reduction_new * Element[trouve].wt;
+							Structure.haul_energy += reduction_new * Element[trouve].wt;
+						}
+					}
+				}
+			}
+			if (TypeElement[zi].haul_speed < 0.0)	//shooting
+			{
+				trouve =  find_bar(TypeElement[zi].haul_speed, zi, extremity);
+				TypeElement[zi].haul_bar = trouve;
+				//TypeElement[zi].wt = Element[trouve].wt;
+				//printf("zc %d  trouve  %d extremity %d\n",zi,trouve,extremity);
+				if (trouve != 0)
+				{
+					if (Element[trouve].lgrepos - reduction < TypeElement[zi].haul_maxi)
+					{
+						Element[trouve].lgrepos = Element[trouve].lgrepos - reduction;
+						//TypeElement[zi].haul_energy = TypeElement[zi].haul_energy + reduction * Element[trouve].wt;
+						TypeElement[zi].haul_energy = reduction * Element[trouve].wt;
+						Structure.haul_energy += reduction * Element[trouve].wt;						
+						//printf("bar %d hauling lgrepos %lf tension %lf energy  %lf J    ",trouve,Element[trouve].lgrepos,Element[trouve].wt,TypeElement[zi].haul_energy);/**/
+					}
+					else
+					{
+						//TypeElement[zi].haul_energy = TypeElement[zi].haul_energy + (Element[trouve].lgrepos - TypeElement[zi].haul_maxi) * Element[trouve].wt;
+						TypeElement[zi].haul_energy = (Element[trouve].lgrepos - TypeElement[zi].haul_maxi) * Element[trouve].wt;
+						Structure.haul_energy += (Element[trouve].lgrepos - TypeElement[zi].haul_maxi) * Element[trouve].wt;
+						//printf("o l d bar %d  ",TypeElement[zi].haul_bar);/**/
+						reduction_new = reduction + TypeElement[zi].haul_maxi - Element[trouve].lgrepos;
+						Element[trouve].lgrepos = TypeElement[zi].haul_maxi;
+						//printf("bar %d l               %lf t       %lf e       %lf J    \n",trouve,Element[trouve].lgrepos,Element[trouve].wt,TypeElement[zi].haul_energy);					
+						/*research of the next bar*/
+						trouve =  find_bar(TypeElement[zi].haul_speed, zi, extremity);
+						//printf("zd %d  trouve  %d extremity %d\n",zi,trouve,extremity);
+						if (trouve != 0)
+						{
+							Element[trouve].lgrepos = Element[trouve].lgrepos - reduction_new;
+							//TypeElement[zi].haul_energy = TypeElement[zi].haul_energy + reduction_new * Element[trouve].wt;
+							TypeElement[zi].haul_energy = reduction_new * Element[trouve].wt;
+							Structure.haul_energy += reduction_new * Element[trouve].wt;
+							//printf("bar %d l               %lf t       %lf e       %lf J    ",trouve,Element[trouve].lgrepos,Element[trouve].wt,TypeElement[zi].haul_energy);					
+						}
+					}
+				}
+			}
+		}
 	}
 	Structure.haul_power = Structure.haul_energy / Pascalcul;
 }
