@@ -25,7 +25,7 @@ BIBOBJ =misezero4 miseajourPondFS resolution4 stockagec4  remonteb4 modification
 	flotteursurf3 flotteursurf4 symetrie2 courantelem8 effort_trainee_elem_flottant efforttraineeelem efforttraineeelem_tab effortstructur fond\
 	etat_convergence impresultat contact_coulisses traineevent1 catch2_volume recouvrement_x cage_volume ../lib_dp/alloc\
 	nrutil jacobi jacobi_environ ran1 gasdev contact1 lecturespe lecturepre output_pressure\
-	foamToFEMNET meshOF porousBaffleOF porousCellSetOF stlOF
+	foamToFEMNET meshOF porousBaffleOF porousCellSetOF stlOF static_foil3
 
 OBJETS = $(BIBOBJ:=.o)
 SOURCE = $(BIBOBJ:=.c)
