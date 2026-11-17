@@ -290,8 +290,10 @@ typedef struct 	element {
 	int	haul_bar;		//hauling : bar by which the cable is reduced, this bar changes during the progress//
 	int	haul_node;		//hauling : node by which side the bar is reduced, this node changes during the progress//
 	int	nb_times;		//in case of dynamic: nb of times//
+	int	nb_haul_times;		//in case of dynamic: nb of times//
 	double	haul_mini,haul_maxi;	//in case of dynamic: minimal and maximal length of bars//
 	double	*times;			//in case of dynamic: times table//
+	double	*haul_times;		//in case of dynamic: times table//
 	double	*haul_v;		//in case of dynamic: hauling speed if >0 hauling if <0 shooting//
 	double	*haul_d;		//in case of dynamic: hauling standad deviation of speed, in this case haul_v is the mean speed//
 	int	*haul_ext;		//in case of dynamic: extremity of the cable by which the cable is hauled or shooted//
@@ -473,6 +475,10 @@ typedef struct 	noeud {
 	double 	speed_ballast;		//in case of ballast, speed of water volume m³/s
 	double	vx,vy,vz;		//in case of determination of water speed per node in *.spe file
 	double	OFx,OFy,OFz,OFsx,OFsy,OFsz;	//used by openfoam
+	double 	foil3_surface;			//in case a foil is affected to this type of node, surface of the foil (m2) > 0
+	double	foil3_cd;			//in case a foil is affected to this type of node, drag coefficient along the horizontal 
+	double	foil3_cl;			//in case a foil is affected to this type of node, transverse coefficient along the horizontal 
+	double	foil3_cz;			//in case a foil is affected to this type of node, coefficient along the ascending vertical 
 	} 	NOEUD;
 
 typedef struct numerique {
