@@ -224,13 +224,10 @@ int main(int argc,char *argv[])
 				//exit(0);
 				//printf("frx %lf sur %lf vol %lf ",frx,  surfacefr, volumefr);
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////
-				//surface();
-				surface3();
-				//vitesseh();
-				vitesseh2();
-				//gammah();
-				gammah2();
-	      			deplacement(nomfichier);
+				surface3();	//wave height for each node
+				vitesseh2();	//wave speed at each node
+				gammah2();	//wave acceleration at each node
+	      			deplacement(nomfichier);	//speed of node, acceleration of node, immersion of node
 	      			misezero4();
  				miseajourPondFS_dyna();
 				//printf(" wanoeua \n");	imprvectreel1(18, 3, wanoeud);     			
@@ -331,6 +328,7 @@ int main(int argc,char *argv[])
 				if (Vent.vitesse > 0.0) traineevent1();
 				//if (nbiter >= 1)	{printf("n wanoeud[66] %11.4lf",wanoeud[66]);	printf("welem[66] %11.4lf",waelem[66]);	printf("wasurf[66] %11.4lf\n",wasurf[66]);}
 	      			fond_dyn();
+				dynamic_foil3();
 	
 	       			/*TEST_debut
 	      				if (zu == 0) for( zw = 1 ; zw <= 3*NOMBRE_NOEUDS ; zw++ )   	
@@ -471,7 +469,7 @@ int main(int argc,char *argv[])
 				printf("Cable(W) %5.0lf ",Structure.element_power);
 				printf("Netting(W) %5.0lf ",Structure.surface_power);
 				printf("Node(W) %5.0lf ",Structure.node_power);
-				if(Sortie_texte.surface_filtree == 1)	printf("filtered_surface %4.0lf ",Structure.filtered_surface);
+				if(Sortie_texte.surface_filtree == 1)	printf("filtered_surface/X %4.0lf ",Structure.filtered_surface);
 				printf("nb_iter %5d ", nbiter);
 				printf("times/End %6.2lf /%6.2lf\n",times,Finstockage);
 				}
