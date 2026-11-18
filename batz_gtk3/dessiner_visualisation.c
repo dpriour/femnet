@@ -4970,7 +4970,8 @@ void dessiner_axes()
 	for (nbticks=0;nbticks<=nbbasex;nbticks++)
 		{ 
 		TraceSegment(BLACK, Xmin + nbticks * basex, Ymin, Xmin + nbticks * basex, Ymin + (baxy - biny) * marge * 0.25);
-    		sprintf(chaine,"%5.2f",nbticks * basex);
+    		if (nbticks * basex<0.0)	sprintf(chaine,"%5.2f",nbticks * basex);
+    		else				sprintf(chaine,"%5.20f",nbticks * basex);
 		EcritText(BLACK, Xmin + nbticks * basex, Ymin - (baxy - biny) * marge * 0.5, chaine, 0.0);
 		}
 	
@@ -4999,7 +5000,8 @@ void dessiner_axes()
 	for (nbticks=1;nbticks<=nbbasex;nbticks++)
 		{ 
 		TraceSegment(BLACK, Xmin, Ymin + nbticks * basex, Xmin + (baxx - binx) * marge * 0.25, Ymin + nbticks * basex);
-    		sprintf(chaine,"%5.2f",nbticks * basex);
+    		if (nbticks * basex<0.0)	sprintf(chaine,"%5.2f",nbticks * basex);
+    		else				sprintf(chaine,"%5.20f",nbticks * basex);
 		EcritText(BLACK, Xmin - (baxx - binx) * marge * 0.9, Ymin + nbticks * basex, chaine, 0.0);
 		}
 	
