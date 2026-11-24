@@ -926,37 +926,72 @@ int find_point(MyProgram *me, int x, int y, int tolerance)
 
 int find_closest_point(MyProgram *me, int x, int y)
 {
-    int i;
+    int zi,zj,zk,trouve,p1;
     int wx, wy, wz;
     int min_dist,dist;
     min_dist = 1000;
     int the_i;
     screen_to_world(me, x, y, &wx, &wy, &wz);
 
-    for (i = 0; i < me->num_points; i++) {
-        if (me->points[i].used) {
+    for (zi = 0; zi < me->num_points; zi++) {
+    
+    	trouve = -1;
+    
+ 	//printf("zi %d trouve %d________________________________________\n", zi, trouve);
+   
+    
+        for (zj = 0; zj < me->num_panels; zj++) 
+        {
+            Panel *poly = &me->panels[zj];
+            for (zk = 0; zk < poly->num_points; zk++) 
+            {
+                p1 = poly->points[zk];
+                if (p1 == zi) trouve = zi;
+ 		//printf("zi %d, zj %d zk %d p1 %d trouve %d num_points %d\n", zi, zj, zk, p1, trouve,poly->num_points);
+            }
+        }
+
+    
+    for (zj = 0; zj < me->num_cables; zj++) 
+    {
+        p1 = me->cables[zj].p1;
+        if (p1 == zi) trouve = zi;
+        p1 = me->cables[zj].p2;
+        if (p1 == zi) trouve = zi;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        if ((me->points[zi].used) && (trouve != -1)) {
             int dx, dy;
 
             /* Comparer les coordonnées selon le plan de vue */
             switch (me->view_plane) {
                 case 1:  /* Normal=X, écran montre Y,Z */
-                    dx = wy - me->points[i].y;
-                    dy = wz - me->points[i].z;
+                    dx = wy - me->points[zi].y;
+                    dy = wz - me->points[zi].z;
                     break;
                 case 2:  /* Normal=Y, écran montre Z,X */
-                    dx = wz - me->points[i].z;
-                    dy = wx - me->points[i].x;
+                    dx = wz - me->points[zi].z;
+                    dy = wx - me->points[zi].x;
                     break;
                 case 3:  /* Normal=Z, écran montre X,Y */
                 default:
-                    dx = wx - me->points[i].x;
-                    dy = wy - me->points[i].y;
+                    dx = wx - me->points[zi].x;
+                    dy = wy - me->points[zi].y;
                     break;
             }
 	    dist = sqrt(dx*dx + dy*dy);
             if (dist < min_dist) {
             	min_dist = dist;
-            	the_i = i;
+            	the_i = zi;
             }
         }
     }
