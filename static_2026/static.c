@@ -184,8 +184,8 @@ int main(int argc,char *argv[])
 				//printf("Qrise.catch_gravity = %17.0lf\n",Prise.catch_gravity);//
       				//in this case the catch is expected below the free surface
 	      			catch_hexa();			//forces and stiffness due to the catch
-    				trainee_front();		//hydrodynamic forces on netting in front of the catch
-      				}
+    				trainee_front2();		//hydrodynamic forces on netting in front of the catch
+       				}
      			if ((Prise.volume > Prise.seuil) && (Prise.catch_gravity > 0.0)) 
       				{
 				//printf("C\n");
@@ -199,7 +199,7 @@ int main(int argc,char *argv[])
 				//printf("D\n");
 				//printf("Srise.catch_gravity = %17.0lf\n",Prise.catch_gravity);//
        				catch_hexa();			//forces and stiffness due to the catch
-     				trainee_front();		//hydrodynamic forces on netting in front of the catch
+     				trainee_front2();		//hydrodynamic forces on netting in front of the catch
 				}
      			if ((Structure.nb_catch2_volume != 0) && (Prise.catch_gravity == 0.0)) 
       				{
@@ -207,7 +207,7 @@ int main(int argc,char *argv[])
 				//printf("Qrise.catch_gravity = %17.0lf\n",Prise.catch_gravity);//
       				//in this case the catch is expected below the free surface
 	      			catch2_volume();		//forces and stiffness due to the catch
-    				//trainee_front();		//hydrodynamic forces on netting in front of the catch
+    				//trainee_front2();		//hydrodynamic forces on netting in front of the catch
       				}
 			//imprvectreel1(51, 3, wasurf);
       			/*efforts sur les elements******************************************************************************/
@@ -513,7 +513,7 @@ int main(int argc,char *argv[])
       		if (Prise.volume > Prise.seuil) 
       			{
        			catch_hexa();
-      			trainee_front();
+      			trainee_front2();
       			}
   		misezero4();
   		miseajourPondFS();
@@ -540,7 +540,7 @@ int main(int argc,char *argv[])
 			//in this case the catch is expected below the free surface
 			//printf("Prise.catch_gravity = %17.0lf\n",Prise.catch_gravity);
 			catch_hexa();
-			trainee_front();/**/
+			trainee_front2();/**/
 			}
 		if ((Prise.volume > Prise.seuil) && (Prise.catch_gravity > 0.0)) 
 			{
@@ -553,7 +553,7 @@ int main(int argc,char *argv[])
 			{
 			//printf("D\n");
 			catch_hexa();
-			trainee_front();/**/
+			trainee_front2();/**/
 			}
 
 		/*efforts sur les elements*/
