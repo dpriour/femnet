@@ -4927,7 +4927,7 @@ void dessiner_axes()
   	char chaine[7];
 	extern void EcritText(int icolor, double dx, double dy, char *chaine, double decalage_y);
 	extern void TraceSegment(int icolor, double dx01, double dy01, double dx02, double dy02);
-	
+
 	/*extremites des axes*/
 	if (1.0+2.0*marge == 0.0){printf("1.0+2.0*marge = 0.0   \n");exit(0);}
 	Xmin = ((1.0+marge)*binx + marge*baxx) / (1.0+2.0*marge);
@@ -4937,8 +4937,8 @@ void dessiner_axes()
 	/*Ymax = Ymin + 60;*/
 	/*Ymax = Ymin + 1.0 / (1.0+2.0*marge) * (baxy - biny) / 5.0;*/
 	
-	printf("Xmin %8.2f Ymin %8.2f   ",Xmin,Ymin);
-	printf("Xmax %8.2f Ymax %8.2f \n",Xmax,Ymax);
+	//printf("Xmin %8.2f Ymin %8.2f   ",Xmin,Ymin);
+	//printf("Xmax %8.2f Ymax %8.2f \n",Xmax,Ymax);
 	
 	/*printf("binx %8.2f biny %8.2f   ",binx,biny);
 	printf("baxx %8.2f baxy %8.2f \n",baxx,baxy);
@@ -4967,11 +4967,12 @@ void dessiner_axes()
 	
 	/*trace des ticks selon l axe X*/
 	Color(BLACK);
+
 	for (nbticks=0;nbticks<=nbbasex;nbticks++)
 		{ 
 		TraceSegment(BLACK, Xmin + nbticks * basex, Ymin, Xmin + nbticks * basex, Ymin + (baxy - biny) * marge * 0.25);
-    		if (nbticks * basex<0.0)	sprintf(chaine,"%5.2f",nbticks * basex);
-    		else				sprintf(chaine,"%5.20f",nbticks * basex);
+    		if (nbticks * basex<10.0)	sprintf(chaine,"%5.2f",nbticks * basex);
+    		else				sprintf(chaine,"%5.0f",nbticks * basex);
 		EcritText(BLACK, Xmin + nbticks * basex, Ymin - (baxy - biny) * marge * 0.5, chaine, 0.0);
 		}
 	
@@ -5000,8 +5001,8 @@ void dessiner_axes()
 	for (nbticks=1;nbticks<=nbbasex;nbticks++)
 		{ 
 		TraceSegment(BLACK, Xmin, Ymin + nbticks * basex, Xmin + (baxx - binx) * marge * 0.25, Ymin + nbticks * basex);
-    		if (nbticks * basex<0.0)	sprintf(chaine,"%5.2f",nbticks * basex);
-    		else				sprintf(chaine,"%5.20f",nbticks * basex);
+    		if (nbticks * basex<10.0)	sprintf(chaine,"%5.2f",nbticks * basex);
+    		else				sprintf(chaine,"%5.0f",nbticks * basex);
 		EcritText(BLACK, Xmin - (baxx - binx) * marge * 0.9, Ymin + nbticks * basex, chaine, 0.0);
 		}
 	
