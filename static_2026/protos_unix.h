@@ -597,6 +597,9 @@ void trainee_fil2(int elem, double VV[4], double *tfuv);
 /*prototypes de trainee_front.c*/
 void trainee_front();
 
+/*prototypes de trainee_front.c*/
+void trainee_front2();
+
 /*prototypes de traineecourant2.c*/
 void traineecourant2();
 
