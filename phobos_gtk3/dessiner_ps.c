@@ -2053,7 +2053,7 @@ void dessiner_numero_interieur()
 
 void dessiner_numero_coin()
 	{
-	int pa,el,no,col,deb;
+	int pa,el,no,col,deb,mode;
 	float x1,y1;
 	char str[80];
 	
@@ -2062,18 +2062,22 @@ void dessiner_numero_coin()
 	if (col==-1) printf("Erreur de couleur dessiner_numero_coin\n");
 	SetColor(col);*/
 	
-	Color(BLACK);
-	for (el=1;el<=Structure.NbTypeelem;el++)
-		{ 
-		if (element[el].flag_dessin != 0)
-			{
-			for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		Color(BLACK);
+		for (el=1;el<=Structure.NbTypeelem;el++)
+			{ 
+			if (element[el].flag_dessin != 0)
 				{
-				sprintf(str,"%d",no);
-				deb = element[el].extremite[no];
-				x1 = (float) (noeud[deb].x - binx) / (baxx - binx);
-				y1 = (float) (noeud[deb].y - biny) / (baxy - biny);
-				Text(x1,y1,str);
+				for (no=1;no<=2;no++)
+					{
+					sprintf(str,"%d",no);
+					deb = element[el].extremite[no];
+					x1 = (float) (noeud[deb].x - binx) / (baxx - binx);
+					y1 = (float) (noeud[deb].y - biny) / (baxy - biny);
+					Text(x1,y1,str);
+					}
 				}
 			}
 		}
@@ -2088,17 +2092,21 @@ void dessiner_numero_coin()
 			Text(x1,y1,str);
 			}
 		}
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		if (panneau[pa].flag_dessin != 0)
-			{
-			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
+			{ 
+			if (panneau[pa].flag_dessin != 0)
 				{
-				sprintf(str,"%d",no);
-				deb = panneau[pa].noeud_contour[no];
-				x1 = (float) (noeud[deb].x - binx) / (baxx - binx);
-				y1 = (float) (noeud[deb].y - biny) / (baxy - biny);
-				Text(x1,y1,str);
+				for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+					{
+					sprintf(str,"%d",no);
+					deb = panneau[pa].noeud_contour[no];
+					x1 = (float) (noeud[deb].x - binx) / (baxx - binx);
+					y1 = (float) (noeud[deb].y - biny) / (baxy - biny);
+					Text(x1,y1,str);
+					}
 				}
 			}
 		}
