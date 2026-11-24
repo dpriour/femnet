@@ -19,7 +19,7 @@ BIBOBJ =misezero4 miseajourPondFS resolution4 stockagec4  remonteb4 modification
 	mouvementtendance mouvementmean limitetronquee pression_interne limit_panels\
 	nouvelleserie imprvectreel imprvectint imprmatrint4 modifraideur value_calculation\
 	lectParam2 lecturesta etirement5 surglob2 rotation3 rotation4 base1 \
-	base9 direct  nbmaille_triangle totalhydro2 compos trainee_front \
+	base9 direct  nbmaille_triangle totalhydro2 compos trainee_front trainee_front2 \
 	rota1 eff1 effuv2 trainee_fil trainee_fil2 poidstriang pesanteurSurface imprmatreel3\
 	etirement_hexa poidstri_hexa catch_hexa efflmn trouve_voisin filethydro4_sta surfacemouillee_sta calculeffort_sta\
 	flotteursurf3 flotteursurf4 symetrie2 courantelem8 effort_trainee_elem_flottant efforttraineeelem efforttraineeelem_tab effortstructur fond\
