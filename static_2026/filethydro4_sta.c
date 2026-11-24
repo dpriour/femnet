@@ -31,7 +31,9 @@ if ((Courant.vitesse != 0.0) && (Structure.openfoam <= 1))
 			printf("ba : ");	
 			//exit(0);
 			}
-		basic_bar_drag1(Surface[elem].diametrehydro, Surface[elem].lgrepos, Surface[elem].cdnormal, Surface[elem].ftangent, ba, Vw, nt);	//nt trainee (drag + lift) sur un seul fils u
+		basic_bar_drag1(Surface[elem].diametrehydro, Surface[elem].lgrepos, Surface[elem].cdnormal, Surface[elem].ftangent, ba, Vw, nt);
+
+			//nt trainee (drag + lift) sur un seul fils u
 		wasurf[yc(elem,1)] += nt[1] * Surface[elem].pondFS[1] * Surface[elem].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils u
 		wasurf[yc(elem,2)] += nt[2] * Surface[elem].pondFS[1] * Surface[elem].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils u
 		wasurf[yc(elem,3)] += nt[3] * Surface[elem].pondFS[1] * Surface[elem].nb_cote_u_ou_v / 3.0;		//1/3 de la trainee de tous les fils u
