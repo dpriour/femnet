@@ -647,6 +647,7 @@ typedef struct panneau
 	double max_exit_size;				//maximum of circle diameter passing trough meshes
 	double mean_exit_size;				//mzan of circle diameter passing trough meshes
 	double std_dev_exit_size;			//standard deciation of circle diameter passing trough meshes
+	double nb_meshes;				//nb of meshes in the panel
 	} PANNEAU;
 
 typedef struct Pan_Hexa
