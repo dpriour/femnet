@@ -876,6 +876,7 @@ void Checked_raideur_traction()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -912,6 +913,7 @@ void Checked_raideur_compression()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -946,6 +948,7 @@ void Checked_raideur_ouverture()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -981,6 +984,7 @@ void Checked_twines_nb()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1017,6 +1021,7 @@ void Checked_longueur_repos()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1053,6 +1058,7 @@ void Checked_bar_length()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1089,6 +1095,7 @@ void Checked_longueur_tendue()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1125,6 +1132,7 @@ void Checked_tension()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1161,6 +1169,7 @@ void Checked_nrj()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1198,6 +1207,7 @@ void Checked_defaut_discretisation()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1235,6 +1245,7 @@ void Checked_masse_volumique()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1271,6 +1282,7 @@ void Checked_diametre()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1307,6 +1319,7 @@ void Checked_largeur_noeud()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1343,6 +1356,7 @@ void Checked_coefficient_cd()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1379,6 +1393,7 @@ void Checked_coefficient_f()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1415,6 +1430,7 @@ void Checked_panel_drag()
 		SetMenuItemChecked(w[92],1);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1451,6 +1467,7 @@ void Checked_longueur_maillage()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],1);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1487,6 +1504,7 @@ void Checked_type_maillage()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],1);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1498,6 +1516,44 @@ void Checked_type_maillage()
 	dessiner();
 	}
 
+void Checked_meshes_nb()
+	{
+	int mode;
+	mode = GetMenuItemChecked(w[105]);
+	if (mode == 0) 
+		{
+		SetMenuItemChecked(w[39],0);
+		SetMenuItemChecked(w[81],0);
+		SetMenuItemChecked(w[82],0);
+		SetMenuItemChecked(w[84],0);
+		SetMenuItemChecked(w[86],0);
+		SetMenuItemChecked(w[40],0);
+		SetMenuItemChecked(w[76],0);
+		SetMenuItemChecked(w[102],0);
+
+		SetMenuItemChecked(w[41],0);
+		SetMenuItemChecked(w[96],0);
+		SetMenuItemChecked(w[42],0);
+		SetMenuItemChecked(w[43],0);
+		SetMenuItemChecked(w[77],0);
+		SetMenuItemChecked(w[44],0);
+		SetMenuItemChecked(w[45],0);
+		SetMenuItemChecked(w[92],0);
+		SetMenuItemChecked(w[46],0);
+		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],1);
+		SetMenuItemChecked(w[64],0);
+		SetMenuItemChecked(w[65],0);
+		SetMenuItemChecked(w[66],0);
+		SetMenuItemChecked(w[67],0);
+		SetMenuItemChecked(w[68],0);
+		SetMenuItemChecked(w[99],0);
+		}
+	if (mode == 1) SetMenuItemChecked(w[105],0);
+	dessiner();
+	}
+
+	
 void Checked_section_element()
 	{
 	int mode;
@@ -1523,6 +1579,7 @@ void Checked_section_element()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],1);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1560,6 +1617,7 @@ void Checked_volume_element()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],1);
 		SetMenuItemChecked(w[66],0);
@@ -1597,6 +1655,7 @@ void Checked_masse_element()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],1);
@@ -1633,6 +1692,7 @@ void Checked_masse_lineique()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1670,6 +1730,7 @@ void Checked_flottabilite()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
@@ -1707,6 +1768,7 @@ void Checked_EI_flexion_cable()
 		SetMenuItemChecked(w[92],0);
 		SetMenuItemChecked(w[46],0);
 		SetMenuItemChecked(w[26],0);
+		SetMenuItemChecked(w[105],0);
 		SetMenuItemChecked(w[64],0);
 		SetMenuItemChecked(w[65],0);
 		SetMenuItemChecked(w[66],0);
