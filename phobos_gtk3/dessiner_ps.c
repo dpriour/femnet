@@ -72,6 +72,7 @@ void dessiner()
 	mode = GetMenuItemChecked(w[92]);	if (mode == 1) dessiner_panel_drag();
 	mode = GetMenuItemChecked(w[46]);	if (mode == 1) dessiner_longueur_maillage();
 	mode = GetMenuItemChecked(w[26]);	if (mode == 1) dessiner_type_maillage();
+	mode = GetMenuItemChecked(w[105]);	if (mode == 1) dessiner_meshes_nb();
 	mode = GetMenuItemChecked(w[64]);	if (mode == 1) dessiner_section_element();
 	mode = GetMenuItemChecked(w[65]);	if (mode == 1) dessiner_volume_element();
 	mode = GetMenuItemChecked(w[66]);	if (mode == 1) dessiner_masse_element();
@@ -1950,7 +1951,7 @@ void dessiner_numero_global()
 
 void dessiner_numero_local()
 	{
-	int pa,el,no,col,deb;
+	int pa,el,no,col,deb,mode;
 	float x1,y1;
 	char str[80];
 	
@@ -1961,31 +1962,39 @@ void dessiner_numero_local()
 	
 	Color(BLACK);
 
-	for (el=1;el<=Structure.NbTypeelem;el++)
-		{ 
-		if (element[el].flag_maillage == 1)
-			{
-			for (no=1;no<=element[el].nb_barre - 1;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (el=1;el<=Structure.NbTypeelem;el++)
+			{ 
+			if (element[el].flag_maillage == 1)
 				{
-				sprintf(str,"%d",no);
-				deb = element[el].noeud[no];
-				x1 = (float) (noeud[deb].x - binx) / (baxx - binx);
-				y1 = (float) (noeud[deb].y - biny) / (baxy - biny);
-				Text(x1,y1,str);
+				for (no=1;no<=element[el].nb_barre - 1;no++)
+					{
+					sprintf(str,"%d",no);
+					deb = element[el].noeud[no];
+					x1 = (float) (noeud[deb].x - binx) / (baxx - binx);
+					y1 = (float) (noeud[deb].y - biny) / (baxy - biny);
+					Text(x1,y1,str);
+					}
 				}
 			}
 		}
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		if (panneau[pa].flag_maillage == 1)
-			{
-			for (no=1;no<=panneau[pa].nb_noeud_cote;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
+			{ 
+			if (panneau[pa].flag_maillage == 1)
 				{
-				sprintf(str,"%d",no);
-				deb = panneau[pa].noeud_cote[no];
-				x1 = (float) (noeud[deb].x - binx) / (baxx - binx);
-				y1 = (float) (noeud[deb].y - biny) / (baxy - biny);
-				Text(x1,y1,str);
+				for (no=1;no<=panneau[pa].nb_noeud_cote;no++)
+					{
+					sprintf(str,"%d",no);
+					deb = panneau[pa].noeud_cote[no];
+					x1 = (float) (noeud[deb].x - binx) / (baxx - binx);
+					y1 = (float) (noeud[deb].y - biny) / (baxy - biny);
+					Text(x1,y1,str);
+					}
 				}
 			}
 		}
@@ -2125,7 +2134,7 @@ void dessiner_numero_coin()
 
 void dessiner_raideur_traction()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1;
 	char str[80],str_l[80],str_m[80],str_n[80];
 	
@@ -2139,20 +2148,24 @@ void dessiner_raideur_traction()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	Text(x1,y1,"traction stiffness (N)");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",panneau[pa].raideur_traction);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",panneau[pa].raideur_traction);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -2176,20 +2189,24 @@ void dessiner_raideur_traction()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",element[pa].raideur_traction);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",element[pa].raideur_traction);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -2213,7 +2230,7 @@ void dessiner_raideur_traction()
 
 void dessiner_raideur_compression()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1;
 	char str[80],str_l[80],str_m[80],str_n[80];
 	
@@ -2228,20 +2245,24 @@ void dessiner_raideur_compression()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	Text(x1,y1,"compression stiffness (N)");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",panneau[pa].raideur_compression);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",panneau[pa].raideur_compression);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -2265,20 +2286,24 @@ void dessiner_raideur_compression()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",element[pa].raideur_compression);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",element[pa].raideur_compression);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -2336,7 +2361,7 @@ void dessiner_raideur_ouverture()
 
 void dessiner_longueur_repos()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1;
 	char str[80],str_l[80],str_m[80],str_n[80];
 	
@@ -2350,22 +2375,26 @@ void dessiner_longueur_repos()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	Text(x1,y1,"unstretched length (m)");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		if (panneau[pa].flag_dessin != 0)
-			{
-			x1 = 0.0;
-			y1 = 0.0;
-			sprintf(str,"%.3g",panneau[pa].longueur_repos);
-			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
-				{ 
-				deb = panneau[pa].noeud_contour[no];
-				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
+			{ 
+			if (panneau[pa].flag_dessin != 0)
+				{
+				x1 = 0.0;
+				y1 = 0.0;
+				sprintf(str,"%.3g",panneau[pa].longueur_repos);
+				for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+					{ 
+					deb = panneau[pa].noeud_contour[no];
+					x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+					y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+					}
+				x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+				y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+				Text(x1,y1,str);
 				}
-			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-			Text(x1,y1,str);
 			}
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
@@ -2390,22 +2419,26 @@ void dessiner_longueur_repos()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		if (element[pa].flag_dessin != 0)
-			{
-			x1 = 0.0;
-			y1 = 0.0;
-			sprintf(str,"%.3g",element[pa].lgrepos);
-			for (no=1;no<=2;no++)
-				{ 
-				deb = element[pa].extremite[no];
-				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
+			{ 
+			if (element[pa].flag_dessin != 0)
+				{
+				x1 = 0.0;
+				y1 = 0.0;
+				sprintf(str,"%.3g",element[pa].lgrepos);
+				for (no=1;no<=2;no++)
+					{ 
+					deb = element[pa].extremite[no];
+					x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+					y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+					}
+				x1 = (float) (x1 / 2);
+				y1 = (float) (y1 / 2);
+				Text(x1,y1,str);
 				}
-			x1 = (float) (x1 / 2);
-			y1 = (float) (y1 / 2);
-			Text(x1,y1,str);
 			}
 		}
 		
@@ -2462,7 +2495,7 @@ void dessiner_bar_length()
 
 void dessiner_masse_volumique()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1;
 	char str[80];
 	
@@ -2476,20 +2509,24 @@ void dessiner_masse_volumique()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	Text(x1,y1,"volumic mass (kg/m^3)");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",panneau[pa].rho);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",panneau[pa].rho);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -2509,20 +2546,24 @@ void dessiner_masse_volumique()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",element[pa].rhoelement);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",element[pa].rhoelement);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -2546,7 +2587,7 @@ void dessiner_masse_volumique()
 
 void dessiner_diametre()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1;
 	char str[80],str_l[80],str_m[80],str_n[80];
 	
@@ -2560,20 +2601,24 @@ void dessiner_diametre()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	Text(x1,y1,"diameter (m)");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",panneau[pa].diam_hydro);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",panneau[pa].diam_hydro);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -2597,20 +2642,24 @@ void dessiner_diametre()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",element[pa].diametrehydro);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",element[pa].diametrehydro);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -2667,7 +2716,7 @@ void dessiner_largeur_noeud()
 
 void dessiner_coefficient_cd()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1;
 	char str[80];
 	
@@ -2681,20 +2730,24 @@ void dessiner_coefficient_cd()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	Text(x1,y1,"normal drag coefficient: cd");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",panneau[pa].cdnormal);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",panneau[pa].cdnormal);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -2714,20 +2767,24 @@ void dessiner_coefficient_cd()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",element[pa].cdnormal);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",element[pa].cdnormal);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -2751,7 +2808,7 @@ void dessiner_coefficient_cd()
 
 void dessiner_coefficient_f()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1;
 	char str[80];
 	
@@ -2765,20 +2822,24 @@ void dessiner_coefficient_f()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	Text(x1,y1,"tangential drag coefficient: f");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",panneau[pa].ftangent);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",panneau[pa].ftangent);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -2798,20 +2859,24 @@ void dessiner_coefficient_f()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",element[pa].ftangent);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",element[pa].ftangent);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -2881,46 +2946,12 @@ void dessiner_panel_drag()
 		Text(x1,y1,str);
 		}
 		
-	Color(BLACK);
-	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",element[pa].ftangent);
-		for (no=1;no<=2;no++)
-			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
-			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		/*Text(x1,y1,str);*/
-		}
 		
-	Color(RED);
-	
-	for (pa=1;pa<=Structure.nombreCoulisses;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",coulisse[pa].ftangent);
-		for (no=1;no<=2;no++)
-			{ 
-			deb = coulisse[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
-			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		/*Text(x1,y1,str);*/
-		}
 	}
 
 void dessiner_longueur_maillage()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1,pas_mail;
 	char str[80];
 	
@@ -2934,20 +2965,24 @@ void dessiner_longueur_maillage()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	Text(x1,y1,"meshing length (m)");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",panneau[pa].pas_maillage);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",panneau[pa].pas_maillage);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -2967,21 +3002,25 @@ void dessiner_longueur_maillage()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		pas_mail = (float) (element[pa].lgrepos / element[pa].nb_barre);
-		sprintf(str,"%.3g",pas_mail);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			pas_mail = (float) (element[pa].lgrepos / element[pa].nb_barre);
+			sprintf(str,"%.3g",pas_mail);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -3054,7 +3093,7 @@ void dessiner_type_maillage()
 
 void dessiner_section_element()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1,section;
 	char str[80];
 	
@@ -3068,21 +3107,25 @@ void dessiner_section_element()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	Text(x1,y1,"cable/twine section (m^2)");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		section = PI * panneau[pa].diam_hydro * panneau[pa].diam_hydro / 4.0 ;
-		sprintf(str,"%.3g",section);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			section = PI * panneau[pa].diam_hydro * panneau[pa].diam_hydro / 4.0 ;
+			sprintf(str,"%.3g",section);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -3090,21 +3133,25 @@ void dessiner_section_element()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		section = PI * element[pa].diametrehydro * element[pa].diametrehydro / 4.0 ;
-		sprintf(str,"%.3g",section);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			section = PI * element[pa].diametrehydro * element[pa].diametrehydro / 4.0 ;
+			sprintf(str,"%.3g",section);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -3127,9 +3174,50 @@ void dessiner_section_element()
 		}
 	}
 
+void dessiner_meshes_nb()
+	{
+	int pa,no,col,deb,mode;
+	float x1,y1,section;
+	char str[80];
+	
+	lecture_des();
+	/*col=GetRGBColor(255,0,0);
+	if (col==-1) printf("Erreur de couleur dessiner_numero_panneau\n");
+	SetColor(col);*/
+	
+	Color(RED);
+	x1 = (float) (0.0);
+	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
+	Text(x1,y1,"meshes nb");
+
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
+			{ 
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%7.0lf",panneau[pa].nb_meshes);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
+			}
+		}
+	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
+		{ 
+		}
+		
+	}
+
 void dessiner_volume_element()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1,volume;
 	char str[80];
 	
@@ -3141,23 +3229,27 @@ void dessiner_volume_element()
 	Color(RED);
 	x1 = (float) (0.0);
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
-	Text(x1,y1,"bar/twine volume (m^3)");
+	Text(x1,y1,"cable/panel volume (m^3)");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		volume = PI * panneau[pa].diam_hydro * panneau[pa].diam_hydro / 4.0  * panneau[pa].longueur_repos ;
-		sprintf(str,"%.3g",volume);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			volume = PI * panneau[pa].diam_hydro * panneau[pa].diam_hydro / 4.0  * panneau[pa].longueur_repos * panneau[pa].nb_meshes * 4.0;
+			sprintf(str,"%.3g",volume);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -3181,21 +3273,25 @@ void dessiner_volume_element()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		volume = PI * element[pa].diametrehydro * element[pa].diametrehydro / 4.0  * element[pa].lgrepos ;
-		sprintf(str,"%.3g",volume);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			volume = PI * element[pa].diametrehydro * element[pa].diametrehydro / 4.0  * element[pa].lgrepos ;
+			sprintf(str,"%.3g",volume);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -3220,34 +3316,35 @@ void dessiner_volume_element()
 
 void dessiner_masse_element()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1,masse,mass_surf,mass_hexa,mass_elem,mass_coul,mass_node,mass_total;
 	char str[80];
 	
 	lecture_des();
-	/*col=GetRGBColor(255,0,0);
-	if (col==-1) printf("Erreur de couleur dessiner_numero_panneau\n");
-	SetColor(col);*/
 	
 	Color(RED);
 
 	mass_surf = 0.0;
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		masse = PI * panneau[pa].diam_hydro * panneau[pa].diam_hydro / 4.0 * panneau[pa].rho  * panneau[pa].longueur_repos;
-		mass_surf += masse;
-		sprintf(str,"%.3g",masse);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			masse = PI * panneau[pa].diam_hydro * panneau[pa].diam_hydro / 4.0 * panneau[pa].rho  * panneau[pa].longueur_repos * panneau[pa].nb_meshes  * 4.0;
+			mass_surf += masse;
+			sprintf(str,"%.3g",masse);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	mass_hexa = 0.0;
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
@@ -3273,22 +3370,26 @@ void dessiner_masse_element()
 		
 	Color(BLUE);	
 	mass_elem = 0.0;
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		masse = PI * element[pa].diametrehydro * element[pa].diametrehydro / 4.0 * element[pa].rhoelement  * element[pa].lgrepos;
-		mass_elem += masse;
-		sprintf(str,"%.3g",masse);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			masse = PI * element[pa].diametrehydro * element[pa].diametrehydro / 4.0 * element[pa].rhoelement  * element[pa].lgrepos;
+			mass_elem += masse;
+			sprintf(str,"%.3g",masse);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -3323,16 +3424,16 @@ void dessiner_masse_element()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	//Text(x1,y1,"twine mass (kg) surf %lf hexa %lf elem %lf node %lf total %lf",mass_surf,mass_hexa,mass_elem,mass_node,mass_total);
 
-	sprintf(str,"%.3g",mass_surf);	Text(x1+0.0,y1+5*0.02,"mass surf : ");	Text(x1+0.1,y1+5*0.02,str);
-	sprintf(str,"%.3g",mass_elem);	Text(x1+0.2,y1+5*0.02,"mass elem : ");	Text(x1+0.3,y1+5*0.02,str);
-	sprintf(str,"%.3g",mass_node);	Text(x1+0.4,y1+5*0.02,"mass node : ");	Text(x1+0.5,y1+5*0.02,str);
-	sprintf(str,"%.3g",mass_total);	Text(x1+0.6,y1+5*0.02,"mass total : ");	Text(x1+0.7,y1+5*0.02,str);
+	sprintf(str,"%.3g",mass_surf);	Text(x1+0.0,y1+5*0.02,"mass netting: ");	Text(x1+0.1,y1+5*0.02,str);
+	sprintf(str,"%.3g",mass_elem);	Text(x1+0.2,y1+5*0.02,"mass cable: ");	Text(x1+0.3,y1+5*0.02,str);
+	sprintf(str,"%.3g",mass_node);	Text(x1+0.4,y1+5*0.02,"mass node: ");	Text(x1+0.5,y1+5*0.02,str);
+	sprintf(str,"%.3g",mass_total);	Text(x1+0.6,y1+5*0.02,"mass total: ");	Text(x1+0.7,y1+5*0.02,str);
 
 	}
 
 void dessiner_masse_lineique()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1,masse;
 	char str[80];
 	
@@ -3346,21 +3447,25 @@ void dessiner_masse_lineique()
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
 	Text(x1,y1,"lineic mass (kg/m)");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		masse = PI * panneau[pa].diam_hydro * panneau[pa].diam_hydro / 4.0 * panneau[pa].rho ;
-		sprintf(str,"%.3g",masse);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			masse = PI * panneau[pa].diam_hydro * panneau[pa].diam_hydro / 4.0 * panneau[pa].rho ;
+			sprintf(str,"%.3g",masse);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -3368,21 +3473,25 @@ void dessiner_masse_lineique()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		masse = PI * element[pa].diametrehydro * element[pa].diametrehydro / 4.0 * element[pa].rhoelement ;
-		sprintf(str,"%.3g",masse);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			masse = PI * element[pa].diametrehydro * element[pa].diametrehydro / 4.0 * element[pa].rhoelement ;
+			sprintf(str,"%.3g",masse);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -3407,7 +3516,7 @@ void dessiner_masse_lineique()
 
 void dessiner_flottabilite()
 	{
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	float x1,y1,flotab;
 	char str[80];
 	
@@ -3419,23 +3528,27 @@ void dessiner_flottabilite()
 	Color(RED);
 	x1 = (float) (0.0);
 	y1 = (float) (0.0 + 1.0 * 0.02); 	/*decalage de 1 puisque c est un element*/
-	Text(x1,y1,"floatability in water (kg)");
+	Text(x1,y1,"weight in water (kg)");
 
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		flotab = PI * panneau[pa].diam_hydro * panneau[pa].diam_hydro * panneau[pa].longueur_repos / 4.0 * RHO;
-		sprintf(str,"%.3g",flotab);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			flotab = PI * panneau[pa].diam_hydro * panneau[pa].diam_hydro * panneau[pa].longueur_repos / 4.0 * (panneau[pa].rho - RHO) * panneau[pa].nb_meshes * 4.0;
+			sprintf(str,"%.3g",flotab);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -3459,21 +3572,25 @@ void dessiner_flottabilite()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		flotab = PI * element[pa].diametrehydro * element[pa].diametrehydro * element[pa].lgrepos / 4.0 * (RHO) ;
-		sprintf(str,"%.3g",flotab);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			flotab = PI * element[pa].diametrehydro * element[pa].diametrehydro * element[pa].lgrepos / 4.0 * (RHO) ;
+			sprintf(str,"%.3g",flotab);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
@@ -3673,7 +3790,7 @@ void dessiner_surface_fils()
 	{
 	float x1,y1,temp,flotab;
 	char str[80];
-	int pa,no,col,deb;
+	int pa,no,col,deb,mode;
 	
 	
 	lecture_des();
@@ -3690,22 +3807,26 @@ void dessiner_surface_fils()
 	SetColor(col);*/
 	
 	Color(RED);
-	for (pa=1;pa<=Structure.NbTypesurf;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		sprintf(str,"%.3g",panneau[pa].surf_fils);
-		//sprintf(str,"%.3g",panneau[pa].surf_fils/2.0/panneau[pa].longueur_repos/panneau[pa].diam_hydro);
-		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+	mode = GetMenuItemChecked(w[6]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypesurf;pa++)
 			{ 
-			deb = panneau[pa].noeud_contour[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			sprintf(str,"%.3g",panneau[pa].surf_fils);
+			//sprintf(str,"%.3g",panneau[pa].surf_fils/2.0/panneau[pa].longueur_repos/panneau[pa].diam_hydro);
+			for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+				{ 
+				deb = panneau[pa].noeud_contour[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
+			y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
+			Text(x1,y1,str);
+			//printf("Twine surface of panel %4d = %.3g m^2\n",pa,panneau[pa].surf_fils);
 			}
-		x1 = (float) (x1 / panneau[pa].nb_noeud_contour);
-		y1 = (float) (y1 / panneau[pa].nb_noeud_contour);
-		Text(x1,y1,str);
-		//printf("Twine surface of panel %4d = %.3g m^2\n",pa,panneau[pa].surf_fils);
 		}
 	for (pa=1;pa<=Structure.NbTypesurf_hexa;pa++)
 		{ 
@@ -3725,21 +3846,25 @@ void dessiner_surface_fils()
 		
 	Color(BLUE);
 	
-	for (pa=1;pa<=Structure.NbTypeelem;pa++)
-		{ 
-		x1 = 0.0;
-		y1 = 0.0;
-		flotab = element[pa].diametrehydro * element[pa].lgrepos;
-		sprintf(str,"%.3g",flotab);
-		for (no=1;no<=2;no++)
+	mode = GetMenuItemChecked(w[9]);	
+	if (mode == 1)
+		{
+		for (pa=1;pa<=Structure.NbTypeelem;pa++)
 			{ 
-			deb = element[pa].extremite[no];
-			x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
-			y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+			x1 = 0.0;
+			y1 = 0.0;
+			flotab = element[pa].diametrehydro * element[pa].lgrepos;
+			sprintf(str,"%.3g",flotab);
+			for (no=1;no<=2;no++)
+				{ 
+				deb = element[pa].extremite[no];
+				x1 += (float) (noeud[deb].x - binx) / (baxx - binx);
+				y1 += (float) (noeud[deb].y - biny) / (baxy - biny);
+				}
+			x1 = (float) (x1 / 2);
+			y1 = (float) (y1 / 2);
+			Text(x1,y1,str);
 			}
-		x1 = (float) (x1 / 2);
-		y1 = (float) (y1 / 2);
-		Text(x1,y1,str);
 		}
 		
 	Color(BLUE);
