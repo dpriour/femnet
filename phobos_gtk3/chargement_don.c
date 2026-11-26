@@ -93,7 +93,7 @@ void charger(char *nomfichier)
 	double masse_volumique_choisie;
 	double diam_hydro_choisi;
 	double coeff_trainee_normal_choisi;
-	double coeff_trainee_tangent_choisi;
+	double coeff_trainee_tangent_choisi,Ua,Ub,Va,Vb;
 
 	int nb_barre_choisi;
 	double actual_foil_surface, model_foil_surface,model_mass_in_air,model_mass_in_water,foil_cd,foil_cl,foil_cz;
@@ -242,6 +242,35 @@ void charger(char *nomfichier)
 			itmp = fscanf(fic,"%d",&noeud[panneau[pa].noeud_contour[no]].type);
 			itmp = fscanf(fic,"%d",&panneau[pa].type_suivant_contour[no]);
 			}
+			
+			
+		panneau[pa].nb_meshes = 0;
+		for (no=1;no<=panneau[pa].nb_noeud_contour;no++)
+			{
+			Ua = noeud[panneau[pa].noeud_contour[no]].U;
+			Va = noeud[panneau[pa].noeud_contour[no]].V;
+			if (no != panneau[pa].nb_noeud_contour)
+				{
+				Ub = noeud[panneau[pa].noeud_contour[no+1]].U;
+				Vb = noeud[panneau[pa].noeud_contour[no+1]].V;
+				}
+			else
+				{
+				Ub = noeud[panneau[pa].noeud_contour[1]].U;
+				Vb = noeud[panneau[pa].noeud_contour[1]].V;
+				}
+			panneau[pa].nb_meshes += 0.5*fabs(Ua*Vb-Va*Ub);
+			}
+		
+		printf("panneau[%d].nb_meshes = %lf\n",pa, panneau[pa].nb_meshes);
+	
+		
+		
+		
+		
+		
+		
+		
 		//buffer = fgets(t1,256,fic); 
 		//buffer = fgets(t1,256,fic); 
     		do  c=fgetc(fic); while (c !=':'); itmp = fscanf(fic,"%f\n",&panneau[pa].raideur_traction);
