@@ -76,6 +76,7 @@ void init_display(int argc, char **argv, MyProgram *me)
 	//w[92]  = MakeMenuItem(w[38], "drag_panel", 		Checked_panel_drag, me);
 	w[46]  = MakeMenuItem(w[38], "meshing_length", 		Checked_longueur_maillage, me);
 	//w[26]  = MakeMenuItem(w[38], "meshing_type", 		Checked_type_maillage, me);
+	w[105]  = MakeMenuItem(w[38], "meshes_nb", 		Checked_meshes_nb, me);
 	w[64]  = MakeMenuItem(w[38], "section", 		Checked_section_element, me);
 	w[65]  = MakeMenuItem(w[38], "volume", 			Checked_volume_element, me);
 	w[66]  = MakeMenuItem(w[38], "mass", 			Checked_masse_element, me);
