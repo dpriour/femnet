@@ -150,6 +150,7 @@ void dessiner_coefficient_f();
 void dessiner_panel_drag();
 void dessiner_longueur_maillage();
 void dessiner_type_maillage();
+void dessiner_meshes_nb();
 void dessiner_section_element();
 void dessiner_volume_element();
 void dessiner_masse_element();
